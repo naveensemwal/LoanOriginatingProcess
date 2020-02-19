@@ -1,0 +1,63 @@
+h4 {
+  font-size: 1.5rem;
+}
+
+small {
+  font-weight: lighter;
+  color: gray;
+  margin: 0;
+}
+
+.flex {
+  padding-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.emicalculator {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  width: 80%;
+  height: 70%;
+  margin: 5vh auto;
+  box-shadow: 15px 20px 40px -10px;
+  background-color: #CDDCDC;
+ background-image: radial-gradient(at 50% 100%, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), linear-gradient(to bottom, rgba(255,255,255,0.25) 0%, rgba(0,0,0,0.25) 100%);
+ background-blend-mode: screen, overlay;
+}
+
+.input-range__label--max {
+  display: none;
+}
+
+.input-range__label--min {
+  display: none;
+}
+
+.input-range__label-container {
+  left: -50%;
+  position: relative;
+  display: none;
+}
+.grad-cta {
+    margin-top: 40px;
+    height: 54px;
+    font-size: 16px!important;
+    font-weight: 500!important;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 2px 4px 0 rgba(60,9,179,.3);
+    box-shadow: 0 2px 4px 0 rgba(60,9,179,.3);
+    background-image: -webkit-gradient(linear,left top,right top,from(#ac2f77),color-stop(72.9%,#da355a));
+    background-image: -webkit-linear-gradient(left,#ac2f77,#da355a 72.9%);
+    background-image: -o-linear-gradient(left,#ac2f77,#da355a 72.9%);
+    background-image: linear-gradient(90deg,#ac2f77,#da355a 72.9%);
+    color: #fff;
+    cursor: pointer;
+    width: 100%;
+    outline: none!important;
+    border: none
+}

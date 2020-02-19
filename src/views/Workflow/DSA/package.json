@@ -1,0 +1,6 @@
+{
+  "name": "DSA",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./DSA.js"
+}

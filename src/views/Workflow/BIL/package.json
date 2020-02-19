@@ -1,0 +1,6 @@
+{
+  "name": "BIL",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./BIL.js"
+}
