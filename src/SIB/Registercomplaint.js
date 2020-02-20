@@ -1,46 +1,13 @@
-import React, { Component } from 'react'
-import {
-  Form,
-  Select,
-  InputNumber,
-  Switch,
-  Radio,
-  Slider,
-  Button,
-  Upload,
-  Icon,
-  Rate,
-  Checkbox,
-  Row,
-  Col,
-  message,
-  Input,
-} from 'antd';
+import { Button, DatePicker, Form, Input, Radio, Select, TimePicker } from 'antd';
 import "antd/dist/antd.css";
+import React, { Component } from 'react';
 
 const { Option } = Select;
 
-
-function getBase64(img, callback) {
-  const reader = new FileReader();
-  reader.addEventListener('load', () => callback(reader.result));
-  reader.readAsDataURL(img);
-}
-
-function beforeUpload(file) {
-  const isJpgOrPng = file.type === 'image/jpeg' || file.type === 'image/png';
-  if (!isJpgOrPng) {
-    message.error('You can only upload JPG/PNG file!');
-  }
-  const isLt2M = file.size / 1024 / 1024 < 2;
-  if (!isLt2M) {
-    message.error('Image must smaller than 2MB!');
-  }
-  return isJpgOrPng && isLt2M;
-}
-
 export default class Registercomplaint extends Component {
+
   handleSubmit = e => {
+    console.dir(this)
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
@@ -49,51 +16,37 @@ export default class Registercomplaint extends Component {
     });
   };
 
-  normFile = e => {
-    console.log('Upload event:', e);
-    if (Array.isArray(e)) {
-      return e;
-    }
-    return e && e.fileList;
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      loading: false,
+      complaintForm: {
+        branchName: "Zoho Branch",
+        city: "1",
+      }
+    };
+
+  }
 
   state = {
     loading: false,
-  };
+    complaintForm: {
+      branchName: "Zoho Branch",
+      city: "1",
 
-  handleChange = info => {
-    if (info.file.status === 'uploading') {
-      this.setState({ loading: true });
-      return;
-    }
-    if (info.file.status === 'done') {
-      // Get this url from response in real world.
-      getBase64(info.file.originFileObj, imageUrl =>
-        this.setState({
-          imageUrl,
-          loading: false,
-        }),
-      );
     }
   };
-
- 
 
   render() {
+
     const { getFieldDecorator } = this.props.form;
+
     const formItemLayout = {
       labelCol: { span: 6 },
       wrapperCol: { span: 14 },
     };
-    const panButton = (
-      <div>
-        <Icon type={this.state.loading ? 'loading' : 'plus'} />
-        <div className="ant-upload-text">PAN</div>
-      </div>
-    );
 
-    const { imageUrl } = this.state;
-    const prefixSelector = getFieldDecorator('prefix', {
+    const prefixSelector = getFieldDecorator('countryCode', {
       initialValue: '91',
     })(
       <Select style={{ width: 70 }}>
@@ -101,27 +54,15 @@ export default class Registercomplaint extends Component {
         <Option value="971">+971</Option>
       </Select>,
     );
-    const tailFormItemLayout = {
-      wrapperCol: {
-        xs: {
-          span: 24,
-          offset: 0,
-        },
-        sm: {
-          span: 16,
-          offset: 6,
-        },
-      },
-    };
     return (
       <Form {...formItemLayout} onSubmit={this.handleSubmit}>
 
-    
         <Form.Item label='Branch Name'>
           {getFieldDecorator('branchName', {
             rules: [{ required: true, message: 'Please input your branch name...', whitespace: true }],
           })(<Input />)}
         </Form.Item>
+
 
         <Form.Item label="City">
           {getFieldDecorator('city', {
@@ -135,25 +76,21 @@ export default class Registercomplaint extends Component {
             </Select>,
           )}
         </Form.Item>
-
         <Form.Item label='Name of the Customer'>
           {getFieldDecorator('customerName', {
             rules: [{ required: true, message: 'Please input customer name...', whitespace: true }],
           })(<Input />)}
         </Form.Item>
-
         <Form.Item label='Account Number'>
           {getFieldDecorator('accountNumber', {
             rules: [{ required: true, message: 'Please input account number...', whitespace: true }],
           })(<Input />)}
         </Form.Item>
-        
         <Form.Item label='Debit Card/ATM Card No.'>
           {getFieldDecorator('cardNumber', {
             rules: [{ required: true, message: 'Please input card number...', whitespace: true }],
           })(<Input />)}
         </Form.Item>
-
         <Form.Item label="E-mail">
           {getFieldDecorator('email', {
             rules: [
@@ -169,46 +106,70 @@ export default class Registercomplaint extends Component {
           })(<Input />)}
         </Form.Item>
         <Form.Item label="Phone Number">
-          {getFieldDecorator('phone', {
+          {getFieldDecorator('mobileNumber', {
             rules: [{ required: true, message: 'Please input your phone number!' }],
           })(<Input addonBefore={prefixSelector} style={{ width: '100%' }} />)}
         </Form.Item>
-        <Form.Item label="Salaried">
-          {getFieldDecorator('switch', { valuePropName: 'salaried' })(<Switch />)}
-        </Form.Item>
-        <Form.Item label="Net Monthly Income" hasFeedback>
-          {getFieldDecorator('monthlyIncome', {
-            rules: [{ required: true, message: 'Please select monthly income!' }],
+        <Form.Item label="Nature of the Complaint">
+          {getFieldDecorator('complaintType',{
+            initialValue:'cashWithdrawal'
           })(
-            <Select placeholder="Net Monthly Income">
-              <Option value="1">20,000-40,000</Option>
-              <Option value="2">40,000-60,000</Option>
-              <Option value="3">60,000-80,000</Option>
-              <Option value="4">80,000 and Above</Option>
-            </Select>,
+            <Radio.Group >
+              <Radio value="cashWithdrawal">Cash withdrawal </Radio>
+              <Radio value="cardCaptured">Card Captured </Radio>
+              <Radio value="otherComplaint">Other Complaint </Radio>
+            </Radio.Group>,
           )}
         </Form.Item>
-        <Form.Item label="Loan Type" hasFeedback>
-          {getFieldDecorator('loanType', {
-            rules: [{ required: true, message: 'Select Loan Type!' }],
-          })(
-            <Select placeholder="Loan Type">
-              <Option value="1">Home Loan</Option>
-              <Option value="2">Personal Loan</Option>
-              <Option value="3">Car Loan</Option>
-              <Option value="4">Mortgage Loan</Option>
-            </Select>,
-          )}
+        { (this.props.form.getFieldValue('complaintType')===undefined || this.props.form.getFieldValue('complaintType')==='cashWithdrawal') ? 
+        <div>
+        <Form.Item label='Amount requested for withdrawal '>
+          {getFieldDecorator('requestedAmount', {
+            rules: [{ required: true, message: 'Please input requested amount!', whitespace: true }],
+          })(<Input />)}
         </Form.Item>
-        <Form.Item {...tailFormItemLayout}>
-          {getFieldDecorator('agreement', {
-            valuePropName: 'checked',
-          })(
-            <Checkbox>
-              I have read the <a href="">agreement</a>
-            </Checkbox>,
-          )}
+        <Form.Item label='Amount actually disbursed at ATM '>
+          {getFieldDecorator('disbursedAmount', {
+            rules: [{ required: true, message: 'Please input disbursed amount!', whitespace: true }],
+          })(<Input />)}
         </Form.Item>
+        <Form.Item label='Amount to the account debited '>
+          {getFieldDecorator('debitedAmount', {
+            rules: [{ required: true, message: 'Please input debited amount!', whitespace: true }],
+          })(<Input />)}
+        </Form.Item>
+        <Form.Item label='Date Time of transaction '>
+          {getFieldDecorator('transactionDate', {
+            rules: [{ type: 'object', required: true, message: 'Please select Date!' }],
+          })(<DatePicker />)}
+        </Form.Item>
+        <Form.Item label='Time of transaction'>
+          {getFieldDecorator('transactionTime', {
+            rules: [{ type: 'object', required: true, message: 'Please select time!' }],
+          })( <TimePicker use12Hours format="h:mm a"/>)}
+        </Form.Item>
+        </div> : null }
+        
+    
+  
+        { this.props.form.getFieldValue('complaintType')==='cardCaptured' ?
+       <Form.Item label="Card Captured Details">
+          {getFieldDecorator('cardCapturedComplaints', {
+            rules: [{ required: true, message: '' }],
+          })(<Input.TextArea rows={4}
+          />)}
+        </Form.Item>:
+         null }
+        
+         { this.props.form.getFieldValue('complaintType')==='otherComplaint' ? 
+          <Form.Item label="Other Complaints ">
+          {getFieldDecorator('otherComplaint', {
+            rules: [{ required: true, message: '' }],
+          })(<Input.TextArea
+            rows={4}
+          />)}
+        </Form.Item>: null }
+        
         <Form.Item wrapperCol={{ span: 12, offset: 6 }}>
           <Button type="primary" htmlType="submit">
             Submit
@@ -219,4 +180,4 @@ export default class Registercomplaint extends Component {
   }
 }
 
-Registercomplaint = Form.create({ name: "yourFormName" })(Registercomplaint)
+Registercomplaint = Form.create({ name: "ATMComplaint" })(Registercomplaint)
