@@ -47,6 +47,7 @@ const Search = React.lazy(() => import('./views/Search/Search'));
 const StickyNotes = React.lazy(() => import('./views/StickyNotes/StickyNotes'));
 const Ruleengine = React.lazy(() => import('./views/Ruleengine/Ruleengine'));
 const Registercomplaint = React.lazy(() => import('./SIB/Registercomplaint'));
+const Complaintdetail = React.lazy(() => import('./SIB/Complaintdetail'));
 
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
@@ -102,7 +103,7 @@ const routes = [
   { path: '/stickynotes', exact: true,  name: 'stickynotes', component: StickyNotes },
   { path: '/ruleengine', exact: true,  name: 'ruleengine', component: Ruleengine },
   { path: '/registercomplaint', exact: true,  name: 'registercomplaint', component: Registercomplaint },
-  { path: '/Complaint/:idt', exact: true,  name: 'Complaint Details', component: Registercomplaint },
+  { path: '/Complaint/:idt', exact: true,  name: 'Complaint Details', component: Complaintdetail },
 ];
 
 export default routes;
