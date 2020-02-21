@@ -103,7 +103,7 @@ const routes = [
   { path: '/stickynotes', exact: true,  name: 'stickynotes', component: StickyNotes },
   { path: '/ruleengine', exact: true,  name: 'ruleengine', component: Ruleengine },
   { path: '/registercomplaint', exact: true,  name: 'registercomplaint', component: Registercomplaint },
-  { path: '/Complaint/:idt', exact: true,  name: 'Complaint Details', component: Complaintdetail },
+  { path: '/Complaint/:id', exact: true,  name: 'Complaint Details', component: Complaintdetail },
 ];
 
 export default routes;
