@@ -4,7 +4,7 @@ import "antd/dist/antd.css";
 
 export default class Atmmasterdetails extends Component {
     render() {
-        // console.dir(this.props.form);
+        
         const { getFieldDecorator } = this.props.form;
         return (
             <div>

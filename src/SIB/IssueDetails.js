@@ -4,24 +4,26 @@ import "antd/dist/antd.css";
 
 export default class IssueDetails extends Component {
     render() {
+        console.log("@jksnfkjdsnkdnvkms");
+        // console.dir(this.props.form);
+		 const { getFieldDecorator } = this.props.form;
         return (
             <div>
-                <Row gutter={[8, 8]}>
+                 <Row gutter={[8, 8]}>
                     <Col span={12} >
-                        <Form.Item label="Complaints Category" >
-                        
-                            <Select disabled= {true}>
-                                <Select.Option value="1">India</Select.Option>
-                                <Select.Option value="2">US</Select.Option> 
-                            </Select>
+                    <Form.Item label="Country" >
+                        {getFieldDecorator('demoField')(<Select disabled={true}>
+                                <Select.Option value="1" >India</Select.Option>
+                                <Select.Option value="2">US</Select.Option>
+                            </Select>)} 
                         </Form.Item>
                     </Col>
 					<Col span={12} >
                         <Form.Item label="Nature of Complaint">
-                            <Select disabled= {true}>
-                                <Select.Option value="1">Maharashtra</Select.Option>
-                                <Select.Option value="2">Delhi</Select.Option> 
-                            </Select>
+                            {getFieldDecorator('NatureOfComplaint')(<Select disabled={true}>
+                                <Select.Option value="1" >India</Select.Option>
+                                <Select.Option value="2">US</Select.Option>
+                            </Select>)} 
                         </Form.Item>
                     </Col>
 				</Row>
@@ -29,41 +31,41 @@ export default class IssueDetails extends Component {
 				<Row gutter={[8, 8]}>
                     <Col span={6} >
                         <Form.Item label="Txn Amount">
-                            <Select disabled= {true}>
-                                <Select.Option value="1">India</Select.Option>
-                                <Select.Option value="2">US</Select.Option> 
-                            </Select>
+                            {getFieldDecorator('TxnAmount')(<Select disabled={true}>
+                                <Select.Option value="1" >India</Select.Option>
+                                <Select.Option value="2">US</Select.Option>
+                            </Select>)} 
                         </Form.Item>
                     </Col>
 					<Col span={6} >
                         <Form.Item label="Txn Reference No">
-                            <Select disabled= {true}>
-                                <Select.Option value="1">Maharashtra</Select.Option>
-                                <Select.Option value="2">Delhi</Select.Option> 
-                            </Select>
+                            {getFieldDecorator('TxnReferenceNo')(<Select disabled={true}>
+                                <Select.Option value="1" >India</Select.Option>
+                                <Select.Option value="2">US</Select.Option>
+                            </Select>)} 
                         </Form.Item>
                     </Col>
 					<Col span={6} >
                         <Form.Item label="Dispensed Amt">
-                            <Select disabled= {true}>
-                                <Select.Option value="1">Maharashtra</Select.Option>
-                                <Select.Option value="2">Delhi</Select.Option> 
-                            </Select>
+                            {getFieldDecorator('DispensedAmt')(<Select disabled={true}>
+                                <Select.Option value="1" >India</Select.Option>
+                                <Select.Option value="2">US</Select.Option>
+                            </Select>)}
                         </Form.Item>
                     </Col>
 					<Col span={6} >
                         <Form.Item label="Txn Date">
-                            <Select disabled= {true}>
-                                <Select.Option value="1">Maharashtra</Select.Option>
-                                <Select.Option value="2">Delhi</Select.Option> 
-                            </Select>
+                            {getFieldDecorator('TxnDate')(<Select disabled={true}>
+                                <Select.Option value="1" >India</Select.Option>
+                                <Select.Option value="2">US</Select.Option>
+                            </Select>)}
                         </Form.Item>
                     </Col>
 				</Row>
                 <Row gutter={[8, 8]}>
                     <Col span={24} >
                         <Form.Item label="Issue Description">
-                        <Input disabled= {true} />
+                        {getFieldDecorator('IssueDescription')(<Input disabled={true} />)} 
                         </Form.Item>
                     </Col>
 					
