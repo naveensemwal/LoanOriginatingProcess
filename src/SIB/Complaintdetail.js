@@ -13,26 +13,37 @@ const { Panel } = Collapse;
 export default class Complaintdetail extends Component {
   componentDidMount() {
     const { id } = this.props.match.params.id;
-    // console.dir("id " + this.props.match.params.id);
     this.getData();
 
 
   }
 
   getData = () => {
-    console.dir("id " + this.props.match.params.id);
-    Axios.get('/rest/bpm/wle/v1/task/'+this.props.match.params.id+'?action=getData&fields=atmSIB', {
+    // console.dir("id " + this.props.match.params.id);
+    Axios.get('/rest/bpm/wle/v1/task/' + this.props.match.params.id + '?action=getData&fields=atmSIB', {
       auth: {
         username: 'p8admin',
         password: 'Password123'
       }
     })
       .then(res => {
-        
-        console.dir(res);
+
+        // console.dir(res);
         const complaintData = JSON.parse(res.data.data.result);
         console.dir(complaintData);
-        // this.setState({ data: res.data.data.items, isLoading: false, count: res.total });
+        let fieldvalues = this.props.form.getFieldsValue();
+          fieldvalues.country =complaintData.atmSIB.country.value;
+          fieldvalues.state = complaintData.atmSIB.state.value
+          fieldvalues.city = complaintData.atmSIB.city.value
+          fieldvalues.branchName =complaintData.atmSIB.branchName.value;
+          fieldvalues.machineMake =complaintData.atmSIB.machineMake;
+          fieldvalues.atmAddress =complaintData.atmSIB.atmAddress;
+          fieldvalues.atmLocation =complaintData.atmSIB.atmLocation.value;
+          fieldvalues.custodian = complaintData.atmSIB.custodian.value;
+          fieldvalues.custodianName = complaintData.atmSIB.custodianName
+          fieldvalues.emailId =complaintData.atmSIB.emailId;
+          this.props.form.setFieldsValue(fieldvalues);
+
       })
   }
 
@@ -60,19 +71,21 @@ export default class Complaintdetail extends Component {
       <Form onSubmit={this.handleSubmit} layout="horizontal" >
         <div className="card-container">
           <Collapse defaultActiveKey={['1']}>
-            <Panel header="ATM Master Details" key="1" danger>
-              <Atmmasterdetails></Atmmasterdetails>
+            <Panel header="ATM Master Details" key="1">
+              <Atmmasterdetails form={this.props.form}></Atmmasterdetails>
             </Panel>
             <Panel header="Issue Details" key="2" >
-              <IssueDetails></IssueDetails>
+              <IssueDetails form={this.props.form}></IssueDetails>
             </Panel>
             <Panel header="Comments" key="3" >
-              <Comments></Comments>
+              <Comments form={this.props.form}></Comments>
             </Panel>
           </Collapse>
-
         </div>
       </Form>
     )
   }
 }
+
+
+Complaintdetail = Form.create({ name: "Complaintdetail" })(Complaintdetail)
