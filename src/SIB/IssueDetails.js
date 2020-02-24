@@ -1,18 +1,17 @@
 import React, { Component } from 'react'
-import { Col, Form, Input, InputNumber, Row, Select } from 'antd';
+import { Col, Form, Input, InputNumber, Row, Select ,DatePicker} from 'antd';
 import "antd/dist/antd.css";
 
 export default class IssueDetails extends Component {
     render() {
-        console.log("@jksnfkjdsnkdnvkms");
-        // console.dir(this.props.form);
+    
 		 const { getFieldDecorator } = this.props.form;
         return (
             <div>
                  <Row gutter={[8, 8]}>
                     <Col span={12} >
-                    <Form.Item label="Country" >
-                        {getFieldDecorator('demoField')(<Select disabled={true}>
+                    <Form.Item label="Complaint Category" >
+                        {getFieldDecorator('ComplaintCategory')(<Select disabled={true}>
                                 <Select.Option value="1" >India</Select.Option>
                                 <Select.Option value="2">US</Select.Option>
                             </Select>)} 
@@ -55,10 +54,8 @@ export default class IssueDetails extends Component {
                     </Col>
 					<Col span={6} >
                         <Form.Item label="Txn Date">
-                            {getFieldDecorator('TxnDate')(<Select disabled={true}>
-                                <Select.Option value="1" >India</Select.Option>
-                                <Select.Option value="2">US</Select.Option>
-                            </Select>)}
+                        {getFieldDecorator('TxnDate')(<DatePicker  style ={{width:'100%'}}disabled={true}/>)}  
+                        
                         </Form.Item>
                     </Col>
 				</Row>

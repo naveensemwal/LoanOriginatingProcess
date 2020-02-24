@@ -30,6 +30,7 @@ export default class Complaintdetail extends Component {
 
     
         const complaintData = res.data.data.resultMap;
+        console.dir(complaintData);
         let fieldvalues = this.props.form.getFieldsValue();
         console.dir(fieldvalues);
 
@@ -43,13 +44,16 @@ export default class Complaintdetail extends Component {
           fieldvalues.custodian = complaintData.atmSIB.custodian.value;
           fieldvalues.custodianName = complaintData.atmSIB.custodianName;
           fieldvalues.emailId =complaintData.atmSIB.emailId;
-          //fieldvalues.ComplaintCategory =complaintData.issueTracker.category.name;
-		      //fieldvalues.NatureOfComplaint =complaintData.issueTracker.natureOfComplaint.name;
-		      //fieldvalues.TxnAmount =complaintData.issueTracker.txnAmount;
-		      //fieldvalues.TxnReferenceNo =complaintData.issueTracker.txnRefNo;
-		      //fieldvalues.DispensedAmt =complaintData.issueTracker.dispensedAmt;
-		      //fieldvalues.TxnDate = complaintData.issueTracker.txnDate;
-		      //fieldvalues.IssueDescription =complaintData.issueTracker.issueDescription;
+          fieldvalues.ComplaintCategory =complaintData.issueTracker.category.name;
+		      fieldvalues.NatureOfComplaint =complaintData.issueTracker.natureOfComplaint.name;
+		      fieldvalues.TxnAmount =complaintData.issueTracker.txnAmount;
+		      fieldvalues.TxnReferenceNo =complaintData.issueTracker.txnRefNo;
+		      fieldvalues.DispensedAmt =complaintData.issueTracker.dispensedAmt;
+          fieldvalues.TxnDate = complaintData.issueTracker.txnDate;
+          let issueDesc = complaintData.issueTracker.issueDescription.replace("<p>","");
+          let issueDesc1 = issueDesc.replace("</p>","");
+          console.log("issue "+issueDesc1);
+		      fieldvalues.IssueDescription = issueDesc1;
           this.props.form.setFieldsValue(fieldvalues);
 
       })
@@ -78,7 +82,7 @@ export default class Complaintdetail extends Component {
 
       <Form onSubmit={this.handleSubmit} layout="horizontal" >
         <div className="card-container">
-          <Collapse defaultActiveKey={['1']}>
+          <Collapse defaultActiveKey={['1','2','3']}>
             <Panel header="ATM Master Details" key="1">
               {<Atmmasterdetails form={this.props.form}></Atmmasterdetails> }
             </Panel>
@@ -89,6 +93,10 @@ export default class Complaintdetail extends Component {
               <Comments form={this.props.form}></Comments>
             </Panel>
           </Collapse>
+        </div>
+        <br/>
+        <div style={{ display: "flex" }}>
+          <button  style={{color: '#000', marginLeft: 'auto',backgroundColor:'#73818f',width: '100px',fontSize:'large',height: '45px'}}>Submit</button>
         </div>
       </Form>
     )
