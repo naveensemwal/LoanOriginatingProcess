@@ -10,12 +10,12 @@ export default class Registercomplaint extends Component {
   handleSubmit = e => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
-      if (!err) {
+      // if (!err) {
         const requestParam = { ...values };
         delete requestParam.countryCode;
         console.log(JSON.stringify(requestParam));
         message.config({ top: 100, });
-        message.loading('Registering Complaint..').then(
+        message.loading('Registering Complaint..',60).then(
             Axios.post(`/rest/bpm/wle/v1/service/SIBATMP@Launch and Insert?action=start&params=` + JSON.stringify(requestParam) + `&createTask=false&parts=all`, {
               auth: {
                 username: 'naveen',
@@ -23,18 +23,18 @@ export default class Registercomplaint extends Component {
               }
             })
               .then(res => {
-                console.log(res);
+                console.log(res.data.data.data.caseIdentifier);
                 message.destroy();
-                message.success('Complaint Registered Successfully!', 5);
+                message.success(`Complaint CRN: ${res.data.data.data.caseIdentifier.split("_").pop()}  Registered Successfully!`, 5);
+                // message.success({});
                 this.props.form.resetFields()
               })
               .catch(function (error) {
-                // handle error
                 message.destroy();
                 message.error('Complaint could not be registered.Please try again!', 5);
               })
           )
-      }
+      // }
     });
   };
 
@@ -59,17 +59,7 @@ export default class Registercomplaint extends Component {
     );
     return (
       <div>
-      {/* <PageHeader
-      style={{
-        border: '1px solid rgb(235, 237, 240)',
-        background: '#E0EAFC', 
-        background: '-webkit-linear-gradient(to right, #CFDEF3, #E0EAFC)' ,
-        background: 'linear-gradient(to right, #CFDEF3, #E0EAFC)', 
-
-      }}
-     title="Register you complaints here"
-    /> */}
-    
+      
     <br></br>
       <Form {...formItemLayout} onSubmit={this.handleSubmit}>
 
@@ -173,17 +163,9 @@ export default class Registercomplaint extends Component {
             <Form.Item label='Date Time of transaction '>
               {getFieldDecorator('txnDate', {
                 rules: [{ type: 'object', required: true, message: 'Please select Date!' }],
-              })(<DatePicker />)}
-            </Form.Item>
-            <Form.Item label='Time of transaction'>
-              {getFieldDecorator('txnTime', {
-                rules: [{ type: 'object', required: true, message: 'Please select time!' }],
-              })(<TimePicker use12Hours format="h:mm a" />)}
+              })(<DatePicker showTime format="DD/MM/YYYY hh:mm A" use12Hours/>)}
             </Form.Item>
           </div> : null}
-
-
-
         {this.props.form.getFieldValue('complaintType') === 'cardCaptured' ?
           <Form.Item label="Card Captured Details">
             {getFieldDecorator('cardCaptured', {
@@ -202,7 +184,7 @@ export default class Registercomplaint extends Component {
             />)}
           </Form.Item> : null}
 
-        <Form.Item wrapperCol={{ span: 12, offset: 6 }}>
+        <Form.Item wrapperCol={{ span: 1, offset: 12 }}>
           <Button type="primary" htmlType="submit">
             Submit
           </Button>

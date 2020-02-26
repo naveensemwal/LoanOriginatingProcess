@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Collapse, Form, Tabs, Card } from 'antd';
+import { Collapse, Form, Tabs, Card,Button,message } from 'antd';
 import Atmmasterdetails from './Atmmasterdetails';
 import Comments from './Comments';
 import IssueDetails from './IssueDetails';
@@ -49,7 +49,7 @@ export default class Complaintdetail extends Component {
 		      fieldvalues.TxnAmount =complaintData.issueTracker.txnAmount;
 		      fieldvalues.TxnReferenceNo =complaintData.issueTracker.txnRefNo;
 		      fieldvalues.DispensedAmt =complaintData.issueTracker.dispensedAmt;
-          fieldvalues.TxnDate = complaintData.issueTracker.txnDate;
+          // fieldvalues.TxnDate = complaintData.issueTracker.txnDate;
           let issueDesc = complaintData.issueTracker.issueDescription.replace("<p>","");
           let issueDesc1 = issueDesc.replace("</p>","");
           console.log("issue "+issueDesc1);
@@ -63,8 +63,36 @@ export default class Complaintdetail extends Component {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
+        // console.log('Received values of form: ', values);
+
+        const requestParam={
+          taskID:this.props.match.params.id,
+          comments:this.props.form.getFieldValue('vendorComments')};
+        console.log(JSON.stringify(requestParam) );
+        message.config({ top: 100, });
+        message.loading('Registering Complaint..').then(
+            Axios.post(`/rest/bpm/wle/v1/service/SIBATMP@Submit Vendor Comments?action=start&params=` + JSON.stringify(requestParam) + `&createTask=false&parts=all`, {
+              auth: {
+                username: 'naveen',
+                password: 'Password123'
+              }
+            })
+              .then(res => {
+                console.log(res);
+                message.destroy();
+                message.success('Task Completed Successfully!', 5);
+                this.props.form.resetFields()
+                this.props.history.push("/");
+              })
+              .catch(function (error) {
+                // handle error
+                message.destroy();
+                message.error('Task could not be completed.Please try again!', 5);
+              })
+          )
+
       }
+      
     });
   };
 
@@ -93,10 +121,6 @@ export default class Complaintdetail extends Component {
               <Comments form={this.props.form}></Comments>
             </Panel>
           </Collapse>
-        </div>
-        <br/>
-        <div style={{ display: "flex" }}>
-          <button  style={{color: '#000', marginLeft: 'auto',backgroundColor:'#73818f',width: '100px',fontSize:'large',height: '45px'}}>Submit</button>
         </div>
       </Form>
     )
