@@ -15,7 +15,9 @@ import {
   Col,
   message,
   Input,
+  Card,
 } from 'antd';
+
 import "antd/dist/antd.css";
 
 const { Option } = Select;
@@ -130,8 +132,11 @@ export default class Launch extends Component {
               </Upload>
         </Form.Item>
         <Form.Item label="Are you an existing Bank customer?">
-          {getFieldDecorator('switch', { valuePropName: 'checked' })(<Switch />)}
+          {getFieldDecorator('isExistingCustomer', { valuePropName: 'checked' })(<Switch />)}
         </Form.Item>
+        <Card>
+
+        </Card>
         <Form.Item
           label='Name'
         >
@@ -159,7 +164,7 @@ export default class Launch extends Component {
           })(<Input addonBefore={prefixSelector} style={{ width: '100%' }} />)}
         </Form.Item>
         <Form.Item label="Salaried">
-          {getFieldDecorator('switch', { valuePropName: 'salaried' })(<Switch />)}
+          {getFieldDecorator('isSalaried', { valuePropName: 'salaried' })(<Switch />)}
         </Form.Item>
         <Form.Item label="Net Monthly Income" hasFeedback>
           {getFieldDecorator('monthlyIncome', {

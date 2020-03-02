@@ -2,8 +2,8 @@ import React, { Component } from 'react';
 import { Query, Builder, BasicConfig, Utils as QbUtils } from 'react-awesome-query-builder';
 import "antd/dist/antd.css";
 import 'react-awesome-query-builder/css/styles.scss';
-import 'react-awesome-query-builder/css/compact_styles.scss'; //optional, for more compact styles
-import { Menu, Icon,Row,Col } from 'antd';
+import 'react-awesome-query-builder/css/compact_styles.scss'; 
+import { Menu,Icon,Row,Col } from 'antd';
 
 // You need to provide your own config. See below 'Config format'
 
@@ -116,44 +116,44 @@ export default class Ruleengine extends Component {
           style={{ width: 256 }}
         >
           <SubMenu
-            key="sub1"
+            key="documentCheckList"
             title={
               <span>
                 <Icon type="setting" />
-                <span>Loan Eligibility Rules</span>
+                <span>Document Checklist Rules</span>
               </span>
             }
           >
-            <Menu.Item key="1">Home Loan Eligibility</Menu.Item>
-            <Menu.Item key="2">Auto Loan Eligibility </Menu.Item>
-            <Menu.Item key="3">Personal Loan Eligibility</Menu.Item>
-            <Menu.Item key="4">Mortgage Loan Eligibility</Menu.Item>
+            <Menu.Item key="homeLoan">Home Loan</Menu.Item>
+            <Menu.Item key="autoLoan">Auto Loan</Menu.Item>
+            <Menu.Item key="personalLoan">Personal Loan</Menu.Item>
+            <Menu.Item key="mortgageLoan">Mortgage Loan</Menu.Item>
           </SubMenu>
-          <SubMenu key="sub2" title={
+          <SubMenu key="documentConsistency" title={
               <span>
                 <Icon type="setting" />
-                <span>Loan Dispersal Rules</span>
+                <span>Document Consistency Rules</span>
               </span>
             }
           >
-            <Menu.Item key="5">Home Loan Dispersal</Menu.Item>
-            <Menu.Item key="6">Auto Loan Dispersal </Menu.Item>
-            <Menu.Item key="7">Personal Loan Dispersal</Menu.Item>
-            <Menu.Item key="8">Mortgage Loan Dispersal</Menu.Item>
+            <Menu.Item key="homeLoan">Home Loan</Menu.Item>
+            <Menu.Item key="autoLoan">Auto Loan</Menu.Item>
+            <Menu.Item key="personalLoan">Personal Loan</Menu.Item>
+            <Menu.Item key="mortgageLoan">Mortgage Loan</Menu.Item>
           </SubMenu>
           <SubMenu
             key="sub4"
             title={
               <span>
-                <Icon type="setting" />
+                <Icon type="customerClassification" />
                 <span>Loan Rejection Rules</span>
               </span>
             }
           >
-            <Menu.Item key="9">Home Loan Rejection</Menu.Item>
-            <Menu.Item key="10">Home Loan Rejection</Menu.Item>
-            <Menu.Item key="11">Home Loan Rejection</Menu.Item>
-            <Menu.Item key="12">Home Loan Rejection</Menu.Item>
+            <Menu.Item key="homeLoan">Home Loan</Menu.Item>
+            <Menu.Item key="autoLoan">Auto Loan</Menu.Item>
+            <Menu.Item key="personalLoan">Personal Loan</Menu.Item>
+            <Menu.Item key="mortgageLoan">Mortgage Loan</Menu.Item>
           </SubMenu>
         </Menu>
       </Col>
