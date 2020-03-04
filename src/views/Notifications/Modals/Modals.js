@@ -74,6 +74,8 @@ class Modals extends Component {
     });
   }
 
+
+
   render() {
     return (
       <div className="animated fadeIn">
