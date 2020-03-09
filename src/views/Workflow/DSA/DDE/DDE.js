@@ -13,6 +13,7 @@ import Incomedetails from '../../../../Compositeviews/Incomedetails/Incomedetail
 import Dcc from '../../../../Compositeviews/Dcc/Dcc';
 import Employmentdetails from '../../../../Compositeviews/Employmentdetails/Employmentdetails';
 import Identificationdetails from '../../../../Compositeviews/Identificationdetails/Identificationdetails';
+import BankStatementDetails from '../../../../Compositeviews/BankStatementDetails/BankStatementDetails';
 
 const { Panel } = Collapse;
 
@@ -110,6 +111,16 @@ export default class DDE extends Component {
             <TabPane tab="Case History" key="8">
               <Card><Casehistory></Casehistory></Card>
             </TabPane>
+            <TabPane tab="Bank statement Details" key="9">
+              {/* <Card> */}
+                <BankStatementDetails></BankStatementDetails>
+              {/* </Card> */}
+            </TabPane>
+
+          
+
+
+
           </Tabs>
         </div>
       </Form>

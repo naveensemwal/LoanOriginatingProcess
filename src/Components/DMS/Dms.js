@@ -5,7 +5,7 @@ import Iframe from 'react-iframe';
 import { Input, Table } from 'reactstrap';
 import IconButton from '@material-ui/core/IconButton';
 import PageviewIcon from '@material-ui/icons/Pageview';
-import FileViewer from 'react-file-viewer';
+// import FileViewer from 'react-file-viewer';
 
 const file = 'http://localhost:8080/viewone/images/tomcat.gif'
 const type = 'gif'

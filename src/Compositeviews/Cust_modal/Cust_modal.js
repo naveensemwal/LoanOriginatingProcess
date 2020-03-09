@@ -37,14 +37,12 @@ export default class Cust_modal extends React.Component {
           Open Modal
         </Button>
         <Modal
-          title="Basic Modal"
+          title={this.props.modalTitle}
           visible={this.state.visible}
           onOk={this.handleOk}
           onCancel={this.handleCancel}
         >
-          <p>Some contents...</p>
-          <p>Some contents...</p>
-          <p>Some contents...</p>
+         {this.props.modalBodyData}
         </Modal>
       </div>
     );
