@@ -63,13 +63,13 @@ const columns2 = [
             {
                 title:'Sum (in Rs.)',
                 width:230,
-                dataIndex: 'SumInRs',
+                dataIndex: 'CreditSumInRs',
 
             },
             {
                 title:'No.',
                 width:230,
-                dataIndex: 'No',
+                dataIndex: 'CreditNo',
 
             }
         ]
@@ -81,13 +81,13 @@ const columns2 = [
             {
                 title:'Sum (in Rs.)',
                 width:230,
-                dataIndex: 'SumInRs',
+                dataIndex: 'DebitSumInRs',
 
             },
             {
                 title:'No.',
                 width:230,
-                dataIndex: 'No',
+                dataIndex: 'DebitNo',
 
             }
         ]
@@ -127,9 +127,12 @@ const columns2 = [
 const data2 =[
     {
         key :1,
-        Months:'JUL',
-        Credit:[10,2],
-        Debit :33,
+        Months:'JULY',
+        CreditSumInRs: 10,
+        CreditNo: 2,
+        DebitSumInRs: 10,
+        DebitNo: 2,
+        Debit: 33,
         ChequeReturns :'',
         MonthlyAverageBankBalance:'sss',
 
@@ -137,7 +140,10 @@ const data2 =[
     {
         key :2,
         Months:'AUG',
-         Credit:[10,2],
+        CreditSumInRs: 10,
+        CreditNo: 2,
+        DebitSumInRs: 13,
+        DebitNo: 4,
         Debit :33,
         ChequeReturns :'',
         MonthlyAverageBankBalance:'sss',
@@ -153,7 +159,7 @@ const data2 =[
     {
         key :4,
         Months:'OCT',
-         Credit:[10,2],
+         Credit:[10, 2],
         Debit :33,
         ChequeReturns :'',
         MonthlyAverageBankBalance:'sss',
@@ -175,7 +181,7 @@ const data2 =[
         MonthlyAverageBankBalance:'sss',
     },
     {
-        key :5,
+        key :7,
         Months:'TOTAL',
          Credit:[10,2],
         Debit :33,
@@ -183,7 +189,7 @@ const data2 =[
         MonthlyAverageBankBalance:'sss',
     },
     {
-        key :5,
+        key :8,
         Months:'AVERAGE',
          Credit:[10,2],
         Debit :33,

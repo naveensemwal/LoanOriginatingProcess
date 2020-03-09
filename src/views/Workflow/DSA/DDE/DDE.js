@@ -14,7 +14,8 @@ import Dcc from '../../../../Compositeviews/Dcc/Dcc';
 import Employmentdetails from '../../../../Compositeviews/Employmentdetails/Employmentdetails';
 import Identificationdetails from '../../../../Compositeviews/Identificationdetails/Identificationdetails';
 import BankStatementDetails from '../../../../Compositeviews/BankStatementDetails/BankStatementDetails';
-
+import FinancialDetailsRation from '../../../../Compositeviews/FinancialDetailsRation/FinancialDetailsRation';
+import Cust_Obligationss from '../../../../Compositeviews/Cust_Obligationss/Cust_Obligationss';
 const { Panel } = Collapse;
 
 export default class DDE extends Component {
@@ -116,7 +117,21 @@ export default class DDE extends Component {
                 <BankStatementDetails></BankStatementDetails>
               {/* </Card> */}
             </TabPane>
-
+            <TabPane tab="Financial Details" key="10">
+              <Collapse
+                defaultActiveKey={['1']}
+              >
+                <Panel header="Ratios" key="1" danger>
+                  <FinancialDetailsRation></FinancialDetailsRation>
+                </Panel>
+                <Panel header="Obligations Details" key="2" >
+                  <Cust_Obligationss></Cust_Obligationss>
+                </Panel>
+                <Panel header="Financial Details" key="3" >
+                  <Addressdetails></Addressdetails>
+                </Panel>
+              </Collapse>
+            </TabPane>
           
 
 
