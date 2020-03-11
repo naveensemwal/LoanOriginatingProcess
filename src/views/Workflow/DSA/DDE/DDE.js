@@ -16,6 +16,7 @@ import Identificationdetails from '../../../../Compositeviews/Identificationdeta
 import BankStatementDetails from '../../../../Compositeviews/BankStatementDetails/BankStatementDetails';
 import FinancialDetailsRation from '../../../../Compositeviews/FinancialDetailsRation/FinancialDetailsRation';
 import Cust_Obligationss from '../../../../Compositeviews/Cust_Obligationss/Cust_Obligationss';
+import CustFinancialDetails from '../../../../Compositeviews/CustFinancialDetails/CustFinancialDetails';
 const { Panel } = Collapse;
 
 export default class DDE extends Component {
@@ -127,8 +128,8 @@ export default class DDE extends Component {
                 <Panel header="Obligations Details" key="2" >
                   <Cust_Obligationss></Cust_Obligationss>
                 </Panel>
-                <Panel header="Financial Details" key="3" >
-                  <Addressdetails></Addressdetails>
+                <Panel header="Financials Gross TurnOver" key="3" >
+                  <CustFinancialDetails></CustFinancialDetails>
                 </Panel>
               </Collapse>
             </TabPane>
