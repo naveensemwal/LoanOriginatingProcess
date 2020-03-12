@@ -1,24 +1,8 @@
-import React, { Component } from 'react'
-import {
-  Form,
-  Select,
-  InputNumber,
-  Switch,
-  Radio,
-  Slider,
-  Button,
-  Upload,
-  Icon,
-  Rate,
-  Checkbox,
-  Row,
-  Col,
-  message,
-  Input,
-  Card,
-} from 'antd';
-
+import { Button, Checkbox, Form, Icon, Input, message, Select, Switch, Upload } from 'antd';
 import "antd/dist/antd.css";
+import React, { Component } from 'react';
+import Stickynotes from './StickyNotes';
+
 
 const { Option } = Select;
 
@@ -61,6 +45,7 @@ export default class Launch extends Component {
 
   state = {
     loading: false,
+    isExistingCustomer:false,
   };
 
   handleChange = info => {
@@ -132,11 +117,13 @@ export default class Launch extends Component {
               </Upload>
         </Form.Item>
         <Form.Item label="Are you an existing Bank customer?">
-          {getFieldDecorator('isExistingCustomer', { valuePropName: 'checked' })(<Switch />)}
+          {getFieldDecorator('isExistingCustomer', { valuePropName: 'checked' })( <Switch checkedChildren="Yes" unCheckedChildren="No" 
+          onChange={e => this.setState({ isExistingCustomer: e})}
+          checked={this.state.isExistingCustomer} />)}
         </Form.Item>
-        <Card>
-
-        </Card>
+        <Form.Item wrapperCol={{ span: 14, offset: 6 }}>
+        <Stickynotes isExistingCustomer={this.state.isExistingCustomer}></Stickynotes>          
+        </Form.Item>
         <Form.Item
           label='Name'
         >
@@ -199,7 +186,7 @@ export default class Launch extends Component {
             </Checkbox>,
           )}
         </Form.Item>
-        <Form.Item wrapperCol={{ span: 12, offset: 6 }}>
+        <Form.Item wrapperCol={{ span: 12, offset: 12 }}>
           <Button type="primary" htmlType="submit">
             Submit
           </Button>

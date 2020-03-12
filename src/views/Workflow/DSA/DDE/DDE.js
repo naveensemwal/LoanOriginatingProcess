@@ -1,5 +1,4 @@
 import { Collapse, Form, Tabs, Card } from 'antd';
-import "antd/dist/antd.css";
 import React, { Component } from 'react';
 import Personaldetails from '../../../../Compositeviews/Personaldetails/Personaldetails';
 import Familydetails from '../../../../Compositeviews/Familydetails/Familydetails';
@@ -13,10 +12,9 @@ import Incomedetails from '../../../../Compositeviews/Incomedetails/Incomedetail
 import Dcc from '../../../../Compositeviews/Dcc/Dcc';
 import Employmentdetails from '../../../../Compositeviews/Employmentdetails/Employmentdetails';
 import Identificationdetails from '../../../../Compositeviews/Identificationdetails/Identificationdetails';
-import BankStatementDetails from '../../../../Compositeviews/BankStatementDetails/BankStatementDetails';
-import FinancialDetailsRation from '../../../../Compositeviews/FinancialDetailsRation/FinancialDetailsRation';
-import Cust_Obligationss from '../../../../Compositeviews/Cust_Obligationss/Cust_Obligationss';
-import CustFinancialDetails from '../../../../Compositeviews/CustFinancialDetails/CustFinancialDetails';
+import Statementanalyzer from '../../../../Compositeviews/Statementanalyzer/Statementanalyzer';
+import Auxiliary from '../../../../Util/Auxiliary';
+
 const { Panel } = Collapse;
 
 export default class DDE extends Component {
@@ -110,33 +108,12 @@ export default class DDE extends Component {
                 </Panel>
               </Collapse>
             </TabPane>
-            <TabPane tab="Case History" key="8">
-              <Card><Casehistory></Casehistory></Card>
+            <TabPane tab="Statement Analysis" key="8">
+            <Auxiliary><Statementanalyzer></Statementanalyzer></Auxiliary>
             </TabPane>
-            <TabPane tab="Bank statement Details" key="9">
-              {/* <Card> */}
-                <BankStatementDetails></BankStatementDetails>
-              {/* </Card> */}
+            <TabPane tab="Case History" key="9">
+            <Card><Casehistory></Casehistory></Card>
             </TabPane>
-            <TabPane tab="Financial Details" key="10">
-              <Collapse
-                defaultActiveKey={['1']}
-              >
-                <Panel header="Ratios" key="1" danger>
-                  <FinancialDetailsRation></FinancialDetailsRation>
-                </Panel>
-                <Panel header="Obligations Details" key="2" >
-                  <Cust_Obligationss></Cust_Obligationss>
-                </Panel>
-                <Panel header="Financials Gross TurnOver" key="3" >
-                  <CustFinancialDetails></CustFinancialDetails>
-                </Panel>
-              </Collapse>
-            </TabPane>
-          
-
-
-
           </Tabs>
         </div>
       </Form>
