@@ -130,44 +130,69 @@ export default class CustFinancialDetails extends Component {
           </Form.Item>
         </Form.Item>
 
-        {/* <Form.Item label="Agricultural Income" style={{ marginBottom: 0 }}>
+        <Form.Item
+          label="Agricultural Income"
+          style={{ marginBottom: 0 }}
+        >
           <Form.Item
-            name=""
+            name="year"
             rules={[{ required: true }]}
             style={{
               display: "inline-block",
-              width: "calc(50%-5px)",
+              width: "calc(50% - 5px)",
               marginRight: 8
             }}
           >
-            <input />
+            <Input placeholder="Input birth year" />
           </Form.Item>
           <Form.Item
-            name=""
+            name="month"
             rules={[{ required: true }]}
-            style={{ display: "inline-block", width: "calc(50%-5px)" }}
+            style={{ display: "inline-block", width: "calc(50% - 5px)" }}
           >
-            <input />
+            <Input placeholder="Input birth month" />
           </Form.Item>
         </Form.Item>
-
-      <Form.Item label="Gross  TurnOver" style={[{marginBottom:0}]}>
-                <Form.Item name='' rules={[{required:true}]} style={{display:'inline-block',width:'calc(50%-5x)',marginRight:8}}>
-                    <Input/>
-                </Form.Item>
-                <Form.Item name='' rules={[{required:true}]} style={{display:'inline-block', width:'calc(50%-5px)'}}>
-                    <Input/>
-                </Form.Item>
-            </Form.Item>
-
-            <Form.Item label="Interest Expense" style={{marginBottom:0}}>
-                <Form.Item name="" rules={[{required:true}]} style={{display:'inline-block',width:'calc(50%-5x)',marginRight:8}}>
-                    <Input/>
-                </Form.Item>
-                <Form.Item name="" rules={[{required:true}]} style={{display:'inline-block',width:'calc(50%-5x)'}}>
-                    <Input/>
-                </Form.Item>
-            </Form.Item> */}
+        <Form.Item
+          label="Gross Turnover"
+          style={{ marginBottom: 0 }}
+        >
+          <Form.Item
+            name="year"
+            rules={[{ required: true }]}
+            style={{
+              display: "inline-block",
+              width: "calc(50% - 5px)",
+              marginRight: 8
+            }}
+          >
+            <Input placeholder="Input birth year" />
+          </Form.Item>
+          <Form.Item
+            name="month"
+            rules={[{ required: true }]}
+            style={{ display: "inline-block", width: "calc(50% - 5px)" }}
+          >
+            <Input placeholder="Input birth month" />
+          </Form.Item>
+        </Form.Item>
+        <Form.Item
+          label="Interest Expense"
+          style={{ marginBottom: 0 }}
+        >
+          <Form.Item
+            name="year"
+            rules={[{ required: true }]}
+            style={{
+              display: "inline-block",
+              width: "calc(50% - 5px)",
+              marginRight: 8
+            }}
+          >
+            <Input placeholder="Input birth year" />
+          </Form.Item>
+        
+        </Form.Item>
             </Form> 
     );
   }
