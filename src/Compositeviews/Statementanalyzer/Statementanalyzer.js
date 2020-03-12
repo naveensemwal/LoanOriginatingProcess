@@ -7,7 +7,7 @@ import Auxiliary from '../../Util/Auxiliary'
 import Portfolio from "./Portfolio";
 import BalanceHistory from "./BalanceHistory";
 // import './Statement.css';
-import '../../styles/wieldy.less';
+// import '../../styles/wieldy.less';
 
 
 const data = [

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
 // import { renderRoutes } from 'react-router-config';
 import './App.scss';
-import './styles/wieldy.less';
+// import './styles/wieldy.less';
 
 
 const loading = () => <div className="animated fadeIn pt-3 text-center">Loading...</div>;
