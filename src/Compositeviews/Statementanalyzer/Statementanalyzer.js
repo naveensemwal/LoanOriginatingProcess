@@ -6,8 +6,9 @@ import { incrementData, lineData } from "./data";
 import Auxiliary from '../../Util/Auxiliary'
 import Portfolio from "./Portfolio";
 import BalanceHistory from "./BalanceHistory";
-import './Statement.css';
-// import "antd/dist/antd.css";
+// import './Statement.css';
+import '../../styles/wieldy.less';
+
 
 const data = [
     {
@@ -28,14 +29,13 @@ const data = [
         docType: 'Bank Statement',
         isExpired: true,
     },
-
 ];
 
-export default class Ruleengine extends Component {
+export default class Statementanalyzer extends Component {
     render() {
         return (
             <Auxiliary>
-                <Row >
+                <Row gutter={[8,8]}>
                     <Col xs={24} sm={12} md={12} lg={12} xl={6}>
                         <Card>
                             <List
@@ -54,7 +54,7 @@ export default class Ruleengine extends Component {
                         </Card>
                     </Col>
                     <Col span={18}>
-                        <Row >
+                        <Row gutter={[8,8]}>
                             <Col xl={6} lg={12} md={12} sm={12} xs={24}>
                                 <ChartCard prize=" ₹16,96,24,735.17" title="23" icon="bitcoin"
                                     children={<ResponsiveContainer width="100%" height={75}>
@@ -123,13 +123,13 @@ export default class Ruleengine extends Component {
                                     styleName="down" desc="Average EOD Balance" />
                             </Col>
                             <Col xl={12} lg={24} md={12} sm={24} xs={24}>
-                <Portfolio/>
-              </Col>
-              <Col xl={12} lg={24} md={12} sm={24} xs={24}>
-                <BalanceHistory/>
-              </Col>
-      
-               {/*<Col xl={9} lg={24} md={24} sm={24} xs={24}>
+                                <Portfolio />
+                            </Col>
+                            <Col xl={12} lg={24} md={12} sm={24} xs={24}>
+                                <BalanceHistory />
+                            </Col>
+
+                            {/*<Col xl={9} lg={24} md={24} sm={24} xs={24}>
                 <SendMoney/>
               </Col>
               <Col xl={6} lg={12} md={12} sm={24} xs={24}>
@@ -149,8 +149,6 @@ export default class Ruleengine extends Component {
                         </Row>
                     </Col>
                 </Row>
-
-
             </Auxiliary>
 
         )
