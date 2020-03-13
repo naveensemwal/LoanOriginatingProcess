@@ -30,10 +30,15 @@ export default class BankStatmentDetails extends Component {
         dataIndex: 'view',
         // render: text => <Icon type="eye"  onClick={(e) => { this.onView (record.key, e); }} />
         render: (text, record) => (
-          <Icon type="eye"  onClick={(e) => { this.onView (record, e); }} />
-          
+          <Icon type="eye"  onClick={(e) => { this.onView (record, e); }} />          
         ),
       },
+      {
+        title:'Download',
+        dataIndex:'download',
+      render: text=><a href='#' class='btn btn-primary'>{text}</a>
+      }
+ 
       
     ];
     
@@ -42,25 +47,28 @@ export default class BankStatmentDetails extends Component {
         key: '1',
         name: 'John Brown',
         view: ' amita singh',
-    
+        download:'Download',
         
       },
       {
         key: '2',
         name: 'Jim Green',
-        view: ' '
+        view: ' ',
+        download:'Download',
         
       },
       {
         key: '3',
         name: 'Joe Black',
-        view: ' <Button type="primary" onClick={() => this.setModal1Visible(true)}> Display a modal dialog at 20px to Top</Button>'
+        view: ' ',
+        download:'Download',
        
       },
       {
         key: '4',
         name: 'Disabled User',
-        view: ' <Button type="primary" onClick={() => this.setModal1Visible(true)}> Display a modal dialog at 20px to Top</Button>'
+        view: ' ',
+        download:'Download',
       
       },
     ];
@@ -111,10 +119,13 @@ export default class BankStatmentDetails extends Component {
         <Divider />
         <BankStatementViewTable/>
       
-        <Table
+        <Table className="table table-hover table-stacked "
           columns={this.columns}
           dataSource={this.state.data}
         />
+<div class="text-center">
+        <a href='#' class='btn btn-primary text-center'>Upload</a>
+        </div>
         <Modal
           title={this.state.title}
           visible={this.state.showModal}

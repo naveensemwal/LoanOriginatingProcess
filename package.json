@@ -64,7 +64,7 @@
     "react-test-renderer": "^16.12.0",
     "reactjs-pdf-reader": "^1.0.9",
     "reactstrap": "^8.3.2",
-    "recharts": "^2.0.0-beta.1",
+    "recharts": "^2.0.0-beta.2",
     "simple-line-icons": "^2.4.1",
     "simple-pdf-viewer": "^2.0.3"
   },
