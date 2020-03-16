@@ -49,6 +49,7 @@ const Ruleengine = React.lazy(() => import('./views/Ruleengine/Ruleengine'));
 const Registercomplaint = React.lazy(() => import('./SIB/Registercomplaint'));
 const Complaintdetail = React.lazy(() => import('./SIB/Complaintdetail'));
 
+
 // https://github.com/ReactTraining/react-router/tree/master/packages/react-router-config
 const routes = [
   { path: '/', exact: true, name: 'Home' },

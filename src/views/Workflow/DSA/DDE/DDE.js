@@ -17,6 +17,13 @@ import BankStatementDetails from '../../../../Compositeviews/BankStatementDetail
 import FinancialDetailsRation from '../../../../Compositeviews/FinancialDetailsRation/FinancialDetailsRation';
 import Cust_Obligationss from '../../../../Compositeviews/Cust_Obligationss/Cust_Obligationss';
 import CustFinancialDetails from '../../../../Compositeviews/CustFinancialDetails/CustFinancialDetails';
+import CreditSanctionCondition from  '../../../../Compositeviews/CreditSanctionCondition/CreditSanctionCondition';
+import CustomerRelationship from  '../../../../Compositeviews/CustomerRelationship/CustomerRelationship';
+import CrossSellingRecommendation from   '../../../../Compositeviews/CrossSellingRecommendation/CrossSellingRecommendation';
+import VerificationDetails from '../../../../Compositeviews/VerficationDetails/VerificationDetails';
+import VerificationList from '../../../../Compositeviews/VerificationList/VerificationList';
+
+
 const { Panel } = Collapse;
 
 export default class DDE extends Component {
@@ -133,9 +140,60 @@ export default class DDE extends Component {
                 </Panel>
               </Collapse>
             </TabPane>
-          
+            <TabPane tab="Credit Sanction Condition" key="11">
+                <Collapse defaultActiveKey={['1']}>
+                  <Panel header="Credit Sanction Condition" key="1">
+                     {/* <Card> */}
+                    <CreditSanctionCondition></CreditSanctionCondition>
+                    {/* </Card> */}
+                  </Panel>
+                 
+                </Collapse>
+            </TabPane>
+            <TabPane tab="Customer Relationship" key="12">
+                <Collapse defaultActiveKey={['1']}>
+                  <Panel header="Customer Realtionship" key="1">
+                     {/* <Card> */}
+                    <CustomerRelationship></CustomerRelationship>
+                    {/* </Card> */}
+                  </Panel>
+                 
+                </Collapse>
+            </TabPane>
 
+            <TabPane tab="Cross Selling Recommendation" key="13">
+                <Collapse defaultActiveKey={['1']}>
+                  <Panel header="Customer Realtionship" key="1">
+                     {/* <Card> */}
+                    <CrossSellingRecommendation></CrossSellingRecommendation>
+                    {/* </Card> */}
+                  </Panel>
+                 
+                </Collapse>
+            </TabPane>
 
+            <TabPane tab="Verification List" key="14">
+                <Collapse defaultActiveKey={['1']}>
+                  <Panel header="Verification List" key="1">
+                     {/* <Card> */}
+                    <VerificationList></VerificationList>
+                    {/* </Card> */}
+                  </Panel>
+                 
+                </Collapse>
+            </TabPane>
+
+            
+            <TabPane tab="Verification Details" key="15">
+                <Collapse defaultActiveKey={['1']}>
+                  <Panel header="Verification Details" key="1">
+                     {/* <Card> */}
+                    <VerificationDetails></VerificationDetails>
+                    {/* </Card> */}
+                  </Panel>
+                 
+                </Collapse>
+            </TabPane>
 
           </Tabs>
         </div>
