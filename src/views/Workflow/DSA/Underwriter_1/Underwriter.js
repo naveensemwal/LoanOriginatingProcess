@@ -1,4 +1,4 @@
-import { Collapse, Form, Tabs, Card,Button } from 'antd';
+import { Collapse, Form, Tabs, Card,Button, Menu, Dropdown, Icon } from 'antd';
 import "antd/dist/antd.css";
 import React, { Component } from 'react';
 import Personaldetails from '../../../../Compositeviews/Personaldetails/Personaldetails';
@@ -23,6 +23,7 @@ import CrossSellingRecommendation from   '../../../../Compositeviews/CrossSellin
 import VerificationDetails from '../../../../Compositeviews/VerficationDetails/VerificationDetails';
 import VerificationList from '../../../../Compositeviews/VerificationList/VerificationList';
 import DedupeResult from '../../../../Compositeviews/DedupeResult/DedupeResult';
+import Riskprofile from '../../../../Components/Risk Profile/Riskprofile'
 
 
 const { Panel } = Collapse;
@@ -56,10 +57,19 @@ export default class DDE extends Component {
     return e && e.fileList;
   };
 
+ 
 
   render() {
     const { size } = this.state;
     const { TabPane } = Tabs;
+	const menu =(
+				<Menu >
+				<Menu.Item key="1">Forward</Menu.Item>
+				<Menu.Item key="2">Approve</Menu.Item>
+				<Menu.Item key="3">Reject</Menu.Item>
+        <Menu.Item key="4">Provisional Approval</Menu.Item>
+        </Menu>
+				);
     return (
       <Form onSubmit={this.handleSubmit} layout="horizontal" >
         <div className="card-container">
@@ -210,6 +220,17 @@ export default class DDE extends Component {
                 </Collapse>
             </TabPane>
 
+            <TabPane tab="Risk profile" key="18">
+                <Collapse defaultActiveKey={['1']}>
+                  <Panel header="Risk profile" key="1">
+                     {/* <Card> */}
+                    <Riskprofile></Riskprofile>
+                    {/* </Card> */}
+                  </Panel>
+                 
+                </Collapse>
+            </TabPane>
+
           </Tabs>
         </div>
         <br/>
@@ -223,8 +244,12 @@ export default class DDE extends Component {
                                 Rerun Dedupe
                         </Button>
                         &nbsp; &nbsp; &nbsp;
-                        <Button type="primary" htmlType="submit" shape="round" size={size}>
-                                Submit
+					            	<Dropdown overlay={menu}>
+						            	<Button type="primary" htmlType="Submit" shape="round" size={size}>Submit<Icon type="down"/> </Button>
+					            	</Dropdown>
+                        &nbsp;&nbsp;&nbsp;
+                        <Button type="primary" htmlType="GenerateSanction" shape="round" size={size}>
+                               Generate Sanction
                         </Button>
             </Form.Item>
       </Form>
