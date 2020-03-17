@@ -22,8 +22,9 @@ import CustomerRelationship from  '../../../../Compositeviews/CustomerRelationsh
 import CrossSellingRecommendation from   '../../../../Compositeviews/CrossSellingRecommendation/CrossSellingRecommendation';
 import VerificationDetails from '../../../../Compositeviews/VerficationDetails/VerificationDetails';
 import VerificationList from '../../../../Compositeviews/VerificationList/VerificationList';
-import DisbursementDetails from '../../../../Compositeviews/DisbursementDetails/DisbursementDetails';
 import DedupeResult from '../../../../Compositeviews/DedupeResult/DedupeResult';
+
+
 const { Panel } = Collapse;
 
 export default class DDE extends Component {
@@ -160,11 +161,20 @@ export default class DDE extends Component {
                  
                 </Collapse>
             </TabPane>
-            
+            <TabPane tab="Customer Relationship" key="12">
+                <Collapse defaultActiveKey={['1']}>
+                  <Panel header="Customer Realtionship" key="1">
+                     {/* <Card> */}
+                    <CustomerRelationship></CustomerRelationship>
+                    {/* </Card> */}
+                  </Panel>
+                 
+                </Collapse>
+            </TabPane>
 
             <TabPane tab="Cross Selling Recommendation" key="13">
                 <Collapse defaultActiveKey={['1']}>
-                  <Panel header="Customer Realtionship" key="1">
+                  <Panel header="Cross Selling Recommendations" key="1">
                      {/* <Card> */}
                     <CrossSellingRecommendation></CrossSellingRecommendation>
                     {/* </Card> */}
@@ -173,27 +183,22 @@ export default class DDE extends Component {
                 </Collapse>
             </TabPane>
 
-            <TabPane tab="Verification List" key="14">
+            <TabPane tab="Verification Details" key="17">
                 <Collapse defaultActiveKey={['1']}>
-                  <Panel header="Verification List" key="1">
+                  <Panel header="Verification List" key="1" danger>
                      {/* <Card> */}
                     <VerificationList></VerificationList>
-                    {/* </Card> */}
+                     {/* <Card> */}
                   </Panel>
-                 
+                  <Panel header="Verification Result" key="2" >
+                     {/* <Card> */}
+                    <VerificationDetails></VerificationDetails>
+                     {/* <Card> */}
+                  </Panel>
+                  
                 </Collapse>
             </TabPane>
-<TabPane tab="Disbursement Details" key="15">
-  <Collapse defaultActiveKey={['1']}>
-    <Panel header="Disbursement Details" key="1">
-      <DisbursementDetails></DisbursementDetails>
-    </Panel>
-  </Collapse>
 
-</TabPane>
-            
-            
-            
             <TabPane tab="Dedupe Result" key="16">
                 <Collapse defaultActiveKey={['1']}>
                   <Panel header="Dedupe Result" key="1">

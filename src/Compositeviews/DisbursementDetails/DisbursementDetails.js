@@ -98,7 +98,11 @@ export default class DisbursementDetails extends Component {
                 </Row>
                 
 
-                <table columns={columns} dataSource={data} ></table>
+                <Table className='table table-striped table-hover table-bordered'
+                    columns={columns} dataSource={data}
+                
+                />
+
             </div>
         )
     }

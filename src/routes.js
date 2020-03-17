@@ -40,6 +40,7 @@ const Inbox = React.lazy(() => import('./views/Inbox/Inbox'));
 const DSA = React.lazy(() => import('./views/Workflow/DSA/DSA'));
 const DSA_DDE = React.lazy(() => import('./views/Workflow/DSA/DDE/DDE'));
 const DSA_UW = React.lazy(() => import('./views/Workflow/DSA/Underwriter/Underwriter'));
+const DSA_UW_1 = React.lazy(() => import('./views/Workflow/DSA/Underwriter_1/Underwriter'));
 const BIL = React.lazy(() => import('./views/Workflow/BIL/BIL'));
 const CreateLoanApp = React.lazy(() => import('./views/Launch/Launch'));
 const Eligibility = React.lazy(() => import('./views/Utilities/Eligibility/Eligibility'));
@@ -97,6 +98,7 @@ const routes = [
   { path: '/workflow/dsa', exact: true,  name: 'DSA', component: DSA },
   { path: '/workflow/dsa/dde', exact: true,  name: 'DDE', component: DSA_DDE },
   { path: '/workflow/dsa/underwriter', exact: true,  name: 'Underwriter', component: DSA_UW },
+  { path: '/workflow/dsa/underwriter_1', exact: true,  name: 'Underwriter', component: DSA_UW_1},
   { path: '/workflow/bil', exact: true,  name: 'BIL', component: BIL },
   { path: '/workflow/createloanapp/createloanapp', exact: true,  name: 'CreateLoanApp', component: CreateLoanApp },
   { path: '/eligibility', exact: true,  name: 'eligibility', component: Eligibility },
