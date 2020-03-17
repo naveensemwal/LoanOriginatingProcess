@@ -174,7 +174,7 @@ export default class DDE extends Component {
 
             <TabPane tab="Cross Selling Recommendation" key="13">
                 <Collapse defaultActiveKey={['1']}>
-                  <Panel header="Cross Selling Recommendation" key="1">
+                  <Panel header="Cross Selling Recommendations" key="1">
                      {/* <Card> */}
                     <CrossSellingRecommendation></CrossSellingRecommendation>
                     {/* </Card> */}
@@ -183,29 +183,22 @@ export default class DDE extends Component {
                 </Collapse>
             </TabPane>
 
-            <TabPane tab="Verification List" key="14">
+            <TabPane tab="Verification Details" key="17">
                 <Collapse defaultActiveKey={['1']}>
-                  <Panel header="Verification List" key="1">
+                  <Panel header="Verification List" key="1" danger>
                      {/* <Card> */}
                     <VerificationList></VerificationList>
-                    {/* </Card> */}
+                     {/* <Card> */}
                   </Panel>
-                 
+                  <Panel header="Verification Result" key="2" >
+                     {/* <Card> */}
+                    <VerificationDetails></VerificationDetails>
+                     {/* <Card> */}
+                  </Panel>
+                  
                 </Collapse>
             </TabPane>
 
-            
-            <TabPane tab="Verification Details" key="15">
-                <Collapse defaultActiveKey={['1']}>
-                  <Panel header="Verification Details" key="1">
-                     {/* <Card> */}
-                    <VerificationDetails></VerificationDetails>
-                    {/* </Card> */}
-                  </Panel>
-                 
-                </Collapse>
-            </TabPane>
-            
             <TabPane tab="Dedupe Result" key="16">
                 <Collapse defaultActiveKey={['1']}>
                   <Panel header="Dedupe Result" key="1">
