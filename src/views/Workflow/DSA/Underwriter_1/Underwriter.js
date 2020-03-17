@@ -174,7 +174,7 @@ export default class DDE extends Component {
 
             <TabPane tab="Cross Selling Recommendation" key="13">
                 <Collapse defaultActiveKey={['1']}>
-                  <Panel header="Customer Realtionship" key="1">
+                  <Panel header="Cross Selling Recommendation" key="1">
                      {/* <Card> */}
                     <CrossSellingRecommendation></CrossSellingRecommendation>
                     {/* </Card> */}
