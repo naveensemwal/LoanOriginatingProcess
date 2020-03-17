@@ -22,9 +22,8 @@ import CustomerRelationship from  '../../../../Compositeviews/CustomerRelationsh
 import CrossSellingRecommendation from   '../../../../Compositeviews/CrossSellingRecommendation/CrossSellingRecommendation';
 import VerificationDetails from '../../../../Compositeviews/VerficationDetails/VerificationDetails';
 import VerificationList from '../../../../Compositeviews/VerificationList/VerificationList';
+import DisbursementDetails from '../../../../Compositeviews/DisbursementDetails/DisbursementDetails';
 import DedupeResult from '../../../../Compositeviews/DedupeResult/DedupeResult';
-
-
 const { Panel } = Collapse;
 
 export default class DDE extends Component {
@@ -184,7 +183,14 @@ export default class DDE extends Component {
                  
                 </Collapse>
             </TabPane>
+<TabPane tab="Disbursement Details" key="15">
+  <Collapse defaultActiveKey={['1']}>
+    <Panel header="Disbursement Details" key="1">
+      <DisbursementDetails></DisbursementDetails>
+    </Panel>
+  </Collapse>
 
+</TabPane>
             
             
             

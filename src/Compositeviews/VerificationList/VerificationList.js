@@ -7,6 +7,7 @@ const columns = [
     {
         title :'Applicant Name',
         dataIndex:'ApplicantName'
+        
     },
     {
         title: 'Residence Check',
