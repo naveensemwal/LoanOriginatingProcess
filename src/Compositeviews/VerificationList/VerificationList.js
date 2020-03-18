@@ -1,55 +1,24 @@
 import React, { Component } from 'react';
-import { Table, Typography } from 'antd';
+import { Table, Typography,Select } from 'antd';
 const { Text } = Typography;
 
+const { Column } = Table;
 
-const columns = [
-    {
-        title :'Applicant Name',
-        dataIndex:'ApplicantName'
-        
-    },
-    {
-        title: 'Residence Check',
-        dataIndex: 'ResidenceCheck',
-      },
-      {
-        title: 'Legal',
-        dataIndex: 'Legal',
-      },
-      {
-        title: 'Business Reference Check',
-        dataIndex: 'BusinessReferenceCheck',
-      },
-      {
-        title: 'Employment Check',
-        dataIndex: 'EmploymentCheck',
-      },
-      {
-        title: 'Property Valuation',
-        dataIndex: 'PropertyValuation',
-      },
+const { Option } = Select;
 
-
-
-];
 
 const data =[
     {
-        key :1,
-        ApplicantName:'Varghese Mathew',
-        ResidenceCheck :'ABC Agency',
-        Legal :'ABC Agency',
-        BusinessReferenceCheck :'Not Applicable',
-        EmploymentCheck:'Not Applicable',
-        PropertyValuation:'ABC Agency'
+        key: "1",
+		ApplicantName: 'Varghese Mathew',
+		ResidenceCheck: '',
+		Legal: '',
+		BusinessReferenceCheck:'',
+		EmploymentCheck:'',
+		PropertyValuation:''
     },
    
-    
-   
-    
-    
-]
+];
 
 
 export default class VerificationList extends Component{
@@ -60,23 +29,88 @@ export default class VerificationList extends Component{
         //     showTable:false
         // }
     }
-    render(){
+render(){
         return(
-            <div>
-                <Table className='table table-striped table-hover table-bordered'
-                    columns={columns} dataSource={data}
-                
-                />
+<div>
+     <Table dataSource={data}>
 
-            </div>
+    <Column title="ApplicantName" dataIndex="ApplicantName" key="ApplicantName" />
+    <Column
+      title="ResidenceCheck"
+      dataIndex="ResidenceCheck"
+      key="ResidenceCheck"
+      render={(text, record) => (
+        <span>
+          <Select style={{width:'14% !important'}}>
+            <Select.Option value="1">Mumbai</Select.Option>
+            <Select.Option value="2">Pune</Select.Option>
+            <Select.Option value="3">Nashik</Select.Option>
+          </Select>
+        </span>
+      )}
+    />
+	 <Column
+      title="Legal"
+      dataIndex="Legal"
+      key="Legal"
+      render={(text, record) => (
+        <span>
+          <Select style={{width:'25% !important'}}>
+            <Select.Option value="1">Mumbai</Select.Option>
+            <Select.Option value="2">Pune</Select.Option>
+            <Select.Option value="3">Nashik</Select.Option>
+          </Select>
+        </span>
+      )}
+    />
+	<Column
+      title="BusinessReferenceCheck"
+      dataIndex="BusinessReferenceCheck"
+      key="BusinessReferenceCheck"
+      render={(text, record) => (
+        <span>
+          <Select style={{width:'14% !important'}}>
+            <Select.Option value="1">Mumbai</Select.Option>
+            <Select.Option value="2">Pune</Select.Option>
+            <Select.Option value="3">Nashik</Select.Option>
+          </Select>
+        </span>
+      )}
+    />
+	<Column
+      title="EmploymentCheck"
+      dataIndex="EmploymentCheck"
+      key="EmploymentCheck"
+      render={(text, record) => (
+        <span>
+          <Select style={{width:'14% !important'}}>
+            <Select.Option value="1">Mumbai</Select.Option>
+            <Select.Option value="2">Pune</Select.Option>
+            <Select.Option value="3">Nashik</Select.Option>
+          </Select>
+        </span>
+      )}
+    />
+	<Column
+      title="PropertyValuation"
+      dataIndex="PropertyValuation"
+      key="PropertyValuation"
+      render={(text, record) => (
+        <span>
+          <Select style={{width:'14% !important'}}>
+            <Select.Option value="1">Mumbai</Select.Option>
+            <Select.Option value="2">Pune</Select.Option>
+            <Select.Option value="3">Nashik</Select.Option>
+          </Select>
+        </span>
+      )}
+			/>
+	</Table>
 
-
+</div>
 
         )
 
-
-
     }
-
 
 }
