@@ -1,6 +1,7 @@
 import { Collapse, Form, Tabs, Card,Button } from 'antd';
 import "antd/dist/antd.css";
 import React, { Component } from 'react';
+import Axios from 'axios';
 import Personaldetails from '../../../../Compositeviews/Personaldetails/Personaldetails';
 import Familydetails from '../../../../Compositeviews/Familydetails/Familydetails';
 import Addressdetails from '../../../../Compositeviews/Addressdetails/Addressdetails';
@@ -27,6 +28,37 @@ import DedupeResult from '../../../../Compositeviews/DedupeResult/DedupeResult';
 const { Panel } = Collapse;
 
 export default class DDE extends Component {
+
+componentDidMount() {
+    const  SectionName  ='IdentificationDetails,AddressDetails';
+    this.getData();
+  }
+
+  
+   getData = () => {
+    // console.dir("id " + this.props.match.params.id);
+    //console.log("sectionr "+ this.prop.SectionName);
+    Axios.get('/rest/bpm/wle/v1/task/4853?action=getData&fields=IdentificationDetails,AddressDetails', {
+      auth: {
+        username: 'p8admin',
+        password: 'Password123'
+      }
+    })
+      .then(res => {
+
+    
+        const result = res.data.data.resultMap;
+        console.dir(result);
+        console.log('before props');
+        console.dir(this.props.form);
+       // let fieldvalues = this.props.form.getFieldsValue();
+        
+        //console.dir(fieldvalues);
+
+         
+      })
+  }
+
 
 
   state = {

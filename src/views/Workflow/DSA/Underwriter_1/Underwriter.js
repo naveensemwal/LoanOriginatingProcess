@@ -23,9 +23,9 @@ import CrossSellingRecommendation from   '../../../../Compositeviews/CrossSellin
 import VerificationDetails from '../../../../Compositeviews/VerficationDetails/VerificationDetails';
 import VerificationList from '../../../../Compositeviews/VerificationList/VerificationList';
 import DedupeResult from '../../../../Compositeviews/DedupeResult/DedupeResult';
-import Riskprofile from '../../../../Components/Risk Profile/Riskprofile'
-
-
+import Riskprofile from '../../../../Components/Risk Profile/Riskprofile';
+import UWObservation from '../../../../Compositeviews/UWObservation/UWObservation';
+import DeviationDetails from '../../../../Compositeviews/DeviationDetails/DeviationDetails';
 const { Panel } = Collapse;
 
 export default class DDE extends Component {
@@ -228,6 +228,22 @@ export default class DDE extends Component {
                     {/* </Card> */}
                   </Panel>
                  
+                </Collapse>
+            </TabPane>
+
+            <TabPane tab="Underwriter Decision" key="19">
+                <Collapse defaultActiveKey={['1']}>
+                  <Panel header="Deviation Details" key="1">
+                     {/* <Card> */}
+                    <DeviationDetails></DeviationDetails>
+                    {/* </Card> */}
+                  </Panel>
+                 
+                  <Panel header="Underwriter Observation" key="1">
+                     {/* <Card> */}
+                    <UWObservation></UWObservation>
+                    {/* </Card> */}
+                  </Panel>
                 </Collapse>
             </TabPane>
 
