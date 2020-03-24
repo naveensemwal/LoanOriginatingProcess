@@ -1,32 +1,66 @@
 import { Collapse, Form, Tabs, Card, Button } from "antd";
 import "antd/dist/antd.css";
-import React, { Component } from "react";
-import Personaldetails from "../../../../Compositeviews/Personaldetails/Personaldetails";
-import Familydetails from "../../../../Compositeviews/Familydetails/Familydetails";
-import Addressdetails from "../../../../Compositeviews/Addressdetails/Addressdetails";
-import Loandetails from "../../../../Compositeviews/Loandetails/Loandetails";
-import Statementdetails from "../../../../Compositeviews/Statementdetails/Statementdetails";
-import Dms from "../../../../Components/DMS/Dms";
-import Casehistory from "../../../../Compositeviews/Casehistory/Casehistory";
-import Productdetails from "../../../../Compositeviews/Productdetails/Productdetails";
-import Incomedetails from "../../../../Compositeviews/Incomedetails/Incomedetails";
-import Dcc from "../../../../Compositeviews/Dcc/Dcc";
-import Employmentdetails from "../../../../Compositeviews/Employmentdetails/Employmentdetails";
-import Identificationdetails from "../../../../Compositeviews/Identificationdetails/Identificationdetails";
-import BankStatementDetails from "../../../../Compositeviews/BankStatementDetails/BankStatementDetails";
-import FinancialDetailsRation from "../../../../Compositeviews/FinancialDetailsRation/FinancialDetailsRation";
-import Cust_Obligationss from "../../../../Compositeviews/Cust_Obligationss/Cust_Obligationss";
-import CustFinancialDetails from "../../../../Compositeviews/CustFinancialDetails/CustFinancialDetails";
-import CreditSanctionCondition from "../../../../Compositeviews/CreditSanctionCondition/CreditSanctionCondition";
-import CustomerRelationship from "../../../../Compositeviews/CustomerRelationship/CustomerRelationship";
-import CrossSellingRecommendation from "../../../../Compositeviews/CrossSellingRecommendation/CrossSellingRecommendation";
-import VerificationDetails from "../../../../Compositeviews/VerficationDetails/VerificationDetails";
-import VerificationList from "../../../../Compositeviews/VerificationList/VerificationList";
-import DisbursementDetails from "../../../../Compositeviews/DisbursementDetails/DisbursementDetails";
-import DedupeResult from "../../../../Compositeviews/DedupeResult/DedupeResult";
+import React, { Component } from 'react';
+import Axios from 'axios';
+import Personaldetails from '../../../../Compositeviews/Personaldetails/Personaldetails';
+import Familydetails from '../../../../Compositeviews/Familydetails/Familydetails';
+import Addressdetails from '../../../../Compositeviews/Addressdetails/Addressdetails';
+import Loandetails from '../../../../Compositeviews/Loandetails/Loandetails';
+import Statementdetails from '../../../../Compositeviews/Statementdetails/Statementdetails';
+import Dms from '../../../../Components/DMS/Dms';
+import Casehistory from '../../../../Compositeviews/Casehistory/Casehistory';
+import Productdetails from '../../../../Compositeviews/Productdetails/Productdetails';
+import Incomedetails from '../../../../Compositeviews/Incomedetails/Incomedetails';
+import Dcc from '../../../../Compositeviews/Dcc/Dcc';
+import Employmentdetails from '../../../../Compositeviews/Employmentdetails/Employmentdetails';
+import Identificationdetails from '../../../../Compositeviews/Identificationdetails/Identificationdetails';
+import BankStatementDetails from '../../../../Compositeviews/BankStatementDetails/BankStatementDetails';
+import FinancialDetailsRation from '../../../../Compositeviews/FinancialDetailsRation/FinancialDetailsRation';
+import Cust_Obligationss from '../../../../Compositeviews/Cust_Obligationss/Cust_Obligationss';
+import CustFinancialDetails from '../../../../Compositeviews/CustFinancialDetails/CustFinancialDetails';
+import CreditSanctionCondition from  '../../../../Compositeviews/CreditSanctionCondition/CreditSanctionCondition';
+import CustomerRelationship from  '../../../../Compositeviews/CustomerRelationship/CustomerRelationship';
+import CrossSellingRecommendation from   '../../../../Compositeviews/CrossSellingRecommendation/CrossSellingRecommendation';
+import VerificationDetails from '../../../../Compositeviews/VerficationDetails/VerificationDetails';
+import VerificationList from '../../../../Compositeviews/VerificationList/VerificationList';
+import DisbursementDetails from '../../../../Compositeviews/DisbursementDetails/DisbursementDetails';
+import DedupeResult from '../../../../Compositeviews/DedupeResult/DedupeResult';
 const { Panel } = Collapse;
 
 export default class DDE extends Component {
+
+componentDidMount() {
+    const  SectionName  ='IdentificationDetails,AddressDetails';
+    this.getData();
+  }
+
+  
+   getData = () => {
+    // console.dir("id " + this.props.match.params.id);
+    //console.log("sectionr "+ this.prop.SectionName);
+    Axios.get('/rest/bpm/wle/v1/task/4853?action=getData&fields=IdentificationDetails,AddressDetails', {
+      auth: {
+        username: 'p8admin',
+        password: 'Password123'
+      }
+    })
+      .then(res => {
+
+    
+        const result = res.data.data.resultMap;
+        console.dir(result);
+        console.log('before props');
+        console.dir(this.props.form);
+       // let fieldvalues = this.props.form.getFieldsValue();
+        
+        //console.dir(fieldvalues);
+
+         
+      })
+  }
+
+
+
   state = {
     size: "large",
     width: "150px"

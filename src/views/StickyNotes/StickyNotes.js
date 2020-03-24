@@ -2,7 +2,7 @@ import { Avatar, Card, Col, Icon, Input, List, Row, Switch,Alert } from 'antd';
 import "antd/dist/antd.css";
 import React, { Component } from 'react';
 import Customerprofile from './Customerprofile';
-import { Badge } from '@material-ui/core';
+
 
 
 const tabList = [
