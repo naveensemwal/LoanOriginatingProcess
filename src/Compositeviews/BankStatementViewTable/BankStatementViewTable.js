@@ -117,7 +117,7 @@ const columns2 = [
             {
                 title:'(In Rs.)',
                 width:230,
-                dataIndex: 'Inward',
+                dataIndex: 'MonthlyAverageBankBalanceInRs',
 
             },
         ]
@@ -128,74 +128,94 @@ const data2 =[
     {
         key :1,
         Months:'JULY',
-        CreditSumInRs: 10,
-        CreditNo: 2,
-        DebitSumInRs: 10,
-        DebitNo: 2,
-        Debit: 33,
-        ChequeReturns :'',
-        MonthlyAverageBankBalance:'sss',
+        CreditSumInRs: 2895703.00,
+        CreditNo: 3.00,
+        DebitSumInRs: -2889482.00,
+        DebitNo: 18.00, 
+        Inward:0.00,
+        Outward:0.00,
+        MonthlyAverageBankBalanceInRs:377028.24
+
 
     },
     {
         key :2,
         Months:'AUG',
-        CreditSumInRs: 10,
-        CreditNo: 2,
-        DebitSumInRs: 13,
-        DebitNo: 4,
-        Debit :33,
-        ChequeReturns :'',
-        MonthlyAverageBankBalance:'sss',
+        CreditSumInRs: 2895703.00,
+        CreditNo: 3.00,
+        DebitSumInRs: -2889482.00,
+        DebitNo: 18.00, 
+        Inward:0.00,
+        Outward:0.00,
+        MonthlyAverageBankBalanceInRs:377028.24
+
     },
     {
         key :3,
         Months:'SEP',
-         Credit:[10,2],
-        Debit :33,
-        ChequeReturns :'',
-        MonthlyAverageBankBalance:'sss',
+        CreditSumInRs: 2895703.00,
+        CreditNo: 3.00,
+        DebitSumInRs: -2889482.00,
+        DebitNo: 18.00, 
+        Inward:0.00,
+        Outward:0.00,
+        MonthlyAverageBankBalanceInRs:377028.24
+
     },
     {
         key :4,
         Months:'OCT',
-         Credit:[10, 2],
-        Debit :33,
-        ChequeReturns :'',
-        MonthlyAverageBankBalance:'sss',
-    },
+        CreditSumInRs: 2895703.00,
+        CreditNo: 3.00,
+        DebitSumInRs: -2889482.00,
+        DebitNo: 18.00, 
+        Inward:0.00,
+        Outward:0.00,
+        MonthlyAverageBankBalanceInRs:377028.24
+ },
     {
         key :5,
         Months:'NOV',
-         Credit:[10,2],
-        Debit :33,
-        ChequeReturns :'',
-        MonthlyAverageBankBalance:'sss',
-    },
+        CreditSumInRs: 2895703.00,
+        CreditNo: 3.00,
+        DebitSumInRs: -2889482.00,
+        DebitNo: 18.00, 
+        Inward:0.00,
+        Outward:0.00,
+        MonthlyAverageBankBalanceInRs:377028.24 },
+
     {
         key :6,
         Months:'DEC',
-         Credit:[10,2],
-        Debit :33,
-        ChequeReturns :'',
-        MonthlyAverageBankBalance:'sss',
+        CreditSumInRs: 2895703.00,
+        CreditNo: 3.00,
+        DebitSumInRs: -2889482.00,
+        DebitNo: 18.00, 
+        Inward:0.00,
+        Outward:0.00,
+        MonthlyAverageBankBalanceInRs:377028.24
     },
     {
         key :7,
         Months:'TOTAL',
-         Credit:[10,2],
-        Debit :33,
-        ChequeReturns :'',
-        MonthlyAverageBankBalance:'sss',
-    },
+       CreditSumInRs: 2895703.00,
+        CreditNo: 3.00,
+        DebitSumInRs: -2889482.00,
+        DebitNo: 18.00, 
+        Inward:0.00,
+        Outward:0.00,
+        MonthlyAverageBankBalanceInRs:377028.24
+     },
     {
         key :8,
         Months:'AVERAGE',
-         Credit:[10,2],
-        Debit :33,
-        ChequeReturns :'',
-        MonthlyAverageBankBalance:'sss',
-    }
+        CreditSumInRs: 2895703.00,
+        CreditNo: 3.00,
+        DebitSumInRs: -2889482.00,
+        DebitNo: 18.00, 
+        Inward:0.00,
+        Outward:0.00,
+        MonthlyAverageBankBalanceInRs:377028.24 }
 ]
 export default class BankStatementViewTable extends Component{
     constructor(props){

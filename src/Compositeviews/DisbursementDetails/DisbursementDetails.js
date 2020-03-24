@@ -1,48 +1,20 @@
 import { Col, Form, Input, InputNumber, Row, Select, DatePicker, Table, Tag  } from 'antd';
 import React, { Component } from 'react';
+import { render } from "react-dom";
+import { nominalTypeHack } from 'prop-types';
+import MultipleDatePicker from "react-multiple-datepicker";
 
 const onChange = (date,dateString) => {
     console.log(date,dateString);
 
+    
 }
-const columns = [
-    {
-        title:'Installment Number',
-        dateIndex:'InstallmentNumber',
-        key:'Installment Number',
-        render : text => <a>{text}</a>
-    },
-    {
-        title:'Due Date',
-        dateIndex:'DueDate',
-        key:'Due Date',
-        render : text => <a>{text}</a>
-    },
-    {
-        title:'Opening Principal (Rs.)',
-        dateIndex:'OpeningPrincipalRs',
-        key:'Opening Principal (Rs.)',
-       
-    },
-    {
-        title:'InstallmentAmountRs',
-        dateIndex:'InstallmentAmountRs',
-        key:'Installment Amount (Rs.)',
-       
-    },
-    {
-        title:'Principal Component of Installment (Rs.)',
-        dateIndex:'PrincipalComponentofInstallmentRs',
-        key:'Principal Component of Installment (Rs.)',
-        
-    },
-    {
-        title:'Interes',
-        dateIndex:'DueDate',
-        key:'Due Date',
-        render : text => <a>{text}</a>
-    },
-];
+
+const disp_non={
+    display                  : 'none',
+    
+}
+
 const data=[
     {
         key:'1',
@@ -51,57 +23,176 @@ const data=[
         OpeningPrincipalRs:"aa",
         InstallmentAmountRs:'120',
         PrincipalComponentofInstallmentRs:"hh",
-        DueDate:'10-Feb-2019',
+        Interes:'aa',
+
+    },
+    {
+        key:'2',
+        InstallmentNumber:'12',
+        DueDate:'2feb',
+        OpeningPrincipalRs:"aa",
+        InstallmentAmountRs:'120',
+        PrincipalComponentofInstallmentRs:"hh",
+        Interes:'aa',
 
     }
 ]
-export default class DisbursementDetails extends Component {
+export default class DisbursementDetails extends React.Component {
+    
+    constructor(props){
+        super(props);
+        this.state={
+            disbursementTableData:[],
+            isLoaded: true,
+            error:false,
+            columnData:[],
+            isSingle:false,
+        }
+        //this.isSingle = true;
+    }
+    disbursementTypeChange =(e) => {
+        //let value = e.target.value;
+        console.log(e);
+        let value='';
+        if(e == 'homeLoan') {
+            
+            this.setState({
+                isSingle:false
+            });
+        }else{
+            this.setState({isSingle:true})
+        }
+    }
+    componentDidMount() {
+        const columns = [
+            {
+                title:'Installment Number',
+                dataIndex:'InstallmentNumber',
+                key:'InstallmentNumber',
+                //render : text => <a>{text}</a>
+            },
+            {
+                title:'Due Date',
+                dataIndex:'DueDate',
+                key:'DueDate',
+              
+            },
+            {
+                title:'Opening Principal (Rs.)',
+                dataIndex:'OpeningPrincipalRs',
+                key:'OpeningPrincipalRs',
+               
+            },
+            {
+                title:'InstallmentAmountRs',
+                dataIndex:'InstallmentAmountRs',
+                key:'InstallmentAmountRs',
+               
+            },
+            {
+                title:'Principal Component of Installment (Rs.)',
+                dataIndex:'PrincipalComponentofInstallmentRs',
+                key:'PrincipalComponentofInstallmentRs',
+                
+            },
+            {
+                title:'Interes',
+                dataIndex:'Interes',
+                key:'Interes',
+               
+            }
+        ];
+        fetch("http://localhost:4231/")
+        .then(response => response.json())
+          .then(
+            (result) => {
+                setTimeout(
+                    function() {
+                        this.setState({
+                            isLoaded: true,
+                            disbursementTableData: result,
+                            columnData:columns
+                          });
+                    }
+                    .bind(this),
+                    3000
+                );
+              
+            },
+            // Note: it's important to handle errors here
+            // instead of a catch() block so that we don't swallow
+            // exceptions from actual bugs in components.
+            (error) => {
+              this.setState({
+                isLoaded: true,
+                error
+              });
+            }
+          )
+      }
     render() {
+        
+        //this.setState.columData = columns;
         return (
             <div>
                 <Row gutter={[8, 8]}>
                     <Col span={8} >
                         <Form.Item label="Disbursement Type">
-                            <Select>
-                                <Select.Option value="homeLoan">Single</Select.Option>
+                            <Select defaultValue="homeLoan" onChange={this.disbursementTypeChange} hidden='isSingle'>
+                                <Select.Option selected value="homeLoan">Single</Select.Option>
                                 <Select.Option value="autoLoan">Multiple</Select.Option>                             
                             </Select>
                         </Form.Item>
                     </Col>
                     <Col span={8} >
                         <Form.Item label="Final documentation status ">
-                            <Select>
+                            <Select hidden='isSingle'>
                                 <Select.Option value="scheme1">Documentation Complete</Select.Option>
                                 <Select.Option value="scheme2">Customer’s Signature Pending</Select.Option>
                             </Select>
                         </Form.Item>
                     </Col>
                     <Col span={8} >
-                        <Form.Item label="No of Tranches  :">
+                        {this.state.isSingle?
+                        <Form.Item label="No of branches  :" >
                             <InputNumber style={{ width: '100%' }} />
                         </Form.Item>
+                        : ''}
                     </Col>
                 </Row>
-                <Row gutter={[8, 8]}>
-
+                <Row gutter={[8, 8]}>   
+                
                     <Col span={8} >
-                        <Form.Item label="Pre EMI ">
+                    {this.state.isSingle?
+                        <Form.Item label="Pre EMI " >
                             <Input suffix="%" />
-                        </Form.Item>
+                        </Form.Item>:''}
                     </Col>
+                    {!this.state.isSingle?
                     <Col span={8} >
-                        <Form.Item label="Expected disbursement date ">
+                    
+                                              <Form.Item label="Expected disbursement date ">
                            <DatePicker onchange={onChange} style={{width:'100%'}}></DatePicker>
                         </Form.Item>
-                    </Col>
-                    
-                </Row>
-                
+                       
 
-                <Table className='table table-striped table-hover table-bordered'
-                    columns={columns} dataSource={data}
-                
-                />
+                    </Col>
+                     :''}
+                    <Col span={8}>
+                        <div className='multiple_date_field'>
+                        {this.state.isSingle?
+                        <Form.Item label="Multiple Date" >
+                             <MultipleDatePicker   style={{width:'100%'}}
+      onSubmit={dates => console.log("selected dates ", dates)}
+    />
+                        </Form.Item>
+                        :''}
+                        </div>
+                    </Col>
+                </Row>
+                <div></div>
+            
+                <Table columns={this.state.columnData} dataSource={this.state.disbursementTableData} />
 
             </div>
         )
