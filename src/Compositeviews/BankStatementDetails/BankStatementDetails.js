@@ -1,87 +1,74 @@
 import React, { Component } from 'react';
+import {
+    Link
+} from "react-router-dom";
 import { Table, Radio, Divider, Button, Modal,Icon } from 'antd';
 import "antd/dist/antd.css";
 import BankStatementViewTable  from "../BankStatementViewTable/BankStatementViewTable";
 
+//import TrialTable from '../TrialTable/TrialTable';
+//import DynamicTable from '../DynamicTable/DynamicTable'
 const CustomModalStyle={
-
-  
     left                  : '0%',
     right                 : '0%',
     bottom                : 'auto',  
- 
-
-
 }
+
+
 
 export default class BankStatmentDetails extends Component {
-
+   
   constructor(props) {
     super(props);
-
-    this.columns = [
-      {
-        title: 'Bank Statement',
-        dataIndex: 'name',
-        render: text => <a>{text}</a>,
-      },
-      {
-        title: 'View',
-        dataIndex: 'view',
-        // render: text => <Icon type="eye"  onClick={(e) => { this.onView (record.key, e); }} />
-        render: (text, record) => (
-          <Icon type="eye"  onClick={(e) => { this.onView (record, e); }} />          
-        ),
-      },
-      {
-        title:'Download',
-        dataIndex:'download',
-      render: text=><a href='#' class='btn btn-primary'>{text}</a>
-      }
- 
+    this.state= {
+      dataBank:[],
+      loading:true,
+      columnData:[],
+      showTable:false,
+      title:'',
+      data: this.data,
+      showModal: false,
+      content:<div>Initiatl</div>
+   
+    };
+  }
+    componentDidMount() {
+      const columns = [
+        {
+          title: 'Bank Statement',
+          dataIndex: 'name',
+          render: text => <a>{text}</a>,
+        },
+        {
+          title: 'View',
+          dataIndex: 'view',
+          // render: text => <Icon type="eye"  onClick={(e) => { this.onView (record.key, e); }} />
+          render: (text, record) => (
+            <Icon type="eye"  onClick={(e) => { this.onView (record, e); }} />          
+          ),
+        },
+        {
+          title:'Download',
+          dataIndex:'download',
+       render: text=> <Link to='../../../../public/assets/img/Sample_Doc.pdf'
+       onClick={(event) => { event.preventDefault(); window.open('../../../public/assets/img/Sample_Doc.pdf');}}>Download</Link>
+        }
       
-    ];
-    
-    this.data = [
-      {
-        key: '1',
-        name: 'John Brown',
-        view: ' amita singh',
-        download:'Download',
         
-      },
-      {
-        key: '2',
-        name: 'Jim Green',
-        view: ' ',
-        download:'Download',
-        
-      },
-      {
-        key: '3',
-        name: 'Joe Black',
-        view: ' ',
-        download:'Download',
-       
-      },
-      {
-        key: '4',
-        name: 'Disabled User',
-        view: ' ',
-        download:'Download',
-      
-      },
-    ];
+      ];
+      fetch("http://localhost:4231/bankstatementDetails.php").
+      then(response=>response.json()).
+      then((responseJson)=>{
+        console.log(responseJson);
+        this.setState({
+          loading:true,
+          dataBank:responseJson,
+          columns:columns
+        })
+      })
+      .catch(error=>console.log(error))
+    }
     
-
-  this.state = {
-    showTable:false,
-    title:'',
-    data: this.data,
-    showModal: false,
-    content:<div>Initiatl</div>
-  };
-}
 
   onView = (data, e) => {
     e.preventDefault();
@@ -112,16 +99,18 @@ export default class BankStatmentDetails extends Component {
  
 
   render() {
+    if(this.state.loading){
     return (
          
       <div>
        
         <Divider />
+     {/* <DynamicTable/>  */}
         <BankStatementViewTable/>
       
         <Table className="table table-hover table-stacked "
-          columns={this.columns}
-          dataSource={this.state.data}
+          columns={this.state.columns}
+          dataSource={this.state.dataBank}
         />
 <div class="text-center">
         <a href='#' class='btn btn-primary text-center'>Upload</a>
@@ -137,7 +126,8 @@ export default class BankStatmentDetails extends Component {
           {this.state.content}
         </Modal>
       </div>
-    )
+    )}
   }
 }
+
 

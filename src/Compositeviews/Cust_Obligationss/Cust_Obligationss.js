@@ -18,25 +18,28 @@ export default class Cust_Obligationss extends React.Component {
         });
       };
       handleAddRow = () => {
-        const item = {
-            ckbox1:'',
-            ConsiderForObligations: "",
-            ConsiderForSurrogate: "",
-            Financer:"",
-            LoanType:"",
-            LoanAmount:"",
-            Tenure:"",
-            NoOfEMIPaid:"",
-            EMIPayingFromBank:"",
-            EMIAmount:"",
-            Status:"",
-            reason:"",
-            remove:"",
-
-
-
-        };
+        let count=1;
+        count=count+1;
+        const item = [
+          'ckbox1'+count,
+          'ConsiderForObligations'+count,
+          'ConsiderForSurrogate'+count,
+          'Financer'+count,
+          'LoanType'+count,
+          'LoanAmount'+count,
+          'Tenure'+count,
+          'NoOfEMIPaid'+count,
+          'EMIPayingFromBank'+count,
+          'EMIAmount'+count,
+          'Status'+count,
+          'reason'+count,
+          'remove'+count
+      ];
         this.setState({
+          
+
+
+
           rows: [...this.state.rows, item]
         });
       };
@@ -76,7 +79,7 @@ export default class Cust_Obligationss extends React.Component {
               </thead>
               <tbody>
                   {this.state.rows.map((item,idx) => (  
-                <tr id="addr0" key={idx}>
+                <tr key={idx}>
                   <td>
                     {/* {idx} */}
                      <input type="checkbox"  name="ckbox1"/>
