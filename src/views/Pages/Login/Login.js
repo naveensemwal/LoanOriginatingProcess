@@ -1,8 +1,9 @@
 import { AppNavbarBrand } from '@coreui/react';
 import React, { Component } from 'react';
 import { Button, Card, CardBody, CardGroup, Col, Container, Form, Input, InputGroup, InputGroupAddon, InputGroupText, Row } from 'reactstrap';
-import logo from '../../../assets/img/brand/logo.svg'
-
+import logo from '../../../assets/img/brand/logo.svg';
+import bg_img from '../../../assets/img/brand/bg_img.png';
+import bg_img_two from '../../../assets/img/brand/bg_img_two.png';
 class Login extends Component {
   onSubmit = () => {
     console.log('hello');
@@ -11,11 +12,13 @@ class Login extends Component {
 
 
 
+
   render() {
     return (
-      <div className="app flex-row align-items-center" style={{ backgroundImage: `linear-gradient(to top, #fff1eb 0%, #ace0f9 100%)` }}>
+      // style={{backgroundImage: `url(${logo})`
+      <div className="login_bg app flex-row align-items-center" style={{background:`url(${bg_img}),url(${bg_img_two})`}}>
         <Container>
-          <Row className="justify-content-center">
+          <Row className="justify-content-end">
             <Col md="4">
               <CardGroup>
                 <Card className="p-4">

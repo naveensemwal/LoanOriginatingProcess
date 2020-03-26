@@ -40,6 +40,7 @@
     "node-sass": "^4.13.1",
     "pdf-viewer-reactjs": "^2.0.2",
     "prop-types": "^15.7.2",
+    "radium": "^0.26.0",
     "react": "^16.12.0",
     "react-app-polyfill": "^1.0.6",
     "react-awesome-query-builder": "^1.2.0",
@@ -69,7 +70,8 @@
     "reactstrap": "^8.3.2",
     "recharts": "^2.0.0-beta.2",
     "simple-line-icons": "^2.4.1",
-    "simple-pdf-viewer": "^2.0.3"
+    "simple-pdf-viewer": "^2.0.3",
+    "styled-components": "^5.0.1"
   },
   "devDependencies": {
     "react-scripts": "^3.3.0"
