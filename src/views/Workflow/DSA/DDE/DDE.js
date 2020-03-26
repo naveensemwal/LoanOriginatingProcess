@@ -92,7 +92,7 @@ componentDidMount() {
     const { TabPane } = Tabs;
     return (
       <Form onSubmit={this.handleSubmit} layout="horizontal">
-        <div className="card-container">
+        <div className="card-container cust_tabs_card form-group">
           <Tabs>
             <TabPane tab="Customer Details" key="1">
               <Collapse defaultActiveKey={["1"]}>
@@ -224,30 +224,31 @@ componentDidMount() {
             </TabPane>
           </Tabs>
         </div>
-        <br />
-        <br />
         <Form.Item>
+          <div className='pull-right'>
           <Button
             type="primary"
             htmlType="SaveAsDraft"
-            shape="round"
+          className='mar-rig-10'
             size={size}
           >
             Save as Draft
           </Button>
-          &nbsp;&nbsp;&nbsp;
+        
           <Button
             type="primary"
             htmlType="RerunDedupe"
-            shape="round"
+            className='mar-rig-10'
             size={size}
           >
             Rerun Dedupe
           </Button>
-          &nbsp; &nbsp; &nbsp;
-          <Button type="primary" htmlType="submit" shape="round" size={size}>
+        
+          <Button type="primary" htmlType="submit" 
+            size={size}>
             Submit
           </Button>
+          </div>
         </Form.Item>
       </Form>
     );
