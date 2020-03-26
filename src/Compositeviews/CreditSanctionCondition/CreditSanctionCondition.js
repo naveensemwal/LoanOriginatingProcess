@@ -6,18 +6,14 @@ import { Table, Input, Button, Popconfirm, Form,Select} from 'antd';
 
 const EditableContext = React.createContext();
 
-const EditableRow = ({ index, ...props }) => {
-  const [form] = Form.useForm();
-  return (
-    <Form form={form} component={false}>
-      <EditableContext.Provider value={form}>
-        <tr {...props} />
-      </EditableContext.Provider>
-    </Form>
-  );
-};
+const EditableRow = ({ form,index, ...props }) => (
+<EditableContext.Provider value={form}>
+    <tr {...props} />
+  </EditableContext.Provider>
 
-
+)
+  
+const EditableFormRow = Form.create()(EditableRow);
 const EditableCell = ({
   title,
   editable,
@@ -172,7 +168,7 @@ export default class  CreditSanctionCondition extends Component {
     const { dataSource } = this.state;
     const components = {
       body: {
-        row: EditableRow,
+        row: EditableFormRow,
         cell: EditableCell,
       },
     };
