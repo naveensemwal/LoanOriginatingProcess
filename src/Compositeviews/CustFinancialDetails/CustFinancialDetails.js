@@ -14,6 +14,7 @@ export default class CustFinancialDetails extends Component {
         onFinish={onFinish}
         labelCol={{ span: 4 }}
         wrapperCol={{ span: 20 }}
+        
       >
         {/* <Form.Item label="Username">
           <Form.Item
@@ -23,89 +24,63 @@ export default class CustFinancialDetails extends Component {
             <Input style={{ width: 160 }} placeholder="Please input" />
           </Form.Item>
         </Form.Item> */}
-       
-        <Form.Item
+
+        
+<Form.Item
           label="Assessment Year"
-          labelCol={{span:4}}
-          wrapperCol={{span:20}}
-         
+          style={{ marginBottom: 0 }}
         >
-         
           <Form.Item
-          
-            name="current Assessment Year (A.Y.)"
+            name="Assessment Year"
             rules={[{ required: true }]}
             style={{
               display: "inline-block",
-            
+              width: "calc(50% - 5px)",
               marginRight: 8
             }}
           >
-            <Input placeholder="" />
+            <select id="ay-drop-down" className="form-control" name="year"><option value="2019-2020">2020-2021</option>
+<option selected="selected" value="2018-2019">2019-2020</option>
+<option value="2017-2018">2018-2019</option>
+<option value="2016-2017">2017-2018</option>
+<option value="2015-2016">2016-2017</option>
+</select>
           </Form.Item>
           <Form.Item
-         
             name="Previous Assessment Year (A.Y.)"
             rules={[{ required: true }]}
-            style={{
-              display: "inline-block",
-           
-              marginRight: 8
-            }}
+            style={{ display: "inline-block", width: "calc(50% - 5px)" }}
           >
-            <Input placeholder="" />
+             <select id="ay-drop-down" className="form-control"  name="year"><option value="2019-2020">2020-2021</option>
+<option selected="selected" value="2018-2019">2019-2020</option>
+<option value="2017-2018">2018-2019</option>
+<option value="2016-2017">2017-2018</option>
+<option value="2015-2016">2016-2017</option>
+</select>
           </Form.Item>
-     
         </Form.Item>
-     
+       
 
 
 
         <Form.Item
           label="Date Of Filling ITR"
-          labelCol={{span:4}}
-          wrapperCol={{span:20}}
+         style={{marginBottom:0}}
          
         >
           <Form.Item
             name="Date Of Filling ITR<sup>*</sup>"
             rules={[{ required: true }]}
-            style={{
-              display: "inline-block",
-              
-              marginRight: 8
-            }}
+            style={{ display: "inline-block",  marginRight: 8, width: "calc(50% - 5px)" }}
           >
             <Input placeholder="Date Of Filling ITR" />
           </Form.Item>
           <Form.Item
             name="Date Of Filling ITR<sup>*</sup>"
             rules={[{ required: true }]}
-            style={{
-              display: "inline-block",
-            
-              marginRight: 8
-            }}
+            style={{ display: "inline-block", width: "calc(50% - 5px)" }}
           >
-            <Input placeholder="Date Of Filling ITR" />
-          </Form.Item>
-          <Form.Item
-            name="Date Of Filling ITR<sup>*</sup>"
-            rules={[{ required: true }]}
-            style={{
-              display: "inline-block",
-            
-              marginRight: 8
-            }}
-          >
-            <Input placeholder="Date Of Filling ITR" />
-          </Form.Item>
-          <Form.Item
-            name="Date Of Filling ITR<sup>*</sup>"
-            rules={[{ required: true }]}
-            style={{ display: "inline-block"}}
-          >
-            <Input placeholder="Date Of Filling ITR" />
+            <Input className='form-control' placeholder="Date Of Filling ITR" />
           </Form.Item>
         </Form.Item>
         <Form.Item label="Rental Income" style={{ marginBottom: 0 }}>

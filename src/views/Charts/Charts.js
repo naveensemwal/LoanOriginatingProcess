@@ -154,7 +154,7 @@ const options = {
 class Charts extends Component {
   render() {
     return (
-      <div className="animated fadeIn">
+      <div className="animated fadeIn cust_charts_group">
         <CardColumns className="cols-2">
           <Card>
             <CardHeader>

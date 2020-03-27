@@ -4,7 +4,8 @@
 
 // Here you can add other styles
 
-.lagkZY, .heJwJj{background:red !important}
+.lagkZY, .heJwJj{background:#59c8e7 !important;
+  height: 341px !important;}
 .multiple_date_field .ant-form-item-control .ant-form-item-children input {
     height: 32px;
     line-height: 27px;
@@ -83,12 +84,14 @@
   }
   /*inner page accordion tab design end*/
 /*Css for inner contents of tab start*/
-.MuiTable-root th.MuiTableCell-root {
-    background: #59c8e7 !important;}
+.MuiTable-root th.MuiTableCell-root, .ant-table-thead > tr > th {
+    background: #59c8e7 !important;
+    color:#fff !important;
+}
 /*Css for inner contents of tab end*/
   /*button css start */
 
-  .ant-btn {
+  .ant-btn, .sc-VigVT.dsKVpZ, .MuiButton-containedPrimary {
     text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
     -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
@@ -96,12 +99,59 @@
     background-color: #1890ff;
     border-color: #1890ff;
     color: #FFF;
-    font-size: 1rem !important;
-    padding: 0.5rem 1rem !important;
-    line-height: 1.334;
     transition: all 0.3s ease 0s;
   }
-  .ant-btn:hover {
+  .ant-btn:hover, .dsKVpZ:hover, .MuiButton-containedPrimary {
     background-color: #40a9ff;
     border-color: #40a9ff; }
+
       /*button css end*/
+
+      .sidebar .nav-link {
+ color: #c7b5b5;}
+
+/*dashboard chart css start*/
+.cust_charts_group .card-header, .Cust_Eligibility_form_wizard_group.card-header {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 0;
+  background-color: #59c8e6;
+  border-bottom: 1px solid #c8ced3;
+  color: #fff;
+  background: #59c8e6;
+  background: -moz-linear-gradient(left, #59c8e6 1%, #86d0e0 50%, #88d6e6 53%, #64bee2 100%);
+  background: -webkit-linear-gradient(left, #59c8e6 1%,#86d0e0 50%,#88d6e6 53%,#64bee2 100%);
+  background: linear-gradient(to right, #59c8e6 1%,#86d0e0 50%,#88d6e6 53%,#64bee2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#59c8e6', endColorstr='#64bee2',GradientType=1 );
+
+  height: 40px;
+  line-height: 15px;}
+
+.cust_charts_group .card small.text-muted {
+  display: none;
+}
+/*dashboard css end*/
+/*Eligibility Calculator cs start*/
+.MuiStepIcon-root.MuiStepIcon-active {
+   width: 48px;
+  height: 48px;
+  margin-top: 0;
+  // background: #6753D8;
+  font-size: 22px;
+  line-height: 48px;
+  border-radius: 50%;
+}
+svg.MuiSvgIcon-root.MuiStepIcon-root {
+  width: 48px;
+  height: 48px;
+  margin-top: 0;
+  // background: #6753D8;
+  font-size: 22px;
+  line-height: 48px;
+  border-radius: 50%;
+}
+.MuiStepConnector-alternativeLabel {
+  top: 26px !important;
+  left: calc(-50% + 25px) !important;
+  right: calc(50% + 23px) !important;
+}
+/*Eligibility Calculator css end*/

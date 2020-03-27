@@ -32,7 +32,7 @@ function getStepContent(stepIndex) {
   switch (stepIndex) {
     case 0:
       return (<Card>
-        <CardHeader>
+        <CardHeader className='Cust_Eligibility_form_wizard_group'>
           <strong>Personal Details</strong>
         </CardHeader>
         <CardBody>
@@ -41,7 +41,7 @@ function getStepContent(stepIndex) {
       </Card>);
     case 1:
       return (<Card>
-        <CardHeader>
+        <CardHeader className='Cust_Eligibility_form_wizard_group'>
           <strong>Employment Details</strong>
         </CardHeader>
         <CardBody>
@@ -50,7 +50,7 @@ function getStepContent(stepIndex) {
       </Card>);
     case 2:
       return (<Card>
-        <CardHeader>
+        <CardHeader className='Cust_Eligibility_form_wizard_group'>
           <strong>Credit Score</strong>
         </CardHeader>
         <CardBody>
@@ -71,7 +71,7 @@ function getStepContent(stepIndex) {
     case 3:
       return (
       <Card>
-        <CardHeader>
+        <CardHeader className='Cust_Eligibility_form_wizard_group'>
           <strong>Emi Calculator</strong>
         </CardHeader>
       <CardBody>

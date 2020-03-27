@@ -1,5 +1,7 @@
 import React from "react";
 import { render } from "react-dom";
+import { Col, Form, Input, InputNumber, Row, Select, DatePicker, Table, Tag  } from 'antd';
+
 
 
 
@@ -7,6 +9,18 @@ export default class Cust_Obligationss extends React.Component {
     state = {
         rows: [{}]
       };
+
+      disbursementTypeChange = idx => e =>{
+        console.log('hi', idx, e)
+        const rows = [...this.state.rows];
+        rows[idx] = {
+          ['ConsiderForObligations']: e
+        };
+        this.setState({
+          rows
+        });
+     
+      }
       handleChange = idx => e => {
         const { name, value} = e.target;
         const rows = [...this.state.rows];
@@ -20,29 +34,30 @@ export default class Cust_Obligationss extends React.Component {
       handleAddRow = () => {
         let count=1;
         count=count+1;
-        const item = [
-          'ckbox1'+count,
-          'ConsiderForObligations'+count,
-          'ConsiderForSurrogate'+count,
-          'Financer'+count,
-          'LoanType'+count,
-          'LoanAmount'+count,
-          'Tenure'+count,
-          'NoOfEMIPaid'+count,
-          'EMIPayingFromBank'+count,
-          'EMIAmount'+count,
-          'Status'+count,
-          'reason'+count,
-          'remove'+count
-      ];
+        console.log('lenth ===',this.state.rows.length); 
+        console.log(count); 
+               const item = {
+          ckbox1:'',
+          ConsiderForObligations: "",
+          ConsiderForSurrogate: "",
+          Financer:"",
+          LoanType:"",
+          LoanAmount:"",
+          Tenure:"",
+          NoOfEMIPaid:"",
+          EMIPayingFromBank:"",
+          EMIAmount:"",
+          Status:"",
+          reason:"",
+          remove:"",
+         };
+         console.log(item);
         this.setState({
-          
-
-
-
           rows: [...this.state.rows, item]
-        });
+       });
+       console.log(this.state.rows);
       };
+
       handleRemoveRow = () => {
         this.setState({
           rows: this.state.rows.slice(0, -1)
@@ -56,8 +71,10 @@ export default class Cust_Obligationss extends React.Component {
   
   render() {
     return (
+    
       <div className="container-fluids">
         <div className="row clearfix">
+        
           <div className="col-md-12 column">
             <table className="table table-bordered table-hover" id="tab_logic">
               <thead>
@@ -84,7 +101,7 @@ export default class Cust_Obligationss extends React.Component {
                     {/* {idx} */}
                      <input type="checkbox"  name="ckbox1"/>
                   </td>
-                  <td>
+                  {/* <td>
                   
                   <input
                           type="text"
@@ -93,6 +110,12 @@ export default class Cust_Obligationss extends React.Component {
                           onChange={this.handleChange(idx)}
                           className="form-control"
                         />
+                  </td> */}
+                  <td>
+                  <Select defaultValue="homeLoan"  name='ConsiderForObligations' onChange={this.disbursementTypeChange(idx)} hidden='isSingle'>
+                                <Select.Option selected value="homeLoan">Single</Select.Option>
+                                <Select.Option value="autoLoan">Multiple</Select.Option>                             
+                  </Select>
                   </td>
                   <td>
                   
@@ -144,12 +167,12 @@ export default class Cust_Obligationss extends React.Component {
                 ))}
               </tbody>
             </table>
-           <button onClick={this.handleAddRow} className="btn btn-primary btn-danger"><i className="fa fa-plus"></i></button>
-           <button
+           <a  className="btn btn-danger " onClick={this.handleAddRow}><i className="fa fa-plus"></i></a>
+           <a
                 onClick={this.handleRemoveRow}
                 className="btn btn-danger float-right">
                 Delete Last Row
-              </button>
+              </a>
           </div>
         </div>
       </div>
