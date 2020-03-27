@@ -7,7 +7,15 @@ import { Menu,Icon,Row,Col,Button,Layout } from 'antd';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import RuleEnginePopup from '../../Compositeviews/RuleEnginePopup/RuleEnginePopup';
 import DocumentChecklist1 from '../../Compositeviews/RuleEnginePopup/DocumentChecklist1';
+import DocumentChecklist2 from '../../Compositeviews/RuleEnginePopup/DocumentChecklist2';
+import DocumentChecklist3 from '../../Compositeviews/RuleEnginePopup/DocumentChecklist3';
 
+import MaxAge from '../../Compositeviews/RuleEnginePopup/MaxAge';
+import CreditReport from '../../Compositeviews/RuleEnginePopup/CreditReport';
+import PremiumClassification from '../../Compositeviews/RuleEnginePopup/PremiumClassification';
+import MaxLoanAmt from '../../Compositeviews/RuleEnginePopup/MaxLoanAmt';
+
+import PolicyComplianceRules from '../../Compositeviews/RuleEnginePopup/PolicyComplianceRules';
 const RulesEngineModalstyle={
 
   
@@ -90,11 +98,14 @@ export default class Ruleengine extends Component {
             }
           >
       <Menu.Item key="homeLoan"><Link to="/DocumentChecklist1" /><span>Home Loan</span></Menu.Item>
-      <Menu.Item key="lap"><Link to="/RuleEnginePopup" /><span>Loan Against Property</span>
+      <Menu.Item key="lap"><Link to="/DocumentChecklist1" /><span>Loan Against Property</span>
                                 </Menu.Item>
-      <Menu.Item key="businessloan">Business Loan</Menu.Item>
-      <Menu.Item key="personalLoan">Personal Loan</Menu.Item>
-      <Menu.Item key="vehicleloan">Vehicle Loan</Menu.Item>
+      <Menu.Item key="businessloan"><Link to="/DocumentChecklist2" /><span>Business Loan</span>
+           </Menu.Item>
+
+      
+      <Menu.Item key="personalLoan"><Link to="/DocumentChecklist2" /><span>Personal Loan</span></Menu.Item>
+      <Menu.Item key="vehicleloan"><Link to="/DocumentChecklist2" /><span>Vehicle Loan</span></Menu.Item>
      
       </SubMenu>
       
@@ -107,7 +118,8 @@ export default class Ruleengine extends Component {
               </span>
             }
           >
-      <Menu.Item key="DataVerf">Data Verification and Consistency</Menu.Item>
+
+      <Menu.Item key="DataVerf"><Link to="/DocumentChecklist3" /><span>Data Verification and Consistency</span></Menu.Item>
            
       </SubMenu>
 
@@ -120,9 +132,11 @@ export default class Ruleengine extends Component {
               </span>
             }
           >
-      <Menu.Item key="CreditReport">Credit Report</Menu.Item>
-      <Menu.Item key="MaxAge">Maximum age based customer profile</Menu.Item>
-      <Menu.Item key="PremiumClassification">Premium Classification</Menu.Item>
+            
+      <Menu.Item key="CreditReport"><Link to="/CreditReport" /><span>Credit Report</span></Menu.Item>
+      
+      <Menu.Item key="MaxAge"><Link to="/MaxAge" /><span>Maximum age based customer profile</span></Menu.Item>
+      <Menu.Item key="PremiumClassification"><Link to="/PremiumClassification" /><span>Premium Classification</span></Menu.Item>
       
       </SubMenu>
 
@@ -135,7 +149,8 @@ export default class Ruleengine extends Component {
               </span>
             }
           >
-      <Menu.Item key="MaxLoanAmt">Maximum Loan Amount</Menu.Item>
+            
+      <Menu.Item key="MaxLoanAmt"><Link to="/MaxLoanAmt" /><span>Maximum Loan Amount</span></Menu.Item>
       <Menu.Item key="MaxTen">Maximum Tenure</Menu.Item>
       
       </SubMenu>
@@ -152,14 +167,17 @@ export default class Ruleengine extends Component {
       </SubMenu>
 
 	  <SubMenu
-            key="Policy"
+            key="Policy" 
             title={
               <span>
                 <Icon type="setting" />
+                
                 <span>Policy Compliance Rules</span>
               </span>
+
             }
           >
+          <Menu.Item key="ComplianceRules"><Link to="/PolicyComplianceRules" /><span>Compliance Rules</span></Menu.Item>
       </SubMenu>
 
 	  
@@ -169,8 +187,20 @@ export default class Ruleengine extends Component {
                         
                         <Content style={{ paddingLeft:71, background: '#fff', minHeight: 500 }}>
                         <Route path="/DocumentChecklist1" component={DocumentChecklist1} />
-                        
-                            <Route path="/RuleEnginePopup" component={RuleEnginePopup} />
+                          
+                         <Route path="/DocumentChecklist2" component={DocumentChecklist2} />
+
+                         <Route path="/DocumentChecklist3" component={DocumentChecklist3} />
+                         
+                         <Route path="/CreditReport" component={CreditReport} />
+                         
+                         <Route path="/MaxAge" component={MaxAge} />
+                         
+                         <Route path="/PremiumClassification" component={PremiumClassification} />
+                         
+                         <Route path="/MaxLoanAmt" component={MaxLoanAmt} />
+                         
+                         <Route path="/PolicyComplianceRules" component={PolicyComplianceRules} />
                         </Content>
 
                     </Layout>
