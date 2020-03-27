@@ -62,7 +62,7 @@ export default class DedupeResult extends Component{
     render(){
         return(
             <div>
-                <Table className='table table-striped table-hover table-bordered'
+                <Table bordered 
                     columns={columns} dataSource={data}
                 
                 />

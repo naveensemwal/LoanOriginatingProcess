@@ -207,7 +207,7 @@ componentDidMount() {
             </TabPane>
             <TabPane tab="Disbursement Details" key="19">
               <Collapse defaultActiveKey={["1"]}>
-                <Panel header="Disbursement Details">
+                <Panel header="Disbursement Details" key="1">
                   <DisbursementDetails></DisbursementDetails>
                 </Panel>
               </Collapse>

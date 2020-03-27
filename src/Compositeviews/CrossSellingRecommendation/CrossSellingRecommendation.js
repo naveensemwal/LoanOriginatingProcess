@@ -56,7 +56,7 @@ export default class CrossSellingRecommendation extends Component{
     render(){
         return(
             <div>
-                <Table className='table table-striped table-hover table-bordered'
+                <Table bordered 
                     columns={columns} dataSource={data}
                 
                 />

@@ -44,29 +44,49 @@ export default class BankStatmentDetails extends Component {
           dataIndex: 'view',
           // render: text => <Icon type="eye"  onClick={(e) => { this.onView (record.key, e); }} />
           render: (text, record) => (
-            <Icon type="eye"  onClick={(e) => { this.onView (record, e); }} />          
+            <Icon type="eye" className='ant-btn ant-btn-primary ant-btn-circle ant-btn-icon-only' onClick={(e) => { this.onView (record, e); }} />          
           ),
         },
         {
           title:'Download',
           dataIndex:'download',
-       render: text=> <Link to='../../../../public/assets/img/Sample_Doc.pdf'
-       onClick={(event) => { event.preventDefault(); window.open('../../../public/assets/img/Sample_Doc.pdf');}}>Download</Link>
+       //  render: <Icon type="download" className='ant-btn ant-btn-primary ant-btn-circle ant-btn-icon-only' onClick={(e) => { this.onView (record, e); }} /> 
+        render: text=><Icon type="download" className='ant-btn ant-btn-primary ant-btn-circle ant-btn-icon-only'/> 
+        // <Link  to='../../../../public/assets/img/Sample_Doc.pdf'
+        // onClick={(event) => { event.preventDefault(); window.open('../../../public/assets/img/Sample_Doc.pdf');}}>Download</Link>
         }
       
         
       ];
-      fetch("http://localhost:4231/bankstatementDetails.php").
-      then(response=>response.json()).
-      then((responseJson)=>{
-        console.log(responseJson);
+      const data= [{
+          "key": "1",
+          "name": "KOTAK MAHINDRA BANK LTD Statement-00897897114",
+          "view": "View",
+          "download": "Download"
+        }, {
+          "key": "2",
+          "name": "KOTAK MAHINDRA BANK LTD Statement-65470157872",
+          "view": "View",
+          "download": "Download"
+        }];
         this.setState({
           loading:true,
-          dataBank:responseJson,
+          dataBank:data,
           columns:columns
         })
-      })
-      .catch(error=>console.log(error))
+
+        /**Fetching data using api*/
+      // fetch("http://localhost:4231/bankstatementDetails.php").
+      // then(response=>response.json()).
+      // then((responseJson)=>{
+      //   console.log(responseJson);
+      //   this.setState({
+      //     loading:true,
+      //     dataBank:responseJson,
+      //     columns:columns
+      //   })
+      // })
+      // .catch(error=>console.log(error))
     }
     
 
@@ -108,12 +128,13 @@ export default class BankStatmentDetails extends Component {
      {/* <DynamicTable/>  */}
         <BankStatementViewTable/>
       
-        <Table className="table table-hover table-stacked "
+        <Table 
           columns={this.state.columns}
           dataSource={this.state.dataBank}
+          bordered 
         />
 <div class="text-center">
-        <a href='#' class='btn btn-primary text-center'>Upload</a>
+        <a href='#' className='ant-btn mar-rig-10 ant-btn-primary ant-btn-lg'>Upload</a>
         </div>
         <Modal
           title={this.state.title}
