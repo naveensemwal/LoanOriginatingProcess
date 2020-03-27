@@ -14,7 +14,8 @@ import MaxAge from '../../Compositeviews/RuleEnginePopup/MaxAge';
 import CreditReport from '../../Compositeviews/RuleEnginePopup/CreditReport';
 import PremiumClassification from '../../Compositeviews/RuleEnginePopup/PremiumClassification';
 import MaxLoanAmt from '../../Compositeviews/RuleEnginePopup/MaxLoanAmt';
-
+import VerificationRules from '../../Compositeviews/RuleEnginePopup/VerificationRules';
+import MaxTen from '../../Compositeviews/RuleEnginePopup/MaxTen';
 import PolicyComplianceRules from '../../Compositeviews/RuleEnginePopup/PolicyComplianceRules';
 const RulesEngineModalstyle={
 
@@ -151,7 +152,8 @@ export default class Ruleengine extends Component {
           >
             
       <Menu.Item key="MaxLoanAmt"><Link to="/MaxLoanAmt" /><span>Maximum Loan Amount</span></Menu.Item>
-      <Menu.Item key="MaxTen">Maximum Tenure</Menu.Item>
+      
+      <Menu.Item key="MaxTen"><Link to="/MaxTen" /><span>Maximum Tenure</span></Menu.Item>
       
       </SubMenu>
 
@@ -164,6 +166,9 @@ export default class Ruleengine extends Component {
               </span>
             }
           >
+
+
+          <Menu.Item key="VerificationRules"><Link to="/VerificationRules" /><span>Verification Rules</span></Menu.Item>
       </SubMenu>
 
 	  <SubMenu
@@ -185,7 +190,7 @@ export default class Ruleengine extends Component {
                     </Sider>
                     <Layout>
                         
-                        <Content style={{ paddingLeft:71, background: '#fff', minHeight: 500 }}>
+                        <Content style={{ paddingLeft:10, background: '#fff', minHeight: 500 }}>
                         <Route path="/DocumentChecklist1" component={DocumentChecklist1} />
                           
                          <Route path="/DocumentChecklist2" component={DocumentChecklist2} />
@@ -201,6 +206,10 @@ export default class Ruleengine extends Component {
                          <Route path="/MaxLoanAmt" component={MaxLoanAmt} />
                          
                          <Route path="/PolicyComplianceRules" component={PolicyComplianceRules} />
+                         
+                         <Route path="/MaxTen" component={MaxTen} />
+                         
+                         <Route path="/VerificationRules" component={VerificationRules} />
                         </Content>
 
                     </Layout>

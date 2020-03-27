@@ -83,11 +83,11 @@ export default class DocumentChecklist2 extends Component{
 
   
   showModal = () => {
-   
+    var id ='2';
     this.setState({
       visible: true,
       // data: this.data,
-      contents:<RuleEnginePopup></RuleEnginePopup>
+      contents:<RuleEnginePopup id={id}></RuleEnginePopup>
     });
   }
 

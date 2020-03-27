@@ -89,11 +89,11 @@ export default class DocumentChecklist1 extends Component{
 
   
   showModal = () => {
-   
+    var id ='1';
     this.setState({
       visible: true,
       // data: this.data,
-      contents:<RuleEnginePopup></RuleEnginePopup>
+      contents:<RuleEnginePopup id={id}></RuleEnginePopup>
     });
   }
 
@@ -130,7 +130,8 @@ export default class DocumentChecklist1 extends Component{
 				visible={this.state.visible}
 				onOk={this.handleOk}
 				onCancel={this.handleCancel}
-				width={820}
+        width={1020}
+        height={200}
          
 			>
 			{this.state.contents}
