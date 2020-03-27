@@ -3,9 +3,19 @@ import { Query, Builder, BasicConfig, Utils as QbUtils } from 'react-awesome-que
 import "antd/dist/antd.css";
 import 'react-awesome-query-builder/css/styles.scss';
 import 'react-awesome-query-builder/css/compact_styles.scss'; 
-import { Menu,Icon,Row,Col,Table,Button,Modal } from 'antd';
+import { Menu,Icon,Row,Col,Button,Layout } from 'antd';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import RuleEnginePopup from '../../Compositeviews/RuleEnginePopup/RuleEnginePopup';
+import DocumentChecklist1 from '../../Compositeviews/RuleEnginePopup/DocumentChecklist1';
+import DocumentChecklist2 from '../../Compositeviews/RuleEnginePopup/DocumentChecklist2';
+import DocumentChecklist3 from '../../Compositeviews/RuleEnginePopup/DocumentChecklist3';
 
+import MaxAge from '../../Compositeviews/RuleEnginePopup/MaxAge';
+import CreditReport from '../../Compositeviews/RuleEnginePopup/CreditReport';
+import PremiumClassification from '../../Compositeviews/RuleEnginePopup/PremiumClassification';
+import MaxLoanAmt from '../../Compositeviews/RuleEnginePopup/MaxLoanAmt';
+
+import PolicyComplianceRules from '../../Compositeviews/RuleEnginePopup/PolicyComplianceRules';
 const RulesEngineModalstyle={
 
   
@@ -18,7 +28,7 @@ const RulesEngineModalstyle={
 
 }
 
-
+const { Header, Content, Footer, Sider } = Layout;
 const { SubMenu } = Menu;
 
 export default class Ruleengine extends Component {
@@ -28,74 +38,12 @@ export default class Ruleengine extends Component {
   super(props);
 
    
-   this.columns = [
-    {
-    title: 'Document Category',
-    dataIndex: 'DocumentCategory',
-    render: text => <a>{text}</a>,
-    },
-    
-    {
-    title:'Document Name',
-    dataIndex:'DocumentName',
-    render: text => <a>{text}</a>,
-    }
- 
-    
-  ];
-  
-  this.data = [
-    {
-    key: '1',
-    DocumentCategory: 'Application Form',
-    
-    DocumentName:'Signed Application form',
-    
-    },
-    {
-    key: '2',
-    DocumentCategory: 'ID Proof',
-    
-    DocumentName:'Aadhar/Passport/PAN/Voter ID/Driving License',
-    
-    },
-    {
-    key: '3',
-    DocumentCategory: 'Address Proof',
-    
-    DocumentName:'Aadhar/Passport/Voter ID/Driving License/Electricity Bill',
-    
-    },
-    {
-    key: '4',
-    DocumentCategory: 'Income Documents',
-    
-    DocumentName:'3 salary slips/salary certificate/Latest form 16',
-    
-    },
-    {
-    key: '5',
-    DocumentCategory: 'banking Documents',
-    
-    DocumentName:'Latest 6 months bank statement',
-    
-    },
-    {
-    key: '6',
-    DocumentCategory: 'Property Documents',
-    
-    DocumentName:'Copy of original sale deed/Allotment-possession letter/NOC from Society',
-    
-    },
-    
-  ];
-  
-
+   
   this.state = {
   visible: false,
   
   contents : <div>Initial</div>,
-  data: this.data,
+  
  
   
   };
@@ -132,13 +80,14 @@ export default class Ruleengine extends Component {
 
   render = () => (
   <div>
-  <Row  gutter={[8, 8]}>
-    <Col span={6}>
-    <Menu
-      mode="inline"
-      
-      style={{ width: 256 }}
-    >
+  
+    <Router>
+                <Layout >
+
+                    <Sider style={{background:'#ffffff'}}>
+                        
+                       <Menu
+                           mode="inline" >
       <SubMenu
             key="documentCheckList"
             title={
@@ -148,41 +97,116 @@ export default class Ruleengine extends Component {
               </span>
             }
           >
-      <Menu.Item key="homeLoan">Home Loan</Menu.Item>
-      <Menu.Item key="lap">Loan Against Property</Menu.Item>
-      <Menu.Item key="businessloan">Business Loan</Menu.Item>
-      <Menu.Item key="personalLoan">Personal Loan</Menu.Item>
-      <Menu.Item key="vehicleloan">Vehicle Loan</Menu.Item>
+      <Menu.Item key="homeLoan"><Link to="/DocumentChecklist1" /><span>Home Loan</span></Menu.Item>
+      <Menu.Item key="lap"><Link to="/DocumentChecklist1" /><span>Loan Against Property</span>
+                                </Menu.Item>
+      <Menu.Item key="businessloan"><Link to="/DocumentChecklist2" /><span>Business Loan</span>
+           </Menu.Item>
+
+      
+      <Menu.Item key="personalLoan"><Link to="/DocumentChecklist2" /><span>Personal Loan</span></Menu.Item>
+      <Menu.Item key="vehicleloan"><Link to="/DocumentChecklist2" /><span>Vehicle Loan</span></Menu.Item>
      
       </SubMenu>
       
-    </Menu>
-    </Col>
-    <Col span={18} >
-    
-    <Table className="table table-hover table-stacked "
-      columns={this.columns}
-      dataSource={this.state.data}
-    />
-    <div class="text-right">
-    <Button type="primary" onClick={this.showModal}>
-           Edit
-        </Button>
+	  <SubMenu
+            key="documentVerification"
+            title={
+              <span>
+                <Icon type="setting" />
+                <span>Document Verification</span>
+              </span>
+            }
+          >
 
-    <Modal
-          title="MODAL"
-          visible={this.state.visible}
-          onOk={this.handleOk}
-          onCancel={this.handleCancel}
-          style={{width: 520}}
-         
-        >
-         {this.state.contents}
-        </Modal>
-    </div>
-    
-    </Col>
-  </Row>
+      <Menu.Item key="DataVerf"><Link to="/DocumentChecklist3" /><span>Data Verification and Consistency</span></Menu.Item>
+           
+      </SubMenu>
+
+	  <SubMenu
+            key="custprescreening"
+            title={
+              <span>
+                <Icon type="setting" />
+                <span>Customer Pre-Screening</span>
+              </span>
+            }
+          >
+            
+      <Menu.Item key="CreditReport"><Link to="/CreditReport" /><span>Credit Report</span></Menu.Item>
+      
+      <Menu.Item key="MaxAge"><Link to="/MaxAge" /><span>Maximum age based customer profile</span></Menu.Item>
+      <Menu.Item key="PremiumClassification"><Link to="/PremiumClassification" /><span>Premium Classification</span></Menu.Item>
+      
+      </SubMenu>
+
+	  <SubMenu
+            key="Eligibility"
+            title={
+              <span>
+                <Icon type="setting" />
+                <span>Eligibility</span>
+              </span>
+            }
+          >
+            
+      <Menu.Item key="MaxLoanAmt"><Link to="/MaxLoanAmt" /><span>Maximum Loan Amount</span></Menu.Item>
+      <Menu.Item key="MaxTen">Maximum Tenure</Menu.Item>
+      
+      </SubMenu>
+
+	  <SubMenu
+            key="Verifications"
+            title={
+              <span>
+                <Icon type="setting" />
+                <span>Verifications</span>
+              </span>
+            }
+          >
+      </SubMenu>
+
+	  <SubMenu
+            key="Policy" 
+            title={
+              <span>
+                <Icon type="setting" />
+                
+                <span>Policy Compliance Rules</span>
+              </span>
+
+            }
+          >
+          <Menu.Item key="ComplianceRules"><Link to="/PolicyComplianceRules" /><span>Compliance Rules</span></Menu.Item>
+      </SubMenu>
+
+	  
+    </Menu> 
+                    </Sider>
+                    <Layout>
+                        
+                        <Content style={{ paddingLeft:71, background: '#fff', minHeight: 500 }}>
+                        <Route path="/DocumentChecklist1" component={DocumentChecklist1} />
+                          
+                         <Route path="/DocumentChecklist2" component={DocumentChecklist2} />
+
+                         <Route path="/DocumentChecklist3" component={DocumentChecklist3} />
+                         
+                         <Route path="/CreditReport" component={CreditReport} />
+                         
+                         <Route path="/MaxAge" component={MaxAge} />
+                         
+                         <Route path="/PremiumClassification" component={PremiumClassification} />
+                         
+                         <Route path="/MaxLoanAmt" component={MaxLoanAmt} />
+                         
+                         <Route path="/PolicyComplianceRules" component={PolicyComplianceRules} />
+                        </Content>
+
+                    </Layout>
+
+                </Layout>
+            </Router>
  </div>
   )
 
