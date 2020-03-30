@@ -125,7 +125,7 @@ export default class DocumentChecklist1 extends Component{
 			           <div class="text-right">
 				          <Button type="primary" onClick={this.showModal}>Edit</Button>
                     <Modal 
-				            title="MODAL"
+				            title="Rules"
 				            visible={this.state.visible}
 				            onOk={this.handleOk}
 				            onCancel={this.handleCancel}

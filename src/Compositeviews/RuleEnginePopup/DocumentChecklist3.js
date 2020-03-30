@@ -115,7 +115,7 @@ export default class DocumentChecklist3 extends Component{
 				</Button>
 
 			<Modal 
-				title="MODAL"
+				title="Rulesś"
 				visible={this.state.visible}
 				onOk={this.handleOk}
 				onCancel={this.handleCancel}

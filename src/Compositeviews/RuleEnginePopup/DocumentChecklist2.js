@@ -122,11 +122,12 @@ export default class DocumentChecklist2 extends Component{
 				</Button>
 
 			<Modal 
-				title="MODAL"
+				title="Rules"
 				visible={this.state.visible}
 				onOk={this.handleOk}
 				onCancel={this.handleCancel}
-				width={820}
+				width={1020}
+        height={200}
          
 			>
 			{this.state.contents}

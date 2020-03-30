@@ -200,8 +200,8 @@ export default class VerificationRules extends Component{
 				visible={this.state.visible}
 				onOk={this.handleOk}
 				onCancel={this.handleCancel}
-				width={820}
-         
+				width={1020}
+        height={200} 
 			>
 			{this.state.contents}
 			</Modal>
