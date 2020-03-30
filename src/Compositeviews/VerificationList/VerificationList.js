@@ -40,8 +40,8 @@ render(){
       dataIndex="ResidenceCheck"
       key="ResidenceCheck"
       render={(text, record) => (
-        <span>
-          <Select style={{width:'100'}}>
+        <span >
+          <Select style={{width:130}}>
             <Select.Option value="1">3G based field management</Select.Option>
             <Select.Option value="2">Dorupo financial service pvt ltd.</Select.Option>
             <Select.Option value="3">Hiranandani Associates</Select.Option>
@@ -58,8 +58,8 @@ render(){
       dataIndex="Legal"
       key="Legal"
       render={(text, record) => (
-        <span>
-          <Select style={{width:'100'}}>
+        <span >
+          <Select style={{width:130}}>
           <Select.Option value="1">3G based field management</Select.Option>
             <Select.Option value="2">Dorupo financial service pvt ltd.</Select.Option>
             <Select.Option value="3">Hiranandani Associates</Select.Option>
@@ -77,7 +77,7 @@ render(){
       key="BusinessReferenceCheck"
       render={(text, record) => (
         <span>
-          <Select style={{width:'100'}}>
+          <Select style={{width:130}}>
           <Select.Option value="1">3G based field management</Select.Option>
             <Select.Option value="2">Dorupo financial service pvt ltd.</Select.Option>
             <Select.Option value="3">Hiranandani Associates</Select.Option>
@@ -95,7 +95,7 @@ render(){
       key="EmploymentCheck"
       render={(text, record) => (
         <span>
-          <Select style={{width:'100'}}>
+          <Select style={{width:130}}>
           <Select.Option value="1">3G based field management</Select.Option>
             <Select.Option value="2">Dorupo financial service pvt ltd.</Select.Option>
             <Select.Option value="3">Hiranandani Associates</Select.Option>
@@ -113,7 +113,7 @@ render(){
       key="PropertyValuation"
       render={(text, record) => (
         <span>
-          <Select style={{width:'100'}}>
+          <Select style={{width:130}}>
           <Select.Option value="1">3G based field management</Select.Option>
             <Select.Option value="2">Dorupo financial service pvt ltd.</Select.Option>
             <Select.Option value="3">Hiranandani Associates</Select.Option>

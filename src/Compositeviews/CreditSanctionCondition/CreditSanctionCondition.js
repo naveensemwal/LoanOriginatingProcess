@@ -111,7 +111,7 @@ export default class  CreditSanctionCondition extends Component {
       },
       
       {
-        title: 'operation',
+        title: 'Operation',
         dataIndex: 'operation',
         render: (text, record) =>
           this.state.dataSource.length >= 1 ? (
