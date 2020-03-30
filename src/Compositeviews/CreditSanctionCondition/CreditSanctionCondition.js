@@ -99,9 +99,11 @@ export default class  CreditSanctionCondition extends Component {
           this.state.dataSource.length >= 1 ? (
             <span>
           <Select style={{width:'25% !important'}}>
-            <Select.Option value="1">Mumbai</Select.Option>
-            <Select.Option value="2">Pune</Select.Option>
-            <Select.Option value="3">Nashik</Select.Option>
+            <Select.Option value="1">Program Norms Not Met</Select.Option>
+            <Select.Option value="2">Banking not satisfactory</Select.Option>
+            <Select.Option value="3">Low eligibility </Select.Option>
+            <Select.Option value="4">Derogatory history </Select.Option>
+            <Select.Option value="5">Others Reasons(Sanction Conditions)</Select.Option>
           </Select>
         </span>
           ) : null,
@@ -123,15 +125,11 @@ export default class  CreditSanctionCondition extends Component {
       dataSource: [
         {
           key: '0',
-          CovenantCondition: '',
+          CovenantCondition: 'Program Norms Not Met',
         },
-        {
-          key: '1',
-          CovenantCondition: '',
-          
-        },
+        
       ],
-      count: 2,
+      count: 1,
     };
   }
 
@@ -190,6 +188,15 @@ export default class  CreditSanctionCondition extends Component {
     });
     return (
       <div>
+        
+        
+        <Table
+          components={components}
+          rowClassName={() => 'editable-row'}
+          bordered
+          dataSource={dataSource}
+          columns={columns}
+        />
         <Button
           onClick={this.handleAdd}
           type="primary"
@@ -199,13 +206,6 @@ export default class  CreditSanctionCondition extends Component {
         >
           Add a row
         </Button>
-        <Table
-          components={components}
-          rowClassName={() => 'editable-row'}
-          bordered
-          dataSource={dataSource}
-          columns={columns}
-        />
       </div>
     );
   }

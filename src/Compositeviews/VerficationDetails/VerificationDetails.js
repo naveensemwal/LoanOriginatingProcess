@@ -40,12 +40,12 @@ const columns1 = [
 const data1 =[
     {
         key :1,
-        ApplicantName:'Varghese Mathew',
-        VerificationAgency :'ABC Agency',
-        Comment :'ABC Agency',
-        Result :'Not Applicable',
-        Status :'Not Applicable',
-        View :'ABC Agency'
+        ApplicantName:'Singla sales',
+        VerificationAgency :'3G based field management',
+        Comment :'Satisfactory',
+        Result :'Positive',
+        Status :'Completed',
+        View :''
     },
 
 ]
@@ -86,12 +86,12 @@ const columns2 = [
 const data2 =[
     {
         key :1,
-        ApplicantName:'Varghese Mathew',
-        VerificationAgency :'ABC Agency',
-        Comment :'ABC Agency',
-        Result :'Not Applicable',
-        Status :'Not Applicable',
-        View :'ABC Agency'
+        ApplicantName:'Singla sales',
+        VerificationAgency :'Hiranandani Associates',
+        Comment :'Part property is constructed on projections which is on MCD land.',
+        Result :'Positive',
+        Status :'Completed',
+        View :''
     },
 
 ]
@@ -131,12 +131,12 @@ const columns3 = [
 const data3 =[
     {
         key :1,
-        ApplicantName:'Varghese Mathew',
-        VerificationAgency :'ABC Agency',
-        Comment :'ABC Agency',
-        Result :'Not Applicable',
-        Status :'Not Applicable',
-        View :'ABC Agency'
+        ApplicantName:'Singla sales',
+        VerificationAgency :'MONEYMALL001',
+        Comment :'Satisfactory',
+        Result :'Positive',
+        Status :'Completed',
+        View :''
     },
 
 ]
