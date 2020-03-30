@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Table, Typography,Button,Modal} from 'antd';
+import { Table, Typography,Button,Modal,Collapse} from 'antd';
 import RuleEnginePopup from './RuleEnginePopup';
-
+const { Panel } = Collapse;
 
 const { Text } = Typography;
 const columns = [
@@ -213,6 +213,8 @@ export default class PolicyComplianceRules extends Component{
     render(){
         return(
             <div>
+                 <Collapse defaultActiveKey={["1"]}>
+                <Panel header="Compliance Rules" key="1" danger>
                 <Table className='table table-striped table-hover table-bordered'
                     columns={columns} dataSource={data}
                 
@@ -233,7 +235,8 @@ export default class PolicyComplianceRules extends Component{
 			{this.state.contents}
 			</Modal>
 			</div>
-
+            </Panel>
+            </Collapse>
             </div>
 
 

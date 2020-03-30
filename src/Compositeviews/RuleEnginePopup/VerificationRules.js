@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import { Table, Typography,Button,Modal,Divider,Tag} from 'antd';
+import { Table, Typography,Button,Modal,Divider,Tag,Collapse} from 'antd';
 import RuleEnginePopup2 from './RuleEnginePopup2';
-
+const { Panel } = Collapse;
 const { Column, ColumnGroup } = Table;
 
   
@@ -170,6 +170,8 @@ export default class VerificationRules extends Component{
     render(){
         return(
             <div>
+               <Collapse defaultActiveKey={["1"]}>
+                <Panel header="Verifications" key="1" danger>
                 <Table className='table table-striped table-hover table-bordered'dataSource={data} >
 				   <Column title="Customer Category" dataIndex="CustomerCategory" key="CustomerCategory" />
                   
@@ -194,7 +196,7 @@ export default class VerificationRules extends Component{
 				</Button>
 
 			<Modal 
-				title="MODAL"
+				title="Rules"
 				visible={this.state.visible}
 				onOk={this.handleOk}
 				onCancel={this.handleCancel}
@@ -204,6 +206,8 @@ export default class VerificationRules extends Component{
 			{this.state.contents}
 			</Modal>
 			</div>
+      </Panel>
+      </Collapse>
 
             </div>
 

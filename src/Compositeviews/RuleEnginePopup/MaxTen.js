@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { Table, Typography,Button,Modal,Divider,Tag} from 'antd';
+import { Table, Typography,Button,Modal,Divider,Tag,Collapse} from 'antd';
 import RuleEnginePopup from './RuleEnginePopup';
 
 const { Column, ColumnGroup } = Table;
-
+const { Panel } = Collapse;
   
 const data = [
     {
@@ -137,6 +137,8 @@ export default class MaxTen extends Component{
     render(){
         return(
             <div>
+               <Collapse defaultActiveKey={["1"]}>
+                <Panel header="Maximum Tenure" key="1" danger>
                 <Table className='table table-striped table-hover table-bordered'dataSource={data}>
 				 
                    <ColumnGroup title="Applicant 1">
@@ -168,6 +170,8 @@ export default class MaxTen extends Component{
 			{this.state.contents}
 			</Modal>
 			</div>
+      </Panel>
+      </Collapse>
 
             </div>
 

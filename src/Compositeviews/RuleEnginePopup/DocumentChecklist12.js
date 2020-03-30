@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { Table, Typography,Button,Modal,Collapse} from 'antd';
 import RuleEnginePopup from './RuleEnginePopup';
-
 const { Panel } = Collapse;
+
 const { Text } = Typography;
 const columns = [
     {
@@ -56,12 +56,18 @@ const data = [
     DocumentName:'Latest 6 months bank statement',
     
     },
+    {
+    key: '6',
+    DocumentCategory: 'Property Documents',
     
+    DocumentName:'Copy of original sale deed/Allotment-possession letter/NOC from Society',
+    
+    },
     
   ]
   
   
-export default class DocumentChecklist2 extends Component{
+export default class DocumentChecklist1 extends Component{
     constructor(props){
         super(props);
     
@@ -83,7 +89,7 @@ export default class DocumentChecklist2 extends Component{
 
   
   showModal = () => {
-    var id ='2';
+    var id ='1';
     this.setState({
       visible: true,
       // data: this.data,
@@ -111,29 +117,27 @@ export default class DocumentChecklist2 extends Component{
         return(
             <div>
               <Collapse defaultActiveKey={["1"]}>
-                <Panel header=" Business Loan" key="1" danger>
+                <Panel header=" Loan against Property" key="1" danger>
                 <Table className='table table-striped table-hover table-bordered'
                     columns={columns} dataSource={data}
                 
                 />
-			 <div class="text-right">
-				<Button type="primary" onClick={this.showModal}>
-					Edit
-				</Button>
-
-			<Modal 
-				title="MODAL"
-				visible={this.state.visible}
-				onOk={this.handleOk}
-				onCancel={this.handleCancel}
-				width={820}
-         
-			>
-			{this.state.contents}
-			</Modal>
-			</div>
-       </Panel>
-      </Collapse>  
+			           <div class="text-right">
+				          <Button type="primary" onClick={this.showModal}>Edit</Button>
+                    <Modal 
+				            title="MODAL"
+				            visible={this.state.visible}
+				            onOk={this.handleOk}
+				            onCancel={this.handleCancel}
+                    width={1020}
+                    height={200}
+                    >
+			              {this.state.contents}
+			              </Modal>
+		             </div>
+                </Panel>
+                
+               </Collapse>
             </div>
 
 

@@ -1,22 +1,21 @@
 import React, { Component } from 'react';
 import { Table, Typography,Button,Modal,Collapse} from 'antd';
 import RuleEnginePopup from './RuleEnginePopup';
-const { Panel } = Collapse;
 
+const { Panel } = Collapse;
 const { Text } = Typography;
 const columns = [
-    
     {
-    title:'Max Age of Applicant/Co-applicant',
-    dataIndex:'Max_age',
+    title: 'Document Category',
+    dataIndex: 'DocumentCategory',
     render: text => <a>{text}</a>,
     },
-	{
-    title: 'Customer Profile',
-    dataIndex: 'CustomerProfile',
+    
+    {
+    title:'Document Name',
+    dataIndex:'DocumentName',
     render: text => <a>{text}</a>,
     }
-    
  
     
   ]
@@ -24,30 +23,45 @@ const columns = [
 const data = [
     {
     key: '1',
-    Max_age:'60',
-    CustomerProfile: 'Salaried',
+    DocumentCategory: 'Application Form',
+    
+    DocumentName:'Signed Application form',
+    
+    },
+    {
+    key: '2',
+    DocumentCategory: 'ID Proof',
+    
+    DocumentName:'Aadhar/Passport/PAN/Voter ID/Driving License',
+    
+    },
+    {
+    key: '3',
+    DocumentCategory: 'Address Proof',
+    
+    DocumentName:'Aadhar/Passport/Voter ID/Driving License/Electricity Bill',
+    
+    },
+    {
+    key: '4',
+    DocumentCategory: 'Income Documents',
+    
+    DocumentName:'3 salary slips/salary certificate/Latest form 16',
+    
+    },
+    {
+    key: '5',
+    DocumentCategory: 'banking Documents',
+    
+    DocumentName:'Latest 6 months bank statement',
+    
     },
     
-	{
-    key: '2',
-    Max_age:'70',
-    CustomerProfile: 'Self-Employed',
-    },
-	{
-    key: '3',
-    Max_age:'70',
-    CustomerProfile: 'Pension Income',
-    },
-	{
-    key: '4',
-    Max_age:'75',
-    CustomerProfile: 'Non-Income',
-    },
     
   ]
   
   
-export default class MaxAge extends Component{
+export default class DocumentChecklist2 extends Component{
     constructor(props){
         super(props);
     
@@ -69,11 +83,11 @@ export default class MaxAge extends Component{
 
   
   showModal = () => {
-   
+    var id ='2';
     this.setState({
       visible: true,
       // data: this.data,
-      contents:<RuleEnginePopup></RuleEnginePopup>
+      contents:<RuleEnginePopup id={id}></RuleEnginePopup>
     });
   }
 
@@ -97,7 +111,7 @@ export default class MaxAge extends Component{
         return(
             <div>
               <Collapse defaultActiveKey={["1"]}>
-                <Panel header="MAximum Age based Customer Profile" key="1" danger>
+                <Panel header=" Personal Loan" key="1" danger>
                 <Table className='table table-striped table-hover table-bordered'
                     columns={columns} dataSource={data}
                 
@@ -118,8 +132,8 @@ export default class MaxAge extends Component{
 			{this.state.contents}
 			</Modal>
 			</div>
-      </Panel>
-</Collapse>
+       </Panel>
+      </Collapse>  
             </div>
 
 
