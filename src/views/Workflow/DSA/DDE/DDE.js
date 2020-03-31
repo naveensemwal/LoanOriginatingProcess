@@ -1,4 +1,6 @@
-import { Collapse, Form, Tabs, Card, Button } from "antd";
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import { Collapse, Tabs, Card, Button } from "antd";
 import "antd/dist/antd.css";
 import React, { Component } from 'react';
 import Axios from 'axios';

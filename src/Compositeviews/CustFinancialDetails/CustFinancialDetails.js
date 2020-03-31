@@ -1,5 +1,7 @@
 import React, { Component } from "react";
-import { Form, Input, Select, Button } from "antd";
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import { Input, Select, Button } from "antd";
 const { Option } = Select;
 const onFinish = values => {
   console.log("Received values of form: ", values);
@@ -212,4 +214,4 @@ export default class CustFinancialDetails extends Component {
             </Form> 
     );
   }
-};
+}

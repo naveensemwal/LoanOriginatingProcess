@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { useContext, useState, useEffect, useRef } from 'react';
 import 'antd/dist/antd.css';
-import { Table, Input, Button, Popconfirm, Form,Select} from 'antd';
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import { Table, Input, Button, Popconfirm, Select } from 'antd';
 
 
 const EditableContext = React.createContext();
@@ -12,7 +14,7 @@ const EditableRow = ({ form,index, ...props }) => (
   </EditableContext.Provider>
 
 )
-  
+
 const EditableFormRow = Form.create()(EditableRow);
 const EditableCell = ({
   title,

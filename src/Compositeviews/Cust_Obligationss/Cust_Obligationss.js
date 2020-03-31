@@ -1,6 +1,8 @@
 import React from "react";
 import { render } from "react-dom";
-import { Col, Form, Input, InputNumber, Row, Select, DatePicker, Table, Tag  } from 'antd';
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import { Col, Input, InputNumber, Row, Select, DatePicker, Table, Tag } from 'antd';
 
 
 

@@ -1,4 +1,16 @@
-import { Button, DatePicker, Form, Input, Radio, Select, TimePicker, InputNumber, message,PageHeader } from 'antd';
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import {
+  Button,
+  DatePicker,
+  Input,
+  Radio,
+  Select,
+  TimePicker,
+  InputNumber,
+  message,
+  PageHeader,
+} from 'antd';
 import "antd/dist/antd.css";
 import React, { Component } from 'react';
 import Axios from 'axios';

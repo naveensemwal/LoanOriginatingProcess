@@ -1,4 +1,6 @@
-import { Col, Form, Input, Row, Select } from 'antd';
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import { Col, Input, Row, Select } from 'antd';
 import React, { Component } from 'react';
 
 export default class Identificationdetails extends Component {

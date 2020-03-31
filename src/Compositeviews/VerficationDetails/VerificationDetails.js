@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Table, Typography,Icon } from 'antd';
+import { EyeOutlined } from '@ant-design/icons';
+import { Table, Typography } from 'antd';
 const { Text } = Typography;
 
 
@@ -28,7 +29,7 @@ const columns1 = [
         title: 'View',
         dataIndex: 'View',
 		render: (text, record) => (
-          <Icon type="eye" />          
+          <EyeOutlined />          
         ),
       },
 
@@ -75,7 +76,7 @@ const columns2 = [
         title: 'View',
         dataIndex: 'View',
         render: (text, record) => (
-          <Icon type="eye" />          
+          <EyeOutlined />          
         ),
       },
 
@@ -121,7 +122,7 @@ const columns3 = [
         title: 'View',
         dataIndex: 'View',
         render: (text, record) => (
-          <Icon type="eye" />          
+          <EyeOutlined />          
         ),
       },
 

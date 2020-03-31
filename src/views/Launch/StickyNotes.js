@@ -1,4 +1,5 @@
-import { Avatar, Card, Col, Icon, Input, List, Row, Switch,Alert } from 'antd';
+import { CheckOutlined, CloseOutlined } from '@ant-design/icons';
+import { Avatar, Card, Col, Input, List, Row, Switch, Alert } from 'antd';
 import "antd/dist/antd.css";
 import React, { Component } from 'react';
 import Customerprofile from './Customerprofile';
@@ -70,8 +71,8 @@ const contentList = {
        {item.isExpired?<Alert message="Document has expired." type="warning" showIcon banner={true}/>:null}
        <div style={{padding:'2px'}}/>
       <Switch
-      checkedChildren={<Icon type="check" />}
-      unCheckedChildren={<Icon type="close" />}
+      checkedChildren={<CheckOutlined />}
+      unCheckedChildren={<CloseOutlined />}
       defaultChecked
     />
     </List.Item>
