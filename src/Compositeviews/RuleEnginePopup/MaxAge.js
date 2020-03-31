@@ -95,10 +95,10 @@ export default class MaxAge extends Component{
 
     render(){
         return(
-            <div>
+            <div clasName="RulesEnginerightSidebar">
               <Collapse defaultActiveKey={["1"]}>
                 <Panel header="MAximum Age based Customer Profile" key="1" danger>
-                <Table className='table table-striped table-hover table-bordered'
+                <Table bordered
                     columns={columns} dataSource={data}
                 
                 />

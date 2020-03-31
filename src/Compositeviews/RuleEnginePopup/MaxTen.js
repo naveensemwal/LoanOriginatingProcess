@@ -136,10 +136,10 @@ export default class MaxTen extends Component{
 
     render(){
         return(
-            <div>
+            <div clasName="RulesEnginerightSidebar">
                <Collapse defaultActiveKey={["1"]}>
                 <Panel header="Maximum Tenure" key="1" danger>
-                <Table className='table table-striped table-hover table-bordered'dataSource={data}>
+                <Table bordered dataSource={data}>
 				 
                    <ColumnGroup title="Applicant 1">
 				   <Column title="Customer Profile" dataIndex="CustomerProfile" key="CustomerProfile" />

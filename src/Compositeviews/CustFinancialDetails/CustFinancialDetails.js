@@ -1,8 +1,11 @@
 import React, { Component } from "react";
-import { Form, Input, Select, Button } from "antd";
+import { Form, Input, Select, Button, DatePicker } from "antd";
 const { Option } = Select;
 const onFinish = values => {
   console.log("Received values of form: ", values);
+};
+const onChange = (date, dateString) => {
+  console.log(date, dateString);
 };
 
 export default class CustFinancialDetails extends Component {
@@ -73,14 +76,20 @@ export default class CustFinancialDetails extends Component {
             rules={[{ required: true }]}
             style={{ display: "inline-block",  marginRight: 8, width: "calc(50% - 5px)" }}
           >
-            <Input placeholder="Date Of Filling ITR" />
+          <DatePicker
+                  onchange={onChange}
+                  style={{ width: "100%" }}
+                ></DatePicker>
           </Form.Item>
           <Form.Item
             name="Date Of Filling ITR<sup>*</sup>"
             rules={[{ required: true }]}
             style={{ display: "inline-block", width: "calc(50% - 5px)" }}
           >
-            <Input className='form-control' placeholder="Date Of Filling ITR" />
+          <DatePicker
+                  onchange={onChange}
+                  style={{ width: "100%" }}
+                ></DatePicker>
           </Form.Item>
         </Form.Item>
         <Form.Item label="Rental Income" style={{ marginBottom: 0 }}>
