@@ -46,23 +46,25 @@
 
   //inner pages accordion tab design
  i.anticon.anticon-right.ant-collapse-arrow {
-    font-weight: 900;
-    width: 45px;
-    height: 45px;
-    line-height: 32px;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 15px;
-    color: #fff;
-    border: 5px solid #fff;
-    position: absolute;
-    top: 10px;
-    left: -4px !important;
-    transition: all 0.3s ease 0s;
-    padding: 12px;
+  font-weight: 900;
+  width: 48px;
+  height: 48px;
+  line-height: 32px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+  border: 5px solid #ddd;
+  position: absolute;
+  top: 21px !important;
+  left: -6px !important;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  padding: 14px;
+  background: #fff;
   }
   
-.cust_tabs_card .ant-collapse > .ant-collapse-item > .ant-collapse-header {
+.cust_tabs_card .ant-collapse > .ant-collapse-item > .ant-collapse-header, .ant-collapse-item .ant-collapse-header {
 
     padding: 13px 46px !important;
     line-height: 10px !important;
@@ -78,7 +80,10 @@
 .cust_tabs_card .ant-collapse-content.ant-collapse-content-active {
     border-top: none !important;
   }
-  
+  .ant-collapse-content {
+       border: 1px solid #ddd;
+    border-radius: 0px 0px 10px 10px;
+}
 .cust_tabs_card .ant-collapse.ant-collapse-icon-position-left {
     padding: 5px;
   }
@@ -155,3 +160,30 @@ svg.MuiSvgIcon-root.MuiStepIcon-root {
   right: calc(50% + 23px) !important;
 }
 /*Eligibility Calculator css end*/
+
+
+/**modal css*/
+.ant-modal-body {
+  overflow-y: scroll;
+  max-height: 400px;
+  height: auto;
+ 
+}
+
+/*sidebar css*/
+.sidebar {
+  z-index: 1 !important;
+}
+
+/*Rules engine custo Sidebar css*/
+.ant-collapse {
+  border-radius: 200px !important;}
+aside.ant-layout-sider.ant-layout-sider-dark, ul.ant-menu {
+  background-color: #f8f8f8 !important;
+  border-color: #e7e7e7;
+}
+li.ant-menu-submenu-open .ant-menu-submenu-title {
+ 
+  color: #555;
+  background-color: #e7e7e7;
+}

@@ -240,7 +240,7 @@ export default class DisbursementDetails extends React.Component {
           </Col>
           <Col span={8}>
             {this.state.isSingle ? (
-              <Form.Item label="No of branches  :">
+              <Form.Item label="No of Tranches  :">
                 <InputNumber style={{ width: "100%" }} />
               </Form.Item>
             ) : (

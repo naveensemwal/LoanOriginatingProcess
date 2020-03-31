@@ -27,7 +27,7 @@ const RulesEngineModalstyle={
   left                  : '0%',
   right                 : '0%',
   bottom                : 'auto',  
-  width                 : '170% !important',
+  width                 : '100% !important',
   top                   : '500px'
 
 
@@ -89,9 +89,9 @@ export default class Ruleengine extends Component {
     <Router>
                 <Layout >
 
-                    <Sider style={{background:'#ffffff'}}>
+                    <Sider classname='RulesEngineLeftAsidebar'style={{ backgroundColor: '#f8f8f8 !important', borderColor: '#e7e7e7'}}>
                         
-                       <Menu
+                    <Menu
                            mode="inline" >
       <SubMenu
             key="documentCheckList"
@@ -101,7 +101,7 @@ export default class Ruleengine extends Component {
                 <Tooltip title="Document Checklist Rules">
                 <span>Document Checklist Rules</span>
                 </Tooltip>
-                
+
               </span>
             }
           >
@@ -111,24 +111,24 @@ export default class Ruleengine extends Component {
       <Menu.Item key="businessloan"><Link to="/DocumentChecklist2" /><Tooltip title="Business Loan"><span>Business Loan</span></Tooltip>
            </Menu.Item>
 
-      
+
       <Menu.Item key="personalLoan"><Link to="/DocumentChecklist21" /><Tooltip title="Personal Loan"><span>Personal Loan</span></Tooltip></Menu.Item>
       <Menu.Item key="vehicleloan"><Link to="/DocumentChecklist22" /><Tooltip title="Vehicle Loan"><span>Vehicle Loan</span></Tooltip></Menu.Item>
-     
+
       </SubMenu>
-      
+
 	  <SubMenu
             key="documentVerification"
             title={
               <span>
                 <Icon type="setting" /><Tooltip title="Document Verification Rules"><span>Document Verification Rules</span></Tooltip>
-                
+
               </span>
             }
           >
 
       <Menu.Item key="DataVerf"><Link to="/DocumentChecklist3" /><Tooltip title="Data Verification and Consistency"><span>Data Verification and Consistency</span></Tooltip></Menu.Item>
-           
+
       </SubMenu>
 
 	  <SubMenu
@@ -137,16 +137,16 @@ export default class Ruleengine extends Component {
               <span>
                 <Icon type="setting" />
 				<Tooltip title="Customer Pre-Screening Rules"><span>Customer Pre-Screening Rules</span></Tooltip>
-                
+
               </span>
             }
           >
-            
+
       <Menu.Item key="CreditReport"><Link to="/CreditReport" /><Tooltip title="Credit Report"><span>Credit Report</span></Tooltip></Menu.Item>
-      
+
       <Menu.Item key="MaxAge"><Link to="/MaxAge" /><Tooltip title="Maximum age based customer profile"><span>Maximum age based customer profile</span></Tooltip></Menu.Item>
       <Menu.Item key="PremiumClassification"><Link to="/PremiumClassification" /><Tooltip title="Premium Classification"><span>Premium Classification</span></Tooltip></Menu.Item>
-      
+
       </SubMenu>
 
 	  <SubMenu
@@ -155,15 +155,15 @@ export default class Ruleengine extends Component {
               <span>
                 <Icon type="setting" />
 				<Tooltip title="Eligibility Rules"><span>Eligibility Rules</span></Tooltip>
-                
+
               </span>
             }
           >
-            
+
       <Menu.Item key="MaxLoanAmt"><Link to="/MaxLoanAmt" /><Tooltip title="Maximum Loan Amount"><span>Maximum Loan Amount</span></Tooltip></Menu.Item>
-      
+
       <Menu.Item key="MaxTen"><Link to="/MaxTen" /><Tooltip title="Maximum Tenure"><span>Maximum Tenure</span></Tooltip></Menu.Item>
-      
+
       </SubMenu>
 
 	  <SubMenu
@@ -172,7 +172,7 @@ export default class Ruleengine extends Component {
               <span>
                 <Icon type="setting" />
 				<Tooltip title="Verifications Rules"><span>Verifications Rules</span></Tooltip>
-                
+
               </span>
             }
           >
@@ -182,12 +182,12 @@ export default class Ruleengine extends Component {
       </SubMenu>
 
 	  <SubMenu
-            key="Policy" 
+            key="Policy"
             title={
               <span>
                 <Icon type="setting" />
                 <Tooltip title="Policy Compliance Rules"> <span>Policy Compliance Rules</span></Tooltip>
-               
+
               </span>
 
             }
@@ -196,14 +196,14 @@ export default class Ruleengine extends Component {
 		  <Tooltip title="Compliance Rules"> <span>Compliance Rules</span></Tooltip></Menu.Item>
       </SubMenu>
 
-	  
-    </Menu> 
+
+    </Menu>
                     </Sider>
                     <Layout>
-                        
+
                         <Content style={{ paddingLeft:10, background: '#fff', minHeight: 500 }}>
                         <Route path="/DocumentChecklist1" component={DocumentChecklist1} />
-                          
+
                         <Route path="/DocumentChecklist12" component={DocumentChecklist12} />
 
                          <Route path="/DocumentChecklist2" component={DocumentChecklist2} />
@@ -212,19 +212,19 @@ export default class Ruleengine extends Component {
                          <Route path="/DocumentChecklist22" component={DocumentChecklist22} />
 
                          <Route path="/DocumentChecklist3" component={DocumentChecklist3} />
-                         
+
                          <Route path="/CreditReport" component={CreditReport} />
-                         
+
                          <Route path="/MaxAge" component={MaxAge} />
-                         
+
                          <Route path="/PremiumClassification" component={PremiumClassification} />
-                         
+
                          <Route path="/MaxLoanAmt" component={MaxLoanAmt} />
-                         
+
                          <Route path="/PolicyComplianceRules" component={PolicyComplianceRules} />
-                         
+
                          <Route path="/MaxTen" component={MaxTen} />
-                         
+
                          <Route path="/VerificationRules" component={VerificationRules} />
                         </Content>
 

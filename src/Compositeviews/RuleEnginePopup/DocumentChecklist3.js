@@ -102,10 +102,10 @@ export default class DocumentChecklist3 extends Component{
 
     render(){
         return(
-            <div>
+            <div clasName="RulesEnginerightSidebar">
                <Collapse defaultActiveKey={["1"]}>
                 <Panel header=" Data Verification and Consistency" key="1" danger>
-                <Table className='table table-striped table-hover table-bordered'
+                <Table bordered
                     columns={columns} dataSource={data}
                 
                 />

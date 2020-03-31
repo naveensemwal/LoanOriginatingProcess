@@ -33,6 +33,7 @@ export default class Dms extends Component {
                   <tr className="tblTrDesign">
                     <th>Document Category</th>
                     <th>Document Name</th>
+                    <th>Received Date</th>
                     <th>Action</th>
                   </tr>
                 </thead>
@@ -40,6 +41,7 @@ export default class Dms extends Component {
                   <tr className="tblTrDesign">
                     <td>ID Proof</td>
                     <td>Aadhar.jifif</td>
+                    <td>28-01-2020</td>
                     <td>
                       <center>
                       <IconButton aria-label="delete" onClick={() => {                
@@ -53,6 +55,7 @@ export default class Dms extends Component {
                   <tr className="tblTrDesign">
                     <td>ID Proof</td>
                     <td>Photograph.jifif</td>
+                    <td>28-01-2020</td>
                     <td>
                       <center>
                       <IconButton aria-label="delete" onClick={() => {                
@@ -66,6 +69,7 @@ export default class Dms extends Component {
                   <tr className="tblTrDesign">
                     <td>Income Proof</td>
                     <td>Pay Slip.pdf</td>
+                    <td>28-01-2020</td>
                     <td>
                       <center>
                       <IconButton aria-label="delete" onClick={() => {                
