@@ -6,7 +6,8 @@ import { incrementData, lineData } from "./data";
 import Auxiliary from '../../Util/Auxiliary'
 import Portfolio from "./Portfolio";
 import BalanceHistory from "./BalanceHistory";
-
+// import './Statement.css';
+// import '../../styles/wieldy.less';
 
 
 const data = [
@@ -127,6 +128,24 @@ export default class Statementanalyzer extends Component {
                             <Col xl={12} lg={24} md={12} sm={24} xs={24}>
                                 <BalanceHistory />
                             </Col>
+
+                            {/*<Col xl={9} lg={24} md={24} sm={24} xs={24}>
+                <SendMoney/>
+              </Col>
+              <Col xl={6} lg={12} md={12} sm={24} xs={24}>
+                <RewardCard/>
+              </Col>
+              <Col xl={9} lg={12} md={12} sm={24} xs={24}>
+                <CurrencyCalculator/>
+              </Col>
+      
+              <Col xl={15} lg={24} md={24} sm={24} xs={24}>
+                <CryptoNews/>
+              </Col>
+              <Col xl={9} lg={24} md={24} sm={24} xs={24}>
+                <DownloadMobileApps/>
+                <OrderHistory/>
+              </Col> */}
                         </Row>
                     </Col>
                 </Row>
