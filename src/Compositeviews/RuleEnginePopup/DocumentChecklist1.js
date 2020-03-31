@@ -118,7 +118,7 @@ export default class DocumentChecklist1 extends Component{
             <div clasName="RulesEnginerightSidebar">
               <Collapse defaultActiveKey={["1"]}>
                 <Panel header=" Home Loan" key="1" danger>
-                <Table 
+                <Table bordered
                     columns={columns} dataSource={data}
                 
                 />

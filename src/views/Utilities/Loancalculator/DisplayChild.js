@@ -3,8 +3,8 @@ import PropTypes from "prop-types";
 
 const DisplayChild = ({ func, text }) => {
   return (
-    <span>
-      {func} <small>{text}</small>
+    <span className='clearfix'>
+      {func} <small className='pull-left text-left'>{text}</small>
     </span>
   );
 };

@@ -105,15 +105,16 @@ export default class Ruleengine extends Component {
               </span>
             }
           >
-      <Menu.Item key="homeLoan"><Link to="/DocumentChecklist1" /> <Tooltip title="Home Loan"><span>Home Loan</span></Tooltip></Menu.Item>
-      <Menu.Item key="lap"><Link to="/DocumentChecklist12" /><Tooltip title="Loan Against Property"><span>Loan Against Property</span></Tooltip>
+      <Menu.Item key="homeLoan">
+      <Tooltip title="Home Loan"> <Link to="/DocumentChecklist1"><span>Home Loan</span></Link></Tooltip></Menu.Item>
+      <Menu.Item key="lap"><Tooltip title="Loan Against Property"><Link to="/DocumentChecklist12" ><span>Loan Against Property</span></Link></Tooltip>
                                 </Menu.Item>
-      <Menu.Item key="businessloan"><Link to="/DocumentChecklist2" /><Tooltip title="Business Loan"><span>Business Loan</span></Tooltip>
+      <Menu.Item key="businessloan"><Tooltip title="Business Loan"><Link to="/DocumentChecklist2"><span>Business Loan</span></Link></Tooltip>
            </Menu.Item>
 
 
-      <Menu.Item key="personalLoan"><Link to="/DocumentChecklist21" /><Tooltip title="Personal Loan"><span>Personal Loan</span></Tooltip></Menu.Item>
-      <Menu.Item key="vehicleloan"><Link to="/DocumentChecklist22" /><Tooltip title="Vehicle Loan"><span>Vehicle Loan</span></Tooltip></Menu.Item>
+      <Menu.Item key="personalLoan"><Tooltip title="Personal Loan"><Link to="/DocumentChecklist21" ><span>Personal Loan</span></Link></Tooltip></Menu.Item>
+      <Menu.Item key="vehicleloan"><Tooltip title="Vehicle Loan"><Link to="/DocumentChecklist22" ><span>Vehicle Loan</span></Link></Tooltip></Menu.Item>
 
       </SubMenu>
 
@@ -127,7 +128,7 @@ export default class Ruleengine extends Component {
             }
           >
 
-      <Menu.Item key="DataVerf"><Link to="/DocumentChecklist3" /><Tooltip title="Data Verification and Consistency"><span>Data Verification and Consistency</span></Tooltip></Menu.Item>
+      <Menu.Item key="DataVerf"><Tooltip title="Data Verification and Consistency"><Link to="/DocumentChecklist3" ><span>Data Verification and Consistency</span></Link></Tooltip></Menu.Item>
 
       </SubMenu>
 
@@ -142,10 +143,10 @@ export default class Ruleengine extends Component {
             }
           >
 
-      <Menu.Item key="CreditReport"><Link to="/CreditReport" /><Tooltip title="Credit Report"><span>Credit Report</span></Tooltip></Menu.Item>
+      <Menu.Item key="CreditReport"><Tooltip title="Credit Report"><Link to="/CreditReport" ><span>Credit Report</span></Link></Tooltip></Menu.Item>
 
-      <Menu.Item key="MaxAge"><Link to="/MaxAge" /><Tooltip title="Maximum age based customer profile"><span>Maximum age based customer profile</span></Tooltip></Menu.Item>
-      <Menu.Item key="PremiumClassification"><Link to="/PremiumClassification" /><Tooltip title="Premium Classification"><span>Premium Classification</span></Tooltip></Menu.Item>
+      <Menu.Item key="MaxAge"><Tooltip title="Maximum age based customer profile"><Link to="/MaxAge" ><span>Maximum age based customer profile</span></Link></Tooltip></Menu.Item>
+      <Menu.Item key="PremiumClassification"><Tooltip title="Premium Classification"><Link to="/PremiumClassification" ><span>Premium Classification</span></Link></Tooltip></Menu.Item>
 
       </SubMenu>
 
@@ -160,9 +161,9 @@ export default class Ruleengine extends Component {
             }
           >
 
-      <Menu.Item key="MaxLoanAmt"><Link to="/MaxLoanAmt" /><Tooltip title="Maximum Loan Amount"><span>Maximum Loan Amount</span></Tooltip></Menu.Item>
+      <Menu.Item key="MaxLoanAmt"><Tooltip title="Maximum Loan Amount"><Link to="/MaxLoanAmt" ><span>Maximum Loan Amount</span></Link></Tooltip></Menu.Item>
 
-      <Menu.Item key="MaxTen"><Link to="/MaxTen" /><Tooltip title="Maximum Tenure"><span>Maximum Tenure</span></Tooltip></Menu.Item>
+      <Menu.Item key="MaxTen"><Tooltip title="Maximum Tenure"><Link to="/MaxTen" ><span>Maximum Tenure</span></Link></Tooltip></Menu.Item>
 
       </SubMenu>
 
@@ -178,7 +179,7 @@ export default class Ruleengine extends Component {
           >
 
 
-          <Menu.Item key="VerificationRules"><Link to="/VerificationRules" /><Tooltip title="Verifications"><span>Verifications</span></Tooltip></Menu.Item>
+          <Menu.Item key="VerificationRules"><Tooltip title="Verifications"><Link to="/VerificationRules" ><span>Verifications</span></Link></Tooltip></Menu.Item>
       </SubMenu>
 
 	  <SubMenu
@@ -192,8 +193,8 @@ export default class Ruleengine extends Component {
 
             }
           >
-          <Menu.Item key="ComplianceRules"><Link to="/PolicyComplianceRules" />
-		  <Tooltip title="Compliance Rules"> <span>Compliance Rules</span></Tooltip></Menu.Item>
+          <Menu.Item key="ComplianceRules"> <Tooltip title="Compliance Rules"><Link to="/PolicyComplianceRules" >
+		  <span>Compliance Rules</span></Link></Tooltip></Menu.Item>
       </SubMenu>
 
 
