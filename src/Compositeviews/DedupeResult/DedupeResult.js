@@ -24,10 +24,7 @@ const columns = [
         title: 'DOB',
         dataIndex: 'DOB',
       },
-      {
-        title: 'Match',
-        dataIndex: 'Match',
-      },
+     
 
 
 
@@ -36,12 +33,21 @@ const columns = [
 const data =[
     {
         key :1,
-        CustomerId:'Varghese Mathew',
-        CustomerName :'ABC Agency',
-        AadharNo :'ABC Agency',
-        PanNo :'Not Applicable',
-        DOB:'Not Applicable',
-        Match:'ABC Agency'
+        CustomerId:'5130404907',
+        CustomerName :'KUNNE GOWDA U B',
+        AadharNo :'985962778215',
+        PanNo :'DRSPK9675K',
+        DOB:'May 20, 1989'
+    
+    },
+    {
+        key :2,
+        CustomerId:'5214438729',
+        CustomerName :'SUMITHRA N',
+        AadharNo :'592269933073',
+        PanNo :'DRSPK9675K',
+        DOB:'Jun 05, 1996'
+    
     },
    
     

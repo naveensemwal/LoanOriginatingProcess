@@ -122,8 +122,10 @@ export default class CustFinancialDetails extends Component {
             }}
           >
           <Select placeholder="Select province">
-            <Option value="Zhejiang">Zhejiang</Option>
-            <Option value="Jiangsu">Jiangsu</Option>
+            <Option value="Cash">Cash</Option>
+            <Option value="Cheque">Cheque</Option>
+            <Option value="Draft">Draft</Option>
+            <Option value="Fund">Fund Transfer</Option>
           </Select>
           </Form.Item>
         

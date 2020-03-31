@@ -14,7 +14,9 @@ export default class Cust_Obligationss extends React.Component {
         console.log('hi', idx, e)
         const rows = [...this.state.rows];
         rows[idx] = {
-          ['ConsiderForObligations']: e
+          ['ConsiderForSurrogate']: e,
+		  ['LoanType']:e,
+		  ['Status']:e
         };
         this.setState({
           rows
@@ -112,20 +114,21 @@ export default class Cust_Obligationss extends React.Component {
                         />
                   </td> */}
                   <td>
-                  <Select defaultValue="homeLoan"  name='ConsiderForObligations' onChange={this.disbursementTypeChange(idx)} hidden='isSingle'>
-                                <Select.Option selected value="homeLoan">Single</Select.Option>
-                                <Select.Option value="autoLoan">Multiple</Select.Option>                             
-                  </Select>
-                  </td>
-                  <td>
-                  
-                  <input
+				  <input
                           type="text"
-                          name="ConsiderForSurrogate"
-                          value={this.state.rows[idx].ConsiderForSurrogate}
+                          name="ConsiderForObligations"
+                          value={this.state.rows[idx].ConsiderForObligations}
                           onChange={this.handleChange(idx)}
                           className="form-control"
                         />
+                  
+                  </td>
+                  <td>
+                  <Select defaultValue="Yes"  name='ConsiderForSurrogate' onChange={this.disbursementTypeChange(idx)} hidden='isSingle'>
+                                <Select.Option selected value="Yes">Yes</Select.Option>
+                                <Select.Option value="No">No</Select.Option>                             
+                  </Select>
+                  
                   </td>
                   <td>
                   <input
@@ -138,13 +141,13 @@ export default class Cust_Obligationss extends React.Component {
 
                   </td>
                   <td>
-                  <input
-                          type="text"
-                          name="LoanType"
-                          value={this.state.rows[idx].LoanType}
-                          onChange={this.handleChange(idx)}
-                          className="form-control"
-                        />
+				  <Select defaultValue="Homeloan"  name='LoanType' onChange={this.disbursementTypeChange(idx)} hidden='isSingle'>
+                                <Select.Option selected value="Homeloan">Home loan</Select.Option>
+                                <Select.Option value="Goldloan">Gold loan</Select.Option>                             
+								<Select.Option value="TWloan">TW loan</Select.Option>                             
+								<Select.Option value="Consumersloan">Consumers loan</Select.Option>                             
+                  </Select>
+                  
                   </td>
                   <td><input type='text' name='435' value={this.state.rows[idx].LoanAmount} onChange={this.handleChange(idx)} className='form-control'/></td>
                   <td><input type='text' name='435' value={this.state.rows[idx].Tenure} onChange={this.handleChange(idx)} className='form-control'/></td>
@@ -152,13 +155,13 @@ export default class Cust_Obligationss extends React.Component {
                   <td><input type='text' name='435' value={this.state.rows[idx].EMIPayingFromBank} onChange={this.handleChange(idx)} className='form-control'/></td>
                   <td><input type='text' name='435' value={this.state.rows[idx].EMIAmount} onChange={this.handleChange(idx)} className='form-control'/></td>
                   <td>
-                  <input
-                          type="text"
-                          name="Status"
-                          value={this.state.rows[idx].Status}
-                          onChange={this.handleChange(idx)}
-                          className="form-control"
-                        />
+				  <Select defaultValue="Running"  name='Status' onChange={this.disbursementTypeChange(idx)} hidden='isSingle'>
+                                <Select.Option selected value="Running">Running</Select.Option>
+                                <Select.Option value="Closing">Closing</Select.Option>                             
+								<Select.Option value="Closing6">Closing in 6 months</Select.Option>                             
+								<Select.Option value="Nottobeconsidered">Not to be considered</Select.Option>                             
+                  </Select>
+                  
                   </td>
                   <td><input type='text' name='reason' value={this.state.rows[idx].Reasons} onChange={this.handleChange(idx)} className='form-control'/></td>
               <td><button name='remove' className="btn btn-outline-danger btn-sm" onClick={this.handleRemoveSpecificRow(idx)}>Remove</button></td>
