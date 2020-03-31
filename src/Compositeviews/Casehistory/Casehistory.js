@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { ClockCircleOutlined, FilePdfOutlined, MailOutlined } from '@ant-design/icons';
-import { Timeline } from 'antd';
+import { Timeline, Icon } from 'antd';
 
 export default class Casehistory extends Component {
     render() {
@@ -8,26 +7,26 @@ export default class Casehistory extends Component {
             <Timeline>
             <Timeline.Item color="green">Lead generated 15-Jan-2020</Timeline.Item>
             <Timeline.Item color="green">Home loan process initiated 16-Jan-2020</Timeline.Item>
-            <Timeline.Item dot={<MailOutlined style={{ fontSize: '16px' }} />} color="green">
+            <Timeline.Item dot={<Icon type="mail" style={{ fontSize: '16px' }} />} color="green">
               Mail sent to applicant for supporting document 16-Jan-2020
             </Timeline.Item>
-            <Timeline.Item dot={<FilePdfOutlined style={{ fontSize: '16px' }} />} color="green">
+            <Timeline.Item dot={<Icon type="file-pdf" style={{ fontSize: '16px' }} />} color="green">
             Received documents from applicant 18-Jan-2020</Timeline.Item>
             <Timeline.Item color="green">Case moved to data entry 18-Jan-2020</Timeline.Item>
             <Timeline.Item color="green"> Data entry started  19-Jan-2020</Timeline.Item>
-            <Timeline.Item dot={<MailOutlined style={{ fontSize: '16px' }} />} color="green">
+            <Timeline.Item dot={<Icon type="mail" style={{ fontSize: '16px' }} />} color="green">
             Mail sent to applicant for missing bank statement 19-Jan-2020</Timeline.Item>
-            <Timeline.Item dot={<FilePdfOutlined style={{ fontSize: '16px' }} />} color="green">Received bank statement 21-Jan-2020</Timeline.Item>
+            <Timeline.Item dot={<Icon type="file-pdf" style={{ fontSize: '16px' }} />} color="green">Received bank statement 21-Jan-2020</Timeline.Item>
             <Timeline.Item color="green">Data entry completed and case moved to underwriter 22-Jan-2020</Timeline.Item>
             <Timeline.Item color='red'>
             <p>Underwriter moved case back to data entry 22-Jan-2020</p>
             <p>Comments : Applicant's name is different in high school certificate</p>
             </Timeline.Item>
-            <Timeline.Item dot={<MailOutlined style={{ fontSize: '16px' }} />} color="green">Mail sent to applicant for discrepancy in name 23-Jan-2020</Timeline.Item>
-            <Timeline.Item dot={<FilePdfOutlined style={{ fontSize: '16px' }} />} color="green">Applicant submitted supporting documents for name change 23-Jan-2020</Timeline.Item>
+            <Timeline.Item dot={<Icon type="mail" style={{ fontSize: '16px' }} />} color="green">Mail sent to applicant for discrepancy in name 23-Jan-2020</Timeline.Item>
+            <Timeline.Item dot={<Icon type="file-pdf" style={{ fontSize: '16px' }} />} color="green">Applicant submitted supporting documents for name change 23-Jan-2020</Timeline.Item>
             <Timeline.Item color='green'>Case moved to underwriter for further processing 23-Jan-2020</Timeline.Item>
-            <Timeline.Item dot={<ClockCircleOutlined style={{ fontSize: '16px' }} />}>Background verification in process </Timeline.Item>
+            <Timeline.Item dot={<Icon type="clock-circle-o" style={{ fontSize: '16px' }} />}>Background verification in process </Timeline.Item>
           </Timeline>
-        );
+        )
     }
 }

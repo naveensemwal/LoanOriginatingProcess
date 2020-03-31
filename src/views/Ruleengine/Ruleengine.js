@@ -2,9 +2,8 @@ import React, { Component } from 'react';
 import { Query, Builder, BasicConfig, Utils as QbUtils } from 'react-awesome-query-builder';
 import "antd/dist/antd.css";
 import 'react-awesome-query-builder/css/styles.scss';
-import 'react-awesome-query-builder/css/compact_styles.scss';
-import { SettingOutlined } from '@ant-design/icons';
-import { Menu, Row, Col, Button, Layout, Tooltip } from 'antd';
+import 'react-awesome-query-builder/css/compact_styles.scss'; 
+import { Menu,Icon,Row,Col,Button,Layout ,Tooltip} from 'antd';
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import RuleEnginePopup from '../../Compositeviews/RuleEnginePopup/RuleEnginePopup';
 import DocumentChecklist1 from '../../Compositeviews/RuleEnginePopup/DocumentChecklist1';
@@ -98,7 +97,7 @@ export default class Ruleengine extends Component {
             key="documentCheckList"
             title={
               <span>
-                <SettingOutlined />
+                <Icon type="setting" />
                 <Tooltip title="Document Checklist Rules">
                 <span>Document Checklist Rules</span>
                 </Tooltip>
@@ -122,7 +121,7 @@ export default class Ruleengine extends Component {
             key="documentVerification"
             title={
               <span>
-                <SettingOutlined /><Tooltip title="Document Verification Rules"><span>Document Verification Rules</span></Tooltip>
+                <Icon type="setting" /><Tooltip title="Document Verification Rules"><span>Document Verification Rules</span></Tooltip>
                 
               </span>
             }
@@ -136,7 +135,7 @@ export default class Ruleengine extends Component {
             key="custprescreening"
             title={
               <span>
-                <SettingOutlined />
+                <Icon type="setting" />
 				<Tooltip title="Customer Pre-Screening Rules"><span>Customer Pre-Screening Rules</span></Tooltip>
                 
               </span>
@@ -154,7 +153,7 @@ export default class Ruleengine extends Component {
             key="Eligibility"
             title={
               <span>
-                <SettingOutlined />
+                <Icon type="setting" />
 				<Tooltip title="Eligibility Rules"><span>Eligibility Rules</span></Tooltip>
                 
               </span>
@@ -171,7 +170,7 @@ export default class Ruleengine extends Component {
             key="Verifications"
             title={
               <span>
-                <SettingOutlined />
+                <Icon type="setting" />
 				<Tooltip title="Verifications Rules"><span>Verifications Rules</span></Tooltip>
                 
               </span>
@@ -186,7 +185,7 @@ export default class Ruleengine extends Component {
             key="Policy" 
             title={
               <span>
-                <SettingOutlined />
+                <Icon type="setting" />
                 <Tooltip title="Policy Compliance Rules"> <span>Policy Compliance Rules</span></Tooltip>
                
               </span>

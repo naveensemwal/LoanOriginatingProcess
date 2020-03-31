@@ -1,6 +1,4 @@
-import { Form, Icon as LegacyIcon } from '@ant-design/compatible';
-import '@ant-design/compatible/assets/index.css';
-import { Button, Checkbox, Input, message, Select, Switch, Upload } from 'antd';
+import { Button, Checkbox, Form, Icon, Input, message, Select, Switch, Upload } from 'antd';
 import "antd/dist/antd.css";
 import React, { Component } from 'react';
 import Stickynotes from './StickyNotes';
@@ -76,7 +74,7 @@ export default class Launch extends Component {
     };
     const panButton = (
       <div>
-        <LegacyIcon type={this.state.loading ? 'loading' : 'plus'} />
+        <Icon type={this.state.loading ? 'loading' : 'plus'} />
         <div className="ant-upload-text">PAN</div>
       </div>
     );

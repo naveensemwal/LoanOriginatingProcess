@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Avatar, Card, Col, Input, List, Row, Switch, Alert } from 'antd';
+import { Avatar, Card, Col, Icon, Input, List, Row, Switch, Alert } from 'antd';
 import { Area, AreaChart, Line, LineChart, ResponsiveContainer, Tooltip } from "recharts";
 import ChartCard from "./ChartCard";
 import { incrementData, lineData } from "./data";

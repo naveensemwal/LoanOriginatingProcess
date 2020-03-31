@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Icon as LegacyIcon } from '@ant-design/compatible';
-import '@ant-design/compatible/assets/index.css';
-import { Row, Col, Input, Button } from 'antd';
+import { Form, Row, Col, Input, Button, Icon } from 'antd';
 import 'antd/dist/antd.css'
 import './Search.css';
 
@@ -70,7 +68,7 @@ export default class Search extends Component {
                                 Clear
                 </Button>
                             <a style={{ marginLeft: 8, fontSize: 12 }} onClick={this.toggle}>
-                                Collapse <LegacyIcon type={this.state.expand ? 'up' : 'down'} />
+                                Collapse <Icon type={this.state.expand ? 'up' : 'down'} />
                             </a>
                         </Col>
                     </Row>
@@ -78,6 +76,8 @@ export default class Search extends Component {
             </div>    
                 <div className="search-result-list">Search Result List</div>
             </div>
+
+
         );
     }
 }

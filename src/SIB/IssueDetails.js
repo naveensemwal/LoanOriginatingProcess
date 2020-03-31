@@ -1,7 +1,5 @@
 import React, { Component } from 'react'
-import { Form } from '@ant-design/compatible';
-import '@ant-design/compatible/assets/index.css';
-import { Col, Input, InputNumber, Row, Select, DatePicker } from 'antd';
+import { Col, Form, Input, InputNumber, Row, Select ,DatePicker} from 'antd';
 import "antd/dist/antd.css";
 
 export default class IssueDetails extends Component {

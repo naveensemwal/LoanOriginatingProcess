@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Form } from '@ant-design/compatible';
-import '@ant-design/compatible/assets/index.css';
-import { Col, DatePicker, Input, Row, Select, InputNumber } from 'antd';
+import { Col, DatePicker, Form, Input, Row, Select, InputNumber } from 'antd';
 import "antd/dist/antd.css";
 
 const { TextArea } = Input;

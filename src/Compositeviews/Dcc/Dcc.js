@@ -1,10 +1,7 @@
 import React from 'react';
 import { forwardRef } from 'react';
 import MaterialTable from 'material-table';
-import { MailOutlined } from '@ant-design/icons';
-import { Form } from '@ant-design/compatible';
-import '@ant-design/compatible/assets/index.css';
-import { Popover, Input, Button, ButtonGroup } from 'antd';
+import { Popover, Input, Form, Button, ButtonGroup, Icon } from 'antd';
 import ErrorIcon from '@material-ui/icons/Error';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import ArrowDownward from '@material-ui/icons/ArrowDownward';
@@ -46,7 +43,7 @@ export default function Dcc() {
                 />
             </Form.Item>
             <Button type="primary">Notify Customer
-               <MailOutlined />
+               <Icon type="mail" />
             </Button>
         </div>
     );
@@ -63,7 +60,7 @@ export default function Dcc() {
                 />
             </Form.Item>
             <Button type="primary">Notify Customer
-               <MailOutlined />
+               <Icon type="mail" />
             </Button>
         </div>
     );

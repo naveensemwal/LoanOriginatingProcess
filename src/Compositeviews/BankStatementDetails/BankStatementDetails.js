@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import {
     Link
 } from "react-router-dom";
-import { DownloadOutlined, EyeOutlined } from '@ant-design/icons';
-import { Table, Radio, Divider, Button, Modal } from 'antd';
+import { Table, Radio, Divider, Button, Modal,Icon } from 'antd';
 import "antd/dist/antd.css";
 import BankStatementViewTable  from "../BankStatementViewTable/BankStatementViewTable";
 
@@ -45,16 +44,14 @@ export default class BankStatmentDetails extends Component {
           dataIndex: 'view',
           // render: text => <Icon type="eye"  onClick={(e) => { this.onView (record.key, e); }} />
           render: (text, record) => (
-            <EyeOutlined
-              className='ant-btn ant-btn-primary ant-btn-circle ant-btn-icon-only'
-              onClick={(e) => { this.onView (record, e); }} />          
+            <Icon type="eye" className='ant-btn ant-btn-primary ant-btn-circle ant-btn-icon-only' onClick={(e) => { this.onView (record, e); }} />          
           ),
         },
         {
           title:'Download',
           dataIndex:'download',
        //  render: <Icon type="download" className='ant-btn ant-btn-primary ant-btn-circle ant-btn-icon-only' onClick={(e) => { this.onView (record, e); }} /> 
-        render: text=><DownloadOutlined className='ant-btn ant-btn-primary ant-btn-circle ant-btn-icon-only' /> 
+        render: text=><Icon type="download" className='ant-btn ant-btn-primary ant-btn-circle ant-btn-icon-only'/> 
         // <Link  to='../../../../public/assets/img/Sample_Doc.pdf'
         // onClick={(event) => { event.preventDefault(); window.open('../../../public/assets/img/Sample_Doc.pdf');}}>Download</Link>
         }

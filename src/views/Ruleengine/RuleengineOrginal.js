@@ -2,10 +2,8 @@ import React, { Component } from 'react';
 import { Query, Builder, BasicConfig, Utils as QbUtils } from 'react-awesome-query-builder';
 import "antd/dist/antd.css";
 import 'react-awesome-query-builder/css/styles.scss';
-import 'react-awesome-query-builder/css/compact_styles.scss';
-import { SettingOutlined } from '@ant-design/icons';
-import { Icon as LegacyIcon } from '@ant-design/compatible';
-import { Menu, Row, Col } from 'antd';
+import 'react-awesome-query-builder/css/compact_styles.scss'; 
+import { Menu,Icon,Row,Col } from 'antd';
 
 // You need to provide your own config. See below 'Config format'
 
@@ -121,7 +119,7 @@ export default class Ruleengine extends Component {
             key="documentCheckList"
             title={
               <span>
-                <SettingOutlined />
+                <Icon type="setting" />
                 <span>Document Checklist Rules</span>
               </span>
             }
@@ -133,7 +131,7 @@ export default class Ruleengine extends Component {
           </SubMenu>
           <SubMenu key="documentConsistency" title={
               <span>
-                <SettingOutlined />
+                <Icon type="setting" />
                 <span>Document Consistency Rules</span>
               </span>
             }
@@ -147,7 +145,7 @@ export default class Ruleengine extends Component {
             key="sub4"
             title={
               <span>
-                <LegacyIcon type="customerClassification" />
+                <Icon type="customerClassification" />
                 <span>Loan Rejection Rules</span>
               </span>
             }

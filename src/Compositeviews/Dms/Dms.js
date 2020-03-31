@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import SplitPane, { Pane } from 'react-split-pane';
-import { UploadOutlined } from '@ant-design/icons';
-import { Card, Button, message, Upload } from 'antd';
+import { Card, Button, message, Upload, Icon } from 'antd';
 import './Dms.css';
 
 
@@ -29,27 +28,27 @@ const props2 = {
 export default class Dms extends Component {
     render() {
         return (
-            <div className='parent'>
-                <SplitPane split="vertical" >
-                    <SplitPane split="horizontal" minSize={50} defaultSize={100} >
-                        <div className='child'>
-                            
-                        </div>
-                        <div className='child'>
-                     
-                        <Upload {...props2}>
-                                <Button>
-                                    <UploadOutlined /> Upload
-                              </Button>
-                             </Upload>
-                     
-                        </div>
-                    </SplitPane>
+        <div className='parent'>
+            <SplitPane split="vertical" >
+                <SplitPane split="horizontal" minSize={50} defaultSize={100} >
                     <div className='child'>
-
+                        
+                    </div>
+                    <div className='child'>
+                 
+                    <Upload {...props2}>
+                            <Button>
+                                <Icon type="upload" /> Upload
+                          </Button>
+                         </Upload>
+                 
                     </div>
                 </SplitPane>
-            </div>
-        );
+                <div className='child'>
+
+                </div>
+            </SplitPane>
+        </div>
+        )
     }
 }

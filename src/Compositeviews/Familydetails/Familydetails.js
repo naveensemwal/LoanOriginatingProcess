@@ -1,8 +1,5 @@
 import React from 'react';
-import { DeleteOutlined, PlusOutlined } from '@ant-design/icons';
-import { Form } from '@ant-design/compatible';
-import '@ant-design/compatible/assets/index.css';
-import { Table, Input, Button, Popconfirm } from 'antd';
+import { Table, Input, Button, Popconfirm, Form } from 'antd';
 
 const EditableContext = React.createContext();
 
@@ -113,7 +110,7 @@ export default class Familydetails extends React.Component {
         render: (text, record) =>
           this.state.dataSource.length >= 1 ? (
             <Popconfirm title="Sure to delete?" onConfirm={() => this.handleDelete(record.key)}>
-             <Button type="danger" icon={<DeleteOutlined />}  />
+             <Button type="danger" icon="delete"  />
             </Popconfirm>
           ) : null,
       },
@@ -201,7 +198,7 @@ export default class Familydetails extends React.Component {
           columns={columns}
           pagination={{ position : 'none' }}
         />
-        <Button onClick={this.handleAdd} type="primary" shape="round" icon={<PlusOutlined />} style={{ margin: 16,float: 'right'}}>
+        <Button onClick={this.handleAdd} type="primary" shape="round" icon="plus" style={{ margin: 16,float: 'right'}}>
           Add
         </Button>
       </div>

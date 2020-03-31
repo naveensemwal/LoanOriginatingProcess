@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Form } from '@ant-design/compatible';
-import '@ant-design/compatible/assets/index.css';
-import { Collapse, Tabs, Card, Button, message } from 'antd';
+import { Collapse, Form, Tabs, Card,Button,message } from 'antd';
 import Atmmasterdetails from './Atmmasterdetails';
 import Comments from './Comments';
 import IssueDetails from './IssueDetails';

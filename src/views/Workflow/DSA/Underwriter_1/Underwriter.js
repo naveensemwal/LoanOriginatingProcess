@@ -1,7 +1,4 @@
-import { DownOutlined } from '@ant-design/icons';
-import { Form } from '@ant-design/compatible';
-import '@ant-design/compatible/assets/index.css';
-import { Collapse, Tabs, Card, Button, Menu, Dropdown } from 'antd';
+import { Collapse, Form, Tabs, Card,Button, Menu, Dropdown, Icon } from 'antd';
 import "antd/dist/antd.css";
 import React, { Component } from 'react';
 import Personaldetails from '../../../../Compositeviews/Personaldetails/Personaldetails';
@@ -264,7 +261,7 @@ export default class DDE extends Component {
                         </Button>
                         &nbsp; &nbsp; &nbsp;
 					            	<Dropdown overlay={menu}>
-						            	<Button type="primary" htmlType="Submit" shape="round" size={size}>Submit<DownOutlined /> </Button>
+						            	<Button type="primary" htmlType="Submit" shape="round" size={size}>Submit<Icon type="down"/> </Button>
 					            	</Dropdown>
                         &nbsp;&nbsp;&nbsp;
                         <Button type="primary" htmlType="GenerateSanction" shape="round" size={size}>
@@ -272,6 +269,6 @@ export default class DDE extends Component {
                         </Button>
             </Form.Item>
       </Form>
-    );
+    )
   }
 }

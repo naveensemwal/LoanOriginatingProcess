@@ -3,7 +3,7 @@ import { Query, Builder, BasicConfig, Utils as QbUtils } from 'react-awesome-que
 import "antd/dist/antd.css";
 import 'react-awesome-query-builder/css/styles.scss';
 import 'react-awesome-query-builder/css/compact_styles.scss'; 
-import { Menu } from 'antd';
+import { Menu,Icon } from 'antd';
 
 // You need to provide your own config. See below 'Config format'
 
