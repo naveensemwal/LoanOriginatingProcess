@@ -94,6 +94,13 @@ componentDidMount() {
       <Form onSubmit={this.handleSubmit} layout="horizontal">
         <div className="card-container cust_tabs_card form-group">
           <Tabs>
+          <TabPane tab="Disbursement Details" key="19">
+              <Collapse defaultActiveKey={["1"]}>
+                <Panel header="Disbursement Details" key="1">
+                  <DisbursementDetails></DisbursementDetails>
+                </Panel>
+              </Collapse>
+            </TabPane>
             <TabPane tab="Customer Details" key="1">
               <Collapse defaultActiveKey={["1"]}>
                 <Panel header="Personal Details" key="1" danger>
@@ -115,105 +122,11 @@ componentDidMount() {
                 
               </Collapse>
             </TabPane>
-            <TabPane tab="Employment & Income Details" key="3">
-              <Collapse defaultActiveKey={["1"]}>
-                <Panel header="Employment Details" key="1" danger>
-                  <Employmentdetails></Employmentdetails>
-                </Panel>
-                <Panel header="Income Details" key="2">
-                  <Incomedetails></Incomedetails>
-                </Panel>
-              </Collapse>
-            </TabPane>
-            <TabPane tab="Share Bank Statements" key="4">
-              {/* <Card> */}
-              <Statementdetails></Statementdetails>
-              {/* </Card> */}
-            </TabPane>
-            <TabPane tab="Document Check List" key="5">
-              {/* <Card> */}
-              <Dcc></Dcc>
-              {/* </Card> */}
-            </TabPane>
+            
             <TabPane tab="Document Details" key="6">
               <Dms></Dms>
             </TabPane>
-            <TabPane tab="Collateral Details" key="7">
-              <Collapse defaultActiveKey={["1"]}>
-              <Panel header="Collateral Details" key="1" danger>
-                  <CollateralDetails></CollateralDetails>
-                </Panel>
-              </Collapse>
-            </TabPane>
-            <TabPane tab="Case History" key="8">
-              <Card>
-                <Casehistory></Casehistory>
-              </Card>
-            </TabPane>
-            <TabPane tab="Bank statement Details" key="9">
-              {/* <Card> */}
-              <BankStatementDetails></BankStatementDetails>
-              {/* </Card> */}
-            </TabPane>
-            <TabPane tab="Financial Details" key="10">
-              <Collapse defaultActiveKey={["1"]}>
-                <Panel header="Ratios" key="1" danger>
-                  <FinancialDetailsRation></FinancialDetailsRation>
-                </Panel>
-                <Panel header="Obligations Details" key="2">
-                  <Cust_Obligationss></Cust_Obligationss>
-                </Panel>
-                <Panel header="Financials Gross TurnOver" key="3">
-                  <CustFinancialDetails></CustFinancialDetails>
-                </Panel>
-              </Collapse>
-            </TabPane>
-            <TabPane tab="Credit Sanction Condition" key="11">
-              <Collapse defaultActiveKey={["1"]}>
-                <Panel header="Credit Sanction Condition" key="1">
-                  {/* <Card> */}
-                  <CreditSanctionCondition></CreditSanctionCondition>
-                  {/* </Card> */}
-                </Panel>
-              </Collapse>
-            </TabPane>
-
-            <TabPane tab="Cross Selling Recommendation" key="12">
-              <Collapse defaultActiveKey={["1"]}>
-                <Panel header="Customer Realtionship" key="1">
-                  {/* <Card> */}
-                  <CrossSellingRecommendation></CrossSellingRecommendation>
-                  {/* </Card> */}
-                </Panel>
-              </Collapse>
-            </TabPane>
-
-            <TabPane tab="Verification Details" key="13">
-              <Collapse defaultActiveKey={["1"]}>
-                <Panel header="Verification Details" key="1">
-                  {/* <Card> */}
-                  <VerificationList></VerificationList>
-                  {/* </Card> */}
-                </Panel>
-              </Collapse>
-            </TabPane>
-            <TabPane tab="Disbursement Details" key="19">
-              <Collapse defaultActiveKey={["1"]}>
-                <Panel header="Disbursement Details" key="1">
-                  <DisbursementDetails></DisbursementDetails>
-                </Panel>
-              </Collapse>
-            </TabPane>
-
-            <TabPane tab="Dedupe Result" key="15">
-              <Collapse defaultActiveKey={["1"]}>
-                <Panel header="Dedupe Result" key="1">
-                  {/* <Card> */}
-                  <DedupeResult></DedupeResult>
-                  {/* </Card> */}
-                </Panel>
-              </Collapse>
-            </TabPane>
+            
           </Tabs>
         </div>
         <Form.Item>

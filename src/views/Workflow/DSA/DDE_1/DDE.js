@@ -25,6 +25,7 @@ import VerificationList from '../../../../Compositeviews/VerificationList/Verifi
 import DisbursementDetails from '../../../../Compositeviews/DisbursementDetails/DisbursementDetails';
 import DedupeResult from '../../../../Compositeviews/DedupeResult/DedupeResult';
 import CollateralDetails from '../../../../Compositeviews/CollateralDetails/CollateralDetails';
+import Riskprofile from '../../../../Components/Risk Profile/Riskprofile';
 const { Panel } = Collapse;
 
 export default class DDE extends Component {
@@ -168,26 +169,7 @@ componentDidMount() {
                 </Panel>
               </Collapse>
             </TabPane>
-            <TabPane tab="Credit Sanction Condition" key="11">
-              <Collapse defaultActiveKey={["1"]}>
-                <Panel header="Credit Sanction Condition" key="1">
-                  {/* <Card> */}
-                  <CreditSanctionCondition></CreditSanctionCondition>
-                  {/* </Card> */}
-                </Panel>
-              </Collapse>
-            </TabPane>
-
-            <TabPane tab="Cross Selling Recommendation" key="12">
-              <Collapse defaultActiveKey={["1"]}>
-                <Panel header="Customer Realtionship" key="1">
-                  {/* <Card> */}
-                  <CrossSellingRecommendation></CrossSellingRecommendation>
-                  {/* </Card> */}
-                </Panel>
-              </Collapse>
-            </TabPane>
-
+            
             <TabPane tab="Verification Details" key="13">
               <Collapse defaultActiveKey={["1"]}>
                 <Panel header="Verification Details" key="1">
@@ -197,21 +179,18 @@ componentDidMount() {
                 </Panel>
               </Collapse>
             </TabPane>
-            <TabPane tab="Disbursement Details" key="19">
-              <Collapse defaultActiveKey={["1"]}>
-                <Panel header="Disbursement Details" key="1">
-                  <DisbursementDetails></DisbursementDetails>
-                </Panel>
-              </Collapse>
-            </TabPane>
-
-            <TabPane tab="Dedupe Result" key="15">
+            
+            <TabPane tab="Compliance and Risk Check " key="15">
               <Collapse defaultActiveKey={["1"]}>
                 <Panel header="Dedupe Result" key="1">
                   {/* <Card> */}
                   <DedupeResult></DedupeResult>
                   {/* </Card> */}
                 </Panel>
+                <Panel header="Risk Profile" key="2">
+                  <Riskprofile></Riskprofile>
+                </Panel>
+
               </Collapse>
             </TabPane>
           </Tabs>

@@ -53,7 +53,7 @@ export default class Loandetails extends Component {
                 <Row gutter={[8, 8]}>
 
                     <Col span={8} >
-                        <Form.Item label="Loan Type :">
+                        <Form.Item label="Scheme :">
                             <Select>
                                 <Select.Option value="1">No Income Proof Program</Select.Option>
                                 <Select.Option value="2">Gross Profit</Select.Option>
@@ -64,7 +64,7 @@ export default class Loandetails extends Component {
                         </Form.Item>
                     </Col>
                     <Col span={8} >
-                        <Form.Item label="Loan Type :">
+                        <Form.Item label="Loan Purpose :">
                             <Select>
                                 <Select.Option value="1">Purchase Of Vacant Plot</Select.Option>
                                 <Select.Option value="2">Business Expansion </Select.Option>
