@@ -36,7 +36,7 @@ export default class DDE extends Component {
     size: 'large',
     width: '150px',
 	visible: false
-  };
+  }
   
   buttonVis = e =>{
   
@@ -106,6 +106,9 @@ export default class DDE extends Component {
                   <Panel header="Credit Sanction Condition" key="3">
                   <CreditSanctionCondition></CreditSanctionCondition>
                 </Panel>
+                <Panel header="Ratios" key="4">
+                  <FinancialDetailsRation></FinancialDetailsRation>
+                </Panel>
                 </Collapse>
             </TabPane>
             <TabPane tab="Compliance and Risk Check " key="16" >
@@ -171,16 +174,7 @@ export default class DDE extends Component {
                 </Collapse>
              
             </TabPane>
-            <TabPane tab="Share Bank Statements" key="4">
-              {/* <Card> */}
-                <Statementdetails></Statementdetails>
-              {/* </Card> */}
-            </TabPane>
-            <TabPane tab="Document Check List" key="5">
-            {/* <Card> */}
-            <Dcc></Dcc>
-            {/* </Card> */}
-            </TabPane>
+           
             <TabPane tab="Document Details" key="6">
               <Dms></Dms>
             </TabPane>
@@ -194,28 +188,11 @@ export default class DDE extends Component {
                 
               </Collapse>
             </TabPane>
-            <TabPane tab="Case History" key="8">
-              <Card><Casehistory></Casehistory></Card>
-            </TabPane>
+            
             <TabPane tab="Bank statement Details" key="9">
               {/* <Card> */}
                 <BankStatementDetails></BankStatementDetails>
               {/* </Card> */}
-            </TabPane>
-            <TabPane tab="Financial Details" key="10">
-              <Collapse
-                defaultActiveKey={['1']}
-              >
-                <Panel header="Ratios" key="1" danger>
-                  <FinancialDetailsRation></FinancialDetailsRation>
-                </Panel>
-                <Panel header="Obligations Details" key="2" >
-                  <Cust_Obligationss></Cust_Obligationss>
-                </Panel>
-                <Panel header="Financials Gross TurnOver" key="3" >
-                  <CustFinancialDetails></CustFinancialDetails>
-                </Panel>
-              </Collapse>
             </TabPane>
             
             <TabPane tab="Customer Relationship" key="12">
@@ -240,9 +217,7 @@ export default class DDE extends Component {
                                 Save as Draft
                         </Button>
                         &nbsp;&nbsp;&nbsp;
-                        <Button type="primary" htmlType="RerunDedupe" shape="round" size={size}>
-                                Rerun Dedupe
-                        </Button>
+                        {this.state.visible ?( <Button type="primary" htmlType="RerunDedupe" shape="round" size={size}>Rerun Dedupe </Button>):("")}
                         &nbsp; &nbsp; &nbsp;
 					            	<Dropdown overlay={menu}>
 						            	<Button type="primary" htmlType="Submit" shape="round" size={size}>Submit<Icon type="down"/> </Button>
