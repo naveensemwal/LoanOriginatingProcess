@@ -112,7 +112,7 @@ componentDidMount() {
       <Form onSubmit={this.handleSubmit} layout="horizontal">
          <a className='fixed-widgets' onClick={this.showModalcase_history}><i className='ant-avatar fixed-widgets-avatar ant-dropdown-trigger ant-avatar-circle ant-avatar-icon fa fa-history'/><span>Case History</span></a>
       <Modal
-      title='Basic Modal'
+      title='Case History'
       visible={this.state.visible}
       onOk={this.handleOkcasehistory}
       onCancel={this.handlecancelcasehistory}>

@@ -175,14 +175,14 @@ a.fixed-widgets:hover span, a.fixed-widgets i{display:inline-block;float:left;wi
     -webkit-box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
     border-radius: 0px !important;
-    background-color: #1890ff;
-    border-color: #1890ff;
-    color: #FFF;
+    background-color: #1890ff !important;
+    border-color: #1890ff !important;
+    color: #FFF !important;
     transition: all 0.3s ease 0s;
   }
-  .ant-btn:hover, .dsKVpZ:hover, .MuiButton-containedPrimary {
-    background-color: #40a9ff;
-    border-color: #40a9ff; }
+  .ant-btn:hover, .dsKVpZ:hover, .MuiButton-containedPrimary:hover {
+    background-color: #40a9ff !important;
+    border-color: #40a9ff !important; }
 
       /*button css end*/
 
