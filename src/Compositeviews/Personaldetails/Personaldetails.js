@@ -11,7 +11,7 @@ export default class Personaldetails extends Component {
                 <Row gutter={[8]}>
                     <Col span={8} >
                         <Form.Item label="Title :">
-                            <Select>
+                            <Select defaultValue="mr">
                                 <Select.Option value="mr">Mr.</Select.Option>
                                 <Select.Option value="ms">Ms.</Select.Option>
                                 <Select.Option value="mrs">Mrs.</Select.Option>
@@ -23,12 +23,12 @@ export default class Personaldetails extends Component {
 
                     <Col span={8} >
                         <Form.Item name="firstName" label='First Name :' rules={[{ required: true }]}>
-                            <Input />
+                            <Input defaultValue="Varghese" />
                         </Form.Item>
                     </Col>
                     <Col span={8} >
                         <Form.Item name="middleName" label='Middle Name :' rules={[{ required: true }]}>
-                            <Input />
+                            <Input defaultValue="Parkadavil" />
                         </Form.Item>
                     </Col>
 
@@ -36,12 +36,12 @@ export default class Personaldetails extends Component {
                 <Row gutter={[8, 8]}>
                     <Col span={8} >
                         <Form.Item name="lastName" label='Last Name :' rules={[{ required: true }]}>
-                            <Input />
+                            <Input defaultValue="Mathew"/>
                         </Form.Item>
                     </Col>
                     <Col span={8} >
                         <Form.Item label="Gender :">
-                            <Select>
+                            <Select defaultValue="male">
                                 <Select.Option value="male">Male</Select.Option>
                                 <Select.Option value="female">Female</Select.Option>
                                 <Select.Option value="transgender">Gender</Select.Option>
@@ -62,7 +62,7 @@ export default class Personaldetails extends Component {
                     </Col>
                     <Col span={8} >
                         <Form.Item label="Marital Status :">
-                            <Select>
+                            <Select defaultValue="married">
                                 <Select.Option value="married">Married</Select.Option>
                                 <Select.Option value="divorced">Divorced</Select.Option>
                                 <Select.Option value="single">Single</Select.Option>
@@ -74,14 +74,14 @@ export default class Personaldetails extends Component {
                     </Col>
                     <Col span={8} >
                         <Form.Item name="fatherName" label="Father's Name :" rules={[{ required: true }]}>
-                            <Input />
+                            <Input defaultValue="Parkadavil"/>
                         </Form.Item>
                     </Col>
                 </Row>
                 <Row gutter={[8, 8]}>
                     <Col span={8} >
                         <Form.Item name="motherName" label="Mother's Name :" rules={[{ required: true }]}>
-                            <Input />
+                            <Input defaultValue="Mathew"/>
                         </Form.Item>
                     </Col>
                 </Row>

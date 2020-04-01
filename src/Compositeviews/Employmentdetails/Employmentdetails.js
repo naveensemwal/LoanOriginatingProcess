@@ -43,12 +43,12 @@ export default class Employmentdetails extends Component {
 					{!this.state.CheckVis ?(
 					 <Col span={8} >
                         <Form.Item label="Current Employer Name :">
-                            <Input defaultValue="Singhla Sales"/>
+                            <Input defaultValue="Varghese Mathew"/>
                         </Form.Item>
                       </Col>):(
                           <Col span={8} >
                           <Form.Item label="Business Name :">
-                              <Input defaultValue="xyz" />
+                              <Input defaultValue="ALTAIR" />
                           </Form.Item>
                       </Col>
                       )}
@@ -98,7 +98,7 @@ export default class Employmentdetails extends Component {
                     {!this.state.CheckVis ?(
                     <Col span={8} >
                         <Form.Item label="Designation :">
-                            <Select defaultValue="1">
+                            <Select defaultValue="7">
                                 <Select.Option value="1">JUNIOR MANAGEMENT</Select.Option>
                                 <Select.Option value="2">Chairman</Select.Option>
                                 <Select.Option value="3">MANAGING DIRECTOR</Select.Option>

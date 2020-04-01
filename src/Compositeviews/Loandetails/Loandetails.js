@@ -41,7 +41,7 @@ export default class Loandetails extends Component {
                     </Col>
                     <Col span={8} >
                         <Form.Item label="Total Expected Loan Amount :">
-                            <Input defaultValue="2000000" prefix="₹" suffix="INR" />
+                            <Input defaultValue="2500000" prefix="₹" suffix="INR" />
                         </Form.Item>
                     </Col>
                     <Col span={8} >
