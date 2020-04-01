@@ -50,14 +50,14 @@ export default class Personaldetails extends Component {
                     </Col>
                     <Col span={8} >
                         <Form.Item label="Date of Birth:">
-                            <DatePicker placeholder='Select date of Birth' style={{ width: '100%' }} />
+                            <DatePicker  placeholder='Select date of Birth' style={{ width: '100%' }} />
                         </Form.Item>
                     </Col>
                 </Row>
                 <Row gutter={[8, 8]}>
                     <Col span={8} >
                         <Form.Item name="age" label='Age :' rules={[{ required: true }]} >
-                            <InputNumber  style={{ width: '100%' }}  />
+                            <InputNumber defaultValue="45" style={{ width: '100%' }}  />
                         </Form.Item>
                     </Col>
                     <Col span={8} >

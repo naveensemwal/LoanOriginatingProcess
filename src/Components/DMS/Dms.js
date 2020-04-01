@@ -14,6 +14,7 @@ import 'react-splitter-layout/lib/index.css';
 const file = 'http://localhost:8080/viewone/images/tomcat.gif'
 const type = 'gif'
 
+
 export default class Dms extends Component {
     state={viewURL:'http://localhost:8080/viewone/Document/Payslip.pdf',}
     render() {

@@ -26,7 +26,7 @@ import DedupeResult from '../../../../Compositeviews/DedupeResult/DedupeResult';
 import Riskprofile from '../../../../Components/Risk Profile/Riskprofile';
 import UWObservation from '../../../../Compositeviews/UWObservation/UWObservation';
 import DeviationDetails from '../../../../Compositeviews/DeviationDetails/DeviationDetails';
-import CollateralDetails from '../../../../Compositeviews/Collateraldetails/CollateralDetails';
+import CollateralDetails from '../../../../Compositeviews/CollateralDetails/CollateralDetails';
 const { Panel } = Collapse;
 
 export default class DDE extends Component {
@@ -35,7 +35,8 @@ export default class DDE extends Component {
   state = {
     size: 'large',
     width: '150px',
-	visible: false
+  visible1: false,
+  visible:false
   }
   showModalcase_history=()=>{
     this.setState({visible:true});
@@ -53,12 +54,12 @@ export default class DDE extends Component {
   
    if(e==="16"){
      this.setState(
-       {visible : true}
+       {visible1 : true}
      )
    }
   else{
     this.setState(
-      {visible : false}
+      {visible1 : false}
     )
     }
   }  
@@ -240,7 +241,7 @@ export default class DDE extends Component {
                                 Save as Draft
                         </Button>
                         &nbsp;&nbsp;&nbsp;
-                        {this.state.visible ?( <Button type="primary" htmlType="RerunDedupe" shape="round" size={size}>Rerun Dedupe </Button>):("")}
+                        {this.state.visible1 ?( <Button type="primary" htmlType="RerunDedupe" shape="round" size={size}>Rerun Dedupe </Button>):("")}
                         &nbsp; &nbsp; &nbsp;
 					            	<Dropdown overlay={menu}>
 						            	<Button type="primary" htmlType="Submit" shape="round" size={size}>Submit<Icon type="down"/> </Button>
@@ -250,7 +251,7 @@ export default class DDE extends Component {
                                Generate Sanction
                         </Button>
                         &nbsp;&nbsp;&nbsp;
-                        {this.state.visible ?( <Button type="primary" htmlType="RiskRule" shape="round" size={size}>Rerun Risk Rule</Button>):("")}
+                        {this.state.visible1 ?( <Button type="primary" htmlType="RiskRule" shape="round" size={size}>Rerun Risk Rule</Button>):("")}
 						
             </Form.Item>
       </Form>

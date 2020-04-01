@@ -24,7 +24,7 @@ import VerificationDetails from '../../../../Compositeviews/VerficationDetails/V
 import VerificationList from '../../../../Compositeviews/VerificationList/VerificationList';
 import DisbursementDetails from '../../../../Compositeviews/DisbursementDetails/DisbursementDetails';
 import DedupeResult from '../../../../Compositeviews/DedupeResult/DedupeResult';
-import CollateralDetails from '../../../../Compositeviews/Collateraldetails/CollateralDetails';
+
 const { Panel } = Collapse;
 
 export default class DDE extends Component {
