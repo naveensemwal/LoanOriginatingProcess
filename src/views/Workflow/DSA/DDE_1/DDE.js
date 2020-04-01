@@ -126,11 +126,7 @@ componentDidMount() {
                 </Panel>
               </Collapse>
             </TabPane>
-            <TabPane tab="Share Bank Statements" key="4">
-              {/* <Card> */}
-              <Statementdetails></Statementdetails>
-              {/* </Card> */}
-            </TabPane>
+            
             <TabPane tab="Document Check List" key="5">
               {/* <Card> */}
               <Dcc></Dcc>
@@ -146,29 +142,8 @@ componentDidMount() {
                 </Panel>
               </Collapse>
             </TabPane>
-            <TabPane tab="Case History" key="8">
-              <Card>
-                <Casehistory></Casehistory>
-              </Card>
-            </TabPane>
-            <TabPane tab="Bank statement Details" key="9">
-              {/* <Card> */}
-              <BankStatementDetails></BankStatementDetails>
-              {/* </Card> */}
-            </TabPane>
-            <TabPane tab="Financial Details" key="10">
-              <Collapse defaultActiveKey={["1"]}>
-                <Panel header="Ratios" key="1" danger>
-                  <FinancialDetailsRation></FinancialDetailsRation>
-                </Panel>
-                <Panel header="Obligations Details" key="2">
-                  <Cust_Obligationss></Cust_Obligationss>
-                </Panel>
-                <Panel header="Financials Gross TurnOver" key="3">
-                  <CustFinancialDetails></CustFinancialDetails>
-                </Panel>
-              </Collapse>
-            </TabPane>
+            
+            
             
             <TabPane tab="Verification Details" key="13">
               <Collapse defaultActiveKey={["1"]}>
@@ -180,19 +155,7 @@ componentDidMount() {
               </Collapse>
             </TabPane>
             
-            <TabPane tab="Compliance and Risk Check " key="15">
-              <Collapse defaultActiveKey={["1"]}>
-                <Panel header="Dedupe Result" key="1">
-                  {/* <Card> */}
-                  <DedupeResult></DedupeResult>
-                  {/* </Card> */}
-                </Panel>
-                <Panel header="Risk Profile" key="2">
-                  <Riskprofile></Riskprofile>
-                </Panel>
-
-              </Collapse>
-            </TabPane>
+           
           </Tabs>
         </div>
         <Form.Item>
@@ -206,14 +169,7 @@ componentDidMount() {
             Save as Draft
           </Button>
         
-          <Button
-            type="primary"
-            htmlType="RerunDedupe"
-            className='mar-rig-10'
-            size={size}
-          >
-            Rerun Dedupe
-          </Button>
+          
         
           <Button type="primary" htmlType="submit" 
             size={size}>

@@ -140,15 +140,7 @@ componentDidMount() {
             Save as Draft
           </Button>
         
-          <Button
-            type="primary"
-            htmlType="RerunDedupe"
-            className='mar-rig-10'
-            size={size}
-          >
-            Rerun Dedupe
-          </Button>
-        
+                  
           <Button type="primary" htmlType="submit" 
             size={size}>
             Submit

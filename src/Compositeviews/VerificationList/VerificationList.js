@@ -70,7 +70,7 @@ render(){
       key="BusinessReferenceCheck"
       render={(text, record) => (
         <span>
-          <Select style={{width:150}}>
+          <Select style={{width:150}} disabled>
           
             <Select.Option value="1"><Tooltip title="Mehta and Associates">Mehta and Associates</Tooltip></Select.Option>
             <Select.Option value="2"><Tooltip title="MONEYMALL001">MONEYMALL001</Tooltip></Select.Option>            
