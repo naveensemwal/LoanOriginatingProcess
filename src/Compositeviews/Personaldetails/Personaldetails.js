@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Col, DatePicker, Input, Row, Select, InputNumber,Form} from 'antd';
 import "antd/dist/antd.css";
+import moment from 'moment';
 
-
-
+const dateFormat = 'DD/MM/YYYY';
 export default class Personaldetails extends Component {
     render() {
         return (
@@ -50,7 +50,7 @@ export default class Personaldetails extends Component {
                     </Col>
                     <Col span={8} >
                         <Form.Item label="Date of Birth:">
-                            <DatePicker  placeholder='Select date of Birth' style={{ width: '100%' }} />
+                            <DatePicker defaultValue={moment('03/03/1975', dateFormat)} format={dateFormat} placeholder='Select date of Birth' style={{ width: '100%' }} />
                         </Form.Item>
                     </Col>
                 </Row>
