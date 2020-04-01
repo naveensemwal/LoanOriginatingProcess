@@ -10,7 +10,7 @@ export default class Loandetails extends Component {
                 <Row gutter={[8, 8]}>
                     <Col span={8} >
                         <Form.Item label="Loan Type :">
-                            <Select>
+                            <Select defaultValue="personalLoan">
                                 <Select.Option value="homeLoan">Home Loan</Select.Option>
                                 <Select.Option value="autoLoan">Auto Loan</Select.Option>
                                 <Select.Option value="personalLoan">Personal Loan</Select.Option>
@@ -20,7 +20,7 @@ export default class Loandetails extends Component {
                     </Col>
                     <Col span={8} >
                         <Form.Item label="Interest Type :">
-                            <Select>
+                            <Select defaultValue="scheme2">
                                 <Select.Option value="scheme1">Fixed</Select.Option>
                                 <Select.Option value="scheme2">Floating</Select.Option>
                             </Select>
@@ -28,7 +28,7 @@ export default class Loandetails extends Component {
                     </Col>
                     <Col span={8} >
                         <Form.Item label="EMI :">
-                            <InputNumber style={{ width: '100%' }} />
+                            <InputNumber defaultValue="2000" style={{ width: '100%' }} />
                         </Form.Item>
                     </Col>
                 </Row>
@@ -36,25 +36,25 @@ export default class Loandetails extends Component {
 
                     <Col span={8} >
                         <Form.Item label="Interest Rate :">
-                            <Input suffix="%" />
+                            <Input defaultValue="9"suffix="%" />
                         </Form.Item>
                     </Col>
                     <Col span={8} >
                         <Form.Item label="Total Expected Loan Amount :">
-                            <Input prefix="₹" suffix="INR" />
+                            <Input defaultValue="2000000" prefix="₹" suffix="INR" />
                         </Form.Item>
                     </Col>
                     <Col span={8} >
                         <Form.Item label="Tenure in Months :">
-                            <InputNumber style={{ width: '100%' }} />
+                            <InputNumber defaultValue="24" style={{ width: '100%' }} />
                         </Form.Item>
                     </Col>
                 </Row>
                 <Row gutter={[8, 8]}>
 
                     <Col span={8} >
-                        <Form.Item label="Loan Type :">
-                            <Select>
+                        <Form.Item label="Scheme :">
+                            <Select defaultValue="2">
                                 <Select.Option value="1">No Income Proof Program</Select.Option>
                                 <Select.Option value="2">Gross Profit</Select.Option>
                                 <Select.Option value="3">Pure Rental Income Program</Select.Option>
@@ -64,8 +64,8 @@ export default class Loandetails extends Component {
                         </Form.Item>
                     </Col>
                     <Col span={8} >
-                        <Form.Item label="Loan Type :">
-                            <Select>
+                        <Form.Item label="Loan Purpose :">
+                            <Select defaultValue="2">
                                 <Select.Option value="1">Purchase Of Vacant Plot</Select.Option>
                                 <Select.Option value="2">Business Expansion </Select.Option>
                                 <Select.Option value="3">Purchase Of Property</Select.Option>

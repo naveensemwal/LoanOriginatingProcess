@@ -8,7 +8,7 @@ import Loandetails from '../../../../Compositeviews/Loandetails/Loandetails';
 import Statementdetails from '../../../../Compositeviews/Statementdetails/Statementdetails';
 import Dms from '../../../../Components/DMS/Dms';
 import Casehistory from '../../../../Compositeviews/Casehistory/Casehistory';
-import Productdetails from '../../../../Compositeviews/Productdetails/Productdetails';
+
 import Incomedetails from '../../../../Compositeviews/Incomedetails/Incomedetails';
 import Dcc from '../../../../Compositeviews/Dcc/Dcc';
 import Employmentdetails from '../../../../Compositeviews/Employmentdetails/Employmentdetails';
@@ -26,6 +26,7 @@ import DedupeResult from '../../../../Compositeviews/DedupeResult/DedupeResult';
 import Riskprofile from '../../../../Components/Risk Profile/Riskprofile';
 import UWObservation from '../../../../Compositeviews/UWObservation/UWObservation';
 import DeviationDetails from '../../../../Compositeviews/DeviationDetails/DeviationDetails';
+import CollateralDetails from '../../../../Compositeviews/CollateralDetails/CollateralDetails';
 const { Panel } = Collapse;
 
 export default class DDE extends Component {
@@ -34,8 +35,22 @@ export default class DDE extends Component {
   state = {
     size: 'large',
     width: '150px',
-  };
-
+	visible: false
+  }
+  
+  buttonVis = e =>{
+  
+   if(e==="16"){
+     this.setState(
+       {visible : true}
+     )
+   }
+  else{
+    this.setState(
+      {visible : false}
+    )
+    }
+  }  
   handleSizeChange = e => {
     this.setState({ size: e.target.value });
   };
@@ -73,126 +88,42 @@ export default class DDE extends Component {
     return (
       <Form onSubmit={this.handleSubmit} layout="horizontal" >
         <div className="card-container">
-          <Tabs >
-            <TabPane tab="Customer Details" key="1">
+          <Tabs onChange={this.buttonVis}>
+          <TabPane tab="Underwriter Decision" key="19">
                 <Collapse defaultActiveKey={['1']}>
-                  <Panel header="Personal Details" key="1" danger>
-                    <Personaldetails></Personaldetails>
+                  <Panel header="Deviation Details" key="1">
+                     {/* <Card> */}
+                    <DeviationDetails></DeviationDetails>
+                    {/* </Card> */}
                   </Panel>
-                  <Panel header="Identification Details" key="2" >
-                    <Identificationdetails></Identificationdetails>
+                 
+                  <Panel header="Eligibility Details" key="2">
+                     {/* <Card> */}
+                    <UWObservation></UWObservation>
+                    {/* </Card> */}
                   </Panel>
-                  <Panel header="Address Details" key="3" >
-                    <Addressdetails></Addressdetails>
-                  </Panel>
-                </Collapse>
-            </TabPane>
-            <TabPane tab="Loan & Product Details" key="2">
-                <Collapse defaultActiveKey={['1']}>
-                  <Panel header="Loan Details" key="1" danger>
-                    <Loandetails></Loandetails>
-                  </Panel>
-                  <Panel header="Product Details" key="2" >
-                    <Productdetails></Productdetails>
-                  </Panel>
-                </Collapse>
-              
-            </TabPane>
-            <TabPane tab="Employment & Income Details" key="3">
-            
-                <Collapse defaultActiveKey={['1']}>
-                  <Panel header="Employment Details" key="1" danger>
-                    <Employmentdetails></Employmentdetails>
-                  </Panel>
-                  <Panel header="Income Details" key="2" >
-                    <Incomedetails></Incomedetails>
-                  </Panel>
-                </Collapse>
-             
-            </TabPane>
-            <TabPane tab="Share Bank Statements" key="4">
-              {/* <Card> */}
-                <Statementdetails></Statementdetails>
-              {/* </Card> */}
-            </TabPane>
-            <TabPane tab="Document Check List" key="5">
-            {/* <Card> */}
-            <Dcc></Dcc>
-            {/* </Card> */}
-            </TabPane>
-            <TabPane tab="Document Details" key="6">
-              <Dms></Dms>
-            </TabPane>
-            <TabPane tab="Collateral Details" key="7">
-              <Collapse
-                defaultActiveKey={['1']}
-              >
-                <Panel header="Personal Details" key="1" danger>
-                  <Personaldetails></Personaldetails>
+                  
+                  <Panel header="Credit Sanction Condition" key="3">
+                  <CreditSanctionCondition></CreditSanctionCondition>
                 </Panel>
-                <Panel header="Family Details" key="2" >
-                  <Familydetails></Familydetails>
-                </Panel>
-                <Panel header="Address Details" key="3" >
-                  <Addressdetails></Addressdetails>
-                </Panel>
-              </Collapse>
-            </TabPane>
-            <TabPane tab="Case History" key="8">
-              <Card><Casehistory></Casehistory></Card>
-            </TabPane>
-            <TabPane tab="Bank statement Details" key="9">
-              {/* <Card> */}
-                <BankStatementDetails></BankStatementDetails>
-              {/* </Card> */}
-            </TabPane>
-            <TabPane tab="Financial Details" key="10">
-              <Collapse
-                defaultActiveKey={['1']}
-              >
-                <Panel header="Ratios" key="1" danger>
+                <Panel header="Ratios" key="4">
                   <FinancialDetailsRation></FinancialDetailsRation>
                 </Panel>
-                <Panel header="Obligations Details" key="2" >
-                  <Cust_Obligationss></Cust_Obligationss>
+                </Collapse>
+            </TabPane>
+            <TabPane tab="Compliance and Risk Check " key="16" >
+              <Collapse defaultActiveKey={["1"]}>
+                <Panel header="Dedupe Result" key="1">
+                  {/* <Card> */}
+                  <DedupeResult></DedupeResult>
+                  {/* </Card> */}
                 </Panel>
-                <Panel header="Financials Gross TurnOver" key="3" >
-                  <CustFinancialDetails></CustFinancialDetails>
+                <Panel header="Risk Profile" key="2">
+                  <Riskprofile></Riskprofile>
                 </Panel>
+
               </Collapse>
             </TabPane>
-            <TabPane tab="Credit Sanction Condition" key="11">
-                <Collapse defaultActiveKey={['1']}>
-                  <Panel header="Credit Sanction Condition" key="1">
-                     {/* <Card> */}
-                    <CreditSanctionCondition></CreditSanctionCondition>
-                    {/* </Card> */}
-                  </Panel>
-                 
-                </Collapse>
-            </TabPane>
-            <TabPane tab="Customer Relationship" key="12">
-                <Collapse defaultActiveKey={['1']}>
-                  <Panel header="Customer Realtionship" key="1">
-                     {/* <Card> */}
-                    <CustomerRelationship></CustomerRelationship>
-                    {/* </Card> */}
-                  </Panel>
-                 
-                </Collapse>
-            </TabPane>
-
-            <TabPane tab="Cross Selling Recommendation" key="13">
-                <Collapse defaultActiveKey={['1']}>
-                  <Panel header="Cross Selling Recommendations" key="1">
-                     {/* <Card> */}
-                    <CrossSellingRecommendation></CrossSellingRecommendation>
-                    {/* </Card> */}
-                  </Panel>
-                 
-                </Collapse>
-            </TabPane>
-
             <TabPane tab="Verification Details" key="17">
                 <Collapse defaultActiveKey={['1']}>
                   <Panel header="Verification List" key="1" danger>
@@ -209,44 +140,74 @@ export default class DDE extends Component {
                 </Collapse>
             </TabPane>
 
-            <TabPane tab="Dedupe Result" key="16">
+            <TabPane tab="Customer Details" key="1">
                 <Collapse defaultActiveKey={['1']}>
-                  <Panel header="Dedupe Result" key="1">
+                  <Panel header="Personal Details" key="1" danger>
+                    <Personaldetails></Personaldetails>
+                  </Panel>
+                  <Panel header="Identification Details" key="2" >
+                    <Identificationdetails></Identificationdetails>
+                  </Panel>
+                  <Panel header="Address Details" key="3" >
+                    <Addressdetails></Addressdetails>
+                  </Panel>
+                </Collapse>
+            </TabPane>
+            <TabPane tab="Loan Details" key="2">
+                <Collapse defaultActiveKey={['1']}>
+                  <Panel header="Loan Details" key="1" danger>
+                    <Loandetails></Loandetails>
+                  </Panel>
+                  
+                </Collapse>
+              
+            </TabPane>
+            <TabPane tab="Employment & Income Details" key="3">
+            
+                <Collapse defaultActiveKey={['1']}>
+                  <Panel header="Employment Details" key="1" danger>
+                    <Employmentdetails></Employmentdetails>
+                  </Panel>
+                  <Panel header="Income Details" key="2" >
+                    <Incomedetails></Incomedetails>
+                  </Panel>
+                </Collapse>
+             
+            </TabPane>
+           
+            <TabPane tab="Document Details" key="6">
+              <Dms></Dms>
+            </TabPane>
+            <TabPane tab="Collateral Details" key="7">
+              <Collapse
+                defaultActiveKey={['1']}
+              >
+                <Panel header="Collateral Details" key="1" danger>
+                  <CollateralDetails></CollateralDetails>
+                </Panel>
+                
+              </Collapse>
+            </TabPane>
+            
+            <TabPane tab="Bank statement Details" key="9">
+              {/* <Card> */}
+                <BankStatementDetails></BankStatementDetails>
+              {/* </Card> */}
+            </TabPane>
+            
+            <TabPane tab="Customer Relationship" key="12">
+                <Collapse defaultActiveKey={['1']}>
+                  <Panel header="Customer Realtionship" key="1">
                      {/* <Card> */}
-                    <DedupeResult></DedupeResult>
+                    <CustomerRelationship></CustomerRelationship>
                     {/* </Card> */}
                   </Panel>
                  
                 </Collapse>
             </TabPane>
 
-            <TabPane tab="Risk profile" key="18">
-                <Collapse defaultActiveKey={['1']}>
-                  <Panel header="Risk profile" key="1">
-                     {/* <Card> */}
-                    <Riskprofile></Riskprofile>
-                    {/* </Card> */}
-                  </Panel>
-                 
-                </Collapse>
-            </TabPane>
-
-            <TabPane tab="Underwriter Decision" key="19">
-                <Collapse defaultActiveKey={['1']}>
-                  <Panel header="Deviation Details" key="1">
-                     {/* <Card> */}
-                    <DeviationDetails></DeviationDetails>
-                    {/* </Card> */}
-                  </Panel>
-                 
-                  <Panel header="Underwriter Observation" key="1">
-                     {/* <Card> */}
-                    <UWObservation></UWObservation>
-                    {/* </Card> */}
-                  </Panel>
-                </Collapse>
-            </TabPane>
-
+            
+            
           </Tabs>
         </div>
         <br/>
@@ -256,9 +217,7 @@ export default class DDE extends Component {
                                 Save as Draft
                         </Button>
                         &nbsp;&nbsp;&nbsp;
-                        <Button type="primary" htmlType="RerunDedupe" shape="round" size={size}>
-                                Rerun Dedupe
-                        </Button>
+                        {this.state.visible ?( <Button type="primary" htmlType="RerunDedupe" shape="round" size={size}>Rerun Dedupe </Button>):("")}
                         &nbsp; &nbsp; &nbsp;
 					            	<Dropdown overlay={menu}>
 						            	<Button type="primary" htmlType="Submit" shape="round" size={size}>Submit<Icon type="down"/> </Button>
@@ -267,6 +226,9 @@ export default class DDE extends Component {
                         <Button type="primary" htmlType="GenerateSanction" shape="round" size={size}>
                                Generate Sanction
                         </Button>
+                        &nbsp;&nbsp;&nbsp;
+                        {this.state.visible ?( <Button type="primary" htmlType="RiskRule" shape="round" size={size}>Rerun Risk Rule</Button>):("")}
+						
             </Form.Item>
       </Form>
     )

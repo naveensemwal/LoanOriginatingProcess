@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Table, Typography,Select } from 'antd';
+import { Table, Typography,Select,Tooltip } from 'antd';
 const { Text } = Typography;
 
 const { Column } = Table;
@@ -41,14 +41,10 @@ render(){
       key="ResidenceCheck"
       render={(text, record) => (
         <span >
-          <Select style={{width:130}}>
-            <Select.Option value="1">3G based field management</Select.Option>
-            <Select.Option value="2">Dorupo financial service pvt ltd.</Select.Option>
-            <Select.Option value="3">Hiranandani Associates</Select.Option>
-            <Select.Option value="4">payal financial service pvt ltd.</Select.Option>
-            <Select.Option value="5">Mehta and Associates</Select.Option>
-            <Select.Option value="6">MONEYMALL001</Select.Option>
-            <Select.Option value="7">D ASK FINANCIAL GROUP</Select.Option>
+          <Select style={{width:150}}>
+            <Select.Option value="1"><Tooltip title="3G based field management">3G based field management</Tooltip></Select.Option>
+            <Select.Option value="2"><Tooltip title="Dorupo financial service pvt ltd.">Dorupo financial service pvt ltd.</Tooltip></Select.Option>
+            
           </Select>
         </span>
       )}
@@ -59,14 +55,11 @@ render(){
       key="Legal"
       render={(text, record) => (
         <span >
-          <Select style={{width:130}}>
-          <Select.Option value="1">3G based field management</Select.Option>
-            <Select.Option value="2">Dorupo financial service pvt ltd.</Select.Option>
-            <Select.Option value="3">Hiranandani Associates</Select.Option>
-            <Select.Option value="4">payal financial service pvt ltd.</Select.Option>
-            <Select.Option value="5">Mehta and Associates</Select.Option>
-            <Select.Option value="6">MONEYMALL001</Select.Option>
-            <Select.Option value="7">D ASK FINANCIAL GROUP</Select.Option>
+          <Select style={{width:150}}>
+
+            <Select.Option value="1"><Tooltip title="Hiranandani Associates">Hiranandani Associates</Tooltip></Select.Option>
+            <Select.Option value="2"><Tooltip title="Payal financial service pvt ltd.">Payal financial service pvt ltd.</Tooltip></Select.Option>            
+
           </Select>
         </span>
       )}
@@ -77,14 +70,12 @@ render(){
       key="BusinessReferenceCheck"
       render={(text, record) => (
         <span>
-          <Select style={{width:130}}>
-          <Select.Option value="1">3G based field management</Select.Option>
-            <Select.Option value="2">Dorupo financial service pvt ltd.</Select.Option>
-            <Select.Option value="3">Hiranandani Associates</Select.Option>
-            <Select.Option value="4">payal financial service pvt ltd.</Select.Option>
-            <Select.Option value="5">Mehta and Associates</Select.Option>
-            <Select.Option value="6">MONEYMALL001</Select.Option>
-            <Select.Option value="7">D ASK FINANCIAL GROUP</Select.Option>
+          <Select style={{width:150}} disabled>
+          
+            <Select.Option value="1"><Tooltip title="Mehta and Associates">Mehta and Associates</Tooltip></Select.Option>
+            <Select.Option value="2"><Tooltip title="MONEYMALL001">MONEYMALL001</Tooltip></Select.Option>            
+           
+            
           </Select>
         </span>
       )}
@@ -95,14 +86,10 @@ render(){
       key="EmploymentCheck"
       render={(text, record) => (
         <span>
-          <Select style={{width:130}}>
-          <Select.Option value="1">3G based field management</Select.Option>
-            <Select.Option value="2">Dorupo financial service pvt ltd.</Select.Option>
-            <Select.Option value="3">Hiranandani Associates</Select.Option>
-            <Select.Option value="4">payal financial service pvt ltd.</Select.Option>
-            <Select.Option value="5">Mehta and Associates</Select.Option>
-            <Select.Option value="6">MONEYMALL001</Select.Option>
-            <Select.Option value="7">D ASK FINANCIAL GROUP</Select.Option>
+          <Select style={{width:150}}>
+          
+            <Select.Option value="1"><Tooltip title="D ASK FINANCIAL GROUP">D ASK FINANCIAL GROUP</Tooltip></Select.Option>
+            <Select.Option value="2"><Tooltip title="PVP FINANCIAL GROUP">PVP FINANCIAL GROUP</Tooltip></Select.Option>            
           </Select>
         </span>
       )}
@@ -113,14 +100,10 @@ render(){
       key="PropertyValuation"
       render={(text, record) => (
         <span>
-          <Select style={{width:130}}>
-          <Select.Option value="1">3G based field management</Select.Option>
-            <Select.Option value="2">Dorupo financial service pvt ltd.</Select.Option>
-            <Select.Option value="3">Hiranandani Associates</Select.Option>
-            <Select.Option value="4">payal financial service pvt ltd.</Select.Option>
-            <Select.Option value="5">Mehta and Associates</Select.Option>
-            <Select.Option value="6">MONEYMALL001</Select.Option>
-            <Select.Option value="7">D ASK FINANCIAL GROUP</Select.Option>
+          <Select style={{width:150}}>
+          <Select.Option value="1"><Tooltip title="ARGUS INC">ARGUS INC</Tooltip></Select.Option>
+            <Select.Option value="2"><Tooltip title="B KAKKAR AND CO">B KAKKAR AND CO</Tooltip></Select.Option>            
+            
           </Select>
         </span>
       )}

@@ -141,6 +141,53 @@ const data3 =[
 
 ]
 
+const columns4 = [
+  {
+      title :'Applicant Name',
+      dataIndex:'ApplicantName'
+  },
+  {
+      title: 'Verification Agency',
+      dataIndex: 'VerificationAgency',
+    },
+    {
+      title: 'Comment',
+      dataIndex: 'Comment',
+    },
+    {
+      title: 'Result',
+      dataIndex: 'Result',
+    },
+    {
+      title: 'Status',
+      dataIndex: 'Status',
+    },
+    {
+      title: 'View',
+      dataIndex: 'View',
+  render: (text, record) => (
+        <Icon type="eye" />          
+      ),
+    },
+
+
+
+];
+
+
+const data4 =[
+  {
+      key :1,
+      ApplicantName:'Singla sales',
+      VerificationAgency :'PVP FINANCIAL GROUP',
+      Comment :'Satisfactory',
+      Result :'Positive',
+      Status :'Completed',
+      View :''
+  },
+
+]
+
 
 
 export default class VerificationDetails extends Component{
@@ -173,6 +220,14 @@ export default class VerificationDetails extends Component{
 
             </div>
 
+            <div>
+				        <label>Employment Check</label>
+                <Table className='table table-striped table-hover table-bordered'
+                    columns={columns4} dataSource={data4}
+                
+                />
+
+            </div> 
 
 			<div>
 				<label>Property Valuation</label>

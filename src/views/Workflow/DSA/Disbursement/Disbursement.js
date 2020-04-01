@@ -1,4 +1,4 @@
-import { Collapse, Form, Tabs, Card, Button, Modal } from "antd";
+import { Collapse, Form, Tabs, Card, Button } from "antd";
 import "antd/dist/antd.css";
 import React, { Component } from 'react';
 import Axios from 'axios';
@@ -63,24 +63,8 @@ componentDidMount() {
 
   state = {
     size: "large",
-    width: "150px",
-    visible:false
+    width: "150px"
   };
-  showModalcase_history = () =>  {
-    this.setState({visible:true});
-  };
-  handleOkcasehistory =e =>{
-    console.log(e);
-    this.setState({
-      visible: false,
-    });
-  }
-  handlecancelcasehistory =e =>{
-    console.log(e);
-    this.setState({
-      visible: false,
-    });
-  }
 
   handleSizeChange = e => {
     this.setState({ size: e.target.value });
@@ -107,23 +91,16 @@ componentDidMount() {
     const { size } = this.state;
     const { TabPane } = Tabs;
     return (
-
-    
       <Form onSubmit={this.handleSubmit} layout="horizontal">
-         <a className='fixed-widgets' onClick={this.showModalcase_history}><i className='ant-avatar fixed-widgets-avatar ant-dropdown-trigger ant-avatar-circle ant-avatar-icon fa fa-history'/><span>Case History</span></a>
-      <Modal
-      title='Case History'
-      visible={this.state.visible}
-      onOk={this.handleOkcasehistory}
-      onCancel={this.handlecancelcasehistory}>
-
-<Card>
-                <Casehistory></Casehistory>
-              </Card>
-
-      </Modal>
         <div className="card-container cust_tabs_card form-group">
           <Tabs>
+          <TabPane tab="Disbursement Details" key="19">
+              <Collapse defaultActiveKey={["1"]}>
+                <Panel header="Disbursement Details" key="1">
+                  <DisbursementDetails></DisbursementDetails>
+                </Panel>
+              </Collapse>
+            </TabPane>
             <TabPane tab="Customer Details" key="1">
               <Collapse defaultActiveKey={["1"]}>
                 <Panel header="Personal Details" key="1" danger>
@@ -145,105 +122,11 @@ componentDidMount() {
                 
               </Collapse>
             </TabPane>
-            <TabPane tab="Employment & Income Details" key="3">
-              <Collapse defaultActiveKey={["1"]}>
-                <Panel header="Employment Details" key="1" danger>
-                  <Employmentdetails></Employmentdetails>
-                </Panel>
-                <Panel header="Income Details" key="2">
-                  <Incomedetails></Incomedetails>
-                </Panel>
-              </Collapse>
-            </TabPane>
-            <TabPane tab="Share Bank Statements" key="4">
-              {/* <Card> */}
-              <Statementdetails></Statementdetails>
-              {/* </Card> */}
-            </TabPane>
-            <TabPane tab="Document Check List" key="5">
-              {/* <Card> */}
-              <Dcc></Dcc>
-              {/* </Card> */}
-            </TabPane>
+            
             <TabPane tab="Document Details" key="6">
               <Dms></Dms>
             </TabPane>
-            <TabPane tab="Collateral Details" key="7">
-              <Collapse defaultActiveKey={["1"]}>
-              <Panel header="Collateral Details" key="1" danger>
-                  <CollateralDetails></CollateralDetails>
-                </Panel>
-              </Collapse>
-            </TabPane>
-            {/* <TabPane tab="Case History" key="8">
-              <Card>
-                <Casehistory></Casehistory>
-              </Card>
-            </TabPane> */}
-            <TabPane tab="Bank statement Details" key="8">
-              {/* <Card> */}
-              <BankStatementDetails></BankStatementDetails>
-              {/* </Card> */}
-            </TabPane>
-            <TabPane tab="Financial Details" key="9">
-              <Collapse defaultActiveKey={["1"]}>
-                <Panel header="Ratios" key="1" danger>
-                  <FinancialDetailsRation></FinancialDetailsRation>
-                </Panel>
-                <Panel header="Obligations Details" key="2">
-                  <Cust_Obligationss></Cust_Obligationss>
-                </Panel>
-                <Panel header="Financials Gross TurnOver" key="3">
-                  <CustFinancialDetails></CustFinancialDetails>
-                </Panel>
-              </Collapse>
-            </TabPane>
-            <TabPane tab="Credit Sanction Condition" key="10">
-              <Collapse defaultActiveKey={["1"]}>
-                <Panel header="Credit Sanction Condition" key="1">
-                  {/* <Card> */}
-                  <CreditSanctionCondition></CreditSanctionCondition>
-                  {/* </Card> */}
-                </Panel>
-              </Collapse>
-            </TabPane>
-
-            <TabPane tab="Cross Selling Recommendation" key="11">
-              <Collapse defaultActiveKey={["1"]}>
-                <Panel header="Customer Realtionship" key="1">
-                  {/* <Card> */}
-                  <CrossSellingRecommendation></CrossSellingRecommendation>
-                  {/* </Card> */}
-                </Panel>
-              </Collapse>
-            </TabPane>
-
-            <TabPane tab="Verification Details" key="12">
-              <Collapse defaultActiveKey={["1"]}>
-                <Panel header="Verification Details" key="1">
-                  {/* <Card> */}
-                  <VerificationList></VerificationList>
-                  {/* </Card> */}
-                </Panel>
-              </Collapse>
-            </TabPane>
-            <TabPane tab="Disbursement Details" key="13">
-              <Collapse defaultActiveKey={["1"]}>
-                <Panel header="Disbursement Details" key="1">
-                  <DisbursementDetails></DisbursementDetails>
-                </Panel>
-              </Collapse>
-            </TabPane>
-
-            <TabPane tab="Dedupe Result" key="14">
-              <Collapse defaultActiveKey={["1"]}>
-                <Panel header="Dedupe Result" key="1">
-                  {/* <Card> */}
-                  <DedupeResult></DedupeResult>
-                  {/* </Card> */}
-                </Panel>
-              </Collapse>
-            </TabPane>
+            
           </Tabs>
         </div>
         <Form.Item>
@@ -257,15 +140,7 @@ componentDidMount() {
             Save as Draft
           </Button>
         
-          <Button
-            type="primary"
-            htmlType="RerunDedupe"
-            className='mar-rig-10'
-            size={size}
-          >
-            Rerun Dedupe
-          </Button>
-        
+                  
           <Button type="primary" htmlType="submit" 
             size={size}>
             Submit
