@@ -106,7 +106,7 @@ export default class DDE extends Component {
                   <Panel header="Credit Sanction Condition" key="3">
                   <CreditSanctionCondition></CreditSanctionCondition>
                 </Panel>
-                <Panel header="Ratios" key="4">
+                <Panel header="Ratios" key="4" >
                   <FinancialDetailsRation></FinancialDetailsRation>
                 </Panel>
                 </Collapse>

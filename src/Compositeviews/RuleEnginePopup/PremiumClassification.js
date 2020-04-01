@@ -117,7 +117,7 @@ export default class PremiumClassification extends Component{
                 
                 />
 			 <div class="text-right">
-				<Button type="primary" onClick={this.showModal}>
+				<Button type="primary" onClick={this.showModal} disabled>
 					Edit
 				</Button>
 

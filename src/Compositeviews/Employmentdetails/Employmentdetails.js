@@ -43,19 +43,19 @@ export default class Employmentdetails extends Component {
 					{!this.state.CheckVis ?(
 					 <Col span={8} >
                         <Form.Item label="Current Employer Name :">
-                            <Input />
+                            <Input defaultValue="Singhla Sales"/>
                         </Form.Item>
                       </Col>):(
                           <Col span={8} >
                           <Form.Item label="Business Name :">
-                              <Input />
+                              <Input defaultValue="xyz" />
                           </Form.Item>
                       </Col>
                       )}
                     {!this.state.CheckVis ?( 
                     <Col span={8} >
                         <Form.Item label="Nature of Business :">
-                            <Select>
+                            <Select defaultValue="3">
                                 <Select.Option value="1">AGRICULTURAL</Select.Option>
                                 <Select.Option value="2">ANESTHETIST</Select.Option>
                                 <Select.Option value="3">ARCHITECT</Select.Option>
@@ -70,7 +70,7 @@ export default class Employmentdetails extends Component {
 					):(
                         <Col span={8} >
                         <Form.Item label="Gross Turnover :">
-                            <InputNumber style={{width:'100%'}}/>
+                            <InputNumber defaultValue="450000" style={{width:'100%'}}/>
                         </Form.Item>
                     </Col>
                     )}
@@ -81,24 +81,24 @@ export default class Employmentdetails extends Component {
                  {!this.state.CheckVis ?(
                    <Col span={8} >
                         <Form.Item label="Declared Net Monthly income :">
-                            <Input prefix="₹" suffix="INR" />
+                            <Input defaultValue="50000" prefix="₹" suffix="INR" />
                         </Form.Item>
                     </Col>):
                     (<Col span={8} >
                         <Form.Item label="Date of Inception :">
-                            <Input />
+                            <Input defaultValue="09/07/2020"/>
                         </Form.Item>
                     </Col>)}
                     {!this.state.CheckVis ?(
                     <Col span={8} >
                         <Form.Item label="Years in Present Job :">
-                            <InputNumber style={{width:'100%'}}/>
+                            <InputNumber defaultValue="6" style={{width:'100%'}}/>
                         </Form.Item>
                     </Col>):("")}
                     {!this.state.CheckVis ?(
                     <Col span={8} >
                         <Form.Item label="Designation :">
-                            <Select>
+                            <Select defaultValue="1">
                                 <Select.Option value="1">JUNIOR MANAGEMENT</Select.Option>
                                 <Select.Option value="2">Chairman</Select.Option>
                                 <Select.Option value="3">MANAGING DIRECTOR</Select.Option>
