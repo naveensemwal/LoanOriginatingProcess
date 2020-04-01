@@ -1,4 +1,4 @@
-import { Collapse, Form, Tabs, Card, Button } from "antd";
+import { Collapse, Form, Tabs, Card, Button,Modal } from "antd";
 import "antd/dist/antd.css";
 import React, { Component } from 'react';
 import Axios from 'axios';
@@ -24,7 +24,7 @@ import VerificationDetails from '../../../../Compositeviews/VerficationDetails/V
 import VerificationList from '../../../../Compositeviews/VerificationList/VerificationList';
 import DisbursementDetails from '../../../../Compositeviews/DisbursementDetails/DisbursementDetails';
 import DedupeResult from '../../../../Compositeviews/DedupeResult/DedupeResult';
-import CollateralDetails from '../../../../Compositeviews/CollateralDetails/CollateralDetails';
+import CollateralDetails from '../../../../Compositeviews/Collateraldetails/CollateralDetails';
 const { Panel } = Collapse;
 
 export default class DDE extends Component {
@@ -63,9 +63,20 @@ componentDidMount() {
 
   state = {
     size: "large",
-    width: "150px"
+    width: "150px",
+    visible:false
   };
-
+  showModalcase_history=()=>{
+    this.setState({visible:true});
+  }
+  handleOkcasehistory=(e) =>{
+    this.setState({visible:false});
+  }
+  handlecancelcasehistory=(e)=>{
+    this.setState({
+      visible:false
+    })
+  }
   handleSizeChange = e => {
     this.setState({ size: e.target.value });
   };
@@ -92,6 +103,18 @@ componentDidMount() {
     const { TabPane } = Tabs;
     return (
       <Form onSubmit={this.handleSubmit} layout="horizontal">
+            <a className='fixed-widgets' onClick={this.showModalcase_history}><i className='ant-avatar fixed-widgets-avatar ant-dropdown-trigger ant-avatar-circle ant-avatar-icon fa fa-history'/><span>Case History</span></a>
+      <Modal
+      title='Case History'
+      visible={this.state.visible}
+      onOk={this.handleOkcasehistory}
+      onCancel={this.handlecancelcasehistory}>
+
+<Card>
+                <Casehistory></Casehistory>
+              </Card>
+
+      </Modal>
         <div className="card-container cust_tabs_card form-group">
           <Tabs>
           <TabPane tab="Disbursement Details" key="19">

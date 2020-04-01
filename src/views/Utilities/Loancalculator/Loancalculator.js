@@ -23,48 +23,24 @@ class Loancalculator extends Component {
 
     return (
       <div className="emicalculator">
-       
-        <div className="col-lg-12 col-sm-12 col-xs-12 row">
-        <div className="col-md-3 col-sm-3 col-xs-3">  
-        <label className='emilabel'>Loan Amount </label>
-        </div>
-       
-        <div className="col-md-7 col-sm-7 col-xs-7"> 
+        <h4>Loan Amount </h4>
+        <h4><Icon className="fa fa-inr" /> {amountValue} </h4>
         <InputRange
           step={10000}
           maxValue={500000}
           minValue={10000}
           value={amountValue}
-         
           onChange={this.handleAmountChange}
         />
-        </div>
-        <div className="col-md-2 col-sm-2 col-xs-2">  
-        <label className="emilabel_val"><Icon className="fa fa-inr" /> {amountValue} </label>
-        </div>
-        </div>
-       
-       
-        <div className="col-lg-12 col-sm-12 col-xs-12 row">
-        <div className="col-md-3 col-sm-3 col-xs-3">  
-         <label className='emilabel'>Tenure</label>
-         </div>
-         <div className="col-md-7 col-sm-7 col-xs-7"> 
+        <h4>Tenure</h4>
+        <h4>{yearsValue} year{yearsValue > 1 && "s"}</h4>
         <InputRange
           step={0.5}
           maxValue={5}
           minValue={1}
-         
           value={yearsValue}
           onChange={this.handleYearChange}
         />
-        </div>
-         <div className="col-md-2 col-sm-2 col-xs-2"> 
-        <label className='emilabel_val'>{yearsValue} year{yearsValue > 1 && "s"}</label>
-        </div>
-       
-        </div>
-      
         <Display years={yearsValue} amount={amountValue} />
       </div>
       

@@ -1,33 +1,33 @@
 import Splitter from 'm-react-splitters';
-import 'm-react-splitters/lib/splitters.css';
+// import 'm-react-splitters/lib/splitters.css';
 import React, { Component } from 'react';
 import Iframe from 'react-iframe';
 import { Input, Table } from 'reactstrap';
 import IconButton from '@material-ui/core/IconButton';
 import PageviewIcon from '@material-ui/icons/Pageview';
+
+import SplitterLayout from 'react-splitter-layout';
+import 'react-splitter-layout/lib/index.css';
+
 // import FileViewer from 'react-file-viewer';
 
 const file = 'http://localhost:8080/viewone/images/tomcat.gif'
 const type = 'gif'
 
 export default class Dms extends Component {
-    state={viewURL:'',}
+    state={viewURL:'http://localhost:8080/viewone/Document/Payslip.pdf',}
     render() {
         return (
-            <Splitter
-    position="horizontal"
-    primaryPaneMaxHeight="80%"
+          
+            <SplitterLayout
+    // position="horizontal"
+    primaryPaneMaxHeight="100%"
     primaryPaneMinHeight={0}
-    primaryPaneHeight="400px"
+     primaryPaneHeight="400px"
+     style={{height:'500px'}}
 
 >    
-    <Splitter
-        position="vertical"
-        primaryPaneMaxWidth="80%"
-        primaryPaneMinWidth={0}
-        primaryPaneWidth="400px"
-        postPoned={false}
-    >    
+   
         <div> <Table responsive bordered size="sm" className="tblDesign2">
                 <thead>
                   <tr className="tblTrDesign">
@@ -45,7 +45,7 @@ export default class Dms extends Component {
                     <td>
                       <center>
                       <IconButton aria-label="delete" onClick={() => {                
-                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Aadhar.jfif'});    
+                        this.setState({viewURL:'http://localhost:8080/viewone/Document/aadhar.png'});    
                         }}>
                       <PageviewIcon />
                      </IconButton>
@@ -59,7 +59,7 @@ export default class Dms extends Component {
                     <td>
                       <center>
                       <IconButton aria-label="delete" onClick={() => {                
-                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Photograph.jfif'});    
+                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Photograph.jpg'});    
                         }}>
                       <PageviewIcon />
                      </IconButton>
@@ -84,16 +84,16 @@ export default class Dms extends Component {
               </Table></div>
         <div>
         <Iframe url={this.state.viewURL}
-        width="100%"
-        height="400px"
+       
         id="myId"
         className="myClassname"
-        display="initial"
-        position="relative"/>
+        
+      />
         </div>
-    </Splitter> 
-    <div></div>
-</Splitter> 
+   
+   
+</SplitterLayout>
+
         )
     }
 }

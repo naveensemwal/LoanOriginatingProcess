@@ -48,26 +48,21 @@ class Display extends Component {
     const totalOwed = decimalFormat * amount;
     const monthlyRepayment = totalOwed / (years * 12);
 
-    return <p className='pull-right'> <Icon className="fa fa-inr" /> {Math.round(monthlyRepayment)}</p>;
+    return <p> <Icon className="fa fa-inr" /> {Math.round(monthlyRepayment)}</p>;
   };
 
   percentageAPR = () => {
-    return <p className='pull-right'>{this.state.APR * 100}%</p>;
+    return <p>{this.state.APR * 100}%</p>;
   };
 
   render() {
     return (
-      <div className="cust_interest_rate_label_display">
-      <div className='row'>
-      <div className="col-lg-5 col-sm-5 col-xs-8"> <DisplayChild className="emilabel" func={this.percentageAPR()} text="interest rate" /></div>
-      </div>
-      <div className='row'>
-      <div className="col-lg-5 col-sm-5 col-xs-8">  <DisplayChild className="emilabel" 
+      <div className="flex">
+        <DisplayChild func={this.percentageAPR()} text="interest rate" />
+        <DisplayChild
           func={this.calculateMonthlyRepayment()}
           text=" monthly repayment"
         />
-        </div>
-        </div>
       </div>
     );
   }

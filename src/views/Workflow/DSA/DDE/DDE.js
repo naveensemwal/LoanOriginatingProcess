@@ -24,7 +24,7 @@ import VerificationDetails from '../../../../Compositeviews/VerficationDetails/V
 import VerificationList from '../../../../Compositeviews/VerificationList/VerificationList';
 import DisbursementDetails from '../../../../Compositeviews/DisbursementDetails/DisbursementDetails';
 import DedupeResult from '../../../../Compositeviews/DedupeResult/DedupeResult';
-import CollateralDetails from '../../../../Compositeviews/CollateralDetails/CollateralDetails';
+import CollateralDetails from '../../../../Compositeviews/Collateraldetails/CollateralDetails';
 const { Panel } = Collapse;
 
 export default class DDE extends Component {
@@ -112,7 +112,7 @@ componentDidMount() {
       <Form onSubmit={this.handleSubmit} layout="horizontal">
          <a className='fixed-widgets' onClick={this.showModalcase_history}><i className='ant-avatar fixed-widgets-avatar ant-dropdown-trigger ant-avatar-circle ant-avatar-icon fa fa-history'/><span>Case History</span></a>
       <Modal
-      title='Basic Modal'
+      title='Case History'
       visible={this.state.visible}
       onOk={this.handleOkcasehistory}
       onCancel={this.handlecancelcasehistory}>
