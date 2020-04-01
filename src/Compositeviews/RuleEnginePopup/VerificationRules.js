@@ -169,10 +169,10 @@ export default class VerificationRules extends Component{
 
     render(){
         return(
-            <div>
+            <div clasName="RulesEnginerightSidebar">
                <Collapse defaultActiveKey={["1"]}>
                 <Panel header="Verifications" key="1" danger>
-                <Table className='table table-striped table-hover table-bordered'dataSource={data} >
+                <Table bordered dataSource={data} >
 				   <Column title="Customer Category" dataIndex="CustomerCategory" key="CustomerCategory" />
                   
 				  <Column title="Customer Segment & Employer category" dataIndex="CustomerSeg" key="CustomerSeg" />

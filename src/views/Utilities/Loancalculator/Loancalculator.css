@@ -15,19 +15,19 @@ small {
 }
 
 .emicalculator {
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: center;
-  text-align: center;
+  text-align: center; */
   padding: 2rem;
   border-radius: 0.5rem;
   width: 80%;
   height: 70%;
   margin: 5vh auto;
-  box-shadow: 15px 20px 40px -10px;
-  background-color: #CDDCDC;
+  /* box-shadow: 15px 20px 40px -10px; */
+  /* background-color: #CDDCDC;
  background-image: radial-gradient(at 50% 100%, rgba(255,255,255,0.50) 0%, rgba(0,0,0,0.50) 100%), linear-gradient(to bottom, rgba(255,255,255,0.25) 0%, rgba(0,0,0,0.25) 100%);
- background-blend-mode: screen, overlay;
+ background-blend-mode: screen, overlay; */
 }
 
 .input-range__label--max {
@@ -61,3 +61,25 @@ small {
     outline: none!important;
     border: none
 }
+
+
+
+.emilabel, .cust_interest_rate_label_display span small{
+  color: #00334e;
+ font-size: 1em;
+ font-weight: 600;
+ margin: 0 0 20px;
+ opacity: .5;
+ text-transform: uppercase;
+}
+.emilabel_val{
+border: none;
+    border-bottom: 1px solid #00334e;
+    color: #00334e;
+    display: inline-block;
+    float: right;
+    font-size: 1.067em;
+    font-weight: 600;
+    border-radius: 0;
+    text-align: right;
+    width: 106px;}

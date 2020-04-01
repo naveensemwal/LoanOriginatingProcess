@@ -109,10 +109,10 @@ export default class PremiumClassification extends Component{
 
     render(){
         return(
-            <div>
+            <div clasName="RulesEnginerightSidebar">
                <Collapse defaultActiveKey={["1"]}>
                 <Panel header="Premium Classification" key="1" danger>
-                <Table className='table table-striped table-hover table-bordered'
+                <Table bordered
                     columns={columns} dataSource={data}
                 
                 />

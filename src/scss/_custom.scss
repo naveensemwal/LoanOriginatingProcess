@@ -45,24 +45,100 @@
 
 
   //inner pages accordion tab design
+  .fixed-widgets{
+    position: fixed;
+    
+    z-index: 2147483640;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    cursor: pointer;
+    bottom: 50%;
+    right: 0px;
+    background: #888585fa;
+    padding: 4px;
+    border-radius: 20px 0px 0px 20px;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+
+  }
+  a.fixed-widgets i.fa-history {
+    color: #333;
+    background-color: #fff;
+    -webkit-box-shadow: 0 3px 6px -4px rgba(0,0,0,.12), 0 6px 16px 0 rgba(0,0,0,.08), 0 9px 28px 8px rgba(0,0,0,.05);
+    box-shadow: 0 3px 6px -4px rgba(0,0,0,.12), 0 6px 16px 0 rgba(0,0,0,.08), 0 9px 28px 8px rgba(0,0,0,.05);
+    -webkit-transition: color .3s;
+    transition: color .3s;
+    width: 44px;
+    height: 44px;
+    line-height: 44px;
+    font-size: 22px;
+
+}
+
+
+a.fixed-widgets span {
+    display: none;
+}
+a.fixed-widgets span {
+padding:10px;
+}
+
+a.fixed-widgets {
+    padding: 2px;
+    -moz-transition:all 0.5s ease-in-out;
+      -ms-transition:all 0.5s ease-in-out;
+        -webkit-transition:all 0.5s ease-in-out;
+          transition:all 0.5s ease-in-out;
+    display:block
+}
+a.fixed-widgets:hover i{-webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;}
+a.fixed-widgets:hover span, a.fixed-widgets i{display:inline-block;float:left;width:130px;color:#fff;   -moz-transition: all 1s;
+    -ms-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;}
+
+
+
+
+
+
  i.anticon.anticon-right.ant-collapse-arrow {
-    font-weight: 900;
-    width: 45px;
-    height: 45px;
-    line-height: 32px;
-    border-radius: 50%;
-    text-align: center;
-    font-size: 15px;
-    color: #fff;
-    border: 5px solid #fff;
-    position: absolute;
-    top: 10px;
-    left: -4px !important;
-    transition: all 0.3s ease 0s;
-    padding: 12px;
+  font-weight: 900;
+  width: 48px;
+  height: 48px;
+  line-height: 32px;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 15px;
+  color: #fff;
+  border: 5px solid #ddd;
+  position: absolute;
+  top: 21px !important;
+  left: -6px !important;
+  -webkit-transition: all 0.3s ease 0s;
+  transition: all 0.3s ease 0s;
+  padding: 14px;
+  background: #fff;
   }
   
-.cust_tabs_card .ant-collapse > .ant-collapse-item > .ant-collapse-header {
+.cust_tabs_card .ant-collapse > .ant-collapse-item > .ant-collapse-header, .ant-collapse-item .ant-collapse-header {
 
     padding: 13px 46px !important;
     line-height: 10px !important;
@@ -78,7 +154,10 @@
 .cust_tabs_card .ant-collapse-content.ant-collapse-content-active {
     border-top: none !important;
   }
-  
+  .ant-collapse-content {
+       border: 1px solid #ddd;
+    border-radius: 0px 0px 10px 10px;
+}
 .cust_tabs_card .ant-collapse.ant-collapse-icon-position-left {
     padding: 5px;
   }
@@ -155,3 +234,30 @@ svg.MuiSvgIcon-root.MuiStepIcon-root {
   right: calc(50% + 23px) !important;
 }
 /*Eligibility Calculator css end*/
+
+
+/**modal css*/
+.ant-modal-body {
+  overflow-y: scroll;
+  max-height: 400px;
+  height: auto;
+ 
+}
+
+/*sidebar css*/
+.sidebar {
+  z-index: 1 !important;
+}
+
+/*Rules engine custo Sidebar css*/
+.RulesEnginerightSidebar .ant-collapse {
+  border-radius: 200px !important;}
+aside.ant-layout-sider.ant-layout-sider-dark, ul.ant-menu {
+  background-color: #f8f8f8 !important;
+  border-color: #e7e7e7;
+}
+li.ant-menu-submenu-open .ant-menu-submenu-title {
+ 
+  color: #555;
+  background-color: #e7e7e7;
+}

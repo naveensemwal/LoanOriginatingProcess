@@ -115,7 +115,7 @@ export default class DisbursementDetails extends React.Component {
     [{
         "key": "1",
         "InstallmentNumber": "12",
-        "DueDate": "12/1/2010",
+        "DueDate": "12/5/2020",
         "OpeningPrincipalRs": "23,90,221",
         "InstallmentAmountRs": "23,793",
         "PrincipalComponentofInstallmentRs": "1,584",
@@ -124,56 +124,67 @@ export default class DisbursementDetails extends React.Component {
         "RateOfInterestPA":"11.50%"
     }, 
     {
-        "key": "1",
-        "InstallmentNumber": "12",
-        "DueDate": "12/1/2010",
-        "OpeningPrincipalRs": "23,90,221",
+        "key": "2",
+        "InstallmentNumber": "2",
+        "DueDate": "13/5/2020",
+        "OpeningPrincipalRs": "23,88,637",
         "InstallmentAmountRs": "23,793",
-        "PrincipalComponentofInstallmentRs": "1,584",
-        "Interes": "22,209",
-        "ClosingPrincipalRs":"23,88,667",
+        "PrincipalComponentofInstallmentRs": "902",
+        "Interes": "22,891",
+        "ClosingPrincipalRs":"23,87,735",
         "RateOfInterestPA":"11.50%"
     }, {
-        "key": "1",
-        "InstallmentNumber": "12",
-        "DueDate": "12/1/2010",
-        "OpeningPrincipalRs": "23,90,221",
+        "key": "3",
+        "InstallmentNumber": "3",
+        "DueDate": "12/5/2020",
+        "OpeningPrincipalRs": "23,87,735",
         "InstallmentAmountRs": "23,793",
-        "PrincipalComponentofInstallmentRs": "1,584",
-        "Interes": "22,209",
-        "ClosingPrincipalRs":"23,88,667",
+        "PrincipalComponentofInstallmentRs": "911",
+        "Interes": "22,882",
+        "ClosingPrincipalRs":"23,86,824",
         "RateOfInterestPA":"11.50%"
     }, {
-        "key": "1",
-        "InstallmentNumber": "12",
-        "DueDate": "12/1/2010",
-        "OpeningPrincipalRs": "23,90,221",
+        "key": "4",
+        "InstallmentNumber": "4",
+        "DueDate": "12/4/2020",
+        "OpeningPrincipalRs": "23,86,824",
         "InstallmentAmountRs": "23,793",
-        "PrincipalComponentofInstallmentRs": "1,584",
-        "Interes": "22,209",
-        "ClosingPrincipalRs":"23,88,667",
+        "PrincipalComponentofInstallmentRs": "919",
+        "Interes": "22,874",
+        "ClosingPrincipalRs":"23,85,905",
         "RateOfInterestPA":"11.50%"
     }, {
-        "key": "1",
-        "InstallmentNumber": "12",
-        "DueDate": "12/1/2010",
-        "OpeningPrincipalRs": "23,90,221",
+        "key": "5",
+        "InstallmentNumber": "5",
+        "DueDate": "12/5/2020",
+        "OpeningPrincipalRs": "23,85,905",
         "InstallmentAmountRs": "23,793",
-        "PrincipalComponentofInstallmentRs": "1,584",
-        "Interes": "22,209",
-        "ClosingPrincipalRs":"23,88,667",
+        "PrincipalComponentofInstallmentRs": "928",
+        "Interes": "22,865",
+        "ClosingPrincipalRs":"23,84,977",
         "RateOfInterestPA":"11.50%"
     }, {
-        "key": "1",
-        "InstallmentNumber": "12",
-        "DueDate": "12/1/2010",
-        "OpeningPrincipalRs": "23,90,221",
-        "InstallmentAmountRs": "23,793",
-        "PrincipalComponentofInstallmentRs": "1,584",
-        "Interes": "22,209",
-        "ClosingPrincipalRs":"23,88,667",
-        "RateOfInterestPA":"11.50%"
-    }];
+        "key": "6",
+        "InstallmentNumber": "6",
+        "DueDate": "12/6/2020",
+        "OpeningPrincipalRs": "23,84,977",
+        "InstallmentAmountRs": "24,225",
+        "PrincipalComponentofInstallmentRs": "375",
+        "Interes": "23,850",
+        "ClosingPrincipalRs":"23,84,602",
+        "RateOfInterestPA":"12.50%"
+    },
+    {
+      "key": "7",
+      "InstallmentNumber": "7",
+      "DueDate": "12/7/2020",
+      "OpeningPrincipalRs": "23,84,602",
+      "InstallmentAmountRs": "24,697",
+      "PrincipalComponentofInstallmentRs": "354",
+      "Interes": "24,343",
+      "ClosingPrincipalRs":"23,84,248",
+      "RateOfInterestPA":"12.25%"
+  }];
     this.setState({
       isLoaded: true,
       disbursementTableData: data,
@@ -240,7 +251,7 @@ export default class DisbursementDetails extends React.Component {
           </Col>
           <Col span={8}>
             {this.state.isSingle ? (
-              <Form.Item label="No of branches  :">
+              <Form.Item label="No of Tranches  :">
                 <InputNumber style={{ width: "100%" }} />
               </Form.Item>
             ) : (

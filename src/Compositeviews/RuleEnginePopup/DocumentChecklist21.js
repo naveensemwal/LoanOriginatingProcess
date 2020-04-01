@@ -109,10 +109,10 @@ export default class DocumentChecklist2 extends Component{
 
     render(){
         return(
-            <div>
+            <div clasName="RulesEnginerightSidebar">
               <Collapse defaultActiveKey={["1"]}>
                 <Panel header=" Personal Loan" key="1" danger>
-                <Table className='table table-striped table-hover table-bordered'
+                <Table bordered
                     columns={columns} dataSource={data}
                 
                 />

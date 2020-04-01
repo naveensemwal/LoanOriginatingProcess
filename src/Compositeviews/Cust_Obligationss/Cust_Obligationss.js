@@ -78,7 +78,8 @@ export default class Cust_Obligationss extends React.Component {
         <div className="row clearfix">
         
           <div className="col-md-12 column">
-            <table className="table table-bordered table-hover" id="tab_logic">
+            <div className='table-responsive'>
+                          <table className="table table-bordered table-hover" id="tab_logic">
               <thead>
                 <tr>
                   <th className="text-center">#</th>
@@ -170,12 +171,14 @@ export default class Cust_Obligationss extends React.Component {
                 ))}
               </tbody>
             </table>
+            </div>
+
            <a  className="btn btn-danger " onClick={this.handleAddRow}><i className="fa fa-plus"></i></a>
-           <a
+           {/* <a
                 onClick={this.handleRemoveRow}
                 className="btn btn-danger float-right">
                 Delete Last Row
-              </a>
+              </a> */}
           </div>
         </div>
       </div>
