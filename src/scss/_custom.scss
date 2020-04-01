@@ -117,7 +117,10 @@ a.fixed-widgets:hover span, a.fixed-widgets i{display:inline-block;float:left;wi
 
 
 
-
+//splitter css start
+.splitter-layout {
+  position: relative !important;}
+//splittr css end
 
  i.anticon.anticon-right.ant-collapse-arrow {
   font-weight: 900;
@@ -261,3 +264,8 @@ li.ant-menu-submenu-open .ant-menu-submenu-title {
   color: #555;
   background-color: #e7e7e7;
 }
+
+
+
+
+

@@ -1,4 +1,4 @@
-import { Collapse, Form, Tabs, Card,Button, Menu, Dropdown, Icon } from 'antd';
+import { Collapse, Form, Tabs, Card,Button, Menu, Dropdown, Icon,Modal } from 'antd';
 import "antd/dist/antd.css";
 import React, { Component } from 'react';
 import Personaldetails from '../../../../Compositeviews/Personaldetails/Personaldetails';
@@ -36,6 +36,17 @@ export default class DDE extends Component {
     size: 'large',
     width: '150px',
 	visible: false
+  }
+  showModalcase_history=()=>{
+    this.setState({visible:true});
+  }
+  handleOkcasehistory=(e) =>{
+    this.setState({visible:false});
+  }
+  handlecancelcasehistory=(e)=>{
+    this.setState({
+      visible:false
+    })
   }
   
   buttonVis = e =>{
@@ -87,7 +98,20 @@ export default class DDE extends Component {
 				);
     return (
       <Form onSubmit={this.handleSubmit} layout="horizontal" >
-        <div className="card-container">
+           <a className='fixed-widgets' onClick={this.showModalcase_history}><i className='ant-avatar fixed-widgets-avatar ant-dropdown-trigger ant-avatar-circle ant-avatar-icon fa fa-history'/><span>Case History</span></a>
+      <Modal
+      title='Case History'
+      visible={this.state.visible}
+      onOk={this.handleOkcasehistory}
+      onCancel={this.handlecancelcasehistory}>
+
+<Card>
+                <Casehistory></Casehistory>
+              </Card>
+
+      </Modal>
+      
+        <div className="card-container cust_tabs_card form-group">
           <Tabs onChange={this.buttonVis}>
           <TabPane tab="Underwriter Decision" key="19">
                 <Collapse defaultActiveKey={['1']}>
@@ -210,8 +234,7 @@ export default class DDE extends Component {
             
           </Tabs>
         </div>
-        <br/>
-        <br/>
+      
             <Form.Item  >
                             <Button type="primary" htmlType="SaveAsDraft" shape="round" size={size} >
                                 Save as Draft
