@@ -5,7 +5,8 @@ import {
 import { Table, Radio, Divider, Button, Modal,Icon } from 'antd';
 import "antd/dist/antd.css";
 import BankStatementViewTable  from "../BankStatementViewTable/BankStatementViewTable";
-
+import Statementanalyzer from '../Statementanalyzer/Statementanalyzer';
+import Statementdetails from '../Statementdetails/Statementdetails';
 //import TrialTable from '../TrialTable/TrialTable';
 //import DynamicTable from '../DynamicTable/DynamicTable'
 const CustomModalStyle={
@@ -54,6 +55,13 @@ export default class BankStatmentDetails extends Component {
         render: text=><Icon type="download" className='ant-btn ant-btn-primary ant-btn-circle ant-btn-icon-only'/> 
         // <Link  to='../../../../public/assets/img/Sample_Doc.pdf'
         // onClick={(event) => { event.preventDefault(); window.open('../../../public/assets/img/Sample_Doc.pdf');}}>Download</Link>
+        },
+        {
+          title:'Statement Analyzer',
+          dataIndex:'statementAnalyzer',
+          render: (text, record) => (
+            <Icon type="pie-chart" className='ant-btn ant-btn-primary ant-btn-circle ant-btn-icon-only' onClick={(e) => { this.onViewCStatement (record, e); }} />          
+          ),
         }
       
         
@@ -62,12 +70,14 @@ export default class BankStatmentDetails extends Component {
           "key": "1",
           "name": "KOTAK MAHINDRA BANK LTD Statement-00897897114",
           "view": "View",
-          "download": "Download"
+          "download": "Download",
+          "statementAnalyzer":"StatementAnalyzer"
         }, {
           "key": "2",
           "name": "KOTAK MAHINDRA BANK LTD Statement-65470157872",
           "view": "View",
-          "download": "Download"
+          "download": "Download",
+          "statementAnalyzer":"StatementAnalyzer"
         }];
         this.setState({
           loading:true,
@@ -89,7 +99,7 @@ export default class BankStatmentDetails extends Component {
       // .catch(error=>console.log(error))
     }
     
-
+    
   onView = (data, e) => {
     e.preventDefault();
     var id= data.key;
@@ -97,7 +107,7 @@ export default class BankStatmentDetails extends Component {
       showModal:true,
       showTable:true,
     title:<div>{data.name}</div>,
-      content: <BankStatementViewTable showTable={true} id={id}/> 
+    content: <BankStatementViewTable showTable={true} id={id}/> 
       
     });
   }
@@ -116,18 +126,34 @@ export default class BankStatmentDetails extends Component {
     });
   };
 
+
+
+  onViewCStatement = (data, e) => {
+    e.preventDefault();
+    var id= data.key;
+    this.setState({ 
+      showModal:true,
+      showTable:true,
+ 
+    title:<div>{data.name}</div>,
+      content:<Statementanalyzer showTable={true} id={id}/>
+      
+    });
+  }
+
+
  
 
   render() {
     if(this.state.loading){
     return (
-         
+
       <div>
        
         <Divider />
      {/* <DynamicTable/>  */}
         <BankStatementViewTable/>
-      
+     
         <Table 
           columns={this.state.columns}
           dataSource={this.state.dataBank}
@@ -142,10 +168,12 @@ export default class BankStatmentDetails extends Component {
           onOk={this.handleOk}
           onCancel={this.handleCancel}
           style={CustomModalStyle}
-          width='70%'
+          width='98%'
+         
         >
           {this.state.content}
         </Modal>
+   
       </div>
     )}
   }

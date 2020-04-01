@@ -24,7 +24,7 @@ import VerificationDetails from '../../../../Compositeviews/VerficationDetails/V
 import VerificationList from '../../../../Compositeviews/VerificationList/VerificationList';
 import DisbursementDetails from '../../../../Compositeviews/DisbursementDetails/DisbursementDetails';
 import DedupeResult from '../../../../Compositeviews/DedupeResult/DedupeResult';
-import CollateralDetails from '../../../../Compositeviews/Collateraldetails/CollateralDetails';
+import CollateralDetails from '../../../../Compositeviews/CollateralDetails/CollateralDetails';
 const { Panel } = Collapse;
 
 export default class DDE extends Component {
@@ -170,7 +170,7 @@ componentDidMount() {
             </TabPane>
             <TabPane tab="Collateral Details" key="7">
               <Collapse defaultActiveKey={["1"]}>
-              <Panel header="Collateral Details" key="1" danger>
+              <Panel header="Collateral Details" key="1" >
                   <CollateralDetails></CollateralDetails>
                 </Panel>
               </Collapse>

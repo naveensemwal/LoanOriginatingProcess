@@ -26,7 +26,7 @@ import DedupeResult from '../../../../Compositeviews/DedupeResult/DedupeResult';
 import Riskprofile from '../../../../Components/Risk Profile/Riskprofile';
 import UWObservation from '../../../../Compositeviews/UWObservation/UWObservation';
 import DeviationDetails from '../../../../Compositeviews/DeviationDetails/DeviationDetails';
-import CollateralDetails from '../../../../Compositeviews/Collateraldetails/CollateralDetails';
+import CollateralDetails from '../../../../Compositeviews/CollateralDetails/CollateralDetails';
 const { Panel } = Collapse;
 
 export default class DDE extends Component {
