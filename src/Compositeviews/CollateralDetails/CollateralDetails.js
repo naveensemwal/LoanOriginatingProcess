@@ -106,17 +106,17 @@ export default class CollateralDetails extends Component {
 				<Row gutter={[8, 8]}>
 					<Col span={8} >
                         <Form.Item label="Address Line 1">
-                            <Input  defaultValue="Flat no 11" style={{ width: '100%' }} />
+                            <Input  defaultValue="C303 BROOK HILL" style={{ width: '100%' }} />
                         </Form.Item>
                     </Col>
 				    <Col span={8} >
                         <Form.Item label="Address Line 2">
-                            <Input  defaultValue="Sec 48,Nerul" style={{ width: '100%' }} />
+                            <Input  defaultValue="ANDHERI WEST" style={{ width: '100%' }} />
                         </Form.Item>
                     </Col>
 				    <Col span={8} >
                         <Form.Item label="Address Line 3">
-                            <Input defaultValue="Navi Mumbai" style={{ width: '100%' }} />
+                            <Input defaultValue=" Mumbai" style={{ width: '100%' }} />
                         </Form.Item>
                     </Col>
 				
@@ -157,7 +157,7 @@ export default class CollateralDetails extends Component {
 				<Row gutter={[8, 8]}>
 					<Col span={8} >
 				        <Form.Item label="Pincode">
-                            <InputNumber defaultValue="4000706" style={{ width: '100%' }} />
+                            <InputNumber defaultValue="400053" style={{ width: '100%' }} />
                         </Form.Item>
 				
 					</Col>
