@@ -1,10 +1,17 @@
-import { Button, Checkbox, Form, Icon, Input, message, Select, Switch, Upload } from 'antd';
+import { Button, Checkbox, Form, Icon, Input, message, Select, Switch, Upload,InputNumber } from 'antd';
 import "antd/dist/antd.css";
 import React, { Component } from 'react';
 import Stickynotes from './StickyNotes';
+import Axios from 'axios';
 
 
 const { Option } = Select;
+let param={
+  "loanAmount":"100000",
+  "customerName":"John Kevin Doe",
+  "customerType":"Retail",
+  "loanType":"Personal Loan"
+}
 
 
 function getBase64(img, callback) {
@@ -30,7 +37,34 @@ export default class Launch extends Component {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log('Received values of form: ', values);
+        const requestParam = { ...values };
+         if (!requestParam.isExistingCustomer)
+         {
+           param.customerName=requestParam.customerName;
+           param.loanAmount=requestParam.loanAmount;
+           param.loanType=requestParam.loanType;
+         }
+        console.log("Param",param);
+
+        message.config({ top: 100, });
+        message.loading('Initiating Loan Request..',60).then(
+            Axios.post(`/rest/bpm/wle/v1/service/LOS@Initiate Loan Process?action=start&params=` + JSON.stringify(param) + `&createTask=false&parts=all`, {
+              auth: {
+                username: 'naveen',
+                password: 'Password123'
+              }
+            })
+              .then(res => {
+                console.log(res);
+                message.destroy();
+                message.success(`Loan request with LAN: ${res.data.data.data.loanAccountNumber}  initiated successfully!`, 5);
+                this.props.form.resetFields()
+              })
+              .catch(function (error) {
+                message.destroy();
+                message.error('Loan request could not be initiated .Please try again!', 5);
+              })
+          )
       }
     });
   };
@@ -103,6 +137,22 @@ export default class Launch extends Component {
     return (
       <Form {...formItemLayout} onSubmit={this.handleSubmit}>
 
+       <Form.Item label='loanAmount'>
+          {getFieldDecorator('loanAmount', {
+            rules: [{ required: true, message: 'Please input loan amount'}],
+          })(<InputNumber style={{width:'100%'}} min={50000} max={1500000} step={50000} />)}
+        </Form.Item>
+
+        <Form.Item label="Are you an existing Bank customer?">
+          {getFieldDecorator('isExistingCustomer',{initialValue:false})( <Switch checkedChildren="Yes" unCheckedChildren="No" 
+          onChange={e => this.setState({ isExistingCustomer: e})}
+          checked={this.state.isExistingCustomer} />)}
+        </Form.Item>
+        {this.props.form.getFieldValue('isExistingCustomer')?
+        <Form.Item wrapperCol={{ span: 14, offset: 6 }}>
+        <Stickynotes isExistingCustomer={this.state.isExistingCustomer}></Stickynotes>          
+        </Form.Item>:
+        <div>
         <Form.Item wrapperCol={{ span: 12, offset: 6 }}>
               <Upload
                 name="PAN"
@@ -116,18 +166,10 @@ export default class Launch extends Component {
                 {imageUrl ? <img src={imageUrl} alt="avatar" style={{ width: '100%' }} /> : panButton}
               </Upload>
         </Form.Item>
-        <Form.Item label="Are you an existing Bank customer?">
-          {getFieldDecorator('isExistingCustomer', { valuePropName: 'checked' })( <Switch checkedChildren="Yes" unCheckedChildren="No" 
-          onChange={e => this.setState({ isExistingCustomer: e})}
-          checked={this.state.isExistingCustomer} />)}
-        </Form.Item>
-        <Form.Item wrapperCol={{ span: 14, offset: 6 }}>
-        <Stickynotes isExistingCustomer={this.state.isExistingCustomer}></Stickynotes>          
-        </Form.Item>
         <Form.Item
           label='Name'
         >
-          {getFieldDecorator('nickname', {
+          {getFieldDecorator('customerName', {
             rules: [{ required: true, message: 'Please input your nickname!', whitespace: true }],
           })(<Input />)}
         </Form.Item>
@@ -170,13 +212,14 @@ export default class Launch extends Component {
             rules: [{ required: true, message: 'Select Loan Type!' }],
           })(
             <Select placeholder="Loan Type">
-              <Option value="1">Home Loan</Option>
-              <Option value="2">Personal Loan</Option>
-              <Option value="3">Car Loan</Option>
-              <Option value="4">Mortgage Loan</Option>
+              <Option value="Home Loan">Home Loan</Option>
+              <Option value="Personal Loan">Personal Loan</Option>
+              <Option value="Car Loan">Car Loan</Option>
+              <Option value="Mortgage Loan">Mortgage Loan</Option>
             </Select>,
           )}
         </Form.Item>
+       
         <Form.Item {...tailFormItemLayout}>
           {getFieldDecorator('agreement', {
             valuePropName: 'checked',
@@ -185,8 +228,9 @@ export default class Launch extends Component {
               I have read the <a href="">agreement</a>
             </Checkbox>,
           )}
-        </Form.Item>
-        <Form.Item wrapperCol={{ span: 12, offset: 12 }}>
+        </Form.Item> </div>
+        }
+        <Form.Item {...tailFormItemLayout}>
           <Button type="primary" htmlType="submit">
             Submit
           </Button>

@@ -11,7 +11,7 @@ const file = 'http://localhost:8080/viewone/images/tomcat.gif'
 const type = 'gif'
 
 export default class Dms extends Component {
-    state={viewURL:'',}
+    state={viewURL:'http://localhost:8080/viewone/Document/Payslip.pdf',}
     render() {
         return (
             <Splitter
@@ -45,7 +45,7 @@ export default class Dms extends Component {
                     <td>
                       <center>
                       <IconButton aria-label="delete" onClick={() => {                
-                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Aadhar.jfif'});    
+                        this.setState({viewURL:'http://localhost:8080/viewone/Document/aadhar.png'});    
                         }}>
                       <PageviewIcon />
                      </IconButton>
@@ -59,7 +59,7 @@ export default class Dms extends Component {
                     <td>
                       <center>
                       <IconButton aria-label="delete" onClick={() => {                
-                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Photograph.jfif'});    
+                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Photograph.jpg'});    
                         }}>
                       <PageviewIcon />
                      </IconButton>
