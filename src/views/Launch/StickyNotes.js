@@ -85,7 +85,7 @@ export default class StickyNotes extends Component {
   state = {
     key: 'customerProfile',
     titleKey: 'customerProfile',
-    isExistingCustomer:false,
+    isExistingCustomer:true,
     showDetails:false,
     fetchingProfile:false,
   };
@@ -98,19 +98,20 @@ export default class StickyNotes extends Component {
    
   handleSearch = (info) => {
     this.setState({fetchingProfile:true});
-     setTimeout(function(){ this.setState({fetchingProfile:false,showDetails:true}); }.bind(this), 30);
+     setTimeout(function(){ this.setState({fetchingProfile:false,showDetails:true}); }.bind(this), 3000);
      
   };
   render() {
     return (
       <div>
         <Row gutter={[12,12]}>
-          <Col span={24}>
+          {/* <Col span={24}>
           <Switch checkedChildren="Yes" unCheckedChildren="No" 
           onChange={e => this.setState({ isExistingCustomer: e})}
           checked={this.state.isExistingCustomer} />
-          </Col>
-          <Col span={6}>{this.state.isExistingCustomer?<Input.Search placeholder="Enter customer ID" loading={this.state.fetchingProfile} onSearch={this.handleSearch}/>:null}
+          </Col> */}
+          {/* <Col span={6}>{this.state.isExistingCustomer?<Input.Search placeholder="Enter customer ID" loading={this.state.fetchingProfile} onSearch={this.handleSearch}/>:null} */}
+          <Col span={6}><Input.Search placeholder="Enter customer ID" loading={this.state.fetchingProfile} onSearch={this.handleSearch}/>
           </Col>
         </Row>
         {this.state.showDetails?
