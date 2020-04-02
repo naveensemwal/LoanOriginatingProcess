@@ -263,8 +263,7 @@ export default class DDE extends Component {
                                 Save as Draft
                         </Button>
                         &nbsp;&nbsp;&nbsp;
-                        {this.state.visible1 ?( <Button type="primary" htmlType="RerunDedupe" shape="round" size={size}>Rerun Dedupe </Button>):("")}
-                        &nbsp; &nbsp; &nbsp;
+                        
 					            	<Dropdown overlay={menu}>
 						            	<Button type="primary" htmlType="Submit" shape="round" size={size}>Submit<Icon type="down"/> </Button>
 					            	</Dropdown>
@@ -274,7 +273,9 @@ export default class DDE extends Component {
                         </Button>
                         &nbsp;&nbsp;&nbsp;
                         {this.state.visible1 ?( <Button type="primary" htmlType="RiskRule" shape="round" size={size}>Rerun Risk Rule</Button>):("")}
-						
+                        &nbsp; &nbsp;
+                        {this.state.visible1 ?( <Button type="primary" htmlType="RerunDedupe" shape="round" size={size}>Rerun Dedupe </Button>):("")}
+                        
             </Form.Item>
       </Form>
     )

@@ -10,14 +10,14 @@ export default class Employmentdetails extends Component {
           <Row>
             <Col>
               <FormGroup>
-                <Label htmlFor="employer">ComcompanyIdy Name</Label>
-                <Input type="text" id="employer" placeholder="Google" />
+                <Label htmlFor="employer">Company ID</Label>
+                <Input defaultValue='768767' type="text" id="employer" placeholder="Google" />
               </FormGroup>
             </Col>
             <Col>
               <FormGroup>
                 <Label htmlFor="designation">Designation</Label>
-                <Input type="text" id="designation" placeholder="Manager" />
+                <Input defaultValue='Senior Manager' type="text" id="designation" placeholder="Manager" />
               </FormGroup>
             </Col>
           </Row>
@@ -25,13 +25,13 @@ export default class Employmentdetails extends Component {
             <Col>
               <FormGroup>
                 <Label htmlFor="businessEmail">Business Email</Label>
-                <Input type="email" id="businessEmail" placeholder="Enter business email id" />
+                <Input defaultValue='mathew.0303@abc.com' type="email" id="businessEmail" placeholder="Enter business email id" />
               </FormGroup>
             </Col>
             <Col>
               <FormGroup>
                 <Label htmlFor="businessPhone">Business Phone</Label>
-                <Input type="number" id="businessPhone" placeholder="enter business phone number" />
+                <Input defaultValue="02224116750" type="number" id="businessPhone" placeholder="02224116750" />
               </FormGroup>
             </Col>
           </Row>
@@ -39,13 +39,13 @@ export default class Employmentdetails extends Component {
             <Col>
               <FormGroup>
                 <Label htmlFor="doj">Date of Joining</Label>
-                <Input type="date" id="doj" name="doj" placeholder="Joining Date" />
+                <Input  id="doj" name="doj" placeholder="Joining Date" defaultValue="23-04-2019"/>
               </FormGroup>
             </Col>
             <Col>
               <FormGroup>
                 <Label htmlFor="companyId">Employee Code</Label>
-                <Input type="number" id="companyId" placeholder="311016" />
+                <Input  defaultValue='35746' type="number" id="companyId" placeholder="311016" />
               </FormGroup>
             </Col>
           </Row>
@@ -53,13 +53,13 @@ export default class Employmentdetails extends Component {
             <Col>
               <FormGroup>
                 <Label htmlFor="monthlySalary">Monthly Take Home Salary</Label>
-                <Input type="number" id="monthlySalary" name="monthlySalary" placeholder="30000" />
+                <Input defaultValue='100000' type="number" id="monthlySalary" name="monthlySalary" placeholder="30000" />
               </FormGroup>
             </Col>
             <Col>
               <FormGroup>
                 <Label htmlFor="monthlyEmi">Monthly EMI</Label>
-                <Input type="number" id="monthlyEmi" placeholder="5000" />
+                <Input defaultValue='31669' type="number" id="monthlyEmi" placeholder="5000" />
               </FormGroup>
             </Col>
           </Row>

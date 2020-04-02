@@ -46,7 +46,7 @@ export default function Riskprofile() {
                   <tbody>
                     <tr>
                       <td>
-                        <div>Ashwini Mathew</div>
+                        <div>Varghese Mathew</div>
                       </td>
                       <td className="text-center">
                       Customer Name

@@ -1,18 +1,9 @@
 import { Button, Card, Collapse, Form, message, Modal, Tabs } from "antd";
 import "antd/dist/antd.css";
 import Axios from 'axios';
-<<<<<<< HEAD
-import Personaldetails from '../../../../Compositeviews/Personaldetails/Personaldetails';
-import Familydetails from '../../../../Compositeviews/Familydetails/Familydetails';
-import Addressdetails from '../../../../Compositeviews/Addressdetails/Addressdetails';
-import Loandetails from '../../../../Compositeviews/Loandetails/Loandetails';
-import Statementdetails from '../../../../Compositeviews/Statementdetails/Statementdetails';
-import Dms from '../../../../Components/DMS/Dms3';
-=======
 import React, { Component } from 'react';
-import Dms from '../../../../Components/DMS/Dms';
+import Dms from '../../../../Components/DMS/Dms3';
 import Addressdetails from '../../../../Compositeviews/Addressdetails/Addressdetails';
->>>>>>> 58c3424f759923a86f64f1b6444997bc55f0387e
 import Casehistory from '../../../../Compositeviews/Casehistory/Casehistory';
 import DisbursementDetails from '../../../../Compositeviews/DisbursementDetails/DisbursementDetails';
 import Identificationdetails from '../../../../Compositeviews/Identificationdetails/Identificationdetails';
