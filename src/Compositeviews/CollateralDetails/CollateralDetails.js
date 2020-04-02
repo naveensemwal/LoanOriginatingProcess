@@ -106,17 +106,17 @@ export default class CollateralDetails extends Component {
 				<Row gutter={[8, 8]}>
 					<Col span={8} >
                         <Form.Item label="Address Line 1">
-                            <Input  defaultValue="C303 BROOK HILL" style={{ width: '100%' }} />
+                            <Input  defaultValue="B303 Seven HILL" style={{ width: '100%' }} />
                         </Form.Item>
                     </Col>
 				    <Col span={8} >
                         <Form.Item label="Address Line 2">
-                            <Input  defaultValue="ANDHERI WEST" style={{ width: '100%' }} />
+                            <Input  defaultValue="Sector 22 " style={{ width: '100%' }} />
                         </Form.Item>
                     </Col>
 				    <Col span={8} >
                         <Form.Item label="Address Line 3">
-                            <Input defaultValue=" Mumbai" style={{ width: '100%' }} />
+                            <Input defaultValue=" Andheri West" style={{ width: '100%' }} />
                         </Form.Item>
                     </Col>
 				

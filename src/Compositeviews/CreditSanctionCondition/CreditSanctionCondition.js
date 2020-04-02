@@ -93,17 +93,21 @@ export default class  CreditSanctionCondition extends Component {
     this.columns = [
      
       {
-        title: 'CovenantCondition',
+        title: 'Covenant Condition',
         dataIndex: 'CovenantCondition',
         render: (text, record) =>
           this.state.dataSource.length >= 1 ? (
             <span>
-          <Select defaultValue="1" style={{width:'25% !important'}}>
-            <Select.Option value="1">Program Norms Not Met</Select.Option>
-            <Select.Option value="2">Banking not satisfactory</Select.Option>
-            <Select.Option value="3">Low eligibility </Select.Option>
-            <Select.Option value="4">Derogatory history </Select.Option>
+          <Select  style={{width:'25% !important'}}>
+            <Select.Option value="1">UND Reason 5- Approve</Select.Option>
+            <Select.Option value="2">'UND Reason 6- Approve</Select.Option>
+            <Select.Option value="3">CS-TPC NEGATIVE </Select.Option>
+            <Select.Option value="4">CS-LOW STABILITY </Select.Option>
             <Select.Option value="5">Others Reasons(Sanction Conditions)</Select.Option>
+            <Select.Option value="6">CPA HOLD</Select.Option>
+            <Select.Option value="7">ADDITIONAL DOCS PENDING</Select.Option>
+            <Select.Option value="8">PHONE NO. NOT CONTACTABLE</Select.Option>
+            <Select.Option value="9">RESIDENCE DOOR LOCKED</Select.Option>
           </Select>
         </span>
           ) : null,
@@ -111,7 +115,7 @@ export default class  CreditSanctionCondition extends Component {
       },
       
       {
-        title: 'Operation',
+        title: 'Action',
         dataIndex: 'operation',
         render: (text, record) =>
           this.state.dataSource.length >= 1 ? (

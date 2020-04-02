@@ -37,13 +37,13 @@ const data =[
         CustomerName :'Varghese Mathew',
         AadharNo :'1257479999',
         PanNo :'ATZPM0882C',
-        DOB:'May 20, 1989'
+        DOB:'March 03, 1975'
     
     },
     {
         key :2,
         CustomerId:'5214438729',
-        CustomerName :'SUMITHRA N',
+        CustomerName :'Erica Fernandis',
         AadharNo :'592269933073',
         PanNo :'DRSPK9675K',
         DOB:'Jun 05, 1996'

@@ -194,6 +194,34 @@ export default class Dms extends Component {
                       </center>
                     </td>
                   </tr>
+                  <tr className="tblTrDesign">
+                    <td>Sanction Letter</td>
+                    <td>Sanction.pdf</td>
+                    <td>02-04-2020</td>
+                    <td>
+                      <center>
+                      <IconButton aria-label="delete" onClick={() => {                
+                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Payslip.pdf'});    
+                        }}>
+                      <PageviewIcon />
+                     </IconButton>
+                      </center>
+                    </td>
+                  </tr>
+                  <tr className="tblTrDesign">
+                    <td>Customer Contribution Proof</td>
+                    <td>Cust_VM.pdf</td>
+                    <td>02-04-2020</td>
+                    <td>
+                      <center>
+                      <IconButton aria-label="delete" onClick={() => {                
+                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Payslip.pdf'});    
+                        }}>
+                      <PageviewIcon />
+                     </IconButton>
+                      </center>
+                    </td>
+                  </tr>
                 </tbody>
               </Table></div>
         <div>

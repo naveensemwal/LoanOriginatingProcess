@@ -7,7 +7,7 @@ import Familydetails from '../../../../Compositeviews/Familydetails/Familydetail
 import Addressdetails from '../../../../Compositeviews/Addressdetails/Addressdetails';
 import Loandetails from '../../../../Compositeviews/Loandetails/Loandetails';
 import Statementdetails from '../../../../Compositeviews/Statementdetails/Statementdetails';
-import Dms from '../../../../Components/DMS/Dms';
+import Dms from '../../../../Components/DMS/Dms2';
 import Casehistory from '../../../../Compositeviews/Casehistory/Casehistory';
 import Incomedetails from '../../../../Compositeviews/Incomedetails/Incomedetails';
 import Dcc from '../../../../Compositeviews/Dcc/Dcc';

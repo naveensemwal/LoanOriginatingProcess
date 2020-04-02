@@ -31,17 +31,66 @@ const tableIcons = {
 
 export default function Dcc() {
     const { TextArea } = Input;
+    
+	
+	
     const negativeContent = (
+        
         <div>
             <Form.Item label="Results :">
                 <TextArea placeholder="Negative" autoSize />
             </Form.Item>
+            
             <Form.Item label="Comments :">
-                <TextArea
+            <TextArea
                     placeholder="Below Rules have not been successfully executed : 100% insurance mandatory if no coapplicants/guarantor in the application"
-                    autoSize={{ minRows: 2, maxRows: 6 }}
+                    autoSize={{ minRows: 4, maxRows: 8 }}
                 />
+               
             </Form.Item>
+            <br/>
+            <Button type="primary">Notify Customer
+               <Icon type="mail" />
+            </Button>
+        </div>
+    );
+
+    const negativeContent2 = (
+        
+        <div>
+            <Form.Item label="Results :">
+                <TextArea placeholder="Negative" autoSize />
+            </Form.Item>
+            
+            <Form.Item label="Comments :">
+            <TextArea
+                    placeholder="Below Rules have not been successfully executed : If declared income not consistent with last 3 salary slips, latest salary certificate is mandatory"
+                    autoSize={{ minRows: 4, maxRows: 8 }}
+                />
+               
+            </Form.Item>
+            <br/>
+            <Button type="primary">Notify Customer
+               <Icon type="mail" />
+            </Button>
+        </div>
+    );
+
+    const negativeContent3 = (
+        
+        <div>
+            <Form.Item label="Results :">
+                <TextArea placeholder="Negative" autoSize />
+            </Form.Item>
+            
+            <Form.Item label="Comments :">
+            <TextArea
+                    placeholder="Below Rules have not been successfully executed : Last 6 months bank-statements of Salary account mandatory for salaried customers"
+                    autoSize={{ minRows: 4, maxRows: 8 }}
+                />
+               
+            </Form.Item>
+            <br/>
             <Button type="primary">Notify Customer
                <Icon type="mail" />
             </Button>
@@ -56,9 +105,10 @@ export default function Dcc() {
             <Form.Item label="Comments :">
                 <TextArea
                     placeholder="Document Verified - all related rules executed successfully"
-                    autoSize={{ minRows: 2, maxRows: 6 }}
+                    autoSize={{ minRows: 4, maxRows: 8 }}
                 />
             </Form.Item>
+            <br/>
             <Button type="primary">Notify Customer
                <Icon type="mail" />
             </Button>
@@ -75,24 +125,30 @@ export default function Dcc() {
 
         ],
         data: [
-            { docCategory: 'Application Form', docType: 'Signed Application Form', fileName: 'ApplicationFormScan.PDF', status: 'Received', receivedDate: '28-01-2020', docStatus: true },
-            { docCategory: 'ID Proof', docType: 'PAN Card', fileName: 'PANScan.PDF', status: 'Received', receivedDate: '28-01-2020', docStatus: false },
-            { docCategory: 'Address Proof', docType: 'Passport', fileName: 'Passport.PDF', status: 'Received', receivedDate: '28-01-2020', docStatus: true },
-            { docCategory: 'Income Documents', docType: 'Salary Slip', fileName: 'SalarySlip.PDF', status: 'Received', receivedDate: '28-01-2020', docStatus: true },
-            { docCategory: 'Banking Documents', docType: 'Last 6 month statement', fileName: 'Statement.PDF', status: 'Received', receivedDate: '28-01-2020', docStatus: true },
-            { docCategory: 'Property Documents', docType: 'Allotment-possession ', fileName: 'PropertyDoc.PDF', status: 'Received', receivedDate: '28-01-2020', docStatus: true },
+            { docCategory: 'Application Form', docType: 'Signed Application Form', fileName: 'ApplicationFormScan.PDF', status: 'Received', receivedDate: '02-04-2020', docStatus: false },
+            { docCategory: 'ID Proof', docType: 'PAN Card', fileName: 'PANScan.PDF', status: 'Received', receivedDate: '02-04-2020', docStatus: true },
+            { docCategory: 'Address Proof', docType: 'Passport', fileName: 'Passport.PDF', status: 'Received', receivedDate: '02-04-2020', docStatus: true },
+            { docCategory: 'Income Documents', docType: 'Salary Slip', fileName: 'SalarySlip.PDF', status: 'Received', receivedDate: '02-04-2020', docStatus: false },
+            { docCategory: 'Banking Documents', docType: 'Last 6 month statement', fileName: 'Statement.PDF', status: 'Received', receivedDate: '02-04-2020', docStatus: false },
+            { docCategory: 'Property Documents', docType: 'Allotment-possession ', fileName: 'PropertyDoc.PDF', status: 'Received', receivedDate: '02-04-2020', docStatus: true },
 
         ],
         actions: [rowData => ({
-            icon: rowData.docStatus ? ((props, ref) =>
-                <Popover placement="right" content={positiveContent} title="Document Verification Status" trigger="click">
+            icon: rowData.docStatus && (rowData.docCategory =='ID Proof'||rowData.docCategory =='Address Proof'||rowData.docCategory =='Property Documents') ? ((props, ref) =>
+                <Popover  width={5000} placement="right" content={positiveContent} title="Document Verification Status" trigger="click">
                     <CheckCircleIcon color="primary" fontSize="small" style={{ color: 'green' }} />
                 </Popover>)
                 :
-                ((props, ref) =>
+                (rowData.docCategory=='Application Form'?((props, ref) =>
                     <Popover placement="right" content={negativeContent} title="Document Verification Status" trigger="click">
                         <ErrorIcon color="error" fontSize="small" />
-                    </Popover>),
+                    </Popover>):(rowData.docCategory=='Income Documents'?((props, ref) =>
+                    <Popover placement="right" content={negativeContent2} title="Document Verification Status" trigger="click">
+                        <ErrorIcon color="error" fontSize="small" />
+                    </Popover>):((props, ref) =>
+                    <Popover placement="right" content={negativeContent3} title="Document Verification Status" trigger="click">
+                        <ErrorIcon color="error" fontSize="small" />
+                    </Popover>))),
             tooltip: 'Delete User',
             disabled: rowData.birthYear < 2000
         })],

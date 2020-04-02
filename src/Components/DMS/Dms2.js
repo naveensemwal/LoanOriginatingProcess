@@ -124,76 +124,7 @@ export default class Dms extends Component {
                       </center>
                     </td>
                   </tr>
-                  <tr className="tblTrDesign">
-                    <td>Residence Verification Report</td>
-                    <td>RVReport.pdf</td>
-                    <td>02-04-2020</td>
-                    <td>
-                      <center>
-                      <IconButton aria-label="delete" onClick={() => {                
-                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Payslip.pdf'});    
-                        }}>
-                      <PageviewIcon />
-                     </IconButton>
-                      </center>
-                    </td>
-                  </tr>
-                  <tr className="tblTrDesign">
-                    <td>Employment Verification Report</td>
-                    <td>EMPReport.pdf</td>
-                    <td>02-04-2020</td>
-                    <td>
-                      <center>
-                      <IconButton aria-label="delete" onClick={() => {                
-                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Payslip.pdf'});    
-                        }}>
-                      <PageviewIcon />
-                     </IconButton>
-                      </center>
-                    </td>
-                  </tr>
-                  <tr className="tblTrDesign">
-                    <td>Legal Verification Report</td>
-                    <td>LegalReport.pdf</td>
-                    <td>02-04-2020</td>
-                    <td>
-                      <center>
-                      <IconButton aria-label="delete" onClick={() => {                
-                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Payslip.pdf'});    
-                        }}>
-                      <PageviewIcon />
-                     </IconButton>
-                      </center>
-                    </td>
-                  </tr>
-                  <tr className="tblTrDesign">
-                    <td>Property Valuation Report</td>
-                    <td>PVReport.pdf</td>
-                    <td>02-04-2020</td>
-                    <td>
-                      <center>
-                      <IconButton aria-label="delete" onClick={() => {                
-                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Payslip.pdf'});    
-                        }}>
-                      <PageviewIcon />
-                     </IconButton>
-                      </center>
-                    </td>
-                  </tr>
-                  <tr className="tblTrDesign">
-                    <td>Credit Report</td>
-                    <td>CIBIL.pdf</td>
-                    <td>02-04-2020</td>
-                    <td>
-                      <center>
-                      <IconButton aria-label="delete" onClick={() => {                
-                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Payslip.pdf'});    
-                        }}>
-                      <PageviewIcon />
-                     </IconButton>
-                      </center>
-                    </td>
-                  </tr>
+                  
                 </tbody>
               </Table></div>
         <div>

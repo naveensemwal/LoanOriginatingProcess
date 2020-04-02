@@ -10,7 +10,7 @@ export default class Loandetails extends Component {
                 <Row gutter={[8, 8]}>
                     <Col span={8} >
                         <Form.Item label="Loan Type :">
-                            <Select defaultValue="personalLoan">
+                            <Select defaultValue="homeLoan">
                                 <Select.Option value="homeLoan">Home Loan</Select.Option>
                                 <Select.Option value="autoLoan">Auto Loan</Select.Option>
                                 <Select.Option value="personalLoan">Personal Loan</Select.Option>
@@ -28,7 +28,7 @@ export default class Loandetails extends Component {
                     </Col>
                     <Col span={8} >
                         <Form.Item label="EMI :">
-                            <InputNumber defaultValue="2000" style={{ width: '100%' }} />
+                            <InputNumber defaultValue="31669" style={{ width: '100%' }} />
                         </Form.Item>
                     </Col>
                 </Row>
@@ -46,7 +46,7 @@ export default class Loandetails extends Component {
                     </Col>
                     <Col span={8} >
                         <Form.Item label="Tenure in Months :">
-                            <InputNumber defaultValue="24" style={{ width: '100%' }} />
+                            <InputNumber defaultValue="120" style={{ width: '100%' }} />
                         </Form.Item>
                     </Col>
                 </Row>
@@ -54,7 +54,7 @@ export default class Loandetails extends Component {
 
                     <Col span={8} >
                         <Form.Item label="Scheme :">
-                            <Select defaultValue="2">
+                            <Select defaultValue="4">
                                 <Select.Option value="1">No Income Proof Program</Select.Option>
                                 <Select.Option value="2">Gross Profit</Select.Option>
                                 <Select.Option value="3">Pure Rental Income Program</Select.Option>
@@ -65,7 +65,7 @@ export default class Loandetails extends Component {
                     </Col>
                     <Col span={8} >
                         <Form.Item label="Loan Purpose :">
-                            <Select defaultValue="2">
+                            <Select defaultValue="5">
                                 <Select.Option value="1">Purchase Of Vacant Plot</Select.Option>
                                 <Select.Option value="2">Business Expansion </Select.Option>
                                 <Select.Option value="3">Purchase Of Property</Select.Option>
