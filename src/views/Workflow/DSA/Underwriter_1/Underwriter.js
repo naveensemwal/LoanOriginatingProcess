@@ -1,34 +1,27 @@
-import { Collapse, Form, Tabs, Card,Button, Menu, Dropdown, Icon,Modal,message } from 'antd';
+import { Button, Card, Collapse, Dropdown, Form, Icon, Menu, message, Modal, Tabs } from 'antd';
 import "antd/dist/antd.css";
+import Axios from 'axios';
 import React, { Component } from 'react';
-import Personaldetails from '../../../../Compositeviews/Personaldetails/Personaldetails';
-import Familydetails from '../../../../Compositeviews/Familydetails/Familydetails';
-import Addressdetails from '../../../../Compositeviews/Addressdetails/Addressdetails';
-import Loandetails from '../../../../Compositeviews/Loandetails/Loandetails';
-import Statementdetails from '../../../../Compositeviews/Statementdetails/Statementdetails';
 import Dms from '../../../../Components/DMS/Dms';
-import Casehistory from '../../../../Compositeviews/Casehistory/Casehistory';
-
-import Incomedetails from '../../../../Compositeviews/Incomedetails/Incomedetails';
-import Dcc from '../../../../Compositeviews/Dcc/Dcc';
-import Employmentdetails from '../../../../Compositeviews/Employmentdetails/Employmentdetails';
-import Identificationdetails from '../../../../Compositeviews/Identificationdetails/Identificationdetails';
+import Riskprofile from '../../../../Components/Risk Profile/Riskprofile';
+import Addressdetails from '../../../../Compositeviews/Addressdetails/Addressdetails';
 import BankStatementDetails from '../../../../Compositeviews/BankStatementDetails/BankStatementDetails';
+import Casehistory from '../../../../Compositeviews/Casehistory/Casehistory';
+import CollateralDetails from '../../../../Compositeviews/Collateraldetails/Collateraldetails';
+import CreditSanctionCondition from '../../../../Compositeviews/CreditSanctionCondition/CreditSanctionCondition';
+import CustomerRelationship from '../../../../Compositeviews/CustomerRelationship/CustomerRelationship';
+import DedupeResult from '../../../../Compositeviews/DedupeResult/DedupeResult';
+import DeviationDetails from '../../../../Compositeviews/DeviationDetails/DeviationDetails';
+import Employmentdetails from '../../../../Compositeviews/Employmentdetails/Employmentdetails';
 import FinancialDetailsRation from '../../../../Compositeviews/FinancialDetailsRation/FinancialDetailsRation';
-import Cust_Obligationss from '../../../../Compositeviews/Cust_Obligationss/Cust_Obligationss';
-import CustFinancialDetails from '../../../../Compositeviews/CustFinancialDetails/CustFinancialDetails';
-import CreditSanctionCondition from  '../../../../Compositeviews/CreditSanctionCondition/CreditSanctionCondition';
-import CustomerRelationship from  '../../../../Compositeviews/CustomerRelationship/CustomerRelationship';
-import CrossSellingRecommendation from   '../../../../Compositeviews/CrossSellingRecommendation/CrossSellingRecommendation';
+import Identificationdetails from '../../../../Compositeviews/Identificationdetails/Identificationdetails';
+import Incomedetails from '../../../../Compositeviews/Incomedetails/Incomedetails';
+import Loandetails from '../../../../Compositeviews/Loandetails/Loandetails';
+import Personaldetails from '../../../../Compositeviews/Personaldetails/Personaldetails';
+import UWObservation from '../../../../Compositeviews/UWObservation/UWObservation';
 import VerificationDetails from '../../../../Compositeviews/VerficationDetails/VerificationDetails';
 import VerificationList from '../../../../Compositeviews/VerificationList/VerificationList';
-import DedupeResult from '../../../../Compositeviews/DedupeResult/DedupeResult';
-import Riskprofile from '../../../../Components/Risk Profile/Riskprofile';
-import UWObservation from '../../../../Compositeviews/UWObservation/UWObservation';
-import DeviationDetails from '../../../../Compositeviews/DeviationDetails/DeviationDetails';
-// import CollateralDetails from '../../../../Compositeviews/Collateraldetails/CollateralDetails';
-import Axios from 'axios';
-import CollateralDetails from '../../../../Compositeviews/CollateralDetails/CollateralDetails';
+
 const { Panel } = Collapse;
 
 export default class DDE extends Component {
@@ -106,6 +99,12 @@ export default class DDE extends Component {
     }
     return e && e.fileList;
   };
+
+
+  raiseInvoiceClicked(){
+  
+    window.open('http://localhost:8080/viewone/Document/SanctionLetter.pdf', "_blank") //to open new page
+ }
 
  
 
@@ -270,7 +269,7 @@ export default class DDE extends Component {
 						            	<Button type="primary" htmlType="Submit" shape="round" size={size}>Submit<Icon type="down"/> </Button>
 					            	</Dropdown>
                         &nbsp;&nbsp;&nbsp;
-                        <Button type="primary" htmlType="GenerateSanction" shape="round" size={size}>
+                        <Button type="primary"  shape="round" size={size} onClick={this.raiseInvoiceClicked} >
                                Generate Sanction
                         </Button>
                         &nbsp;&nbsp;&nbsp;

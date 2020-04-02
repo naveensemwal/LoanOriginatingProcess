@@ -73,7 +73,7 @@ export default class Tasklist extends Component {
             }
         },
         {
-            name: "PI_CREATE",
+            name: "BD_CREATION___DATE",
             label: "Creation Date",
             options: {
                 filter: false,

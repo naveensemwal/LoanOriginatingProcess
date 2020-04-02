@@ -1,13 +1,11 @@
-import Splitter from 'm-react-splitters';
-// import 'm-react-splitters/lib/splitters.css';
-import React, { Component } from 'react';
-import Iframe from 'react-iframe';
-import { Input, Table } from 'reactstrap';
 import IconButton from '@material-ui/core/IconButton';
 import PageviewIcon from '@material-ui/icons/Pageview';
-
+import React, { Component } from 'react';
+import Iframe from 'react-iframe';
 import SplitterLayout from 'react-splitter-layout';
 import 'react-splitter-layout/lib/index.css';
+import { Table } from 'reactstrap';
+
 
 // import FileViewer from 'react-file-viewer';
 
@@ -41,7 +39,7 @@ export default class Dms extends Component {
                 <tbody>
                   <tr className="tblTrDesign">
                     <td>ID Proof</td>
-                    <td>Aadhar.jifif</td>
+                    <td>Aadhar.png</td>
                     <td>28-01-2020</td>
                     <td>
                       <center>
@@ -55,7 +53,7 @@ export default class Dms extends Component {
                   </tr>
                   <tr className="tblTrDesign">
                     <td>ID Proof</td>
-                    <td>Photograph.jifif</td>
+                    <td>Photograph.jpg</td>
                     <td>28-01-2020</td>
                     <td>
                       <center>
@@ -81,14 +79,84 @@ export default class Dms extends Component {
                       </center>
                     </td>
                   </tr>
+                  <tr className="tblTrDesign">
+                    <td>Income Proof</td>
+                    <td>AccountStatement.pdf</td>
+                    <td>28-01-2020</td>
+                    <td>
+                      <center>
+                      <IconButton aria-label="delete" onClick={() => {                
+                        this.setState({viewURL:'http://localhost:8080/viewone/Document/LAPAccountStatement.pdf'});    
+                        }}>
+                      <PageviewIcon />
+                     </IconButton>
+                      </center>
+                    </td>
+                  </tr>
+                  <tr className="tblTrDesign">
+                    <td>Application Form</td>
+                    <td>LAPForm.pdf</td>
+                    <td>28-01-2020</td>
+                    <td>
+                      <center>
+                      <IconButton aria-label="delete" onClick={() => {                
+                        this.setState({viewURL:'http://localhost:8080/viewone/Document/LAPForm.pdf'});    
+                        }}>
+                      <PageviewIcon />
+                     </IconButton>
+                      </center>
+                    </td>
+                  </tr>
+                  <tr className="tblTrDesign">
+                    <td>Current Address Proof</td>
+                    <td>EBill.pdf</td>
+                    <td>28-01-2020</td>
+                    <td>
+                      <center>
+                      <IconButton aria-label="delete" onClick={() => {                
+                        this.setState({viewURL:'http://localhost:8080/viewone/Document/LAPEBill.pdf'});    
+                        }}>
+                      <PageviewIcon />
+                     </IconButton>
+                      </center>
+                    </td>
+                  </tr>
+                  <tr className="tblTrDesign">
+                    <td>Supporting Document</td>
+                    <td>KYC.pdf</td>
+                    <td>28-01-2020</td>
+                    <td>
+                      <center>
+                      <IconButton aria-label="delete" onClick={() => {                
+                        this.setState({viewURL:'http://localhost:8080/viewone/Document/LAPKYC.pdf'});    
+                        }}>
+                      <PageviewIcon />
+                     </IconButton>
+                      </center>
+                    </td>
+                  </tr>
+                  <tr className="tblTrDesign">
+                    <td>Supporting Document</td>
+                    <td>PAN Card.pdf</td>
+                    <td>28-01-2020</td>
+                    <td>
+                      <center>
+                      <IconButton aria-label="delete" onClick={() => {                
+                        this.setState({viewURL:'http://localhost:8080/viewone/Document/PanCard.jpg'});    
+                        }}>
+                      <PageviewIcon />
+                     </IconButton>
+                      </center>
+                    </td>
+                  </tr>
                 </tbody>
               </Table></div>
         <div>
         <Iframe url={this.state.viewURL}
-       
         id="myId"
         className="myClassname"
-        
+        width="100%"
+        height="483px"
       />
         </div>
    

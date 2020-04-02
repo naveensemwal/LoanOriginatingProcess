@@ -4,7 +4,6 @@ import Axios from 'axios';
 import React, { Component } from 'react';
 import Dms from '../../../../Components/DMS/Dms';
 import Addressdetails from '../../../../Compositeviews/Addressdetails/Addressdetails';
-// import CollateralDetails from '../../../../Compositeviews/Collateraldetails/CollateralDetails';
 import Dcc from '../../../../Compositeviews/Dcc/Dcc';
 import Employmentdetails from '../../../../Compositeviews/Employmentdetails/Employmentdetails';
 import Identificationdetails from '../../../../Compositeviews/Identificationdetails/Identificationdetails';
@@ -14,7 +13,7 @@ import Personaldetails from '../../../../Compositeviews/Personaldetails/Personal
 import VerificationList from '../../../../Compositeviews/VerificationList/VerificationList';
 import DisbursementDetails from '../../../../Compositeviews/DisbursementDetails/DisbursementDetails';
 import DedupeResult from '../../../../Compositeviews/DedupeResult/DedupeResult';
-import CollateralDetails from '../../../../Compositeviews/CollateralDetails/CollateralDetails';
+import CollateralDetails from '../../../../Compositeviews/Collateraldetails/Collateraldetails';
 import Riskprofile from '../../../../Components/Risk Profile/Riskprofile';
 import Casehistory from '../../../../Compositeviews/Casehistory/Casehistory';
 const { Panel } = Collapse;

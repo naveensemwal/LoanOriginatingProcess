@@ -159,15 +159,15 @@ class Eligibility extends React.Component {
         </Stepper>
         <div>
           {this.state.activeStep === steps.length ? (
-            <Card><CardBody><center>
-            <i className="fa fa-smile-o font100Px greenClr" aria-hidden="true"></i>
+            <Card><CardBody>
+            <div className='errorGroups'>
+            <center>
+            <i className="fa fa-check-circle fa-5x font100Px greenClr" aria-hidden="true"></i>
           </center>
-          <center><Label className="font24Px noPadding noMargin list-group-item-success list-group-item noBackgroundColor noBorder">Thank You!!!</Label></center>
-          <center><Label className="font16Px noPadding noMargin list-group-item-danger list-group-item noBackgroundColor noBorder">Customer Tier : Gold</Label></center>
-          <center><Col lg="6">Please handover the documents to your respective
-            Sales Manager</Col></center>
-            <br/>
-            <center><Form.Item>
+          <center><Label className="font24Px label">Thank You!!!</Label></center>
+          <center><Label className="font16Px label">Customer Tier : Gold</Label></center>
+          </div>
+          <center><Form.Item>
          
         
         
