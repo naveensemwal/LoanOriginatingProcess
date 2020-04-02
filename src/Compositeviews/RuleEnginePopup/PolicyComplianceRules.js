@@ -220,9 +220,7 @@ export default class PolicyComplianceRules extends Component{
                 
                 />
 			 <div class="text-right">
-				<Button type="primary" onClick={this.showModal} disabled>
-					Edit
-				</Button>
+				
 
 			<Modal 
 				title="MODAL"
