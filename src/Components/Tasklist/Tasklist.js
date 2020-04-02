@@ -23,44 +23,17 @@ export default class Tasklist extends Component {
         this.setState({ isLoading: true });
         Axios.get(`/rest/bpm/wle/v1/tasks?savedSearch=My_Task_List&interaction=claimed_and_available&filterByCurrentUser=false&calcStats=false`, {
             auth: {
-                username: 'naveen',
+                username: 'p8admin',
                 password: 'Password123'
             }
         })
             .then(res => {
-                
+                console.dir(res);
                 this.setState({ data: res.data.data.items, isLoading: false, count: res.total });
             })
     }
 
-    completeTask = (taskId,currentStage) => {
-
-        let params='';
-
-        switch(currentStage) {
-        case "Sales":
-            params = '{"moveTo":"QDE"}';
-          break;
-        case "Data Entry":
-            params = '{"applicationDetails":{"userAction":"ToUnderwriter"}}';
-          break;
-        case "Underwriter":
-            params = '{"applicationDetails":{"userAction":"Completed"}}';
-          break;
-        default:
-            params = "I have never heard of that fruit...";
-      }
-      let url =`/rest/bpm/wle/v1/task/`+taskId+'?action=complete&params='+params+'&parts=all';
-        Axios.put(url, {
-            auth: {
-                username: 'naveen',
-                password: 'Password123'
-            }
-        })
-            .then(res => {
-                this.getData();
-            })
-    }
+    
    
 
     render() {
@@ -150,11 +123,13 @@ export default class Tasklist extends Component {
               customBodyRender: (value, tableMeta, updateValue) => {
                const { data } = this.state;
                let rowData=data[tableMeta.rowIndex];
-               let currentStage=rowData.TAD_DISPLAY_NAME;
-               console.log("Current Stage" + currentStage);
-               
+               let currentStage=rowData.TAD_DISPLAY_NAME;               
                 return (
-                <Link to={currentStage==='Underwriter'?'/Workflow/DSA/Underwriter':'/Workflow/DSA/DDE'} className="fa fa-play"></Link>
+                <Link to={currentStage==='Sales'?'/Workflow/DSA/Sales/'+rowData.TKIID:
+                          currentStage==='Data Entry'?'/Workflow/DSA/DDE_1/'+rowData.TKIID:
+                          currentStage==='Underwriter'?'/Workflow/DSA/underwriter_1/'+rowData.TKIID:
+                          currentStage==='Disbursement'?'/Workflow/DSA/disbursement/'+rowData.TKIID:
+                          null} className="fa fa-play"></Link>
                 );
               }
             }

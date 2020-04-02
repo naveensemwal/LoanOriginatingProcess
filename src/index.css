@@ -14,3 +14,8 @@
     min-height: 0px !important;
 }
  
+
+.MuiStepper-root {
+  display: flex;
+padding: 5px !important; 
+}

@@ -1,4 +1,4 @@
-import { Collapse, Form, Tabs, Card,Button, Menu, Dropdown, Icon } from 'antd';
+import { Collapse, Form, Tabs, Card,Button, Menu, Dropdown, Icon,message } from 'antd';
 import "antd/dist/antd.css";
 import React, { Component } from 'react';
 import Personaldetails from '../../../../Compositeviews/Personaldetails/Personaldetails';
@@ -27,6 +27,7 @@ import Riskprofile from '../../../../Components/Risk Profile/Riskprofile';
 import UWObservation from '../../../../Compositeviews/UWObservation/UWObservation';
 import DeviationDetails from '../../../../Compositeviews/DeviationDetails/DeviationDetails';
 import CollateralDetails from '../../../../Compositeviews/Collateraldetails/CollateralDetails';
+import Axios from 'axios';
 const { Panel } = Collapse;
 
 export default class DDE extends Component {
@@ -55,13 +56,34 @@ export default class DDE extends Component {
     this.setState({ size: e.target.value });
   };
 
-  handleSubmit = e => {
-    e.preventDefault();
-    this.props.form.validateFields((err, values) => {
-      if (!err) {
-        console.log('Received values of form: ', values);
+  completeTask = (taskId) => {
+
+    let params = '{"applicationDetails":{"userAction":"ToDisbursement"}}';
+    let url = `/rest/bpm/wle/v1/task/` + taskId + '?action=complete&params=' + params + '&parts=all';
+    
+    message.config({ top: 100, });
+    message.loading('Submitting Task Data',60).then(
+    Axios.put(url, {
+      auth: {
+        username: 'p8admin',
+        password: 'Password12'
       }
-    });
+    })
+      .then(res => {
+        message.destroy();
+        message.success(`Task completed successfully`, 2);
+        this.props.history.push("/inbox");
+      })
+      .catch(function (error) {
+        message.destroy();
+        message.error('Something went wrong. Please try again!', 2);
+      })
+  )
+  }
+
+
+  handleSubmit = e => {
+    this.completeTask(this.props.match.params.id);
   };
 
   normFile = e => {
