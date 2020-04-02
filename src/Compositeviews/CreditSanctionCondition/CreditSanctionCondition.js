@@ -98,7 +98,7 @@ export default class  CreditSanctionCondition extends Component {
         render: (text, record) =>
           this.state.dataSource.length >= 1 ? (
             <span>
-          <Select style={{width:'25% !important'}}>
+          <Select defaultValue="1" style={{width:'25% !important'}}>
             <Select.Option value="1">Program Norms Not Met</Select.Option>
             <Select.Option value="2">Banking not satisfactory</Select.Option>
             <Select.Option value="3">Low eligibility </Select.Option>

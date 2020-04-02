@@ -1,10 +1,10 @@
-import { Button, Collapse, Form, message, Tabs } from "antd";
+import { Collapse, Form, Tabs, Card, Button, Modal,message } from "antd";
 import "antd/dist/antd.css";
 import Axios from 'axios';
 import React, { Component } from 'react';
 import Dms from '../../../../Components/DMS/Dms';
 import Addressdetails from '../../../../Compositeviews/Addressdetails/Addressdetails';
-import CollateralDetails from '../../../../Compositeviews/Collateraldetails/CollateralDetails';
+// import CollateralDetails from '../../../../Compositeviews/Collateraldetails/CollateralDetails';
 import Dcc from '../../../../Compositeviews/Dcc/Dcc';
 import Employmentdetails from '../../../../Compositeviews/Employmentdetails/Employmentdetails';
 import Identificationdetails from '../../../../Compositeviews/Identificationdetails/Identificationdetails';
@@ -12,6 +12,11 @@ import Incomedetails from '../../../../Compositeviews/Incomedetails/Incomedetail
 import Loandetails from '../../../../Compositeviews/Loandetails/Loandetails';
 import Personaldetails from '../../../../Compositeviews/Personaldetails/Personaldetails';
 import VerificationList from '../../../../Compositeviews/VerificationList/VerificationList';
+import DisbursementDetails from '../../../../Compositeviews/DisbursementDetails/DisbursementDetails';
+import DedupeResult from '../../../../Compositeviews/DedupeResult/DedupeResult';
+import CollateralDetails from '../../../../Compositeviews/CollateralDetails/CollateralDetails';
+import Riskprofile from '../../../../Components/Risk Profile/Riskprofile';
+import Casehistory from '../../../../Compositeviews/Casehistory/Casehistory';
 const { Panel } = Collapse;
 
 export default class DDE extends Component {
@@ -75,9 +80,20 @@ export default class DDE extends Component {
 
   state = {
     size: "large",
-    width: "150px"
+    width: "150px",
+    visible:false
   };
-
+  showModalcase_history=()=>{
+    this.setState({visible:true});
+  }
+  handleOkcasehistory=(e) =>{
+    this.setState({visible:false});
+  }
+  handlecancelcasehistory=(e)=>{
+    this.setState({
+      visible:false
+    })
+  }
   handleSizeChange = e => {
     this.setState({ size: e.target.value });
   };
@@ -99,6 +115,19 @@ export default class DDE extends Component {
     const { TabPane } = Tabs;
     return (
       <Form onSubmit={this.handleSubmit} layout="horizontal">
+         <a className='fixed-widgets' onClick={this.showModalcase_history}><i className='ant-avatar fixed-widgets-avatar ant-dropdown-trigger ant-avatar-circle ant-avatar-icon fa fa-history'/><span>Case History</span></a>
+      <Modal
+      title='Case History'
+      visible={this.state.visible}
+      onOk={this.handleOkcasehistory}
+      onCancel={this.handlecancelcasehistory}>
+
+<Card>
+                <Casehistory></Casehistory>
+              </Card>
+
+      </Modal>
+       
         <div className="card-container cust_tabs_card form-group">
           <Tabs>
             <TabPane tab="Customer Details" key="1">

@@ -10,7 +10,7 @@ const { Option } = Select;
 const data =[
     {
         key: "1",
-		ApplicantName: 'Singla sales',
+		ApplicantName: 'Varghese Mathew',
 		ResidenceCheck: '',
 		Legal: '',
 		BusinessReferenceCheck:'',
@@ -41,7 +41,7 @@ render(){
       key="ResidenceCheck"
       render={(text, record) => (
         <span >
-          <Select style={{width:150}}>
+          <Select defaultValue="1" style={{width:150}}>
             <Select.Option value="1"><Tooltip title="3G based field management">3G based field management</Tooltip></Select.Option>
             <Select.Option value="2"><Tooltip title="Dorupo financial service pvt ltd.">Dorupo financial service pvt ltd.</Tooltip></Select.Option>
             
@@ -55,7 +55,7 @@ render(){
       key="Legal"
       render={(text, record) => (
         <span >
-          <Select style={{width:150}}>
+          <Select defaultValue="1" style={{width:150}}>
 
             <Select.Option value="1"><Tooltip title="Hiranandani Associates">Hiranandani Associates</Tooltip></Select.Option>
             <Select.Option value="2"><Tooltip title="Payal financial service pvt ltd.">Payal financial service pvt ltd.</Tooltip></Select.Option>            
@@ -86,7 +86,7 @@ render(){
       key="EmploymentCheck"
       render={(text, record) => (
         <span>
-          <Select style={{width:150}}>
+          <Select defaultValue="2" style={{width:150}}>
           
             <Select.Option value="1"><Tooltip title="D ASK FINANCIAL GROUP">D ASK FINANCIAL GROUP</Tooltip></Select.Option>
             <Select.Option value="2"><Tooltip title="PVP FINANCIAL GROUP">PVP FINANCIAL GROUP</Tooltip></Select.Option>            
@@ -100,7 +100,7 @@ render(){
       key="PropertyValuation"
       render={(text, record) => (
         <span>
-          <Select style={{width:150}}>
+          <Select defaultValue="2" style={{width:150}}>
           <Select.Option value="1"><Tooltip title="ARGUS INC">ARGUS INC</Tooltip></Select.Option>
             <Select.Option value="2"><Tooltip title="B KAKKAR AND CO">B KAKKAR AND CO</Tooltip></Select.Option>            
             

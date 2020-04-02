@@ -1,9 +1,10 @@
-import { Button, Collapse, Form, message, Tabs } from "antd";
+import { Button, Card, Collapse, Form, message, Modal, Tabs } from "antd";
 import "antd/dist/antd.css";
 import Axios from 'axios';
 import React, { Component } from 'react';
 import Dms from '../../../../Components/DMS/Dms';
 import Addressdetails from '../../../../Compositeviews/Addressdetails/Addressdetails';
+import Casehistory from '../../../../Compositeviews/Casehistory/Casehistory';
 import DisbursementDetails from '../../../../Compositeviews/DisbursementDetails/DisbursementDetails';
 import Identificationdetails from '../../../../Compositeviews/Identificationdetails/Identificationdetails';
 import Loandetails from '../../../../Compositeviews/Loandetails/Loandetails';
@@ -46,9 +47,20 @@ componentDidMount() {
 
   state = {
     size: "large",
-    width: "150px"
+    width: "150px",
+    visible:false
   };
-
+  showModalcase_history=()=>{
+    this.setState({visible:true});
+  }
+  handleOkcasehistory=(e) =>{
+    this.setState({visible:false});
+  }
+  handlecancelcasehistory=(e)=>{
+    this.setState({
+      visible:false
+    })
+  }
   handleSizeChange = e => {
     this.setState({ size: e.target.value });
   };
@@ -96,6 +108,18 @@ componentDidMount() {
     const { TabPane } = Tabs;
     return (
       <Form onSubmit={this.handleSubmit} layout="horizontal">
+            <a className='fixed-widgets' onClick={this.showModalcase_history}><i className='ant-avatar fixed-widgets-avatar ant-dropdown-trigger ant-avatar-circle ant-avatar-icon fa fa-history'/><span>Case History</span></a>
+      <Modal
+      title='Case History'
+      visible={this.state.visible}
+      onOk={this.handleOkcasehistory}
+      onCancel={this.handlecancelcasehistory}>
+
+<Card>
+                <Casehistory></Casehistory>
+              </Card>
+
+      </Modal>
         <div className="card-container cust_tabs_card form-group">
           <Tabs>
           <TabPane tab="Disbursement Details" key="19">

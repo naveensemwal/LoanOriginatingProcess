@@ -6,6 +6,7 @@ import { incrementData, lineData } from "./data";
 import Auxiliary from '../../Util/Auxiliary'
 import Portfolio from "./Portfolio";
 import BalanceHistory from "./BalanceHistory";
+import BankStatmentDetails from '../BankStatementDetails/BankStatementDetails';
 // import './Statement.css';
 // import '../../styles/wieldy.less';
 
@@ -34,7 +35,9 @@ const data = [
 export default class Statementanalyzer extends Component {
     render() {
         return (
+            <div className='cust_statementAnalyzer'>
             <Auxiliary>
+              
                 <Row gutter={[8,8]}>
                     <Col xs={24} sm={12} md={12} lg={12} xl={6}>
                         <Card>
@@ -150,7 +153,7 @@ export default class Statementanalyzer extends Component {
                     </Col>
                 </Row>
             </Auxiliary>
-
+            </div>
         )
     }
 }

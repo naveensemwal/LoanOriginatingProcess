@@ -40,7 +40,7 @@ const columns1 = [
 const data1 =[
     {
         key :1,
-        ApplicantName:'Singla sales',
+        ApplicantName:'Varghese Mathew',
         VerificationAgency :'3G based field management',
         Comment :'Satisfactory',
         Result :'Positive',
@@ -86,7 +86,7 @@ const columns2 = [
 const data2 =[
     {
         key :1,
-        ApplicantName:'Singla sales',
+        ApplicantName:'Varghese Mathew',
         VerificationAgency :'Hiranandani Associates',
         Comment :'Part property is constructed on projections which is on MCD land.',
         Result :'Positive',
@@ -131,8 +131,8 @@ const columns3 = [
 const data3 =[
     {
         key :1,
-        ApplicantName:'Singla sales',
-        VerificationAgency :'MONEYMALL001',
+        ApplicantName:'Varghese Mathew',
+        VerificationAgency :'B KAKKAR AND CO',
         Comment :'Satisfactory',
         Result :'Positive',
         Status :'Completed',
@@ -178,7 +178,7 @@ const columns4 = [
 const data4 =[
   {
       key :1,
-      ApplicantName:'Singla sales',
+      ApplicantName:'Varghese Mathew',
       VerificationAgency :'PVP FINANCIAL GROUP',
       Comment :'Satisfactory',
       Result :'Positive',

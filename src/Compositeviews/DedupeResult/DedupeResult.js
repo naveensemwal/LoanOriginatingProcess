@@ -34,9 +34,9 @@ const data =[
     {
         key :1,
         CustomerId:'5130404907',
-        CustomerName :'KUNNE GOWDA U B',
-        AadharNo :'985962778215',
-        PanNo :'DRSPK9675K',
+        CustomerName :'Varghese Mathew',
+        AadharNo :'1257479999',
+        PanNo :'ATZPM0882C',
         DOB:'May 20, 1989'
     
     },
