@@ -50,7 +50,7 @@ export default class Launch extends Component {
         message.loading('Initiating Loan Request..',60).then(
             Axios.post(`/rest/bpm/wle/v1/service/LOS@Initiate Loan Process?action=start&params=` + JSON.stringify(param) + `&createTask=false&parts=all`, {
               auth: {
-                username: 'naveen',
+                username: 'p8admin',
                 password: 'Password123'
               }
             })
@@ -143,6 +143,19 @@ export default class Launch extends Component {
           })(<InputNumber style={{width:'100%'}} min={50000} max={1500000} step={50000} />)}
         </Form.Item>
 
+        <Form.Item label="Upload Documents" extra="">
+          {getFieldDecorator('upload', {
+            valuePropName: 'fileList',
+            getValueFromEvent: this.normFile,
+          })(
+            <Upload name="logo" action="/upload.do" listType="picture" multiple={true}>
+              <Button>
+                <Icon type="upload" /> Click to upload
+              </Button>
+            </Upload>,
+          )}
+        </Form.Item>
+
         <Form.Item label="Are you an existing Bank customer?">
           {getFieldDecorator('isExistingCustomer',{initialValue:false})( <Switch checkedChildren="Yes" unCheckedChildren="No" 
           onChange={e => this.setState({ isExistingCustomer: e})}
@@ -230,6 +243,7 @@ export default class Launch extends Component {
           )}
         </Form.Item> </div>
         }
+        
         <Form.Item {...tailFormItemLayout}>
           <Button type="primary" htmlType="submit">
             Submit

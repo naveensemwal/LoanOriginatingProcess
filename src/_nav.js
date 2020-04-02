@@ -25,7 +25,7 @@ export default {
       icon: 'icon-settings',
       children: [
         {
-          name: 'Loan',
+          name: 'Initiate Loan Process',
           url: '/workflow/createloanapp/createloanapp',
           icon: 'fa fa-handshake-o'
         },

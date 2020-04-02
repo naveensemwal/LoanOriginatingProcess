@@ -38,6 +38,7 @@ const Users = React.lazy(() => import('./views/Users/Users'));
 const User = React.lazy(() => import('./views/Users/User'));
 const Inbox = React.lazy(() => import('./views/Inbox/Inbox'));
 const DSA = React.lazy(() => import('./views/Workflow/DSA/DSA'));
+const DSA_Sales = React.lazy(() => import('./views/Workflow/DSA/Sales/Sales'));
 const DSA_DDE = React.lazy(() => import('./views/Workflow/DSA/DDE/DDE'));
 const DSA_DDE_1 = React.lazy(() => import('./views/Workflow/DSA/DDE_1/DDE'));
 const DSA_UW = React.lazy(() => import('./views/Workflow/DSA/Underwriter/Underwriter'));
@@ -98,11 +99,12 @@ const routes = [
   { path: '/users/:id', exact: true, name: 'User Details', component: User },
   { path: '/inbox', exact: true,  name: 'Inbox', component: Inbox },
   { path: '/workflow/dsa', exact: true,  name: 'DSA', component: DSA },
+  { path: '/workflow/dsa/sales/:id', exact: true,  name: 'Sales', component: DSA_Sales },
   { path: '/workflow/dsa/dde', exact: true,  name: 'DDE', component: DSA_DDE },
-  { path: '/workflow/dsa/dde_1', exact: true,  name: 'DDE', component: DSA_DDE_1},
+  { path: '/workflow/dsa/dde_1/:id', exact: true,  name: 'DDE', component: DSA_DDE_1},
   { path: '/workflow/dsa/underwriter', exact: true,  name: 'Underwriter', component: DSA_UW },
-  { path: '/workflow/dsa/underwriter_1', exact: true,  name: 'Underwriter', component: DSA_UW_1},
-  { path: '/workflow/dsa/disbursement', exact: true,  name: 'disbursement', component: DSA_DIS },
+  { path: '/workflow/dsa/underwriter_1/:id', exact: true,  name: 'Underwriter', component: DSA_UW_1},
+  { path: '/workflow/dsa/disbursement/:id', exact: true,  name: 'disbursement', component: DSA_DIS },
   { path: '/workflow/bil', exact: true,  name: 'BIL', component: BIL },
   { path: '/workflow/createloanapp/createloanapp', exact: true,  name: 'CreateLoanApp', component: CreateLoanApp },
   { path: '/eligibility', exact: true,  name: 'eligibility', component: Eligibility },

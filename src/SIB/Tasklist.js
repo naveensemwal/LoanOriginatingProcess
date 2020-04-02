@@ -53,7 +53,7 @@ export default class Tasklist extends Component {
       let url =`/rest/bpm/wle/v1/task/`+taskId+'?action=complete&params='+params+'&parts=all';
         Axios.put(url, {
             auth: {
-                username: 'naveen',
+                username: 'p8admin',
                 password: 'Password123'
             }
         })

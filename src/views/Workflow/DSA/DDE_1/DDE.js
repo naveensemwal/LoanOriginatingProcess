@@ -1,7 +1,7 @@
-import { Collapse, Form, Tabs, Card, Button, Modal } from "antd";
+import { Collapse, Form, Tabs, Card, Button, Modal,message } from "antd";
 import "antd/dist/antd.css";
-import React, { Component } from 'react';
 import Axios from 'axios';
+<<<<<<< HEAD
 import Personaldetails from '../../../../Compositeviews/Personaldetails/Personaldetails';
 import Familydetails from '../../../../Compositeviews/Familydetails/Familydetails';
 import Addressdetails from '../../../../Compositeviews/Addressdetails/Addressdetails';
@@ -10,33 +10,36 @@ import Statementdetails from '../../../../Compositeviews/Statementdetails/Statem
 import Dms from '../../../../Components/DMS/Dms2';
 import Casehistory from '../../../../Compositeviews/Casehistory/Casehistory';
 import Incomedetails from '../../../../Compositeviews/Incomedetails/Incomedetails';
+=======
+import React, { Component } from 'react';
+import Dms from '../../../../Components/DMS/Dms';
+import Addressdetails from '../../../../Compositeviews/Addressdetails/Addressdetails';
+// import CollateralDetails from '../../../../Compositeviews/Collateraldetails/CollateralDetails';
+>>>>>>> 58c3424f759923a86f64f1b6444997bc55f0387e
 import Dcc from '../../../../Compositeviews/Dcc/Dcc';
 import Employmentdetails from '../../../../Compositeviews/Employmentdetails/Employmentdetails';
 import Identificationdetails from '../../../../Compositeviews/Identificationdetails/Identificationdetails';
-import BankStatementDetails from '../../../../Compositeviews/BankStatementDetails/BankStatementDetails';
-import FinancialDetailsRation from '../../../../Compositeviews/FinancialDetailsRation/FinancialDetailsRation';
-import Cust_Obligationss from '../../../../Compositeviews/Cust_Obligationss/Cust_Obligationss';
-import CustFinancialDetails from '../../../../Compositeviews/CustFinancialDetails/CustFinancialDetails';
-import CreditSanctionCondition from  '../../../../Compositeviews/CreditSanctionCondition/CreditSanctionCondition';
-import CustomerRelationship from  '../../../../Compositeviews/CustomerRelationship/CustomerRelationship';
-import CrossSellingRecommendation from   '../../../../Compositeviews/CrossSellingRecommendation/CrossSellingRecommendation';
-import VerificationDetails from '../../../../Compositeviews/VerficationDetails/VerificationDetails';
+import Incomedetails from '../../../../Compositeviews/Incomedetails/Incomedetails';
+import Loandetails from '../../../../Compositeviews/Loandetails/Loandetails';
+import Personaldetails from '../../../../Compositeviews/Personaldetails/Personaldetails';
 import VerificationList from '../../../../Compositeviews/VerificationList/VerificationList';
 import DisbursementDetails from '../../../../Compositeviews/DisbursementDetails/DisbursementDetails';
 import DedupeResult from '../../../../Compositeviews/DedupeResult/DedupeResult';
 import CollateralDetails from '../../../../Compositeviews/CollateralDetails/CollateralDetails';
 import Riskprofile from '../../../../Components/Risk Profile/Riskprofile';
+import Casehistory from '../../../../Compositeviews/Casehistory/Casehistory';
 const { Panel } = Collapse;
 
 export default class DDE extends Component {
 
-componentDidMount() {
-    const  SectionName  ='IdentificationDetails,AddressDetails';
+  componentDidMount() {
+    console.log("DDE page loaded");
+    const SectionName = 'IdentificationDetails,AddressDetails';
     this.getData();
   }
 
-  
-   getData = () => {
+
+  getData = () => {
     // console.dir("id " + this.props.match.params.id);
     //console.log("sectionr "+ this.prop.SectionName);
     Axios.get('/rest/bpm/wle/v1/task/4853?action=getData&fields=IdentificationDetails,AddressDetails', {
@@ -47,19 +50,43 @@ componentDidMount() {
     })
       .then(res => {
 
-    
+
         const result = res.data.data.resultMap;
         console.dir(result);
         console.log('before props');
         console.dir(this.props.form);
-       // let fieldvalues = this.props.form.getFieldsValue();
-        
+        // let fieldvalues = this.props.form.getFieldsValue();
+
         //console.dir(fieldvalues);
 
-         
+
       })
   }
 
+  completeTask = (taskId) => {
+
+    let params = '{"applicationDetails":{"userAction":"ToUnderwriter"}}';
+    let url = `/rest/bpm/wle/v1/task/` + taskId + '?action=complete&params=' + params + '&parts=all';
+    
+    message.config({ top: 100, });
+    message.loading('Submitting Task Data',60).then(
+    Axios.put(url, {
+      auth: {
+        username: 'p8admin',
+        password: 'Password12'
+      }
+    })
+      .then(res => {
+        message.destroy();
+        message.success(`Task completed successfully`, 2);
+        this.props.history.push("/inbox");
+      })
+      .catch(function (error) {
+        message.destroy();
+        message.error('Something went wrong. Please try again!', 2);
+      })
+  )
+  }
 
 
   state = {
@@ -83,12 +110,7 @@ componentDidMount() {
   };
 
   handleSubmit = e => {
-    e.preventDefault();
-    this.props.form.validateFields((err, values) => {
-      if (!err) {
-        console.log("Received values of form: ", values);
-      }
-    });
+   this.completeTask(this.props.match.params.id);
   };
 
   normFile = e => {
@@ -137,7 +159,7 @@ componentDidMount() {
                 <Panel header="Loan Details" key="1" danger>
                   <Loandetails></Loandetails>
                 </Panel>
-                
+
               </Collapse>
             </TabPane>
             <TabPane tab="Employment & Income Details" key="3">
@@ -150,7 +172,7 @@ componentDidMount() {
                 </Panel>
               </Collapse>
             </TabPane>
-            
+
             <TabPane tab="Document Check List" key="5">
               {/* <Card> */}
               <Dcc></Dcc>
@@ -161,14 +183,14 @@ componentDidMount() {
             </TabPane>
             <TabPane tab="Collateral Details" key="7">
               <Collapse defaultActiveKey={["1"]}>
-              <Panel header="Collateral Details" key="1" danger>
+                <Panel header="Collateral Details" key="1" danger>
                   <CollateralDetails></CollateralDetails>
                 </Panel>
               </Collapse>
             </TabPane>
-            
-            
-            
+
+
+
             <TabPane tab="Verification Details" key="13">
               <Collapse defaultActiveKey={["1"]}>
                 <Panel header="Verification Details" key="1">
@@ -178,26 +200,26 @@ componentDidMount() {
                 </Panel>
               </Collapse>
             </TabPane>
-            
-           
+
+
           </Tabs>
         </div>
         <Form.Item>
           <div className='pull-right'>
-          <Button
-            type="primary"
-            htmlType="SaveAsDraft"
-          className='mar-rig-10'
-            size={size}
-          >
-            Save as Draft
+            <Button
+              type="primary"
+              htmlType="submit"
+              className='mar-rig-10'
+              size={size}
+            >
+              Save as Draft
           </Button>
-        
-          
-        
-          <Button type="primary" htmlType="submit" 
-            size={size}>
-            Submit
+
+
+
+            <Button type="primary" htmlType="submit"
+              size={size}>
+              Submit
           </Button>
           </div>
         </Form.Item>
