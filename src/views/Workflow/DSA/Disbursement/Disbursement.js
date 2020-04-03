@@ -2,7 +2,7 @@ import { Button, Card, Collapse, Form, message, Modal, Tabs } from "antd";
 import "antd/dist/antd.css";
 import Axios from 'axios';
 import React, { Component } from 'react';
-import Dms from '../../../../Components/DMS/Dms';
+import Dms from '../../../../Components/DMS/Dms3';
 import Addressdetails from '../../../../Compositeviews/Addressdetails/Addressdetails';
 import Casehistory from '../../../../Compositeviews/Casehistory/Casehistory';
 import DisbursementDetails from '../../../../Compositeviews/DisbursementDetails/DisbursementDetails';

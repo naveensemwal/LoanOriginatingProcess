@@ -11,21 +11,21 @@ export default class Customerprofile extends Component {
                     <Col span={8} >
                     <div className='customer one' style={{ textAlign: 'center'}}>
                     </div>
-                    <h5 style={{ textAlign: 'center'}}>John Kevin Doe </h5>
+                    <h5 style={{ textAlign: 'center'}}>Varghese Mathew</h5>
                     </Col>
                     <Col span={16}>
                         <Row gutter={[8,8]} type='flex'>
                             <Col span={6}>
                             <label>First Name:</label>
-                            <Input disabled={true} id='firstName' value='John'></Input>
+                            <Input disabled={true} id='firstName' value='Varghese'></Input>
                             </Col>
                             <Col span={6}>
                             <label>Middle Name:</label>
-                            <Input disabled={true} id='middleName' value='Kevin'></Input>
+                            <Input disabled={true} id='middleName' value='Parkadavil'></Input>
                             </Col>
                             <Col span={6}>
                             <label>Last Name:</label>
-                            <Input disabled={true} id='lastName' value='Doe'></Input>
+                            <Input disabled={true} id='lastName' value='Mathew'></Input>
                             </Col>
                             <Col span={6}>
                             <label>Customer ID</label>
@@ -35,7 +35,7 @@ export default class Customerprofile extends Component {
                         <Row gutter={[8,8]} type='flex'>
                             <Col span={6}>
                             <label>PAN#:</label>
-                            <Input disabled={true} name='First Name' value='DGIPS1211L'></Input>
+                            <Input disabled={true} name='First Name' value='ATZPM0882C'></Input>
                             </Col>
                             <Col span={6}>
                             <label>Mobile#:</label>
@@ -43,11 +43,11 @@ export default class Customerprofile extends Component {
                             </Col>
                             <Col span={6}>
                             <label>Email ID:</label>
-                            <Input disabled={true} name='First Name' value='johndoe@gmail.com'></Input>
+                            <Input disabled={true} name='First Name' value='Mathew.0303@gmail.com'></Input>
                             </Col>
                             <Col span={6}>
                             <label>Date of Birth</label>
-                            <DatePicker disabled={true} name='First Name' style={{width:'100%'}} defaultValue={moment('01/01/1987', 'DD/MM/YYYY')} ></DatePicker>
+                            <DatePicker disabled={true} name='First Name' style={{width:'100%'}} defaultValue={moment('03/03/1975', 'DD/MM/YYYY')} ></DatePicker>
                             </Col>
                         </Row>
                     </Col>

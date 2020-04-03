@@ -14,17 +14,17 @@ export default class UWObservation extends Component {
                     
                     <Col span={8} >
                         <Form.Item name="Elgibility" label='Elgibility:' rules={[{ required: true }]}>
-                            <Input defaultValue="5549520" disabled />
+                            <Input defaultValue="2500000" disabled />
                         </Form.Item>
                     </Col>
 					<Col span={8} >
                         <Form.Item name="FOIR based Elgibility" label='FOIR based Elgibility:' rules={[{ required: true }]}>
-                            <Input defaultValue="23543222" disabled/>
+                            <Input defaultValue="2354322" disabled/>
                         </Form.Item>
                     </Col>
 					<Col span={8} >
                         <Form.Item name="ABB based Elgibility" label='ABB based Elgibility:' rules={[{ required: true }]}>
-                            <Input defaultValue="22384785" disabled/>
+                            <Input defaultValue="2238478" disabled/>
                         </Form.Item>
                     </Col>
                     

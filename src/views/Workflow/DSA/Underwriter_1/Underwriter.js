@@ -168,7 +168,6 @@ export default class DDE extends Component {
                 <Panel header="Risk Profile" key="2">
                   <Riskprofile></Riskprofile>
                 </Panel>
-
               </Collapse>
             </TabPane>
             <TabPane tab="Verification Details" key="17">
@@ -187,6 +186,22 @@ export default class DDE extends Component {
                 </Collapse>
             </TabPane>
 
+            <TabPane tab="Bank statement Details" key="9">
+              {/* <Card> */}
+                <BankStatementDetails></BankStatementDetails>
+              {/* </Card> */}
+            </TabPane>
+            
+            <TabPane tab="Customer Relationship" key="12">
+                <Collapse defaultActiveKey={['1']}>
+                  <Panel header="Customer Realtionship" key="1">
+                     {/* <Card> */}
+                    <CustomerRelationship></CustomerRelationship>
+                    {/* </Card> */}
+                  </Panel>
+                 
+                </Collapse>
+            </TabPane>
             <TabPane tab="Customer Details" key="1">
                 <Collapse defaultActiveKey={['1']}>
                   <Panel header="Personal Details" key="1" danger>
@@ -236,23 +251,7 @@ export default class DDE extends Component {
               </Collapse>
             </TabPane>
             
-            <TabPane tab="Bank statement Details" key="9">
-              {/* <Card> */}
-                <BankStatementDetails></BankStatementDetails>
-              {/* </Card> */}
-            </TabPane>
-            
-            <TabPane tab="Customer Relationship" key="12">
-                <Collapse defaultActiveKey={['1']}>
-                  <Panel header="Customer Realtionship" key="1">
-                     {/* <Card> */}
-                    <CustomerRelationship></CustomerRelationship>
-                    {/* </Card> */}
-                  </Panel>
-                 
-                </Collapse>
-            </TabPane>
-
+           
             
             
           </Tabs>
@@ -263,18 +262,19 @@ export default class DDE extends Component {
                                 Save as Draft
                         </Button>
                         &nbsp;&nbsp;&nbsp;
-                        {this.state.visible1 ?( <Button type="primary" htmlType="RerunDedupe" shape="round" size={size}>Rerun Dedupe </Button>):("")}
-                        &nbsp; &nbsp; &nbsp;
+                        
 					            	<Dropdown overlay={menu}>
 						            	<Button type="primary" htmlType="Submit" shape="round" size={size}>Submit<Icon type="down"/> </Button>
 					            	</Dropdown>
                         &nbsp;&nbsp;&nbsp;
                         <Button type="primary"  shape="round" size={size} onClick={this.raiseInvoiceClicked} >
-                               Generate Sanction
+                        Generate Sanction Letter
                         </Button>
                         &nbsp;&nbsp;&nbsp;
                         {this.state.visible1 ?( <Button type="primary" htmlType="RiskRule" shape="round" size={size}>Rerun Risk Rule</Button>):("")}
-						
+                        &nbsp; &nbsp;
+                        {this.state.visible1 ?( <Button type="primary" htmlType="RerunDedupe" shape="round" size={size}>Rerun Dedupe </Button>):("")}
+                        
             </Form.Item>
       </Form>
     )

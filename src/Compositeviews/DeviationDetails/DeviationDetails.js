@@ -10,30 +10,30 @@ const { Option } = Select;
 const data =[
     {
         key: "1",
-		SystemDeviationDescription: 'Shareholding norms not met',
-		DeviationLevel: 'L2',
+		SystemDeviationDescription: 'DEV FOR WAIVER OF PROCESSING CHARGES',
+		DeviationLevel: 'L1',
 		Action: '',
 		
     },
 	{
         key: "2",
-		SystemDeviationDescription: 'Marital Status is other than Married',
-		DeviationLevel: 'L3',
+		SystemDeviationDescription: 'Average bank Balance less than proposed Emi',
+		DeviationLevel: 'L2',
 		Action: '',
 		
     },
 	{
         key: "3",
-		SystemDeviationDescription: 'Residence Verification Negative',
-		DeviationLevel: 'L1',
+		SystemDeviationDescription: 'More than equal to  30 DPD in last 12 months',
+		DeviationLevel: 'L3',
 		Action: '',
 		
     },
    
     {
         key: "4",
-		SystemDeviationDescription: 'Residence stability norms not met',
-		DeviationLevel: 'L4',
+		SystemDeviationDescription: 'Greater than 5 enquiries on bureau in the last 3 months for any unsecured loan for Applicant/ Guarantor/ Director/ Partner cc',
+		DeviationLevel: 'L2',
 		Action: '',
 		
     },
@@ -52,19 +52,20 @@ export default class DeviationDetails extends Component{
 render(){
         return(
 <div>
-	<label>System Deviation</label>
+	
      <Table dataSource={data}>
 
-    <Column title="System Deviation Description" dataIndex="SystemDeviationDescription" key="SystemDeviationDescription" />
-	<Column title="Deviation Level" dataIndex="DeviationLevel" key="DeviationLevel" />
+    <Column  width={250} title="Deviation Description" dataIndex="SystemDeviationDescription" key="SystemDeviationDescription" />
+	<Column width={100} title="Deviation Level" dataIndex="DeviationLevel" key="DeviationLevel" />
 
     <Column
       title="Action"
       dataIndex="Action"
       key="Action"
+      width={5}
       render={(text, record) => (
         <span>
-          <Select style={{width:'14% !important'}}>
+          <Select >
             <Select.Option value="1">Approve</Select.Option>
             <Select.Option value="2">Reject</Select.Option>
             

@@ -1,21 +1,32 @@
 import { Collapse, Form, Tabs, Card, Button, Modal,message } from "antd";
 import "antd/dist/antd.css";
 import Axios from 'axios';
-import React, { Component } from 'react';
-import Dms from '../../../../Components/DMS/Dms';
+
+import Personaldetails from '../../../../Compositeviews/Personaldetails/Personaldetails';
+import Familydetails from '../../../../Compositeviews/Familydetails/Familydetails';
 import Addressdetails from '../../../../Compositeviews/Addressdetails/Addressdetails';
+import Loandetails from '../../../../Compositeviews/Loandetails/Loandetails';
+import Statementdetails from '../../../../Compositeviews/Statementdetails/Statementdetails';
+import Dms from '../../../../Components/DMS/Dms2';
+import Casehistory from '../../../../Compositeviews/Casehistory/Casehistory';
+import Incomedetails from '../../../../Compositeviews/Incomedetails/Incomedetails';
+import React, { Component } from 'react';
+
+
+// import CollateralDetails from '../../../../Compositeviews/Collateraldetails/CollateralDetails';
+
 import Dcc from '../../../../Compositeviews/Dcc/Dcc';
 import Employmentdetails from '../../../../Compositeviews/Employmentdetails/Employmentdetails';
 import Identificationdetails from '../../../../Compositeviews/Identificationdetails/Identificationdetails';
-import Incomedetails from '../../../../Compositeviews/Incomedetails/Incomedetails';
-import Loandetails from '../../../../Compositeviews/Loandetails/Loandetails';
-import Personaldetails from '../../../../Compositeviews/Personaldetails/Personaldetails';
+
+
+
 import VerificationList from '../../../../Compositeviews/VerificationList/VerificationList';
 import DisbursementDetails from '../../../../Compositeviews/DisbursementDetails/DisbursementDetails';
 import DedupeResult from '../../../../Compositeviews/DedupeResult/DedupeResult';
 import CollateralDetails from '../../../../Compositeviews/Collateraldetails/Collateraldetails';
 import Riskprofile from '../../../../Components/Risk Profile/Riskprofile';
-import Casehistory from '../../../../Compositeviews/Casehistory/Casehistory';
+
 const { Panel } = Collapse;
 
 export default class DDE extends Component {

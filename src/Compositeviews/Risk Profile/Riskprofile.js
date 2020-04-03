@@ -46,7 +46,7 @@ export default function Riskprofile() {
                   <tbody>
                     <tr>
                       <td>
-                        <div>Shardul Yadav</div>
+                        <div>Varghese Mathew</div>
                       </td>
                       <td className="text-center">
                       Customer Name
@@ -69,7 +69,7 @@ export default function Riskprofile() {
                     </tr>
                     <tr>
                       <td>
-                        <div>Shardul Yadav</div>
+                        <div>Varghese Mathew</div>
                       </td>
                       <td className="text-center">
                       Nationality of Customer
@@ -92,7 +92,7 @@ export default function Riskprofile() {
                     </tr>
                     <tr>
                       <td>
-                        <div>Shardul Yadav</div>
+                        <div>Varghese Mathew</div>
                       </td>
                       <td className="text-center">
                       <div>Does not belong to </div> 
@@ -116,7 +116,7 @@ export default function Riskprofile() {
                     </tr>
                     <tr>
                       <td>
-                        <div>Shardul Yadav</div>
+                        <div>Varghese Mathew</div>
                       </td>
                       <td className="text-center">
                       <div>Not associated with</div>
@@ -162,8 +162,8 @@ export default function Riskprofile() {
                   </thead>
                   <tbody>
                     <tr>
-                      <td>
-                        <div>Shardul Yadav</div>
+                      <td> 
+                        <div>Varghese Mathew</div>
                       </td>
                       <td className="text-center">
                       Tax Evasion
@@ -178,7 +178,7 @@ export default function Riskprofile() {
                     </tr>
                     <tr>
                       <td>
-                        <div>Shardul Yadav</div>
+                        <div>Varghese Mathew</div>
                       </td>
                       <td className="text-center">
                       Bankruptcy Fraud
@@ -193,7 +193,7 @@ export default function Riskprofile() {
                     </tr>
                     <tr>
                       <td>
-                        <div>Shardul Yadav</div>
+                        <div>Varghese Mathew</div>
                       </td>
                       <td className="text-center">
                       <div>Identify Theft</div> 
@@ -209,7 +209,7 @@ export default function Riskprofile() {
                     </tr>
                     <tr>
                       <td>
-                        <div>Shardul Yadav</div>
+                        <div>Varghese Mathew</div>
                       </td>
                       <td className="text-center">
                       <div>Money Laundaring</div>
@@ -249,7 +249,7 @@ export default function Riskprofile() {
                   <tbody>
                     <tr>
                       <td>
-                        <div>Shardul Yadav</div>
+                        <div>Varghese Mathew</div>
                       </td>
                       <td className="text-center">
                       Derog comments in CIBIL report
@@ -261,7 +261,7 @@ export default function Riskprofile() {
                     </tr>
                     <tr>
                       <td>
-                        <div>Shardul Yadav</div>
+                        <div>Varghese Mathew</div>
                       </td>
                       <td className="text-center">
                       Internal blacklist customer check
@@ -273,7 +273,7 @@ export default function Riskprofile() {
                     </tr>
                     <tr>
                       <td>
-                        <div>Shardul Yadav</div>
+                        <div>Varghese Mathew</div>
                       </td>
                       <td className="text-center">
                       Negative DPD in credit report

@@ -63,8 +63,8 @@ export default function Addressdetails() {
             },
         ],
         data: [
-            { type: '1', address: '52, Saket Colony', city: 'Dehradun', pinCode: 248001, status: 1 },
-            { type: '2', address: 'B - 303 Subham Society', city: 'Pune', pinCode: 411027, status: 4 },
+            
+            { type: '2', address: 'C-302 Brook Hill Andheri West', city: 'Mumbai', pinCode: 400053, status: 3 },
 
         ],
     });
