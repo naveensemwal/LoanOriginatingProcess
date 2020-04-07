@@ -42,11 +42,11 @@ export default class Dms extends Component {
                   <tr className="tblTrDesign">
                     <td>Signed Application Form</td>
                     <td>ApplicationForm.pdf</td>
-                    <td>02-04-2020</td>
+                    <td>03-04-2030</td>
                     <td>
                       <center>
                       <IconButton aria-label="delete" onClick={() => {                
-                        this.setState({viewURL:'http://localhost:8080/viewone/Document/aadhar.png'});    
+                        this.setState({viewURL:'http://localhost:8080/viewone/Document/ApplicationForm.pdf'});    
                         }}>
                       <PageviewIcon />
                      </IconButton>
@@ -55,12 +55,12 @@ export default class Dms extends Component {
                   </tr>
                   <tr className="tblTrDesign">
                     <td>Pan Card</td>
-                    <td>Pan_VM.pdf</td>
-                    <td>02-04-2020</td>
+                    <td>PanCard.jpg</td>
+                    <td>03-04-2030</td>
                     <td>
                       <center>
                       <IconButton aria-label="delete" onClick={() => {                
-                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Photograph.jpg'});    
+                        this.setState({viewURL:'http://localhost:8080/viewone/Document/PanCard.jpg'});    
                         }}>
                       <PageviewIcon />
                      </IconButton>
@@ -69,12 +69,12 @@ export default class Dms extends Component {
                   </tr>
 				  <tr className="tblTrDesign">
                     <td>Passport</td>
-                    <td>Passport_VM.pdf</td>
-                    <td>02-04-2020</td>
+                    <td>Passport_VM.jpg</td>
+                    <td>03-04-2030</td>
                     <td>
                       <center>
                       <IconButton aria-label="delete" onClick={() => {                
-                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Photograph.jpg'});    
+                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Passport_VM.png'});    
                         }}>
                       <PageviewIcon />
                      </IconButton>
@@ -84,11 +84,11 @@ export default class Dms extends Component {
                   <tr className="tblTrDesign">
                     <td>Salary Slip</td>
                     <td>Salary_Slip_Oct_Mar.pdf</td>
-                    <td>02-04-2020</td>
+                    <td>03-04-2030</td>
                     <td>
                       <center>
                       <IconButton aria-label="delete" onClick={() => {                
-                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Payslip.pdf'});    
+                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Salary_Slip_Oct_Mar.pdf'});    
                         }}>
                       <PageviewIcon />
                      </IconButton>
@@ -98,11 +98,11 @@ export default class Dms extends Component {
 				  <tr className="tblTrDesign">
                     <td>Last 6 month statement</td>
                     <td>Statement.pdf</td>
-                    <td>02-04-2020</td>
+                    <td>03-04-2030</td>
                     <td>
                       <center>
                       <IconButton aria-label="delete" onClick={() => {                
-                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Payslip.pdf'});    
+                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Statement.pdf'});    
                         }}>
                       <PageviewIcon />
                      </IconButton>
@@ -113,11 +113,11 @@ export default class Dms extends Component {
 				  <tr className="tblTrDesign">
                     <td>Copy of original sale deed</td>
                     <td>Saledeed.pdf</td>
-                    <td>02-04-2020</td>
+                    <td>03-04-2030</td>
                     <td>
                       <center>
                       <IconButton aria-label="delete" onClick={() => {                
-                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Payslip.pdf'});    
+                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Saledeed.pdf'});    
                         }}>
                       <PageviewIcon />
                      </IconButton>
@@ -127,11 +127,11 @@ export default class Dms extends Component {
                   <tr className="tblTrDesign">
                     <td>Residence Verification Report</td>
                     <td>RVReport.pdf</td>
-                    <td>02-04-2020</td>
+                    <td>03-04-2030</td>
                     <td>
                       <center>
                       <IconButton aria-label="delete" onClick={() => {                
-                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Payslip.pdf'});    
+                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Residence_Check_Report.pdf'});    
                         }}>
                       <PageviewIcon />
                      </IconButton>
@@ -141,7 +141,7 @@ export default class Dms extends Component {
                   <tr className="tblTrDesign">
                     <td>Employment Verification Report</td>
                     <td>EMPReport.pdf</td>
-                    <td>02-04-2020</td>
+                    <td>03-04-2030</td>
                     <td>
                       <center>
                       <IconButton aria-label="delete" onClick={() => {                
@@ -155,7 +155,7 @@ export default class Dms extends Component {
                   <tr className="tblTrDesign">
                     <td>Legal Verification Report</td>
                     <td>LegalReport.pdf</td>
-                    <td>02-04-2020</td>
+                    <td>03-04-2030</td>
                     <td>
                       <center>
                       <IconButton aria-label="delete" onClick={() => {                
@@ -169,7 +169,7 @@ export default class Dms extends Component {
                   <tr className="tblTrDesign">
                     <td>Property Valuation Report</td>
                     <td>PVReport.pdf</td>
-                    <td>02-04-2020</td>
+                    <td>03-04-2030</td>
                     <td>
                       <center>
                       <IconButton aria-label="delete" onClick={() => {                
@@ -183,11 +183,11 @@ export default class Dms extends Component {
                   <tr className="tblTrDesign">
                     <td>Credit Report</td>
                     <td>CIBIL.pdf</td>
-                    <td>02-04-2020</td>
+                    <td>03-04-2030</td>
                     <td>
                       <center>
                       <IconButton aria-label="delete" onClick={() => {                
-                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Payslip.pdf'});    
+                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Cibil_Score.pdf'});    
                         }}>
                       <PageviewIcon />
                      </IconButton>
@@ -197,11 +197,11 @@ export default class Dms extends Component {
                   <tr className="tblTrDesign">
                     <td>Sanction Letter</td>
                     <td>Sanction.pdf</td>
-                    <td>02-04-2020</td>
+                    <td>03-04-2030</td>
                     <td>
                       <center>
                       <IconButton aria-label="delete" onClick={() => {                
-                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Payslip.pdf'});    
+                        this.setState({viewURL:'http://localhost:8080/viewone/Document/SanctionLetter.pdf'});    
                         }}>
                       <PageviewIcon />
                      </IconButton>
@@ -211,7 +211,7 @@ export default class Dms extends Component {
                   <tr className="tblTrDesign">
                     <td>Customer Contribution Proof</td>
                     <td>Cust_VM.pdf</td>
-                    <td>02-04-2020</td>
+                    <td>03-04-2030</td>
                     <td>
                       <center>
                       <IconButton aria-label="delete" onClick={() => {                
@@ -226,10 +226,10 @@ export default class Dms extends Component {
               </Table></div>
         <div>
         <Iframe url={this.state.viewURL}
-       
         id="myId"
         className="myClassname"
-        
+        width="100%"
+        height="483px"
       />
         </div>
    

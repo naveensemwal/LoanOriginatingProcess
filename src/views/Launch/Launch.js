@@ -7,10 +7,10 @@ import Axios from 'axios';
 
 const { Option } = Select;
 let param={
-  "loanAmount":"100000",
-  "customerName":"John Kevin Doe",
+  "loanAmount":"2500000",
+  "customerName":"Varghese Parkadavil Mathew",
   "customerType":"Retail",
-  "loanType":"Personal Loan"
+  "loanType":"Home Loan"
 }
 
 

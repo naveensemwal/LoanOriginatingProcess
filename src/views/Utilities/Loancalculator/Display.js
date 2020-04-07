@@ -5,7 +5,7 @@ import Icon from '@material-ui/core/Icon';
 
 class Display extends Component {
   state = {
-    APR: 0.05
+    APR: 0.08
   };
 
   componentDidMount() {
@@ -22,22 +22,22 @@ class Display extends Component {
     const { amount } = this.props;
 
     if (10000 < amount && amount < 50000) {
-      this.setState({ APR: 0.05 });
+      this.setState({ APR: 0.08 });
     }
     if (50000 < amount && amount < 100000) {
-      this.setState({ APR: 0.1 });
+      this.setState({ APR: 0.08 });
     }
     if (100000 < amount && amount < 150000) {
-      this.setState({ APR: 0.15 });
+      this.setState({ APR: 0.08 });
     }
     if (150000 < amount && amount < 250000) {
-      this.setState({ APR: 0.2 });
+      this.setState({ APR: 0.08 });
     }
     if (250000 < amount && amount < 350000) {
-      this.setState({ APR: 0.22 });
+      this.setState({ APR: 0.08 });
     }
     if (350000 < amount && amount < 500000) {
-      this.setState({ APR: 0.25 });
+      this.setState({ APR: 0.08 });
     }
   };
 

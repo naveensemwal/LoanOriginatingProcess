@@ -168,7 +168,7 @@ export default function Riskprofile() {
                       <td className="text-center">
                       Tax Evasion
                       </td>
-                      <td className="text-center">
+                      <td >
                         <small className="text-muted">NA</small>
                       </td>
                       <td>

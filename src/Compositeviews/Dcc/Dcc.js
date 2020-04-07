@@ -149,7 +149,7 @@ export default function Dcc() {
                     <Popover placement="right" content={negativeContent3} title="Document Verification Status" trigger="click">
                         <ErrorIcon color="error" fontSize="small" />
                     </Popover>))),
-            tooltip: 'Delete User',
+            // tooltip: 'Delete User',
             disabled: rowData.birthYear < 2000
         })],
     });

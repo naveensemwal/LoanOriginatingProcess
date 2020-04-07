@@ -7,8 +7,8 @@ import Icon from '@material-ui/core/Icon';
 
 class Loancalculator extends Component {
   state = {
-    amountValue: 500000,
-    yearsValue: 5
+    amountValue: 2500000,
+    yearsValue: 20
   };
 
   handleAmountChange = value => {
@@ -36,7 +36,7 @@ class Loancalculator extends Component {
         <h4>{yearsValue} year{yearsValue > 1 && "s"}</h4>
         <InputRange
           step={0.5}
-          maxValue={5}
+          maxValue={25}
           minValue={1}
           value={yearsValue}
           onChange={this.handleYearChange}

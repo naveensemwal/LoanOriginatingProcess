@@ -39,7 +39,7 @@ export default class Statementanalyzer extends Component {
             <Auxiliary>
               
                 <Row gutter={[8,8]}>
-                    <Col xs={24} sm={12} md={12} lg={12} xl={6}>
+                    {/* <Col xs={24} sm={12} md={12} lg={12} xl={6}>
                         <Card>
                             <List
                                 itemLayout="horizontal"
@@ -55,8 +55,8 @@ export default class Statementanalyzer extends Component {
                                 )}
                             />
                         </Card>
-                    </Col>
-                    <Col span={18}>
+                    </Col> */}
+                    <Col span={24}>
                         <Row gutter={[8,8]}>
                             <Col xl={6} lg={12} md={12} sm={12} xs={24}>
                                 <ChartCard prize=" ₹16,96,24,735.17" title="23" icon="bitcoin"

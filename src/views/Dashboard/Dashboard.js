@@ -210,7 +210,7 @@ const cardChartOpts2 = {
 
 // Card Chart 3
 const cardChartData3 = {
-  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July',"August","September","October","Novemeber","December"],
+  labels: ['Apruary', 'February', 'March', 'April', 'May', 'June', 'July',"August","September","October","Novemeber","Marember"],
   datasets: [
     {
       label: 'Completed Cases',
@@ -245,7 +245,7 @@ const cardChartOpts3 = {
 
 // Card Chart 4
 const cardChartData4 = {
-  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July',"August","September","October","Novemeber","December"],
+  labels: ['Apruary', 'February', 'March', 'April', 'May', 'June', 'July',"August","September","October","Novemeber","Marember"],
   datasets: [
     {
       label: 'Rejectedd Cases',
@@ -479,7 +479,7 @@ componentDidMount() {
                       <td>
                         <div>Dev</div>
                         <div className="small text-muted">
-                          Initiated : Dec 1, 2019
+                          Initiated : Mar 1, 2019
                       </div>
                       </td>
                       <td className="text-center">
@@ -491,13 +491,13 @@ componentDidMount() {
                             <strong>20%</strong>
                           </div>
                           <div className="float-right">
-                            <small className="text-muted">Dec 1, 2019 - Dec 5, 2019</small>
+                            <small className="text-muted">Mar 1, 2019 - Mar 5, 2019</small>
                           </div>
                         </div>
                         <Progress className="progress-xs" color="danger" value="20" />
                       </td>
                       <td className="text-center">
-                        <small className="text-muted">Dec 20, 2019</small>
+                        <small className="text-muted">Mar 20, 2019</small>
                       </td>
                       <td>
                         <div className="small text-muted">Customer Insufficiency</div>
@@ -507,7 +507,7 @@ componentDidMount() {
                       <td>
                         <div>Anand</div>
                         <div className="small text-muted">
-                          Initiated : Nov 1, 2019
+                          Initiated : Mar 1, 2019
                       </div>
                       </td>
                       <td className="text-center">
@@ -519,13 +519,13 @@ componentDidMount() {
                             <strong>100%</strong>
                           </div>
                           <div className="float-right">
-                            <small className="text-muted">Nov 1, 2019 - Nov 5, 2019</small>
+                            <small className="text-muted">Mar 1, 2019 - Mar 5, 2019</small>
                           </div>
                         </div>
                         <Progress className="progress-xs" color="danger" value="100" />
                       </td>
                       <td className="text-center">
-                        <small className="text-muted">Nov 15, 2019</small>
+                        <small className="text-muted">Mar 15, 2019</small>
                       </td>
                       <td>
                         <div className="small text-muted">Rejected</div>
@@ -535,7 +535,7 @@ componentDidMount() {
                       <td>
                         <div>Ganesh</div>
                         <div className="small text-muted">
-                          Initiated : Jan 4, 2020
+                          Initiated : Apr 1, 2020
                       </div>
                       </td>
                       <td className="text-center">
@@ -547,13 +547,13 @@ componentDidMount() {
                             <strong>10%</strong>
                           </div>
                           <div className="float-right">
-                            <small className="text-muted">Jan 4, 2020 - Jan 5, 2020</small>
+                            <small className="text-muted">Apr 1, 2020 - Apr 3, 2020</small>
                           </div>
                         </div>
                         <Progress className="progress-xs" color="info" value="10" />
                       </td>
                       <td className="text-center">
-                        <small className="text-muted">Jan 20, 2020</small>
+                        <small className="text-muted">Apr 20, 2020</small>
                       </td>
                       <td>
                         <div className="small text-muted">Documents Pending</div>
@@ -563,7 +563,7 @@ componentDidMount() {
                       <td>
                         <div>Naveen</div>
                         <div className="small text-muted">
-                          Initiated : Jan 1, 2020
+                          Initiated : Mar 25, 2020
                       </div>
                       </td>
                       <td className="text-center">
@@ -575,13 +575,13 @@ componentDidMount() {
                             <strong>50%</strong>
                           </div>
                           <div className="float-right">
-                            <small className="text-muted">Jan 1, 2020 - Jan 10, 2020</small>
+                            <small className="text-muted">Mar 25, 2020 - Apr 02, 2020</small>
                           </div>
                         </div>
                         <Progress className="progress-xs" color="success" value="50" />
                       </td>
                       <td className="text-center">
-                        <small className="text-muted">Jan 20, 2020</small>
+                        <small className="text-muted">Apr 20, 2020</small>
                       </td>
                       <td>
                         <div className="small text-muted">Verification pending</div>
@@ -591,7 +591,7 @@ componentDidMount() {
                       <td>
                         <div>Ganesh</div>
                         <div className="small text-muted">
-                          Initiated : Jan 4, 2020
+                          Initiated : Apr 2, 2020
                       </div>
                       </td>
                       <td className="text-center">
@@ -603,13 +603,13 @@ componentDidMount() {
                             <strong>10%</strong>
                           </div>
                           <div className="float-right">
-                            <small className="text-muted">Jan 4, 2020 - Jan 5, 2020</small>
+                            <small className="text-muted">Apr 2, 2020 - Apr 3, 2020</small>
                           </div>
                         </div>
                         <Progress className="progress-xs" color="info" value="10" />
                       </td>
                       <td className="text-center">
-                        <small className="text-muted">Jan 20, 2020</small>
+                        <small className="text-muted">Apr 18, 2020</small>
                       </td>
                       <td>
                         <div className="small text-muted">Documents Pending</div>

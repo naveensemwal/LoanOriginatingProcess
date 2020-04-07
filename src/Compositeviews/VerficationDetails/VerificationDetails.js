@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Table, Typography,Icon } from 'antd';
+import { Table, Typography,Icon,Button } from 'antd';
 const { Text } = Typography;
 
 
@@ -28,7 +28,7 @@ const columns1 = [
         title: 'View',
         dataIndex: 'View',
 		render: (text, record) => (
-          <Icon type="eye" />          
+      <Button   onClick={() => window.open('http://localhost:8080/viewone/Document/Residence_Check_Report.pdf', "_blank")} icon="eye" />    
         ),
       },
 
@@ -75,7 +75,7 @@ const columns2 = [
         title: 'View',
         dataIndex: 'View',
         render: (text, record) => (
-          <Icon type="eye" />          
+           <Button   onClick={() => window.open('http://localhost:8080/viewone/Document/Residence_Check_Report.pdf', "_blank")} icon="eye" />         
         ),
       },
 
@@ -121,7 +121,7 @@ const columns3 = [
         title: 'View',
         dataIndex: 'View',
         render: (text, record) => (
-          <Icon type="eye" />          
+           <Button   onClick={() => window.open('http://localhost:8080/viewone/Document/Residence_Check_Report.pdf', "_blank")} icon="eye" />         
         ),
       },
 
@@ -166,7 +166,7 @@ const columns4 = [
       title: 'View',
       dataIndex: 'View',
   render: (text, record) => (
-        <Icon type="eye" />          
+         <Button   onClick={() => window.open('http://localhost:8080/viewone/Document/Residence_Check_Report.pdf', "_blank")} icon="eye" />         
       ),
     },
 
