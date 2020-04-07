@@ -100,14 +100,14 @@ export default class  CreditSanctionCondition extends Component {
             <span>
           <Select  style={{width:'25% !important'}}>
             <Select.Option value="1">UND Reason 5- Approve</Select.Option>
-            <Select.Option value="2">'UND Reason 6- Approve</Select.Option>
-            <Select.Option value="3">CS-TPC NEGATIVE </Select.Option>
-            <Select.Option value="4">CS-LOW STABILITY </Select.Option>
+            <Select.Option value="2">UND Reason 6- Approve</Select.Option>
+            <Select.Option value="3">CS-TPC Negative </Select.Option>
+            <Select.Option value="4">CS-LOW Stability </Select.Option>
             <Select.Option value="5">Others Reasons(Sanction Conditions)</Select.Option>
             <Select.Option value="6">CPA HOLD</Select.Option>
-            <Select.Option value="7">ADDITIONAL DOCS PENDING</Select.Option>
-            <Select.Option value="8">PHONE NO. NOT CONTACTABLE</Select.Option>
-            <Select.Option value="9">RESIDENCE DOOR LOCKED</Select.Option>
+            <Select.Option value="7">Additional docs pending</Select.Option>
+            <Select.Option value="8">Phone No. not contable</Select.Option>
+            <Select.Option value="9">Residence door locked </Select.Option>
           </Select>
         </span>
           ) : null,

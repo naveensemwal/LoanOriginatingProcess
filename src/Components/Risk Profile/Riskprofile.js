@@ -64,7 +64,7 @@ export default function Riskprofile() {
                       </td>
                       <td>
                         <div className="small text-muted"><strong>Low Risk</strong></div>
-                        <Progress className="progress-xs" color="warning" value="100" />
+                        <Progress className="progress-xs" color="success" value="100" />
                       </td>
                     </tr>
                     <tr>
@@ -87,7 +87,7 @@ export default function Riskprofile() {
                       </td>
                       <td>
                         <div className="small text-muted"><strong>High Risk</strong></div>
-                        <Progress className="progress-xs" color="success" value="100" />
+                        <Progress className="progress-xs" color="danger" value="100" />
                       </td>
                     </tr>
                     <tr>
@@ -134,7 +134,7 @@ export default function Riskprofile() {
                       </td>
                       <td>
                         <div className="small text-muted"><strong>Low Risk</strong></div>
-                        <Progress className="progress-xs" color="danger" value="100" />
+                        <Progress className="progress-xs" color="success" value="100" />
                       </td>
                     </tr>
                    

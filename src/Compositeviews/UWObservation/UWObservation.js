@@ -13,17 +13,17 @@ export default class UWObservation extends Component {
                 <Row gutter={[8, 8]}>
                     
                     <Col span={8} >
-                        <Form.Item name="Elgibility" label='Elgibility:' rules={[{ required: true }]}>
+                        <Form.Item name="Eligibility" label='Eligibility:' rules={[{ required: true }]}>
                             <Input defaultValue="2500000" disabled />
                         </Form.Item>
                     </Col>
 					<Col span={8} >
-                        <Form.Item name="FOIR based Elgibility" label='FOIR based Elgibility:' rules={[{ required: true }]}>
+                        <Form.Item name="FOIR based Eligibility" label='FOIR based Eligibility:' rules={[{ required: true }]}>
                             <Input defaultValue="2354322" disabled/>
                         </Form.Item>
                     </Col>
 					<Col span={8} >
-                        <Form.Item name="ABB based Elgibility" label='ABB based Elgibility:' rules={[{ required: true }]}>
+                        <Form.Item name="ABB based Eligibility" label='ABB based Eligibility:' rules={[{ required: true }]}>
                             <Input defaultValue="2238478" disabled/>
                         </Form.Item>
                     </Col>

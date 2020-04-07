@@ -7,13 +7,13 @@ const tableColumns = [
       width: 270
     },
     {
-      label: 'activityName',
+      label: 'Activity Name',
       field: 'activityName',
       sort: 'asc',
       width: 200
     },
     {
-      label: 'receivedDate',
+      label: 'Received Date',
       field: 'date',
       sort: 'asc',
       width: 100
@@ -25,7 +25,7 @@ const tableColumns = [
       width: 150
     },
     {
-      label: 'overDueStatus',
+      label: 'OverDue Status',
       field: 'overDueStatus',
       sort: 'asc',
       width: 100

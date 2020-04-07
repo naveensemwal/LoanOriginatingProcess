@@ -50,7 +50,7 @@ componentDidMount() {
         const result = res.data.data.resultMap;
         console.dir(result);
         console.log('before props');
-        console.dir(this.props.form);
+        console.dir(this.props);
        // let fieldvalues = this.props.form.getFieldsValue();
         
         //console.dir(fieldvalues);

@@ -81,7 +81,7 @@ export default class Tasklist extends Component {
         },
         {
             name: "BDLOAN_AMOUNT_L_A_P",
-            label: "Ammount",
+            label: "Amount",
             options: {
                 filter: false,
             }

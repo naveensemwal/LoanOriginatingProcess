@@ -3,7 +3,7 @@ import "antd/dist/antd.css";
 import Axios from 'axios';
 
 import Personaldetails from '../../../../Compositeviews/Personaldetails/Personaldetails';
-import Familydetails from '../../../../Compositeviews/Familydetails/Familydetails';
+
 import Addressdetails from '../../../../Compositeviews/Addressdetails/Addressdetails';
 import Loandetails from '../../../../Compositeviews/Loandetails/Loandetails';
 import Statementdetails from '../../../../Compositeviews/Statementdetails/Statementdetails';
@@ -53,7 +53,7 @@ export default class DDE extends Component {
         const result = res.data.data.resultMap;
         console.dir(result);
         console.log('before props');
-        console.dir(this.props.form);
+        console.dir(this);
         // let fieldvalues = this.props.form.getFieldsValue();
 
         //console.dir(fieldvalues);
@@ -143,7 +143,7 @@ export default class DDE extends Component {
             <TabPane tab="Customer Details" key="1">
               <Collapse defaultActiveKey={["1"]}>
                 <Panel header="Personal Details" key="1" danger>
-                  <Personaldetails></Personaldetails>
+                  <Personaldetails form={this.props.form}></Personaldetails>
                 </Panel>
                 <Panel header="Identification Details" key="2">
                   <Identificationdetails></Identificationdetails>

@@ -103,10 +103,7 @@ export default class MaxAge extends Component{
                 
                 />
 			 <div class="text-right">
-				<Button type="primary" onClick={this.showModal} disabled>
-					Edit
-				</Button>
-
+				
 			<Modal 
 				title="MODAL"
 				visible={this.state.visible}

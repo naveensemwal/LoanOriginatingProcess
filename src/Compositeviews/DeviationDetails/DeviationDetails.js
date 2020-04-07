@@ -10,14 +10,14 @@ const { Option } = Select;
 const data =[
     {
         key: "1",
-		SystemDeviationDescription: 'DEV FOR WAIVER OF PROCESSING CHARGES',
+		SystemDeviationDescription: 'Dev for waiver of processing charges',
 		DeviationLevel: 'L1',
 		Action: '',
 		
     },
 	{
         key: "2",
-		SystemDeviationDescription: 'Average bank Balance less than proposed Emi',
+		SystemDeviationDescription: 'Average bank balance less than proposed EMI',
 		DeviationLevel: 'L2',
 		Action: '',
 		

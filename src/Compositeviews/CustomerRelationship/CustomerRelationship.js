@@ -5,7 +5,7 @@ const { Text } = Typography;
 
 const columns = [
     {
-        title :'Line Of Business',
+        title :'Line of Business',
         dataIndex:'LineOfBusiness'
     },
     {

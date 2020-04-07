@@ -21,7 +21,6 @@ import Personaldetails from '../../../../Compositeviews/Personaldetails/Personal
 import UWObservation from '../../../../Compositeviews/UWObservation/UWObservation';
 import VerificationDetails from '../../../../Compositeviews/VerficationDetails/VerificationDetails';
 import VerificationList from '../../../../Compositeviews/VerificationList/VerificationList';
-
 const { Panel } = Collapse;
 
 export default class DDE extends Component {
@@ -186,7 +185,7 @@ export default class DDE extends Component {
                 </Collapse>
             </TabPane>
 
-            <TabPane tab="Bank statement Details" key="9">
+            <TabPane tab="Bank Statement Details" key="9">
               {/* <Card> */}
                 <BankStatementDetails></BankStatementDetails>
               {/* </Card> */}
@@ -264,7 +263,7 @@ export default class DDE extends Component {
                         &nbsp;&nbsp;&nbsp;
                         
 					            	<Dropdown overlay={menu}>
-						            	<Button type="primary" htmlType="Submit" shape="round" size={size}>Submit<Icon type="down"/> </Button>
+						            	<Button type="primary" htmlType="Submit" shape="round" size={size}>Submit </Button>
 					            	</Dropdown>
                         &nbsp;&nbsp;&nbsp;
                         <Button type="primary"  shape="round" size={size} onClick={this.raiseInvoiceClicked} >

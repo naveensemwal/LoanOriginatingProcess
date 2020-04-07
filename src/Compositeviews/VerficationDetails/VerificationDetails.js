@@ -132,7 +132,7 @@ const data3 =[
     {
         key :1,
         ApplicantName:'Varghese Mathew',
-        VerificationAgency :'B KAKKAR AND CO',
+        VerificationAgency :'B Kakkar and CO',
         Comment :'Satisfactory',
         Result :'Positive',
         Status :'Completed',
@@ -179,7 +179,7 @@ const data4 =[
   {
       key :1,
       ApplicantName:'Varghese Mathew',
-      VerificationAgency :'PVP FINANCIAL GROUP',
+      VerificationAgency :'PVP Financial Group',
       Comment :'Satisfactory',
       Result :'Positive',
       Status :'Completed',

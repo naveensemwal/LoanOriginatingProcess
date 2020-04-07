@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Timeline, Icon } from 'antd';
+import { Timeline,Icon } from 'antd';
+import { MailOutlined,FilePdfOutlined,ClockCircleOutlined} from '@ant-design/icons';
 
 export default class Casehistory extends Component {
     render() {
@@ -22,8 +23,8 @@ export default class Casehistory extends Component {
             <p>Underwriter moved case back to data entry 22-Jan-2020</p>
             <p>Comments : Applicant's name is different in high school certificate</p>
             </Timeline.Item>
-            <Timeline.Item dot={<Icon type="mail" style={{ fontSize: '16px' }} />} color="green">Mail sent to applicant for discrepancy in name 23-Jan-2020</Timeline.Item>
-            <Timeline.Item dot={<Icon type="file-pdf" style={{ fontSize: '16px' }} />} color="green">Applicant submitted supporting documents for name change 23-Jan-2020</Timeline.Item>
+            <Timeline.Item dot={<MailOutlined style={{ fontSize: '16px' }} />} color="green">Mail sent to applicant for discrepancy in name 23-Jan-2020</Timeline.Item>
+            <Timeline.Item dot={<FilePdfOutlined style={{ fontSize: '16px' }} />} color="green">Applicant submitted supporting documents for name change 23-Jan-2020</Timeline.Item>
             <Timeline.Item color='green'>Case moved to underwriter for further processing 23-Jan-2020</Timeline.Item>
             <Timeline.Item dot={<Icon type="clock-circle-o" style={{ fontSize: '16px' }} />}>Background verification in process </Timeline.Item> */}
           </Timeline>

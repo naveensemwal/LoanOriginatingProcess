@@ -72,7 +72,7 @@ function getStepContent(stepIndex) {
       return (
       <Card>
         <CardHeader className='Cust_Eligibility_form_wizard_group'>
-          <strong>Emi Calculator</strong>
+          <strong>EMI Calculator</strong>
         </CardHeader>
       <CardBody>
       <Loancalculator></Loancalculator>

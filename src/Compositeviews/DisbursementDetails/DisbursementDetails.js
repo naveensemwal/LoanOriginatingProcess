@@ -239,7 +239,7 @@ export default class DisbursementDetails extends React.Component {
             </Form.Item>
           </Col>
           <Col span={8}>
-            <Form.Item label="Final documentation status ">
+            <Form.Item label="Final Documentation Status ">
               <Select hidden="isSingle">
                 <Select.Option value="scheme1">
                   Documentation Complete

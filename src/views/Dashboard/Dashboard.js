@@ -13,7 +13,7 @@ const brandInfo = getStyle('--info');
 
 // Card Chart 1
 const cardChartData1 = {
-  labels: ['Mortgage loan', 'Personal Loan', 'Auto Loan', 'Home Loan'],
+  labels: ['Mortgage Loan', 'Personal Loan', 'Auto Loan', 'Home Loan'],
   datasets: [
     {
       label: 'Pending Cases',
@@ -152,7 +152,7 @@ const cardChartOpts1 = {
 
 // Card Chart 2
 const cardChartData2 = {
-  labels: ['Auto loan', 'Home Loan', 'Personal Loan', 'Mortgage Loan'],
+  labels: ['Auto Loan', 'Home Loan', 'Personal Loan', 'Mortgage Loan'],
   datasets: [
     {
       label: 'Summary',
@@ -584,7 +584,7 @@ componentDidMount() {
                         <small className="text-muted">Apr 20, 2020</small>
                       </td>
                       <td>
-                        <div className="small text-muted">Verification pending</div>
+                        <div className="small text-muted">Verification Pending</div>
                       </td>
                     </tr>
                     <tr>
@@ -637,7 +637,7 @@ componentDidMount() {
           <Col xs="6" sm="4">
           <Card>
             <CardHeader>
-              Aeging
+              Ageing
             </CardHeader>
             <CardBody>
               <div className="chart-wrapper">
