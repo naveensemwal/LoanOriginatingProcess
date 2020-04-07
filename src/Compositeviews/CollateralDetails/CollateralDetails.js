@@ -64,7 +64,7 @@ export default class CollateralDetails extends Component {
                         </Form.Item>
                     </Col>
                     <Col span={8} >
-                        <Form.Item label="Age Of Property :">
+                        <Form.Item label="Age of Property :">
                             <Input defaultValue="15" prefix="₹" suffix="INR" />
                         </Form.Item>
                     </Col>

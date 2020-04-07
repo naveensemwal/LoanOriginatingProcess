@@ -9,6 +9,7 @@ window.React = React;
 
 function UserRow(props) {
   const user = props.user
+  console.log("user"+user);
   const userLink = `/Workflow/${user.workflowName}`
 
   const getBadge = (overDueStatus) => {

@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-import { Upload, Icon, message, Row, Col, Button,Card} from 'antd';
+import { Upload, message, Row, Col, Button,Card} from 'antd';
 
-
-
+import {UploadOutlined ,InboxOutlined} from '@ant-design/icons';
 
 const { Dragger } = Upload;
 
@@ -53,7 +52,7 @@ export default class Statementdetails extends Component {
                     <Card>
                     <Upload {...props2}>
                             <Button>
-                                <Icon type="upload" /> Upload
+                                <UploadOutlined /> Upload
                           </Button>
                          </Upload>
                     </Card>
@@ -62,7 +61,7 @@ export default class Statementdetails extends Component {
                     <Card>
                         <Dragger {...props}>
                             <p className="ant-upload-drag-icon">
-                                <Icon type="inbox" />
+                                <InboxOutlined/>
                             </p>
                             <p className="ant-upload-text">Click or drag file to this area to upload</p>
                             <p className="ant-upload-hint">

@@ -1,7 +1,7 @@
 import React from 'react';
 import { forwardRef } from 'react';
 import MaterialTable from 'material-table';
-import { Popover, Input, Form, Button, ButtonGroup, Icon } from 'antd';
+import { Popover, Input, Form, Button, ButtonGroup } from 'antd';
 import ErrorIcon from '@material-ui/icons/Error';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import ArrowDownward from '@material-ui/icons/ArrowDownward';
@@ -13,7 +13,7 @@ import FirstPage from '@material-ui/icons/FirstPage';
 import LastPage from '@material-ui/icons/LastPage';
 import Search from '@material-ui/icons/Search';
 import Clear from '@material-ui/icons/Clear';
-
+import {MailOutlined} from '@ant-design/icons';
 
 const tableIcons = {
     Check: forwardRef((props, ref) => <Check {...props} ref={ref} />),
@@ -50,7 +50,7 @@ export default function Dcc() {
             </Form.Item>
             <br/>
             <Button type="primary">Notify Customer
-               <Icon type="mail" />
+               <MailOutlined />
             </Button>
         </div>
     );
@@ -71,7 +71,7 @@ export default function Dcc() {
             </Form.Item>
             <br/>
             <Button type="primary">Notify Customer
-               <Icon type="mail" />
+               <MailOutlined />
             </Button>
         </div>
     );
@@ -92,7 +92,7 @@ export default function Dcc() {
             </Form.Item>
             <br/>
             <Button type="primary">Notify Customer
-               <Icon type="mail" />
+               <MailOutlined />
             </Button>
         </div>
     );
@@ -110,7 +110,7 @@ export default function Dcc() {
             </Form.Item>
             <br/>
             <Button type="primary">Notify Customer
-               <Icon type="mail" />
+               <MailOutlined />
             </Button>
         </div>
     );

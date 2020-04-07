@@ -2,11 +2,12 @@ import React, { Component } from 'react';
 import {
     Link
 } from "react-router-dom";
-import { Table, Radio, Divider, Button, Modal,Icon } from 'antd';
+import { Table, Radio, Divider, Button, Modal } from 'antd';
 import "antd/dist/antd.css";
 import BankStatementViewTable  from "../BankStatementViewTable/BankStatementViewTable";
 import Statementanalyzer from '../Statementanalyzer/Statementanalyzer';
 import Statementdetails from '../Statementdetails/Statementdetails';
+import {EyeOutlined,PieChartOutlined,DownloadOutlined} from '@ant-design/icons';
 //import TrialTable from '../TrialTable/TrialTable';
 //import DynamicTable from '../DynamicTable/DynamicTable'
 const CustomModalStyle={
@@ -45,14 +46,14 @@ export default class BankStatmentDetails extends Component {
           dataIndex: 'view',
           // render: text => <Icon type="eye"  onClick={(e) => { this.onView (record.key, e); }} />
           render: (text, record) => (
-            <Icon type="eye" className='ant-btn ant-btn-primary ant-btn-circle ant-btn-icon-only' onClick={(e) => { this.onView (record, e); }} />          
+            <EyeOutlined className='ant-btn ant-btn-primary ant-btn-circle ant-btn-icon-only' onClick={(e) => { this.onView (record, e); }} />          
           ),
         },
         {
           title:'Download',
           dataIndex:'download',
        //  render: <Icon type="download" className='ant-btn ant-btn-primary ant-btn-circle ant-btn-icon-only' onClick={(e) => { this.onView (record, e); }} /> 
-        render: text=><Icon type="download" className='ant-btn ant-btn-primary ant-btn-circle ant-btn-icon-only'/> 
+        render: text=><DownloadOutlined className='ant-btn ant-btn-primary ant-btn-circle ant-btn-icon-only'/> 
         // <Link  to='../../../../public/assets/img/Sample_Doc.pdf'
         // onClick={(event) => { event.preventDefault(); window.open('../../../public/assets/img/Sample_Doc.pdf');}}>Download</Link>
         },
@@ -60,7 +61,7 @@ export default class BankStatmentDetails extends Component {
           title:'Statement Analyzer',
           dataIndex:'statementAnalyzer',
           render: (text, record) => (
-            <Icon type="pie-chart" className='ant-btn ant-btn-primary ant-btn-circle ant-btn-icon-only' onClick={(e) => { this.onViewCStatement (record, e); }} />          
+            <PieChartOutlined className='ant-btn ant-btn-primary ant-btn-circle ant-btn-icon-only' onClick={(e) => { this.onViewCStatement (record, e); }} />          
           ),
         }
       
@@ -68,13 +69,13 @@ export default class BankStatmentDetails extends Component {
       ];
       const data= [{
           "key": "1",
-          "name": "KOTAK MAHINDRA BANK LTD Statement-00897897114",
+          "name": "KOTAK MAHINDRA BANK LTD - 00897897114",
           "view": "View",
           "download": "Download",
           "statementAnalyzer":"StatementAnalyzer"
         }, {
           "key": "2",
-          "name": "KOTAK MAHINDRA BANK LTD Statement-65470157872",
+          "name": "KOTAK MAHINDRA BANK LTD - 65470157872",
           "view": "View",
           "download": "Download",
           "statementAnalyzer":"StatementAnalyzer"

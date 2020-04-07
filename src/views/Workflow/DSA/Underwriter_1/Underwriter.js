@@ -1,8 +1,8 @@
-import { Collapse, Form, Tabs, Card,Button, Menu, Dropdown, Icon,Modal,message } from 'antd';
+import { Collapse, Form, Tabs, Card,Button, Menu, Dropdown,Modal,message } from 'antd';
 import "antd/dist/antd.css";
 import React, { Component } from 'react';
 import Personaldetails from '../../../../Compositeviews/Personaldetails/Personaldetails';
-import Familydetails from '../../../../Compositeviews/Familydetails/Familydetails';
+
 import Addressdetails from '../../../../Compositeviews/Addressdetails/Addressdetails';
 import Loandetails from '../../../../Compositeviews/Loandetails/Loandetails';
 import Statementdetails from '../../../../Compositeviews/Statementdetails/Statementdetails';
@@ -29,6 +29,7 @@ import DeviationDetails from '../../../../Compositeviews/DeviationDetails/Deviat
 // import CollateralDetails from '../../../../Compositeviews/Collateraldetails/CollateralDetails';
 import Axios from 'axios';
 import CollateralDetails from '../../../../Compositeviews/CollateralDetails/CollateralDetails';
+import { DownOutlined }  from '@ant-design/icons';
 const { Panel } = Collapse;
 
 export default class DDE extends Component {
@@ -187,7 +188,7 @@ export default class DDE extends Component {
                 </Collapse>
             </TabPane>
 
-            <TabPane tab="Bank statement Details" key="9">
+            <TabPane tab="Bank Statement Details" key="9">
               {/* <Card> */}
                 <BankStatementDetails></BankStatementDetails>
               {/* </Card> */}
@@ -265,7 +266,7 @@ export default class DDE extends Component {
                         &nbsp;&nbsp;&nbsp;
                         
 					            	<Dropdown overlay={menu}>
-						            	<Button type="primary" htmlType="Submit" shape="round" size={size}>Submit<Icon type="down"/> </Button>
+						            	<Button type="primary" htmlType="Submit" shape="round" size={size}>Submit<DownOutlined /> </Button>
 					            	</Dropdown>
                         &nbsp;&nbsp;&nbsp;
                         <Button type="primary" htmlType="GenerateSanction" shape="round" size={size}>

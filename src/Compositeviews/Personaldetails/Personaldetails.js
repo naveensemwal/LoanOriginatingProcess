@@ -57,7 +57,7 @@ export default class Personaldetails extends Component {
                 <Row gutter={[8, 8]}>
                     <Col span={8} >
                         <Form.Item name="age" label='Age :' rules={[{ required: true }]} >
-                            <InputNumber defaultValue="45" style={{ width: '100%' }}  />
+                            <Input defaultValue="45" style={{ width: '100%' }}  />
                         </Form.Item>
                     </Col>
                     <Col span={8} >

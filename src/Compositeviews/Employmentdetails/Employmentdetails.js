@@ -80,7 +80,7 @@ export default class Employmentdetails extends Component {
 				 <Row gutter={[8, 8]}>
                  {!this.state.CheckVis ?(
                    <Col span={8} >
-                        <Form.Item label="Declared Net Monthly income :">
+                        <Form.Item label="Declared Net Monthly Income :">
                             <Input defaultValue="50000" prefix="₹" suffix="INR" />
                         </Form.Item>
                     </Col>):

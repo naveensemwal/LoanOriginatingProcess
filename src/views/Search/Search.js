@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import { Form, Row, Col, Input, Button, Icon } from 'antd';
+import { Form, Row, Col, Input, Button } from 'antd';
 import 'antd/dist/antd.css'
 import './Search.css';
-
+import {UpOutlined , DownOutlined} from '@ant-design/icons'
 
 export default class Search extends Component {
     state = {
@@ -68,7 +68,7 @@ export default class Search extends Component {
                                 Clear
                 </Button>
                             <a style={{ marginLeft: 8, fontSize: 12 }} onClick={this.toggle}>
-                                Collapse <Icon type={this.state.expand ? 'up' : 'down'} />
+                                Collapse {this.state.expand ? (<UpOutlined />) : (<DownOutlined />)} 
                             </a>
                         </Col>
                     </Row>

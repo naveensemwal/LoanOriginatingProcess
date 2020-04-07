@@ -238,7 +238,7 @@ export default class DisbursementDetails extends React.Component {
             </Form.Item>
           </Col>
           <Col span={8}>
-            <Form.Item label="Final documentation status ">
+            <Form.Item label="Final Documentation Status ">
               <Select hidden="isSingle">
                 <Select.Option value="scheme1">
                   Documentation Complete
@@ -266,21 +266,15 @@ export default class DisbursementDetails extends React.Component {
                 <Input suffix="%" />
               </Form.Item>
             ) : (
-              ""
+              <Form.Item label="Expected Disbursement Date ">
+              <DatePicker
+                onchange={onChange}
+                style={{ width: "100%" }}
+              ></DatePicker>
+            </Form.Item>
             )}
           </Col>
-          {!this.state.isSingle ? (
-            <Col span={8}>
-              <Form.Item label="Expected disbursement date ">
-                <DatePicker
-                  onchange={onChange}
-                  style={{ width: "100%" }}
-                ></DatePicker>
-              </Form.Item>
-            </Col>
-          ) : (
-            ""
-          )}
+         
           <Col span={8}>
             <div className="multiple_date_field">
               {this.state.isSingle ? (

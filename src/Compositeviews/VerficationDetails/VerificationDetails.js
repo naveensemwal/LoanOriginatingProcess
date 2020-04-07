@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Table, Typography,Icon } from 'antd';
+import { Table, Typography } from 'antd';
+import {EyeOutlined} from '@ant-design/icons';
 const { Text } = Typography;
 
 
@@ -28,7 +29,7 @@ const columns1 = [
         title: 'View',
         dataIndex: 'View',
 		render: (text, record) => (
-          <Icon type="eye" />          
+          <EyeOutlined />          
         ),
       },
 
@@ -75,7 +76,7 @@ const columns2 = [
         title: 'View',
         dataIndex: 'View',
         render: (text, record) => (
-          <Icon type="eye" />          
+          <EyeOutlined />          
         ),
       },
 
@@ -121,7 +122,7 @@ const columns3 = [
         title: 'View',
         dataIndex: 'View',
         render: (text, record) => (
-          <Icon type="eye" />          
+          <EyeOutlined />          
         ),
       },
 
@@ -132,7 +133,7 @@ const data3 =[
     {
         key :1,
         ApplicantName:'Varghese Mathew',
-        VerificationAgency :'B KAKKAR AND CO',
+        VerificationAgency :'B Kakkar and CO',
         Comment :'Satisfactory',
         Result :'Positive',
         Status :'Completed',
@@ -166,7 +167,7 @@ const columns4 = [
       title: 'View',
       dataIndex: 'View',
   render: (text, record) => (
-        <Icon type="eye" />          
+        <EyeOutlined />          
       ),
     },
 
@@ -179,7 +180,7 @@ const data4 =[
   {
       key :1,
       ApplicantName:'Varghese Mathew',
-      VerificationAgency :'PVP FINANCIAL GROUP',
+      VerificationAgency :'PVP Financial Group',
       Comment :'Satisfactory',
       Result :'Positive',
       Status :'Completed',

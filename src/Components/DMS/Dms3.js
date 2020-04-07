@@ -96,7 +96,7 @@ export default class Dms extends Component {
                     </td>
                   </tr>
 				  <tr className="tblTrDesign">
-                    <td>Last 6 month statement</td>
+                    <td>Last 6 Month Statement</td>
                     <td>Statement.pdf</td>
                     <td>02-04-2020</td>
                     <td>
@@ -111,7 +111,7 @@ export default class Dms extends Component {
                   </tr>
 				  
 				  <tr className="tblTrDesign">
-                    <td>Copy of original sale deed</td>
+                    <td>Copy of Original Sale Deed</td>
                     <td>Saledeed.pdf</td>
                     <td>02-04-2020</td>
                     <td>
