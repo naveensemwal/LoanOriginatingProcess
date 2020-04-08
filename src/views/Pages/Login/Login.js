@@ -6,16 +6,34 @@ import bg_img from '../../../assets/img/brand/bg_img.png';
 import bg_img_two from '../../../assets/img/brand/bg_img_two.png';
 import bg_img_three from '../../../assets/img/brand/bg-01.jpg';
 import bg_img_four from '../../../assets/img/brand/log_2.jpg';
+
+
+
 class Login extends Component {
   onSubmit = () => {
     console.log('hello');
+    console.log(this.props);
     this.props.history.push("/"); 
 }
 
+constructor(){
+    super();
+    this.state={
+      userName:'',
 
+    }
+
+}
+
+handle(event){
+ console.log("user name "+event.target.value);
+ this.setState({userName:event.target.value});
+ console.log(`user name1 ${this.state.userName}`); 
+}
 
 
   render() {
+   
     return (
       // style={{backgroundImage: `url(${logo})`
       <div className="login_bg app flex-row align-items-center" style={{background:`url(${bg_img_four})`}}>
@@ -29,7 +47,7 @@ class Login extends Component {
                     <AppNavbarBrand full={{ src: logo, width: 250, height: 50, alt: 'Smart Portal Logo' }}/>
                     <br/>
                         <br/>
-                        
+                       
                       <InputGroup className="mb-3">
                         <InputGroupAddon addonType="prepend">
                           <InputGroupText>
@@ -37,8 +55,10 @@ class Login extends Component {
                           </InputGroupText>
                         </InputGroupAddon>
                         
-                        <Input type="text" placeholder="Username" autoComplete="username" />
+                       <Input type="text" placeholder="Username" autoComplete="username" onChange={this.handle.bind(this)}  />
                       </InputGroup>
+                      
+                      
                       <InputGroup className="mb-4">
                         <InputGroupAddon addonType="prepend">
                           <InputGroupText>

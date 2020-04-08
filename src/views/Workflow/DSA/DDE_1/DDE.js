@@ -24,7 +24,7 @@ import Identificationdetails from '../../../../Compositeviews/Identificationdeta
 import VerificationList from '../../../../Compositeviews/VerificationList/VerificationList';
 import DisbursementDetails from '../../../../Compositeviews/DisbursementDetails/DisbursementDetails';
 import DedupeResult from '../../../../Compositeviews/DedupeResult/DedupeResult';
-import CollateralDetails from '../../../../Compositeviews/Collateraldetails/Collateraldetails';
+import CollateralDetails from '../../../../Compositeviews/CollateralDetails/CollateralDetails';
 import Riskprofile from '../../../../Components/Risk Profile/Riskprofile';
 
 const { Panel } = Collapse;

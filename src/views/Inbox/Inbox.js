@@ -5,13 +5,14 @@ import Tasklists from '../../Components/Tasklist/Tasklists';
 import usersData from './UsersData';
 import Widget04 from './Widget04';
 
+
 window.React = React;
 
 function UserRow(props) {
   const user = props.user
-  console.log("user"+user);
+ 
   const userLink = `/Workflow/${user.workflowName}`
-
+  console.log("user "+userLink);
   const getBadge = (overDueStatus) => {
     return overDueStatus === 'Active' ? 'success' :
     overDueStatus === 'Inactive' ? 'secondary' :
@@ -92,7 +93,7 @@ const ModalExample = (props) => {
       }))
     },2000);
   }
-
+ 
   return (
 
     <div>
@@ -156,12 +157,12 @@ const ModalExample = (props) => {
 }
 
 class Inbox extends React.Component {
+  
 
   render() {
-
   
     const userList = usersData;
-
+   
     return (
       <div className="animated fadeIn">
         <ModalExample
@@ -176,7 +177,11 @@ class Inbox extends React.Component {
         <Col xs="12" sm="6" lg="3"><Widget04 icon="icon-pie-chart" color="primary" header="28%" value="25">OverDue(%)</Widget04></Col>
         <Col xs="12" sm="6" lg="3"><Widget04 icon="icon-speedometer" color="danger" header="18" value="25">OverDue</Widget04></Col>
         </Row>
-        <Tasklists></Tasklists>
+        
+            <Tasklists  ></Tasklists>
+         
+        
+        
       </div>
     )
   }
