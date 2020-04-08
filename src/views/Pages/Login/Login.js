@@ -6,15 +6,9 @@ import bg_img from '../../../assets/img/brand/bg_img.png';
 import bg_img_two from '../../../assets/img/brand/bg_img_two.png';
 import bg_img_three from '../../../assets/img/brand/bg-01.jpg';
 import bg_img_four from '../../../assets/img/brand/log_2.jpg';
-
-
+import UserContext from '../../../UserContext';
 
 class Login extends Component {
-  onSubmit = () => {
-    console.log('hello');
-    console.log(this.props);
-    this.props.history.push("/"); 
-}
 
 constructor(){
     super();
@@ -23,18 +17,18 @@ constructor(){
 
     }
 
-}
+static contextType = UserContext;
 
-handle(event){
- console.log("user name "+event.target.value);
- this.setState({userName:event.target.value});
- console.log(`user name1 ${this.state.userName}`); 
+onSubmit = () => {
+  const { user, setUser } = this.context;
+  const newUser = { name: 'Joe', loggedIn: true };
+  setUser(newUser);
+  this.props.history.push("/"); 
 }
 
 
   render() {
-   
-    return (
+     return (
       // style={{backgroundImage: `url(${logo})`
       <div className="login_bg app flex-row align-items-center" style={{background:`url(${bg_img_four})`}}>
         <Container>
