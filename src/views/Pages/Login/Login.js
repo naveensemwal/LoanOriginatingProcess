@@ -6,17 +6,23 @@ import bg_img from '../../../assets/img/brand/bg_img.png';
 import bg_img_two from '../../../assets/img/brand/bg_img_two.png';
 import bg_img_three from '../../../assets/img/brand/bg-01.jpg';
 import bg_img_four from '../../../assets/img/brand/log_2.jpg';
+import UserContext from '../../../UserContext';
+
 class Login extends Component {
-  onSubmit = () => {
-    console.log('hello');
-    this.props.history.push("/"); 
+
+
+static contextType = UserContext;
+
+onSubmit = () => {
+  const { user, setUser } = this.context;
+  const newUser = { name: 'Joe', loggedIn: true };
+  setUser(newUser);
+  this.props.history.push("/"); 
 }
 
 
-
-
   render() {
-    return (
+     return (
       // style={{backgroundImage: `url(${logo})`
       <div className="login_bg app flex-row align-items-center" style={{background:`url(${bg_img_four})`}}>
         <Container>

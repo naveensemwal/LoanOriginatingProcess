@@ -2,8 +2,20 @@ import React, { Component } from 'react';
 import { Tabs } from 'antd';
 import "antd/dist/antd.css";
 import Tasklist from './Tasklist';
+import UserContext from '../../UserContext';
 
 export default class Tasklists extends Component {
+
+  static contextType = UserContext
+
+  componentDidMount() {
+    const user = this.context;
+
+    console.log(user) ;
+  }
+
+  
+
   render() {
     const { TabPane } = Tabs;
     return (

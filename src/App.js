@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { HashRouter, Route, Switch } from 'react-router-dom';
-// import { renderRoutes } from 'react-router-config';
+import { UserProvider } from './UserContext'
 import './App.scss';
 // import './styles/wieldy.less';
 
@@ -16,11 +16,13 @@ const Register = React.lazy(() => import('./views/Pages/Register'));
 // const Complaint = React.lazy(() => import('./views/Pages/Complaint'));
 const Page404 = React.lazy(() => import('./views/Pages/Page404'));
 const Page500 = React.lazy(() => import('./views/Pages/Page500'));
+const user = { name: 'Tania', loggedIn: true }
 
 class App extends Component {
 
   render() {
     return (
+      <UserProvider value={user}>
       <HashRouter>
           <React.Suspense fallback={loading()}>
             <Switch>
@@ -34,6 +36,7 @@ class App extends Component {
             </Switch>
           </React.Suspense>
       </HashRouter>
+      </UserProvider>
     );
   }
 }
