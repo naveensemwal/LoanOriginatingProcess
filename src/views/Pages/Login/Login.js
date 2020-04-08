@@ -7,21 +7,36 @@ import bg_img_two from '../../../assets/img/brand/bg_img_two.png';
 import bg_img_three from '../../../assets/img/brand/bg-01.jpg';
 import bg_img_four from '../../../assets/img/brand/log_2.jpg';
 import UserContext from '../../../UserContext';
-
+import Inbox from '../../Inbox/Inbox';
 class Login extends Component {
 
-constructor(){
-    super();
-    this.state={
-      userName:'',
-
-    }
-
+  
 static contextType = UserContext;
+
+constructor(){
+  super();
+  this.state={
+    userName:'',
+
+  }
+  
+  
+}
+
+handleChange(event) {
+  this.setState({
+    
+    userName : event.target.value
+  })
+    
+console.log("username "+this.state.userName);
+}
+
 
 onSubmit = () => {
   const { user, setUser } = this.context;
-  const newUser = { name: 'Joe', loggedIn: true };
+  
+  const newUser = { name: this.state.userName, loggedIn: true };
   setUser(newUser);
   this.props.history.push("/"); 
 }
@@ -49,7 +64,7 @@ onSubmit = () => {
                           </InputGroupText>
                         </InputGroupAddon>
                         
-                       <Input type="text" placeholder="Username" autoComplete="username" onChange={this.handle.bind(this)}  />
+                       <Input type="text" placeholder="Username" autoComplete="username" onChange={ this.handleChange.bind(this)} name="userValue" />
                       </InputGroup>
                       
                       

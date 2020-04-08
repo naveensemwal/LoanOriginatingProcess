@@ -21,7 +21,7 @@ export default class Tasklist extends Component {
     // get data
     getData = () => {
         this.setState({ isLoading: true });
-        Axios.get(`/rest/bpm/wle/v1/tasks?savedSearch=My_Task_List&interaction=claimed_and_available&searchFilter=Sales&filterByCurrentUser=false&calcStats=false`, {
+        Axios.get(`/rest/bpm/wle/v1/tasks?savedSearch=My_Task_List&interaction=claimed_and_available&searchFilter=Data+Entry&filterByCurrentUser=false&calcStats=false`, {
             auth: {
                 username: 'p8admin',
                 password: 'Password123'
