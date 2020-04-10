@@ -25,28 +25,28 @@ const data = [
     key: '1',
     DocumentType: 'Application Form',
     
-    Rule:'100% insurance mandatory if no coapplicants/guarantor in the application',
+    Rule:'100% Insurance mandatory if no coapplicants/guarantor in the application',
     
     },
     {
     key: '2',
     DocumentType: 'Income Documents',
     
-    Rule:'If declared income not consistent with last 3 salary slips,latest salary certificate is mandatory',
+    Rule:'If declared Income not consistent with last 3 Salary Slips,Latest Salary Certificate is mandatory',
     
     },
 	{
     key: '3',
     DocumentType: 'Bank Documents',
     
-    Rule:'Last 6 months bank-statements of Salary account mandatory for salaried customers',
+    Rule:'Last 6 months bank-statements of Salary account mandatory for Salaried Customers',
     
     },
 	{
     key: '4',
     DocumentType: 'Application Form',
     
-    Rule:'At-least one applicant should be Salaried/Self-Employed',
+    Rule:'At-least One applicant should be Salaried/Self-Employed',
     
     },
     

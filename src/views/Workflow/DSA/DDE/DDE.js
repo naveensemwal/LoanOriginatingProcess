@@ -210,7 +210,7 @@ componentDidMount() {
 
             <TabPane tab="Cross Selling Recommendation" key="11">
               <Collapse defaultActiveKey={["1"]}>
-                <Panel header="Customer Realtionship" key="1">
+                <Panel header=" Cross Selling Recommendation" key="1">
                   {/* <Card> */}
                   <CrossSellingRecommendation></CrossSellingRecommendation>
                   {/* </Card> */}

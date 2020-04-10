@@ -25,7 +25,7 @@ const data = [
     key: '1',
     DocumentCategory: 'Application Form',
     
-    DocumentName:'Signed Application form',
+    DocumentName:'Signed Application Form',
     
     },
     {
@@ -46,21 +46,21 @@ const data = [
     key: '4',
     DocumentCategory: 'Income Documents',
     
-    DocumentName:'3 salary slips/salary certificate/Latest form 16',
+    DocumentName:'3 Salary Slips/Salary Certificate/Latest Form 16',
     
     },
     {
     key: '5',
-    DocumentCategory: 'banking Documents',
+    DocumentCategory: 'Banking Documents',
     
-    DocumentName:'Latest 6 months bank statement',
+    DocumentName:'Latest 6 Months Bank Statement',
     
     },
     {
     key: '6',
     DocumentCategory: 'Property Documents',
     
-    DocumentName:'Copy of original sale deed/Allotment-possession letter/NOC from Society',
+    DocumentName:'Copy of Original Sale Deed/Allotment-Possession Letter/NOC from Society',
     
     },
     

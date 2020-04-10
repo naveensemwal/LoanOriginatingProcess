@@ -4,7 +4,7 @@ import React, { Component } from 'react';
 import Customerprofile from './Customerprofile';
 import { Badge } from '@material-ui/core';
 import {CheckOutlined,CloseOutlined} from '@ant-design/icons';
-
+import CustomerRelationship from '../../Compositeviews/CustomerRelationship/CustomerRelationship';
 const tabList = [
   {
     key: 'customerProfile',
@@ -14,6 +14,11 @@ const tabList = [
     key: 'customerDocuments',
     tab: 'Customer Documents',
   },
+  {
+    key: 'Customerrelationship',
+    tab: 'Customer Relationship',
+  },
+
 ];
 
 const data = [
@@ -75,8 +80,10 @@ const contentList = {
       defaultChecked
     />
     </List.Item>
+    
   )}
 />,
+  Customerrelationship :<CustomerRelationship></CustomerRelationship>,
 };
 
 

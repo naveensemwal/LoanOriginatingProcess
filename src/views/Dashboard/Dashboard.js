@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import { Bar, Doughnut, Line, Pie, Polar } from 'react-chartjs-2';
 import { ButtonDropdown, ButtonGroup, Card, CardBody, CardHeader, Col, Dropdown, DropdownItem, DropdownMenu, DropdownToggle, Progress, Row, Table } from 'reactstrap';
 
-
+import UserContext from '../../UserContext';
 
 
 const brandPrimary = getStyle('--primary');
@@ -307,6 +307,8 @@ for (var i = 0; i <= elements; i++) {
 
 
 class Dashboard extends Component {
+	static contextType = UserContext;
+	
   constructor(props) {
     super(props);
 
@@ -317,6 +319,7 @@ class Dashboard extends Component {
       dropdownOpen: false,
       radioSelected: 2,
       taskList:[],
+	  userN:'',
     };
   }
 
@@ -337,6 +340,12 @@ class Dashboard extends Component {
 //Get task list 
 
 componentDidMount() {
+	const user = this.context;
+
+    console.log(JSON.stringify(user)) ;
+    console.log(user);
+    console.log(user.user.name);
+    this.setData(user.user.name);
   Axios.get(`/rest/bpm/wle/v1/tasks?savedSearch=My_Task_List&interaction=claimed_and_available&filterByCurrentUser=false&calcStats=false`, {
     // Axios looks for the `auth` option, and, if it is set, formats a
     // basic auth header for you automatically.
@@ -351,7 +360,14 @@ componentDidMount() {
     })
 }
 
+setData = (e) =>{
 
+    this.setState({
+      userN : e,
+    })
+    console.log("value of user state2 "+this.state.userN); 
+  }
+  
 
 
 
@@ -457,17 +473,17 @@ componentDidMount() {
           </Col>
         </Row>
 
-        <Row>
+        {this.state.userN == 'Sales_1'?(<Row>
         <Col >
             <Card>
               <CardHeader>
-                My Requests
+                My Logged In Cases
               </CardHeader>
               <CardBody>
                 <Table hover responsive className="table-outline mb-0 d-none d-sm-table">
                   <thead className="thead-light">
                     <tr>
-                      <th>Performer</th>
+                      <th>Last Actioned By</th>
                       <th className="text-center">Product</th>
                       <th>Progress</th>
                       <th className="text-center">Due Date</th>
@@ -620,7 +636,11 @@ componentDidMount() {
               </CardBody>
             </Card>
           </Col>
-        </Row>
+        </Row>):(
+		<Row>
+		</Row>
+		
+		)}
         <Row>
           <Col xs="6" sm="4">
             <Card>

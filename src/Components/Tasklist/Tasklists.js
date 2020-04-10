@@ -58,7 +58,7 @@ export default class Tasklists extends Component {
                  <TabPane tab="Returned Tasks" key="3">
                  <Tasklist></Tasklist>
                  </TabPane>
-                 <TabPane tab="Relook Tasks" key="4">
+                 <TabPane tab="Re-look Tasks" key="4">
                  <Tasklist></Tasklist>
                  </TabPane>
                </Tabs>

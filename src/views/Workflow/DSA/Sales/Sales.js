@@ -12,7 +12,10 @@ import Employmentdetails from '../../../../views/Employmentdetails/Employmentdet
 import ReactSpeedometer from "react-d3-speedometer";
 import Loancalculator from "../../../../views/Utilities/Loancalculator/Loancalculator";
 import Axios from 'axios';
-import {message,Form} from 'antd';
+import {message,Form,List, Avatar,Tooltip} from 'antd';
+import { CheckOutlined,CreditCardOutlined,InsuranceOutlined,CaretRightFilled } from '@ant-design/icons';
+import CrossSellingRecommendation from '../../../../Compositeviews/CrossSellingRecommendation/CrossSellingRecommendation';
+
 
 const styles = theme => ({
   root: {
@@ -85,6 +88,26 @@ function getStepContent(stepIndex) {
       return 'Unknown stepIndex';
   }
 }
+
+const data = [
+  
+  {
+    title: 'Customer Category : Salaried',
+  },
+  {
+    title: 'CIBIL Score >700',
+    
+  },
+  {
+    title: 'Monthly Income >50K',
+   
+  },
+  {
+    title: 'Employer Category : CAT SA',
+  }
+  
+];
+
 
 class Eligibility extends React.Component {
 
@@ -159,26 +182,60 @@ class Eligibility extends React.Component {
         </Stepper>
         <div>
           {this.state.activeStep === steps.length ? (
-            <Card><CardBody>
-            <div className='errorGroups'>
-            <center>
-            <i className="fa fa-check-circle fa-5x font100Px greenClr" aria-hidden="true"></i>
-          </center>
-          <center><Label className="font24Px label">Thank You!!!</Label></center>
-          <center><Label className="font16Px label">Customer Tier : Gold</Label></center>
+          <Card><CardBody>
+          <Row>
+			<Col xs="12" sm="6" lg="6">
+          <center><h4>Application Approved-Customer Tier : Gold</h4></center>
+      <div className='errorGroups'>
+       
+        <List
+          itemLayout="horizontal"
+          dataSource={data}
+          renderItem={item => (
+          <List.Item >
+          <List.Item.Meta
+            avatar={<Avatar style={{ backgroundColor: '#87d068' }} icon={<CheckOutlined className="icon_ash"/>} />}
+            title={item.title}
+          
+          />
+          </List.Item>
+            )}
+        />
+       
+         
+               </div>
+              </Col> 
+              <Col xs="12" sm="6" lg="6">
+              <div>
+              <center> <h4>Cross Selling Recommendations</h4></center>
+              <br/>
+                <center>
+
+              <Card style={{ width: 500 }}>
+                <div><br/>
+             <center><Avatar size={64}  style={{ backgroundColor: '#0000FF' }}
+               icon={<center><CreditCardOutlined className="icon_ash"/></center>}/></center>
+               <center><h4><Tooltip  placement="topRight" title="Eligible as per net annual salary">VISA Signature Credit Card</Tooltip></h4></center>
+               <center><p>Earn 2 PAYBACK points on every ₹ 100 spent, Waiver of 2.5% fuel surcharge on fuel purchases, Complimentary airport lounge access</p></center>  
+              </div>
+             </Card>,
+            <Card style={{ width: 500 }}>
+              <div><br/>
+            <center><Avatar size={64}  style={{ backgroundColor: '#0000FF' }}
+              icon={<InsuranceOutlined className="icon_ash"/>}/></center>
+            <center><h4><Tooltip  placement="topRight" title="Eligible as per monthly EMI 60% of monthly salary">Loan Protect Plan</Tooltip>	</h4></center>
+            <center><p>Life insurance coverage, Assistance to repay a variety of loans, Coverage for co-borrowers</p></center>  
           </div>
-          <center><Form.Item>
-         
+          </Card></center></div>
+          		</Col>  
+          </Row>
+          <div className='pull-right'><Button type="primary" variant="contained" color="primary" htmlType="submit">
+           Submit
+         </Button></div>
+        </CardBody></Card>
+           
         
-        
-                  
-          <Button type="primary" variant="contained" color="primary" htmlType="submit">
-            Submit
-          </Button>
-         
-        </Form.Item></center>
-              </CardBody></Card>
- 
+		  
           ) : (
               <div style={{padding: "0px 0px 5px 0px "}}>
                 <Typography className={classes.instructions}>{getStepContent(activeStep)}</Typography>
