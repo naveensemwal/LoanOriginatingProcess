@@ -46,14 +46,14 @@ const data = [
     key: '4',
     DocumentCategory: 'Income Documents',
     
-    DocumentName:'3 salary slips/salary certificate/Latest form 16',
+    DocumentName:'3 Salary Slips/Salary Certificate/Latest Form 16',
     
     },
     {
     key: '5',
     DocumentCategory: 'banking Documents',
     
-    DocumentName:'Latest 6 months bank statement',
+    DocumentName:'Latest 6 Months Bank Statement',
     
     },
     

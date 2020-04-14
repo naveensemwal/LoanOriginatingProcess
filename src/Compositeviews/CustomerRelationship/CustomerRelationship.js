@@ -1,86 +1,49 @@
 import React, { Component } from 'react';
-import { Table, Typography } from 'antd';
-const { Text } = Typography;
-
-
-const columns = [
-    {
-        title :'Line of Business',
-        dataIndex:'LineOfBusiness'
-    },
-    {
-        title: 'Account Type',
-        dataIndex: 'AccountType',
-      },
-      {
-        title: 'Account Name',
-        dataIndex: 'AccountName',
-      },
-      {
-        title: 'Active Since',
-        dataIndex: 'ActiveSince',
-      },
-      {
-        title: 'Customer Category',
-        dataIndex: 'CustomerCategory',
-      },
+import ReactDOM from 'react-dom';
+import { List, Avatar,Tooltip } from 'antd';
+import { CheckOutlined,MoreOutlined,CaretRightFilled,InsuranceOutlined,LockOutlined,DollarOutlined } from '@ant-design/icons';
+const data = [
+  {
+    title: 'Saving Account',
+    description :'Active since Jan 2016',
+    accName:'Account Name : Insta Saving Account',
+    view: ( <DollarOutlined className="icon_ash"/>),
+  },
+  {
+    title: 'Fixed Deposit Account',
+    description :'Active since Jun 2018',
+    accName:'Account Name :Fixed Tenor Premium FD Account',
+    view: (<LockOutlined className="icon_ash"/>),
+  },
+  {
+    title: 'Term Insurance',
+    description :'Active since Aug 2012',
+    accName:'Account Name : iProtect Smart',
+    view: (<InsuranceOutlined className="icon_ash"/>),
+  },
+  
 ];
-
-const data =[
-    {
-        key :1,
-        LineOfBusiness:'Retail CASA',
-        AccountType:'Savings Account',
-        AccountName :'Insta Saving Account',
-        ActiveSince :'Jan 2016',
-        CustomerCategory :'Bronze'
-    },
-    {
-        key :2,
-        LineOfBusiness:'Retail Deposits',
-        AccountType:'Fixed Deposit Account',
-        AccountName :'Fixed Tenor Premium FD Account',
-        ActiveSince :'Jun 2018',
-        CustomerCategory :'Premium'
-    },
-    {
-        key :3,
-        LineOfBusiness:'Insurance',
-        AccountType:'Term Insurance',
-        AccountName :'iProtect Smart',
-        ActiveSince :'Aug 2012',
-        CustomerCategory :'Premium'
-    },
-    
-    
-]
-
-
 export default class CustomerRelationship extends Component{
-    constructor(props){
-        super(props);
-    
-        // this.state={
-        //     showTable:false
-        // }
+
+render(){
+ return(	
+  <div>
+  <h4>Customer Relationship</h4>
+  <List
+    itemLayout="horizontal"
+    dataSource={data}
+    renderItem={item => (
+      <List.Item actions={[<Tooltip  placement="topRight" title={item.accName}><MoreOutlined /></Tooltip>]}>
+        <List.Item.Meta
+          avatar={<Avatar style={{ backgroundColor: '#1890ff' }} icon={item.view} />}
+          title={item.title}
+          description={item.description}
+        />
+      </List.Item>
+    )}
+  />
+  </div>
+	)
+  
     }
-    render(){
-        return(
-            <div>
-                <Table className='table table-striped table-hover table-bordered'
-                    columns={columns} dataSource={data}
-                
-                />
-
-            </div>
-
-
-
-        )
-
-
-
-    }
-
-
 }

@@ -30,7 +30,7 @@ const data = [
     
 	{
     key: '2',
-    Rule:'If Paymenthistory1>=30 DPD in last 3 months',
+    Rule:'If Payment history 1 >=30 DPD in last 3 months',
     Action: 'reject',
     },
 	{

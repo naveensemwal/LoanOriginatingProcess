@@ -21,7 +21,7 @@ const config = {
       ],
     },
     Segment: {
-      label: 'CustomerSegment',
+      label: 'Customer Segment',
       type: 'select',
       valueSources: ['value'],
       listValues: [
@@ -35,11 +35,11 @@ const config = {
       type: 'select',
       valueSources: ['value'],
       listValues: [
-        { value: 'SalariedCatSA', title: 'Salaried Cat SA'},
-        { value: 'SalariedCatA', title: 'Salaried Cat A' },
-        { value: 'SalariedCatB', title: 'Salaried Cat B' },
-		{ value: 'SalariedCatC', title: 'Salaried Cat C' },
-		{ value: 'SalariedCatD', title: 'Salaried Cat D' },
+        { value: 'SalariedCatSA', title: 'Salaried CAT SA'},
+        { value: 'SalariedCatA', title: 'Salaried CAT A' },
+        { value: 'SalariedCatB', title: 'Salaried CAT B' },
+		{ value: 'SalariedCatC', title: 'Salaried CAT C' },
+		{ value: 'SalariedCatD', title: 'Salaried CAT D' },
      ],
     },
 	

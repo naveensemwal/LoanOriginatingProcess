@@ -9,7 +9,7 @@ const data = [
     {
     key: '1',
     CustomerCategory: 'Premium',
-    CustomerSeg: 'Salaried-Cat SA/A/B',
+    CustomerSeg: 'Salaried-CAT SA/A/B',
     LoanAmt: '< 1Cr',
     EmailId: 'Yes',
     Residence: 'Y',
@@ -23,7 +23,7 @@ const data = [
 	{
     key: '2',
     CustomerCategory: 'Premium',
-    CustomerSeg: 'Salaried-Cat SA/A/B',
+    CustomerSeg: 'Salaried-CAT SA/A/B',
     LoanAmt: '< 1Cr',
     EmailId: 'No',
     Residence: 'Y',
@@ -36,7 +36,7 @@ const data = [
 	{
     key: '3',
     CustomerCategory: 'Premium',
-    CustomerSeg: 'Salaried-Cat SA/A/B',
+    CustomerSeg: 'Salaried-CAT SA/A/B',
     LoanAmt: '> 1Cr',
     EmailId: 'Yes/No',
     Residence: 'Y',
@@ -50,7 +50,7 @@ const data = [
 	{
     key: '4',
     CustomerCategory: 'Normal',
-    CustomerSeg: 'Salaried-Cat SA/A/B',
+    CustomerSeg: 'Salaried-CAT SA/A/B',
     LoanAmt: '< 1Cr',
     EmailId: 'Yes/No',
     Residence: 'Y',
@@ -64,7 +64,7 @@ const data = [
 	{
     key: '5',
     CustomerCategory: 'Normal',
-    CustomerSeg: 'Salaried-Cat C/D',
+    CustomerSeg: 'Salaried-CAT C/D',
     LoanAmt: '< 1Cr',
     EmailId: 'Yes/No',
     Residence: 'Y',

@@ -57,28 +57,28 @@ const data = [
 
 	{
     key: '6',
-    Deviation: 'Deviation for <51 per stake holder taken as coapplicant',
+    Deviation: 'Deviation for <51 per Stake Holder taken as Coapplicant',
 	ApprovalLevel:'L4',
 	
     },
 
 	{
     key: '7',
-    Deviation: 'Dev for waiver of processing charges',
+    Deviation: 'Dev for waiver of Processing Charges',
 	ApprovalLevel:'L1',
 	
     },
 
 	{
     key: '8',
-    Deviation: 'Property outside geo limits',
+    Deviation: 'Property outside Geo limits',
 	ApprovalLevel:'L4',
 	
     },
 
 	{
     key: '9',
-    Deviation: 'Average bank Balance less than proposed Emi',
+    Deviation: 'Average Bank Balance less than Proposed EMI',
 	ApprovalLevel:'L2',
 	
     },
@@ -99,7 +99,7 @@ const data = [
 
 	{
     key: '12',
-    Deviation: '1 to 30 DpD in any of the Open tradeLine',
+    Deviation: '1 to 30 DpD in any of the Open TradeLine',
 	ApprovalLevel:'L1',
 	
     },
@@ -113,7 +113,7 @@ const data = [
 
 	{
     key: '14',
-    Deviation: 'Minimum norms for debit/credit entries not met',
+    Deviation: 'Minimum Norms for debit/credit entries not met',
 	ApprovalLevel:'L2',
 	
     },
@@ -127,7 +127,7 @@ const data = [
 
 	{
     key: '16',
-    Deviation: 'More than equals to 5 unsecured live loans',
+    Deviation: 'More than equals to 5 unsecured Live Loans',
 	ApprovalLevel:'L3',
 	
     },
@@ -148,7 +148,7 @@ const data = [
 
 	{
     key: '19',
-    Deviation: 'Greater than 5 Enquiries on bureau in the last 3 months for any unsecured loan for Applicant/Guarantor/Director/Partner cc',
+    Deviation: 'Greater than 5 enquiries on Bureau in the last 3 months for any Unsecured Loan for Applicant/Guarantor/Director/Partner cc',
 	ApprovalLevel:'L2',
 	
     },

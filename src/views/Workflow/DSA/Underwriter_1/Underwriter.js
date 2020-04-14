@@ -7,7 +7,7 @@ import Riskprofile from '../../../../Components/Risk Profile/Riskprofile';
 import Addressdetails from '../../../../Compositeviews/Addressdetails/Addressdetails';
 import BankStatementDetails from '../../../../Compositeviews/BankStatementDetails/BankStatementDetails';
 import Casehistory from '../../../../Compositeviews/Casehistory/Casehistory';
-import CollateralDetails from '../../../../Compositeviews/Collateraldetails/Collateraldetails';
+import CollateralDetails from '../../../../Compositeviews/CollateralDetails/CollateralDetails';
 import CreditSanctionCondition from '../../../../Compositeviews/CreditSanctionCondition/CreditSanctionCondition';
 import CustomerRelationship from '../../../../Compositeviews/CustomerRelationship/CustomerRelationship';
 import DedupeResult from '../../../../Compositeviews/DedupeResult/DedupeResult';

@@ -7,15 +7,36 @@ import bg_img_two from '../../../assets/img/brand/bg_img_two.png';
 import bg_img_three from '../../../assets/img/brand/bg-01.jpg';
 import bg_img_four from '../../../assets/img/brand/log_2.jpg';
 import UserContext from '../../../UserContext';
-
+import Inbox from '../../Inbox/Inbox';
 class Login extends Component {
 
-
+  
 static contextType = UserContext;
+
+constructor(){
+  super();
+  this.state={
+    userName:'',
+
+  }
+  
+  
+}
+
+handleChange(event) {
+  this.setState({
+    
+    userName : event.target.value
+  })
+    
+console.log("username "+this.state.userName);
+}
+
 
 onSubmit = () => {
   const { user, setUser } = this.context;
-  const newUser = { name: 'Joe', loggedIn: true };
+  
+  const newUser = { name: this.state.userName, loggedIn: true };
   setUser(newUser);
   this.props.history.push("/"); 
 }
@@ -35,7 +56,7 @@ onSubmit = () => {
                     <AppNavbarBrand full={{ src: logo, width: 250, height: 50, alt: 'Smart Portal Logo' }}/>
                     <br/>
                         <br/>
-                        
+                       
                       <InputGroup className="mb-3">
                         <InputGroupAddon addonType="prepend">
                           <InputGroupText>
@@ -43,8 +64,10 @@ onSubmit = () => {
                           </InputGroupText>
                         </InputGroupAddon>
                         
-                        <Input type="text" placeholder="Username" autoComplete="username" />
+                       <Input type="text" placeholder="Username" autoComplete="username" onChange={ this.handleChange.bind(this)} name="userValue" />
                       </InputGroup>
+                      
+                      
                       <InputGroup className="mb-4">
                         <InputGroupAddon addonType="prepend">
                           <InputGroupText>

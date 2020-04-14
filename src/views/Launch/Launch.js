@@ -156,7 +156,7 @@ export default class Launch extends Component {
           )}
         </Form.Item>
 
-        <Form.Item label="Are you an existing Bank customer?">
+        <Form.Item label="Are you an Existing Bank Customer?">
           {getFieldDecorator('isExistingCustomer',{initialValue:false})( <Switch checkedChildren="Yes" unCheckedChildren="No" 
           onChange={e => this.setState({ isExistingCustomer: e})}
           checked={this.state.isExistingCustomer} />)}

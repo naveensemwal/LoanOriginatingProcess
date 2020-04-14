@@ -27,7 +27,7 @@ const data =[
     {
         key :1,
         ProductType:'VISA Signature Credit Card',
-        ProductName :'Credit Card',
+        ProductName : 'Credit Card',
         Reason :'Eligible as per net annual salary',
         Features :'Earn 2 PAYBACK points on every ₹ 100 spent, Waiver of 2.5% fuel surcharge on fuel purchases, Complimentary airport lounge access'
     },

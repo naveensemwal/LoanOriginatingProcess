@@ -24,7 +24,7 @@ import VerificationDetails from '../../../../Compositeviews/VerficationDetails/V
 import VerificationList from '../../../../Compositeviews/VerificationList/VerificationList';
 import DisbursementDetails from '../../../../Compositeviews/DisbursementDetails/DisbursementDetails';
 import DedupeResult from '../../../../Compositeviews/DedupeResult/DedupeResult';
-import CollateralDetails from '../../../../Compositeviews/Collateraldetails/Collateraldetails';
+import CollateralDetails from '../../../../Compositeviews/CollateralDetails/CollateralDetails';
 const { Panel } = Collapse;
 
 export default class DDE extends Component {
@@ -210,7 +210,7 @@ componentDidMount() {
 
             <TabPane tab="Cross Selling Recommendation" key="11">
               <Collapse defaultActiveKey={["1"]}>
-                <Panel header="Customer Realtionship" key="1">
+                <Panel header=" Cross Selling Recommendation" key="1">
                   {/* <Card> */}
                   <CrossSellingRecommendation></CrossSellingRecommendation>
                   {/* </Card> */}
