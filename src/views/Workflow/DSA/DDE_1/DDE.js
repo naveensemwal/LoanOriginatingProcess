@@ -191,13 +191,9 @@ export default class DDE extends Component {
 
 
             <TabPane tab="Verification Details" key="13">
-              <Collapse defaultActiveKey={["1"]}>
-                <Panel header="Verification Details" key="1">
-                  {/* <Card> */}
+              
                   <VerificationList></VerificationList>
-                  {/* </Card> */}
-                </Panel>
-              </Collapse>
+                
             </TabPane>
 
 

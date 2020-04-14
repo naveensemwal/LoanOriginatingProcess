@@ -14,7 +14,7 @@ const type = 'gif'
 
 
 export default class Dms extends Component {
-  state = { viewURL: 'http://localhost:8080/viewone/Document/Payslip.pdf', }
+  state = { viewURL: 'http://localhost:8080/viewone/index.html', }
   render() {
     return (
 

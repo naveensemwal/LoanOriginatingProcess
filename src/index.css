@@ -19,3 +19,12 @@
   display: flex;
 padding: 5px !important; 
 }
+
+iframe {
+  border-width: 0px!important;
+  border-style: none !important;
+  border-color: transparent !important;
+  border-image: none !important;
+  overflow:hidden;
+  overflow:hidden;  
+}

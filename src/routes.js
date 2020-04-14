@@ -22,6 +22,7 @@ const ButtonDropdowns = React.lazy(() => import('./views/Buttons/ButtonDropdowns
 const ButtonGroups = React.lazy(() => import('./views/Buttons/ButtonGroups'));
 const Buttons = React.lazy(() => import('./views/Buttons/Buttons'));
 const Charts = React.lazy(() => import('./views/Charts'));
+const Geostats = React.lazy(() => import('./views/Maps/SimpleMap'));
 const Dashboard = React.lazy(() => import('./views/Dashboard'));
 // const Dashboard = React.lazy(() => import('./SIB/Sibdashboard'));
 const CoreUIIcons = React.lazy(() => import('./views/Icons/CoreUIIcons'));
@@ -95,6 +96,7 @@ const routes = [
   { path: '/notifications/modals', name: 'Modals', component: Modals },
   { path: '/widgets', name: 'Widgets', component: Widgets },
   { path: '/charts', name: 'Charts', component: Charts },
+  { path: '/geostats', name: 'Geostats', component: Geostats },
   { path: '/users', exact: true,  name: 'Users', component: Users },
   { path: '/users/:id', exact: true, name: 'User Details', component: User },
   { path: '/inbox', exact: true,  name: 'Inbox', component: Inbox },

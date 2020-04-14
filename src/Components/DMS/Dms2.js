@@ -16,7 +16,7 @@ const type = 'gif'
 
 
 export default class Dms extends Component {
-    state={viewURL:'http://localhost:8080/viewone/Document/ApplicationForm.pdf',}
+    state={viewURL:'http://localhost:8080/viewone/index.html',}
     render() {
         return (
           
@@ -45,9 +45,7 @@ export default class Dms extends Component {
                     <td>03-04-2030</td>
                     <td>
                       <center>
-                      <IconButton aria-label="delete" onClick={() => {                
-                        this.setState({viewURL:'http://localhost:8080/viewone/Document/ApplicationForm.png'});    
-                        }}>
+                      <IconButton aria-label="delete" onClick={() => window.open('http://localhost:8080/viewone/index.html', "_blank")}>
                       <PageviewIcon />
                      </IconButton>
                       </center>

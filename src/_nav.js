@@ -45,6 +45,12 @@ export default {
           url: '/charts',
           icon: 'fa fa-line-chart'
         },
+        {
+          name: 'Geo Performance',
+          url: '/geostats',
+          icon: 'fa fa-globe'
+        },
+
       ]
     },
     {
