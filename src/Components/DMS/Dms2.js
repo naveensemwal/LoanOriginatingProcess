@@ -1,141 +1,79 @@
-import Splitter from 'm-react-splitters';
-// import 'm-react-splitters/lib/splitters.css';
 import React, { Component } from 'react';
-import Iframe from 'react-iframe';
-import { Input, Table } from 'reactstrap';
-import IconButton from '@material-ui/core/IconButton';
-import PageviewIcon from '@material-ui/icons/Pageview';
+import { Avatar, Card, Col, Input, List, Row, Switch, Alert } from 'antd';
+import {CheckOutlined,CloseOutlined} from '@ant-design/icons';
+import "antd/dist/antd.css";
 
-import SplitterLayout from 'react-splitter-layout';
-import 'react-splitter-layout/lib/index.css';
+const data = [
+  {
+    docName: 'ApplicationForm.pdf',
+    mimeType: 'pdf',
+    docType: 'Signed Application Form',
+    isExpired: false,
+    createdOn: '14-Apr-2020',
+    url:'http://localhost:8080/viewone/index.html?docName='
+  },
+  {
+    docName: 'PanCard.jpg',
+    mimeType: 'jpg',
+    docType: 'Pan Card',
+    isExpired: false,
+    createdOn: '14-Apr-2020',
+    url:'http://localhost:8080/viewone/index.html?docName='
+  },
+  {
+    docName: 'Passport_VM.png',
+    mimeType: 'png',
+    docType: 'Passport',
+    isExpired: false,
+    createdOn: '14-Apr-2020',
+    url:'http://localhost:8080/viewone/index.html?docName='
+  },
+  {
+    docName: 'Salary_Slip_Oct_Mar.pdf',
+    mimeType: 'pdf',
+    docType: 'Salary Slip',
+    isExpired: false,
+    createdOn: '14-Apr-2020',
+    url:'http://localhost:8080/viewone/index.html?docName='
+  },
+  {
+    docName: 'Saledeed.pdf',
+    mimeType: 'pdf',
+    docType: 'Copy of Original Sale Deed',
+    isExpired: false,
+    createdOn: '14-Apr-2020',
+    url:'http://localhost:8080/viewone/index.html?docName='
+  },
+];
 
-// import FileViewer from 'react-file-viewer';
+export default class Dms2 extends Component {
+  render() {
+    return (
+      <div>
+        <Card>
+          <List
+            itemLayout="horizontal"
+            dataSource={data}
+            renderItem={item => (
+              <List.Item>
+                <List.Item.Meta
+                 avatar={<Avatar src={require(`./`+item.mimeType+`.png`)} />}
+                  title={<a href={item.url+item.docName} target="blank" >{item.docName}</a>}
+                  description={item.docType+ "  | Created On: " +item.createdOn }
+                />
+                {/* {item.isExpired ? <Alert message="Document has expired." type="warning" showIcon banner={true} /> : null}
+                <div style={{ padding: '2px' }} />
+                <Switch
+                  checkedChildren={<CheckOutlined />}
+                  unCheckedChildren={<CloseOutlined />}
+                  defaultChecked
+                /> */}
+              </List.Item>
 
-const file = 'http://localhost:8080/viewone/images/tomcat.gif'
-const type = 'gif'
-
-
-export default class Dms extends Component {
-    state={viewURL:'http://localhost:8080/viewone/index.html',}
-    render() {
-        return (
-          
-            <SplitterLayout
-    // position="horizontal"
-    primaryPaneMaxHeight="100%"
-    primaryPaneMinHeight={0}
-     primaryPaneHeight="400px"
-     style={{height:'500px'}}
-
->    
-   
-        <div> <Table responsive bordered size="sm" className="tblDesign2">
-                <thead>
-                  <tr className="tblTrDesign">
-                    <th>Document Type</th>
-                    <th>File Name</th>
-                    <th>Received Date</th>
-                    <th>Action</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr className="tblTrDesign">
-                    <td>Signed Application Form</td>
-                    <td>ApplicationForm.pdf</td>
-                    <td>03-04-2030</td>
-                    <td>
-                      <center>
-                      <IconButton aria-label="delete" onClick={() => window.open('http://localhost:8080/viewone/index.html', "_blank")}>
-                      <PageviewIcon />
-                     </IconButton>
-                      </center>
-                    </td>
-                  </tr>
-                  <tr className="tblTrDesign">
-                    <td>Pan Card</td>
-                    <td>PanCard.jpg</td>
-                    <td>03-04-2030</td>
-                    <td>
-                      <center>
-                      <IconButton aria-label="delete" onClick={() => {                
-                        this.setState({viewURL:'http://localhost:8080/viewone/Document/PanCard.jpg'});    
-                        }}>
-                      <PageviewIcon />
-                     </IconButton>
-                      </center>
-                    </td>
-                  </tr>
-				  <tr className="tblTrDesign">
-                    <td>Passport</td>
-                    <td>Passport_VM.jpg</td>
-                    <td>03-04-2030</td>
-                    <td>
-                      <center>
-                      <IconButton aria-label="delete" onClick={() => {                
-                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Passport_VM.png'});    
-                        }}>
-                      <PageviewIcon />
-                     </IconButton>
-                      </center>
-                    </td>
-                  </tr>
-                  <tr className="tblTrDesign">
-                    <td>Salary Slip</td>
-                    <td>Salary_Slip_Oct_Mar.pdf</td>
-                    <td>03-04-2030</td>
-                    <td>
-                      <center>
-                      <IconButton aria-label="delete" onClick={() => {                
-                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Salary_Slip_Oct_Mar.pdf'});    
-                        }}>
-                      <PageviewIcon />
-                     </IconButton>
-                      </center>
-                    </td>
-                  </tr>
-				  <tr className="tblTrDesign">
-                    <td>Last 6 Month Statement</td>
-                    <td>Statement.pdf</td>
-                    <td>03-04-2030</td>
-                    <td>
-                      <center>
-                      <IconButton aria-label="delete" onClick={() => {                
-                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Statement.pdf'});    
-                        }}>
-                      <PageviewIcon />
-                     </IconButton>
-                      </center>
-                    </td>
-                  </tr>
-				  
-				  <tr className="tblTrDesign">
-                    <td>Copy of Original Sale Deed</td>
-                    <td>Saledeed.pdf</td>
-                    <td>03-04-2030</td>
-                    <td>
-                      <center>
-                      <IconButton aria-label="delete" onClick={() => {                
-                        this.setState({viewURL:'http://localhost:8080/viewone/Document/Saledeed.pdf'});    
-                        }}>
-                      <PageviewIcon />
-                     </IconButton>
-                      </center>
-                    </td>
-                  </tr>
-                  
-                </tbody>
-              </Table></div>
-        <div>
-        <Iframe url={this.state.viewURL}
-        id="myId"
-        className="myClassname"
-        width="100%"
-        height="483px"
-      />
-   </div>
-   
-</SplitterLayout>
-
-        )
-    }
+            )}
+          />
+        </Card>
+      </div>
+    )
+  }
 }

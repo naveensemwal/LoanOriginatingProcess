@@ -102,7 +102,7 @@ export default class DDE extends Component {
 
   raiseInvoiceClicked(){
   
-    window.open('http://localhost:8080/viewone/Document/SanctionLetter.pdf', "_blank") //to open new page
+    window.open('http://localhost:8080/viewone/index.html?docName=SanctionLetter.pdf', "_blank") //to open new page
  }
 
  

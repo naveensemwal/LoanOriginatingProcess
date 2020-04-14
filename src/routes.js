@@ -22,7 +22,7 @@ const ButtonDropdowns = React.lazy(() => import('./views/Buttons/ButtonDropdowns
 const ButtonGroups = React.lazy(() => import('./views/Buttons/ButtonGroups'));
 const Buttons = React.lazy(() => import('./views/Buttons/Buttons'));
 const Charts = React.lazy(() => import('./views/Charts'));
-const Geostats = React.lazy(() => import('./views/Maps/SimpleMap'));
+const Geostats = React.lazy(() => import('./views/Charts/Geostats'));
 const Dashboard = React.lazy(() => import('./views/Dashboard'));
 // const Dashboard = React.lazy(() => import('./SIB/Sibdashboard'));
 const CoreUIIcons = React.lazy(() => import('./views/Icons/CoreUIIcons'));
