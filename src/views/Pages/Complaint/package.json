@@ -1,6 +1,0 @@
-{
-  "name": "Complaint",
-  "version": "0.0.0",
-  "private": true,
-  "main": "./Complaint.js"
-}

@@ -4,7 +4,7 @@ export default {
     {
       name: 'Dashboard',
       url: '/dashboard',
-      icon: 'icon-speedometer',
+      icon: 'cui-speedometer icons font-1xl',
     },
     {
       title: true,
@@ -22,7 +22,7 @@ export default {
     {
       name: 'Launch',
       url: '/launch',
-      icon: 'icon-settings',
+      icon: 'fa fa-cog',
       children: [
         {
           name: 'Initiate Loan Process',

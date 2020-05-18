@@ -1,47 +1,57 @@
 import React, { Component } from 'react';
-
-import { Button, Form, FormGroup, Input, InputGroup, InputGroupAddon, InputGroupText } from 'reactstrap';
-
+import moment from 'moment';
+import { Button, Label, Col, Row, Form, FormGroup, Input, InputGroup, InputGroupAddon, InputGroupText } from 'reactstrap';
+const dateFormat = 'DD/MM/YYYY';
 export default class Personaldetails extends Component {
-    render() {
-        return (
-            <div>
-                <Form action="" method="post">
-                  <FormGroup>
-                    <InputGroup>
-                      <InputGroupAddon addonType="prepend">
-                        <InputGroupText>Username</InputGroupText>
-                      </InputGroupAddon>
-                      <Input type="email" id="username3" name="username3" autoComplete="name"/>
-                      <InputGroupAddon addonType="append">
-                        <InputGroupText><i className="fa fa-user"></i></InputGroupText>
-                      </InputGroupAddon>
-                    </InputGroup>
-                  </FormGroup>
-                  <FormGroup>
-                    <InputGroup>
-                      <InputGroupAddon addonType="prepend">
-                        <InputGroupText>Email</InputGroupText>
-                      </InputGroupAddon>
-                      <Input type="email" id="email3" name="email3" autoComplete="username"/>
-                      <InputGroupAddon addonType="append">
-                        <InputGroupText><i className="fa fa-envelope"></i></InputGroupText>
-                      </InputGroupAddon>
-                    </InputGroup>
-                  </FormGroup>
-                  <FormGroup>
-                    <InputGroup>
-                      <InputGroupAddon addonType="prepend">
-                        <InputGroupText>Password</InputGroupText>
-                      </InputGroupAddon>
-                      <Input type="password" id="password3" name="password3" autoComplete="current-password"/>
-                      <InputGroupAddon addonType="append">
-                        <InputGroupText><i className="fa fa-asterisk"></i></InputGroupText>
-                      </InputGroupAddon>
-                    </InputGroup>
-                  </FormGroup>
-                </Form>
-            </div>
-        )
-    }
+  render() {
+    return (
+      <div>
+        <Form action="" method="post">
+          <Row>
+            <Col>
+              <FormGroup>
+                <Label htmlFor="firstName">First Name</Label>
+                <Input defaultValue='Varghese' type="text" id="firstName" placeholder="Enter your first Name" />
+              </FormGroup>
+            </Col>
+            <Col>
+              <FormGroup>
+                <Label htmlFor="lastName">Last Name</Label>
+                <Input  defaultValue='Mathew' type="text" id="lastName" placeholder="Enter your last name" />
+              </FormGroup>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <FormGroup>
+                <Label htmlFor="personalEmail">Email</Label>
+                <Input defaultValue='mathew.0303@gmail.com'type="email" id="personalEmail" placeholder="Enter your email id" />
+              </FormGroup>
+            </Col>
+            <Col>
+              <FormGroup>
+                <Label htmlFor="mobile">Mobile</Label>
+                <Input type="text" id="mobile" placeholder="9970692927" />
+              </FormGroup>
+            </Col>
+          </Row>
+          <Row>
+            <Col>
+              <FormGroup>
+                <Label htmlFor="dob">Date of Birth</Label>
+                <Input defaultValue='03-03-1975' id="dob" name="dob" placeholder="Birthday" />
+              </FormGroup>
+            </Col>
+            <Col>
+              <FormGroup>
+                <Label htmlFor="vat">PAN</Label>
+                <Input type="text" id="pan" placeholder="ATZPM0882C" />
+              </FormGroup>
+            </Col>
+          </Row>
+
+        </Form>
+      </div>
+    )
+  }
 }
