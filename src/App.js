@@ -4,7 +4,7 @@ import { UserProvider } from './UserContext'
 import './App.scss';
 // import './styles/wieldy.less';
 
-
+//Loading 
 const loading = () => <div className="animated fadeIn pt-3 text-center">Loading...</div>;
 
 // Containers
