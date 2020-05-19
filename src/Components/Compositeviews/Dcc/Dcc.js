@@ -1,7 +1,9 @@
 import React from 'react';
 import { forwardRef } from 'react';
 import MaterialTable from 'material-table';
-import { Popover, Input, Form, Button, ButtonGroup } from 'antd';
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import { Popover, Input, Button, ButtonGroup } from 'antd';
 import ErrorIcon from '@material-ui/icons/Error';
 import CheckCircleIcon from '@material-ui/icons/CheckCircle';
 import ArrowDownward from '@material-ui/icons/ArrowDownward';

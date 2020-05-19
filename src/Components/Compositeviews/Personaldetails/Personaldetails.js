@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Col, DatePicker, Input, Row, Select, InputNumber,Form} from 'antd';
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import { Col, DatePicker, Input, Row, Select, InputNumber } from 'antd';
 import "antd/dist/antd.css";
 import moment from 'moment';
 

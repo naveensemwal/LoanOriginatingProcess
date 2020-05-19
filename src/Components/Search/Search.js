@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import { Form, Row, Col, Input, Button } from 'antd';
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import { Row, Col, Input, Button } from 'antd';
 import 'antd/dist/antd.css'
 import './Search.css';
 import {UpOutlined , DownOutlined} from '@ant-design/icons'

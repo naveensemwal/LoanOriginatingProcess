@@ -1,4 +1,6 @@
-import { Button, Checkbox, Form, Input, message, Select, Switch, Upload, InputNumber } from 'antd';
+import { Form } from '@ant-design/compatible';
+import '@ant-design/compatible/assets/index.css';
+import { Button, Checkbox, Input, message, Select, Switch, Upload, InputNumber } from 'antd';
 import "antd/dist/antd.css";
 import React, { Component } from 'react';
 import Stickynotes from './StickyNotes';

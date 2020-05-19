@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import { Table, Typography,Icon,Button } from 'antd';
+import { EyeOutlined } from '@ant-design/icons';
+import { Table, Typography, Button } from 'antd';
 const { Text } = Typography;
 
 
@@ -28,7 +29,7 @@ const columns1 = [
         title: 'View',
         dataIndex: 'View',
 		render: (text, record) => (
-      <Button   onClick={() => window.open('http://localhost:8080/viewone/Document/Residence_Check_Report.pdf', "_blank")} icon="eye" />    
+      <Button   onClick={() => window.open('http://localhost:8080/viewone/Document/Residence_Check_Report.pdf', "_blank")} icon={<EyeOutlined />} />    
         ),
       },
 
@@ -75,7 +76,7 @@ const columns2 = [
         title: 'View',
         dataIndex: 'View',
         render: (text, record) => (
-           <Button   onClick={() => window.open('http://localhost:8080/viewone/Document/Residence_Check_Report.pdf', "_blank")} icon="eye" />         
+           <Button   onClick={() => window.open('http://localhost:8080/viewone/Document/Residence_Check_Report.pdf', "_blank")} icon={<EyeOutlined />} />         
         ),
       },
 
@@ -121,7 +122,7 @@ const columns3 = [
         title: 'View',
         dataIndex: 'View',
         render: (text, record) => (
-           <Button   onClick={() => window.open('http://localhost:8080/viewone/Document/Residence_Check_Report.pdf', "_blank")} icon="eye" />         
+           <Button   onClick={() => window.open('http://localhost:8080/viewone/Document/Residence_Check_Report.pdf', "_blank")} icon={<EyeOutlined />} />         
         ),
       },
 
@@ -166,7 +167,7 @@ const columns4 = [
       title: 'View',
       dataIndex: 'View',
   render: (text, record) => (
-         <Button   onClick={() => window.open('http://localhost:8080/viewone/Document/Residence_Check_Report.pdf', "_blank")} icon="eye" />         
+         <Button   onClick={() => window.open('http://localhost:8080/viewone/Document/Residence_Check_Report.pdf', "_blank")} icon={<EyeOutlined />} />         
       ),
     },
 
