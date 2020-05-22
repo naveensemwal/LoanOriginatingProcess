@@ -4,7 +4,7 @@ import '@ant-design/compatible/assets/index.css';
 import { Row, Col, Input, Button } from 'antd';
 import 'antd/dist/antd.css'
 import './Search.css';
-import {UpOutlined , DownOutlined} from '@ant-design/icons'
+import { UpOutlined, DownOutlined } from '@ant-design/icons'
 
 export default class Search extends Component {
     state = {
@@ -12,14 +12,14 @@ export default class Search extends Component {
     };
 
     // To generate mock Form.Item
-    
+
 
 
     getFields() {
         const count = this.state.expand ? 10 : 6;
         const { getFieldDecorator } = this.props.form;
         const children = [];
-        const field=['CRN','Loan Number','First Name','Middle Name','Last Name','PAN #','Aadhar #','Mobile #','Email','Date of Birth'];
+        const field = ['CRN', 'Loan Number', 'First Name', 'Middle Name', 'Last Name', 'PAN #', 'Aadhar #', 'Mobile #', 'Email', 'Date of Birth'];
         for (let i = 0; i < field.length; i++) {
             children.push(
                 <Col span={8} key={i} style={{ display: i < count ? 'block' : 'none' }}>
@@ -58,24 +58,24 @@ export default class Search extends Component {
     render() {
         return (
             <div>
-            <div>
-                <Form className="ant-advanced-search-form" layout="vertical"  onSubmit={this.handleSearch}>
-                    <Row gutter={24}>{this.getFields()}</Row>
-                    <Row>
-                        <Col span={24} style={{ textAlign: 'right' }}>
-                            <Button type="primary" htmlType="submit">
-                                Search
+                <div>
+                    <Form className="ant-advanced-search-form" layout="vertical" onSubmit={this.handleSearch}>
+                        <Row gutter={24}>{this.getFields()}</Row>
+                        <Row>
+                            <Col span={24} style={{ textAlign: 'right' }}>
+                                <Button type="primary" htmlType="submit">
+                                    Search
                 </Button>
-                            <Button style={{ marginLeft: 8 }} onClick={this.handleReset}>
-                                Clear
+                                <Button style={{ marginLeft: 8 }} onClick={this.handleReset}>
+                                    Clear
                 </Button>
-                            <a style={{ marginLeft: 8, fontSize: 12 }} onClick={this.toggle}>
-                                Collapse {this.state.expand ? (<UpOutlined />) : (<DownOutlined />)} 
-                            </a>
-                        </Col>
-                    </Row>
-                </Form>
-            </div>    
+                                <a style={{ marginLeft: 8, fontSize: 12 }} onClick={this.toggle}>
+                                    Collapse {this.state.expand ? (<UpOutlined />) : (<DownOutlined />)}
+                                </a>
+                            </Col>
+                        </Row>
+                    </Form>
+                </div>
                 <div className="search-result-list">Search Result List</div>
             </div>
 

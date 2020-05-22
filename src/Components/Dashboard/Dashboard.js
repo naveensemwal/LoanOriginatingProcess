@@ -1,15 +1,13 @@
-import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
-import { getStyle } from '@coreui/coreui/dist/js/coreui-utilities';
-import Axios from 'axios';
+// import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 import React, { Component } from 'react';
+import Axios from 'axios';
 import { Bar, Doughnut, Line, Pie, Polar } from 'react-chartjs-2';
 import { ButtonDropdown, ButtonGroup, Card, CardBody, CardHeader, Col, Dropdown, DropdownItem, DropdownMenu, DropdownToggle, Progress, Row, Table } from 'reactstrap';
-
 import UserContext from '../../UserContext';
+import "./Dashboard.css"
 
-
-const brandPrimary = getStyle('--primary');
-const brandInfo = getStyle('--info');
+const brandPrimary = "#007bff"
+const brandInfo = "#17a2b8";
 
 // Card Chart 1
 const cardChartData1 = {
@@ -72,10 +70,10 @@ const polar = {
 };
 
 const options = {
-  tooltips: {
-    enabled: false,
-    custom: CustomTooltips
-  },
+  // tooltips: {
+  //   enabled: false,
+  //   custom: CustomTooltips
+  // },
   maintainAspectRatio: false
 }
 
@@ -106,10 +104,10 @@ const doughnut = {
 };
 
 const cardChartOpts1 = {
-  tooltips: {
-    enabled: false,
-    custom: CustomTooltips
-  },
+  // tooltips: {
+  //   enabled: false,
+  //   custom: CustomTooltips
+  // },
   maintainAspectRatio: false,
   legend: {
     display: false,
@@ -164,10 +162,10 @@ const cardChartData2 = {
 };
 
 const cardChartOpts2 = {
-  tooltips: {
-    enabled: false,
-    custom: CustomTooltips
-  },
+  // tooltips: {
+  //   enabled: true,
+  //   // custom: CustomTooltips
+  // },
   maintainAspectRatio: false,
   legend: {
     display: false,
@@ -222,10 +220,10 @@ const cardChartData3 = {
 };
 
 const cardChartOpts3 = {
-  tooltips: {
-    enabled: false,
-    custom: CustomTooltips
-  },
+  // tooltips: {
+  //   enabled: false,
+  //   custom: CustomTooltips
+  // },
   maintainAspectRatio: false,
   legend: {
     display: false,
@@ -257,10 +255,10 @@ const cardChartData4 = {
 };
 
 const cardChartOpts4 = {
-  tooltips: {
-    enabled: false,
-    custom: CustomTooltips
-  },
+  // tooltips: {
+  //   enabled: false,
+  //   custom: CustomTooltips
+  // },
   maintainAspectRatio: false,
   legend: {
     display: false,
@@ -374,15 +372,15 @@ class Dashboard extends Component {
   render() {
 
     return (
-      <div className="animate fadeIn">
+      <div className="container animate fadeIn">
         <Row>
           <Col xs="12" sm="6" lg="3">
             <Card className="text-white bg-info">
               <CardBody className="pb-0">
                 <ButtonGroup className="float-right">
                   <ButtonDropdown id='card1' isOpen={this.state.card1} toggle={() => { this.setState({ card1: !this.state.card1 }); }}>
-                    <DropdownToggle caret className="p-0" color="transparent">
-                      <i className="fa fa-cog"></i>
+                    <DropdownToggle caret className="p-0 i-white" color="transparent">
+                      <i className="fa fa-cog i-white"></i>
                     </DropdownToggle>
                     <DropdownMenu right>
                       <DropdownItem>Fetch Cases</DropdownItem>
@@ -393,7 +391,7 @@ class Dashboard extends Component {
                 <div className="text-value">100</div>
                 <div>Case Pending Documents</div>
               </CardBody>
-              <div className="chart-wrapper mx-3" style={{ height: '70px' }}>
+              <div className="chart-wrapper mx-3 height-100" >
                 <Line data={cardChartData2} options={cardChartOpts2} height={70} />
               </div>
             </Card>
@@ -404,8 +402,8 @@ class Dashboard extends Component {
               <CardBody className="pb-0">
                 <ButtonGroup className="float-right">
                   <Dropdown id='card2' isOpen={this.state.card2} toggle={() => { this.setState({ card2: !this.state.card2 }); }}>
-                    <DropdownToggle caret className="p-0" color="transparent">
-                      <i className="fa fa-cog"></i>
+                    <DropdownToggle caret className="p-0 i-white" color="transparent">
+                      <i className="fa fa-cog i-white"></i>
                     </DropdownToggle>
                     <DropdownMenu right>
                       <DropdownItem>Get Auto Loan Cases</DropdownItem>
@@ -418,19 +416,19 @@ class Dashboard extends Component {
                 <div className="text-value">1554</div>
                 <div>In Progress Cases</div>
               </CardBody>
-              <div className="chart-wrapper mx-3" style={{ height: '70px' }}>
+              <div className="chart-wrapper mx-3 height-100" >
                 <Line data={cardChartData1} options={cardChartOpts1} height={70} />
               </div>
             </Card>
           </Col>
 
-          <Col xs="12" sm="6" lg="3">
+          <Col xs={12} sm={6} lg={3}>
             <Card className="text-white bg-warning">
               <CardBody className="pb-0">
                 <ButtonGroup className="float-right">
                   <Dropdown id='card3' isOpen={this.state.card3} toggle={() => { this.setState({ card3: !this.state.card3 }); }}>
-                    <DropdownToggle caret className="p-0" color="transparent">
-                      <i className="fa fa-cog"></i>
+                    <DropdownToggle caret className="p-0 i-white" color="transparent">
+                      <i className="fa fa-cog i-white"></i>
                     </DropdownToggle>
                     <DropdownMenu right>
                       <DropdownItem>Monthly Summary</DropdownItem>
@@ -442,8 +440,8 @@ class Dashboard extends Component {
                 <div className="text-value">500</div>
                 <div>Completed Cases</div>
               </CardBody>
-              <div className="chart-wrapper" style={{ height: '70px' }}>
-                <Bar data={cardChartData3} options={cardChartOpts3} height={70} />
+              <div className="chart-wrapper height-100" >
+                <Bar data={cardChartData3} options={cardChartOpts3} height={100} />
               </div>
             </Card>
           </Col>
@@ -453,8 +451,8 @@ class Dashboard extends Component {
               <CardBody className="pb-0">
                 <ButtonGroup className="float-right">
                   <ButtonDropdown id='card4' isOpen={this.state.card4} toggle={() => { this.setState({ card4: !this.state.card4 }); }}>
-                    <DropdownToggle caret className="p-0" color="transparent">
-                      <i className="fa fa-cog"></i>
+                    <DropdownToggle caret className="p-0 i-white" color="transparent">
+                      <i className="fa fa-cog i-white"></i>
                     </DropdownToggle>
                     <DropdownMenu right>
                       <DropdownItem>Monthly Summary</DropdownItem>
@@ -466,8 +464,8 @@ class Dashboard extends Component {
                 <div className="text-value">186</div>
                 <div>Rejected Cases</div>
               </CardBody>
-              <div className="chart-wrapper mx-3" style={{ height: '70px' }}>
-                <Bar data={cardChartData4} options={cardChartOpts4} height={70} />
+              <div className="chart-wrapper mx-3 height-100" >
+                <Bar data={cardChartData4} options={cardChartOpts4} height={100} />
               </div>
             </Card>
           </Col>
@@ -641,8 +639,8 @@ class Dashboard extends Component {
             </Row>
 
           )}
-        <Row>
-          <Col xs="6" sm="4">
+        <Row className="top-buffer-d">
+          <Col xs={6} sm={4}>
             <Card>
               <CardHeader>
                 My SLA
@@ -654,7 +652,7 @@ class Dashboard extends Component {
               </CardBody>
             </Card>
           </Col>
-          <Col xs="6" sm="4">
+          <Col xs={6} sm={4}>
             <Card>
               <CardHeader>
                 Ageing
@@ -662,11 +660,12 @@ class Dashboard extends Component {
               <CardBody>
                 <div className="chart-wrapper">
                   <Polar data={polar} options={options} />
+                  {/* <Polar data={polar} /> */}
                 </div>
               </CardBody>
             </Card>
           </Col>
-          <Col xs="6" sm="4"> <Card>
+          <Col xs={6} sm={4}> <Card>
             <CardHeader>
               My Open Cases
             </CardHeader>

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { Bar, Doughnut, Line, Pie, Polar, Radar } from 'react-chartjs-2';
 import { Card, CardBody, CardColumns, CardHeader } from 'reactstrap';
-import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
+// import { CustomTooltips } from '@coreui/coreui-plugin-chartjs-custom-tooltips';
 
 const line = {
-  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July','August','September','October','November','December'],
+  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
   datasets: [
     {
       label: 'Year 2019',
@@ -25,13 +25,13 @@ const line = {
       pointHoverBorderWidth: 2,
       pointRadius: 1,
       pointHitRadius: 10,
-      data: [65, 59,70,75, 40,60,55,65, 81, 56, 55, 85],
+      data: [65, 59, 70, 75, 40, 60, 55, 65, 81, 56, 55, 85],
     },
   ],
 };
 
 const bar = {
-  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July','August','September','October','November','December'],
+  labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
   datasets: [
     {
       label: 'Year 2019',
@@ -40,7 +40,7 @@ const bar = {
       borderWidth: 1,
       hoverBackgroundColor: 'rgba(255,99,132,0.4)',
       hoverBorderColor: 'rgba(255,99,132,1)',
-      data: [65, 59, 80, 81, 56, 55, 40,30,25,40,33,23],
+      data: [65, 59, 80, 81, 56, 55, 40, 30, 25, 40, 33, 23],
     },
   ],
 };
@@ -144,10 +144,10 @@ const polar = {
 };
 
 const options = {
-  tooltips: {
-    enabled: false,
-    custom: CustomTooltips
-  },
+  // tooltips: {
+  //   enabled: false,
+  //   custom: CustomTooltips
+  // },
   maintainAspectRatio: false
 }
 
@@ -173,7 +173,7 @@ class Charts extends Component {
           </Card>
           <Card>
             <CardHeader>
-            Rejected Loans
+              Rejected Loans
               <div className="card-header-actions">
                 <a href="http://www.chartjs.org" className="card-header-action">
                   <small className="text-muted">docs</small>
@@ -188,7 +188,7 @@ class Charts extends Component {
           </Card>
           <Card>
             <CardHeader>
-            SLA Performance – Completed Cases
+              SLA Performance – Completed Cases
               <div className="card-header-actions">
                 <a href="http://www.chartjs.org" className="card-header-action">
                   <small className="text-muted">docs</small>
@@ -203,7 +203,7 @@ class Charts extends Component {
           </Card>
           <Card>
             <CardHeader>
-            Quaterly Performance
+              Quaterly Performance
               <div className="card-header-actions">
                 <a href="http://www.chartjs.org" className="card-header-action">
                   <small className="text-muted">docs</small>
@@ -218,7 +218,7 @@ class Charts extends Component {
           </Card>
           <Card>
             <CardHeader>
-            SLA Performance – Active Cases
+              SLA Performance – Active Cases
               <div className="card-header-actions">
                 <a href="http://www.chartjs.org" className="card-header-action">
                   <small className="text-muted">docs</small>
@@ -233,7 +233,7 @@ class Charts extends Component {
           </Card>
           <Card>
             <CardHeader>
-            Active Applications
+              Active Applications
               <div className="card-header-actions">
                 <a href="http://www.chartjs.org" className="card-header-action">
                   <small className="text-muted">docs</small>
@@ -242,7 +242,7 @@ class Charts extends Component {
             </CardHeader>
             <CardBody>
               <div className="chart-wrapper">
-                <Polar data={polar} options={options}/>
+                <Polar data={polar} options={options} />
               </div>
             </CardBody>
           </Card>

@@ -1,0 +1,68 @@
+.apple > .dropdown-menu {
+  top: 20px;
+}
+.apple > .dropdown-menu > * {
+  line-height: 20px;
+}
+
+.span-hidden {
+  visibility: hidden;
+}
+
+.dropdown-item {
+  padding: 0.5rem 0.5rem;
+}
+.trigger {
+  font-size: 18px;
+  line-height: 64px;
+  padding: 0 24px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.trigger:hover {
+  color: #1890ff;
+}
+
+.logo {
+  height: 64px;
+  background: white;
+  /* margin: 16px; */
+  padding: 16px 4px;
+}
+
+.min-logo {
+  padding: 10px 15px;
+}
+
+.site-layout .site-layout-background {
+  background: #fff;
+}
+
+/* a {
+  color: rgba(255, 255, 255, 0.65);
+  text-decoration: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+  -webkit-text-decoration-skip: objects;
+}
+a:hover {
+  color: #40a9ff;
+  color: #fff;
+}
+a:active {
+  color: #096dd9;
+}
+a:active,
+a:hover {
+  text-decoration: none;
+  outline: 0;
+}
+a[disabled] {
+  color: rgba(0, 0, 0, 0.25);
+  cursor: not-allowed;
+  pointer-events: none;
+} */
