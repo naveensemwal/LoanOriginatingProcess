@@ -11,7 +11,7 @@ const Portfolio = () => {
         <Col lg={12} md={12} sm={12} xs={24}>
 
           <div className="ant-row-flex">
-            <h2 className="gx-mr-2 gx-mb-0 gx-fs-xxxl gx-font-weight-medium">₹57,43,900</h2>
+            <h2 className="gx-mr-2 gx-mb-0 gx-fs-xxxl gx-font-weight-medium">₹704313.91</h2>
             <h4 className="gx-pt-2 gx-chart-up">64% <i className="icon icon-menu-up gx-fs-sm"/></h4>
           </div>
           <p className="gx-text-grey">Average balance</p>
@@ -28,19 +28,19 @@ const Portfolio = () => {
             <h5 className="gx-mb-3">Transaction Distribution</h5>
             <ul className="gx-line-indicator gx-fs-sm gx-pb-1 gx-pb-sm-0">
               <li>
-                <LineIndicator width="13%" title="Credit Transaction"  title2="359" color="primary" value="13%"/>
+                <LineIndicator width="17%" title="Credit Transaction"  title2="66" color="primary" value="17%"/>
               </li>
               <li>
-                <LineIndicator width="85%" title="Debit Transaction" title2="2463" color="pink" value="86%"/>
+                <LineIndicator width="70%" title="Debit Transaction" title2="264" color="pink" value="70%"/>
               </li>
               <li>
-                <LineIndicator width="4%" title="Cash Transaction" title2="23" color="orange" value="4%"/>
+                <LineIndicator width="4%" title="Cash Transaction" title2="10" color="orange" value="4%"/>
               </li>
               <li>
-                <LineIndicator width="2%" title="Cheque Transaction" title2="5" color="green" value="2%"/>
+                <LineIndicator width="8%" title="Cheque Transaction" title2="30" color="green" value="8%"/>
               </li>
               <li>
-                <LineIndicator width="6%" title="Loan Debit Transaction" title2="40" color="yellow" value="6%"/>
+                <LineIndicator width="1%" title="Loan Debit Transaction" title2="2" color="yellow" value="1%"/>
               </li>
             </ul>
             <p className="gx-text-primary gx-pointer gx-d-block gx-d-sm-none gx-mb-0 gx-mt-3">

@@ -142,13 +142,24 @@ export default class Launch extends Component {
             rules: [{ required: true, message: 'Please input loan amount'}],
           })(<InputNumber style={{width:'100%'}} min={50000} max={1500000} step={50000} />)}
         </Form.Item>
-
+        <Form.Item label="Loan Type" hasFeedback>
+          {getFieldDecorator('loanType', {
+            rules: [{ required: true, message: 'Select Loan Type!' }],
+          })(
+            <Select placeholder="Loan Type">
+              <Option value="Home Loan">Home Loan</Option>
+              <Option value="Personal Loan">Personal Loan</Option>
+              <Option value="Car Loan">Car Loan</Option>
+              <Option value="Mortgage Loan">Mortgage Loan</Option>
+            </Select>,
+          )}
+        </Form.Item>
         <Form.Item label="Upload Documents" extra="">
           {getFieldDecorator('upload', {
             valuePropName: 'fileList',
             getValueFromEvent: this.normFile,
           })(
-            <Upload name="logo" action="/upload.do" listType="picture" multiple={true}>
+            <Upload name="logo" className='upload-list-inline' action="https://www.mocky.io/v2/5cc8019d300000980a055e76" listType="picture" multiple={true}>
               <Button>
                  <UploadOutlined/>Click to upload
               </Button>
@@ -220,18 +231,7 @@ export default class Launch extends Component {
             </Select>,
           )}
         </Form.Item>
-        <Form.Item label="Loan Type" hasFeedback>
-          {getFieldDecorator('loanType', {
-            rules: [{ required: true, message: 'Select Loan Type!' }],
-          })(
-            <Select placeholder="Loan Type">
-              <Option value="Home Loan">Home Loan</Option>
-              <Option value="Personal Loan">Personal Loan</Option>
-              <Option value="Car Loan">Car Loan</Option>
-              <Option value="Mortgage Loan">Mortgage Loan</Option>
-            </Select>,
-          )}
-        </Form.Item>
+        
        
         <Form.Item {...tailFormItemLayout}>
           {getFieldDecorator('agreement', {

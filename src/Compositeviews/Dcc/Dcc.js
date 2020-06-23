@@ -125,12 +125,12 @@ export default function Dcc() {
 
         ],
         data: [
-            { docCategory: 'Application Form', docType: 'Signed Application Form', fileName: 'ApplicationFormScan.PDF', status: 'Received', receivedDate: '02-04-2020', docStatus: false },
-            { docCategory: 'ID Proof', docType: 'PAN Card', fileName: 'PANScan.PDF', status: 'Received', receivedDate: '02-04-2020', docStatus: true },
-            { docCategory: 'Address Proof', docType: 'Passport', fileName: 'Passport.PDF', status: 'Received', receivedDate: '02-04-2020', docStatus: true },
-            { docCategory: 'Income Documents', docType: 'Salary Slip', fileName: 'SalarySlip.PDF', status: 'Received', receivedDate: '02-04-2020', docStatus: false },
-            { docCategory: 'Banking Documents', docType: 'Last 6 month statement', fileName: 'Statement.PDF', status: 'Received', receivedDate: '02-04-2020', docStatus: false },
-            { docCategory: 'Property Documents', docType: 'Allotment-possession ', fileName: 'PropertyDoc.PDF', status: 'Received', receivedDate: '02-04-2020', docStatus: true },
+            { docCategory: 'Application Form', docType: 'Signed Application Form', fileName: 'ApplicationFormScan.PDF', status: 'Received', receivedDate: '15-Apr-2020', docStatus: false },
+            { docCategory: 'ID Proof', docType: 'PAN Card', fileName: 'PANScan.PDF', status: 'Received', receivedDate: '15-Apr-2020', docStatus: true },
+            { docCategory: 'Address Proof', docType: 'Passport', fileName: 'Passport.PDF', status: 'Received', receivedDate: '15-Apr-2020', docStatus: true },
+            { docCategory: 'Income Documents', docType: 'Salary Slip', fileName: 'SalarySlip.PDF', status: 'Received', receivedDate: '15-Apr-2020', docStatus: false },
+            { docCategory: 'Banking Documents', docType: 'Last 6 month statement', fileName: 'Statement.PDF', status: 'Received', receivedDate: '15-Apr-2020', docStatus: false },
+            { docCategory: 'Property Documents', docType: 'Allotment-possession ', fileName: 'PropertyDoc.PDF', status: 'Received', receivedDate: '15-Apr-2020', docStatus: true },
 
         ],
         actions: [rowData => ({

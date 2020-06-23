@@ -127,7 +127,7 @@ const columns2 = [
 const data2 =[
     {
         key :1,
-        Months:'JULY',
+        Months:'OCT',
         CreditSumInRs: 5790126.00,
         CreditNo: 6.00,
         DebitSumInRs: -5778964.00,
@@ -140,7 +140,7 @@ const data2 =[
     },
     {
         key :2,
-        Months:'AUG',
+        Months:'NOV',
         CreditSumInRs: 7034664.00,
         CreditNo: 4.00,
         DebitSumInRs: -7120434.00,
@@ -152,7 +152,7 @@ const data2 =[
     },
     {
         key :3,
-        Months:'SEP',
+        Months:'DEC',
         CreditSumInRs: 78878888.00,
         CreditNo: 20.00,
         DebitSumInRs: -7917926.00,
@@ -164,7 +164,7 @@ const data2 =[
     },
     {
         key :4,
-        Months:'OCT',
+        Months:'JAN',
         CreditSumInRs: 5264386.00,
         CreditNo: 16.00,
         DebitSumInRs: -5182132.00,
@@ -175,7 +175,7 @@ const data2 =[
  },
     {
         key :5,
-        Months:'NOV',
+        Months:'FEB',
         CreditSumInRs: 1921366.96,
         CreditNo: 10.00,
         DebitSumInRs: -2982932.00,
@@ -186,7 +186,7 @@ const data2 =[
 
     {
         key :6,
-        Months:'DEC',
+        Months:'MAR',
         CreditSumInRs: 1705178.00,
         CreditNo: 66.00,
         DebitSumInRs: -1965766.58,

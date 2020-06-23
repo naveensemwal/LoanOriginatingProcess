@@ -78,13 +78,12 @@ export const queriesData = [
 ];
 
 export const incrementData = [
-  {name: 'Page A', price: 200},
-  {name: 'Page B', price: 1200},
-  {name: 'Page C', price: 600},
-  {name: 'Page D', price: 1600},
-  {name: 'Page D', price: 1000},
-  {name: 'Page H', price: 2260},
-  {name: 'Page K', price: 800},
+  {name: 'OCT', price: 200},
+  {name: 'NOV', price: 1200},
+  {name: 'DEC', price: 600},
+  {name: 'JAN', price: 1600},
+  {name: 'FEB', price: 1000},
+  {name: 'MAR', price: 2260},
 ];
 
 export const increamentRevenueData = [

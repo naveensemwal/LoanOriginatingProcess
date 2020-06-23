@@ -177,7 +177,7 @@ const SimpleMap = (props) => {
                   <List.Item.Meta
                     avatar={<Icon type="pushpin" theme="filled" />}
                     title={<a href="https://ant.design">{item.title}</a>}
-                    description="Learner"
+                    // description="Learner"
                   />
                      <Switch
                   checkedChildren={<CheckOutlined />}
@@ -198,7 +198,7 @@ const SimpleMap = (props) => {
                   <List.Item.Meta
                     avatar={<Icon type="pushpin" theme="filled" />}
                     title={<a href="https://ant.design">{item.title}</a>}
-                    description="Learner"
+                    // description="Learner"
                   />
                      <Switch
                   checkedChildren={<CheckOutlined />}

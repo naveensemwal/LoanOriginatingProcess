@@ -9,7 +9,7 @@ const data = [
     mimeType: 'pdf',
     docType: 'Signed Application Form',
     isExpired: false,
-    createdOn: '14-Apr-2020',
+    createdOn: '15-Apr-2020',
     url:'http://localhost:8080/viewone/index.html?docName='
   },
   {
@@ -17,7 +17,7 @@ const data = [
     mimeType: 'jpg',
     docType: 'Pan Card',
     isExpired: false,
-    createdOn: '14-Apr-2020',
+    createdOn: '15-Apr-2020',
     url:'http://localhost:8080/viewone/index.html?docName='
   },
   {
@@ -25,15 +25,39 @@ const data = [
     mimeType: 'png',
     docType: 'Passport',
     isExpired: false,
-    createdOn: '14-Apr-2020',
+    createdOn: '15-Apr-2020',
     url:'http://localhost:8080/viewone/index.html?docName='
   },
   {
-    docName: 'Salary_Slip_Oct_Mar.pdf',
+    docName: 'Salary Slip_Jan 2019',
     mimeType: 'pdf',
-    docType: 'Salary Slip',
+    docType: 'Income Proof',
     isExpired: false,
-    createdOn: '14-Apr-2020',
+    createdOn: '15-Apr-2020',
+    url:'http://localhost:8080/viewone/index.html?docName='
+  },
+  {
+    docName: 'Salary Slip_Feb 2019',
+    mimeType: 'pdf',
+    docType: 'Income Proof',
+    isExpired: false,
+    createdOn: '15-Apr-2020',
+    url:'http://localhost:8080/viewone/index.html?docName='
+  },
+  {
+    docName: 'Salary Slip_Mar 2019',
+    mimeType: 'pdf',
+    docType: 'Income Proof',
+    isExpired: false,
+    createdOn: '15-Apr-2020',
+    url:'http://localhost:8080/viewone/index.html?docName='
+  },
+  {
+    docName: 'LAPEBill',
+    mimeType: 'pdf',
+    docType: 'Address Proof',
+    isExpired: false,
+    createdOn: '15-Apr-2020',
     url:'http://localhost:8080/viewone/index.html?docName='
   },
   {
@@ -41,7 +65,7 @@ const data = [
     mimeType: 'pdf',
     docType: 'Copy of Original Sale Deed',
     isExpired: false,
-    createdOn: '14-Apr-2020',
+    createdOn: '15-Apr-2020',
     url:'http://localhost:8080/viewone/index.html?docName='
   },
 ];

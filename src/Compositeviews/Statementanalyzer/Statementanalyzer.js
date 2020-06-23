@@ -59,7 +59,7 @@ export default class Statementanalyzer extends Component {
                     <Col span={24}>
                         <Row gutter={[8,8]}>
                             <Col xl={6} lg={12} md={12} sm={12} xs={24}>
-                                <ChartCard prize=" ₹16,96,24,735.17" title="23" icon="bitcoin"
+                                <ChartCard prize=" ₹16558345.16 " title="23" icon="bitcoin"
                                     children={<ResponsiveContainer width="100%" height={75}>
                                         <AreaChart data={incrementData}
                                             margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
@@ -74,10 +74,10 @@ export default class Statementanalyzer extends Component {
                                                 fillOpacity={1} />
                                         </AreaChart>
                                     </ResponsiveContainer>}
-                                    styleName="up" desc="Credit Transaction Amount" />
+                                    styleName="up" desc="Average Credit Transaction Amount" />
                             </Col>
                             <Col xl={6} lg={12} md={12} sm={12} xs={24}>
-                                <ChartCard prize=" ₹17,06,75,737.65" title="07" icon="etherium"
+                                <ChartCard prize=" ₹5158025.76" title="07" icon="etherium"
                                     children={<ResponsiveContainer width="100%" height={75}>
                                         <AreaChart data={incrementData}
                                             margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
@@ -93,10 +93,10 @@ export default class Statementanalyzer extends Component {
                                                 fillOpacity={1} />
                                         </AreaChart>
                                     </ResponsiveContainer>}
-                                    styleName="up" desc="Debit Transaction Amount" />
+                                    styleName="up" desc="Average Debit Transaction Amount" />
                             </Col>
                             <Col xl={6} lg={12} md={12} sm={12} xs={24}>
-                                <ChartCard prize=" ₹2,76,53,952.80" title="08" icon="ripple"
+                                <ChartCard prize=" ₹2264386.00" title="08" icon="ripple"
                                     children={<ResponsiveContainer width="100%" height={75}>
                                         <AreaChart data={incrementData}
                                             margin={{ top: 0, right: 0, left: 0, bottom: 0 }}>
@@ -111,10 +111,10 @@ export default class Statementanalyzer extends Component {
                                                 fillOpacity={1} />
                                         </AreaChart>
                                     </ResponsiveContainer>}
-                                    styleName="down" desc="Max EOD Balance" />
+                                    styleName="down" desc="Average EOD Balance" />
                             </Col>
                             <Col xl={6} lg={12} md={12} sm={12} xs={24}>
-                                <ChartCard prize=" ₹57,43,900.92" title="47" icon="litcoin"
+                                <ChartCard prize=" ₹704313.91" title="47" icon="litcoin"
                                     children={<ResponsiveContainer width="100%" height={75}>
 
                                         <LineChart data={lineData}
@@ -123,7 +123,7 @@ export default class Statementanalyzer extends Component {
                                             <Line dataKey="price" stroke="#038FDE" dot={{ stroke: '#FEA931', strokeWidth: 2 }} />
                                         </LineChart>
                                     </ResponsiveContainer>}
-                                    styleName="down" desc="Average EOD Balance" />
+                                    styleName="down" desc="Average Monthly Balance" />
                             </Col>
                             <Col xl={12} lg={24} md={12} sm={24} xs={24}>
                                 <Portfolio />

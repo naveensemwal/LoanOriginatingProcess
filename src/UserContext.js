@@ -5,7 +5,7 @@ const UserContext = React.createContext()
 class UserProvider extends Component {
   // Context state
   state = {
-    user: {},
+    user: { name: 'Sales_1', loggedIn: true },
   }
 
   // Method to update state

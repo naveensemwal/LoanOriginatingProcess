@@ -5,20 +5,13 @@ import {Select} from "antd";
 import Widget from "./index";
 
 const data = [
-  {name: '', balance: 200},
-  {name: 'JAN', balance: 400},
-  {name: 'FEB', balance: 150},
-  {name: 'MAR', balance: 400},
-  {name: 'APR', balance: 1000},
-  {name: 'MAY', balance: 400},
-  {name: 'JUN', balance: 1200},
-  {name: 'JUL', balance: 1000},
-  {name: 'AUG', balance: 800},
-  {name: 'SEP', balance: 750},
-  {name: 'OCT', balance: 1500},
-  {name: 'NOV', balance: 1000},
-  {name: 'DEC', balance: 1500},
-  {name: '', balance: 500},
+  {name: '', balance: 754056.48},
+  {name: 'OCT', balance: 754056.48},
+  {name: 'NOV', balance: 1009103.7},
+  {name: 'DEC', balance: 586577.49},
+  {name: 'JAN', balance: 674156.54},
+  {name: 'FEB', balance: 607524.09},
+  {name: 'MAR', balance: 594365.18},
 ];
 
 const Option = Select.Option;
@@ -31,7 +24,7 @@ const BalanceHistory = () => {
   return (
     <Widget styleName="gx-card-full">
 
-      <div className="ant-row-flex gx-px-4 gx-pt-4">
+      {/* <div className="ant-row-flex gx-px-4 gx-pt-4">
         <h2 className="h4 gx-mb-3">Balance History</h2>
         <div className="gx-ml-auto">
           <Select className="gx-mb-2 gx-select-sm" defaultValue="10" onChange={handleChange}>
@@ -40,7 +33,7 @@ const BalanceHistory = () => {
             <Option value="30">Last 30 days</Option>
           </Select>
         </div>
-      </div>
+      </div> */}
 
       <ResponsiveContainer width="100%" height={180}>
         <AreaChart data={data}
